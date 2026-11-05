@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KarachiFoodDeals — App Prototype</title>
+<style>
+  :root{
+    --bg:#111014; --surface:#1b191f; --surface2:#242128; --ink:#f4f1ea; --muted:#9b93a3;
+    --accent:#ff5a3c; --accent-ink:#fff; --deal:#ffb020; --good:#3ecf8e; --border:#2e2b35;
+    --radius:16px; --shadow:0 8px 24px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:#08080a; color:var(--ink);
+    font-family:"Manrope",-apple-system,"Segoe UI",Roboto,sans-serif;
+    display:flex; align-items:center; justify-content:center; gap:48px; padding:32px 16px; flex-wrap:wrap;
+  }
+  .phone{
+    width:390px; height:820px; max-height:96vh; background:var(--bg); border-radius:44px;
+    border:1px solid #33303a; box-shadow:0 30px 80px rgba(0,0,0,.7), inset 0 0 0 8px #050506;
+    overflow:hidden; position:relative; display:flex; flex-direction:column;
+  }
+  @media (max-width:480px){
+    body{padding:0}
+    .phone{width:100vw;height:100vh;max-height:100vh;border-radius:0;border:none;box-shadow:none}
+    .side{display:none}
+  }
+  .statusbar{height:34px;display:flex;justify-content:space-between;align-items:center;padding:0 24px;font-size:12px;color:var(--muted);flex-shrink:0}
+  .appheader{padding:8px 20px 12px;flex-shrink:0}
+  .appheader h1{font-size:24px;font-weight:800;letter-spacing:-.5px}
+  .appheader .sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .appheader .sub b{color:var(--deal)}
+
+  .chips{display:flex;gap:8px;overflow-x:auto;padding:6px 20px 12px;scrollbar-width:none;flex-shrink:0}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    padding:8px 14px;border-radius:100px;border:1px solid var(--border);background:transparent;
+    color:var(--muted);font-size:13px;font-weight:600;white-space:nowrap;cursor:pointer;transition:.15s;font-family:inherit;
+  }
+  .chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+  .feed{flex:1;overflow-y:auto;padding:2px 16px 12px;display:flex;flex-direction:column;gap:12px}
+  .feed::-webkit-scrollbar{display:none}
+
+  .card{
+    background:var(--surface);border-radius:var(--radius);overflow:hidden;cursor:pointer;
+    border:1px solid var(--border);transition:transform .12s;
+  }
+  .card:active{transform:scale(.985)}
+  .thumb{height:130px;position:relative;display:flex;align-items:flex-end;padding:12px;
+    background:linear-gradient(160deg,#2b2026 0%,#1b191f 100%)}
+  .thumb .dish{font-size:40px;line-height:1;filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
+  .pricepill{
+    position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;font-weight:800;
+    font-size:14px;padding:6px 12px;border-radius:100px;box-shadow:var(--shadow);
+  }
+  .was{font-size:11px;font-weight:600;text-decoration:line-through;color:rgba(255,255,255,.55);margin-left:6px}
+  .srcbadges{position:absolute;top:12px;left:12px;display:flex;gap:5px}
+  .src{font-size:10px;font-weight:800;padding:4px 8px;border-radius:7px;letter-spacing:.3px}
+  .src.yt{background:#ff0033;color:#fff}.src.ig{background:#d6249f;color:#fff}
+  .src.tt{background:#00f2ea;color:#00141f}.src.gg{background:#4285f4;color:#fff}
+  .src.cr{background:var(--good);color:#04150d}
+  .cardbody{padding:12px 14px 14px}
+  .cardbody h3{font-size:15.5px;font-weight:800;letter-spacing:-.2px}
+  .meta{display:flex;gap:10px;align-items:center;margin-top:6px;font-size:12.5px;color:var(--muted);flex-wrap:wrap}
+  .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+  .expiry{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+  .timer{font-size:12px;font-weight:700;color:var(--deal)}
+  .timer.urgent{color:var(--accent)}
+  .savebtn{background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:10px;
+    padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+  .savebtn.saved{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  .tabbar{flex-shrink:0;display:flex;border-top:1px solid var(--border);background:var(--surface);padding:6px 8px 20px}
+  .tab{flex:1;background:none;border:none;color:var(--muted);font-size:10.5px;font-weight:700;cursor:pointer;
+    padding:8px 4px;border-radius:12px;font-family:inherit;display:flex;flex-direction:column;gap:4px;align-items:center}
+  .tab .ico{font-size:20px}
+  .tab.on{color:var(--accent)}
+
+  .sheet{
+    position:absolute;inset:0;background:rgba(0,0,0,.55);z-index:30;display:none;
+  }
+  .sheet.open{display:block}
+  .sheetcard{
+    position:absolute;left:0;right:0;bottom:0;background:var(--surface);border-radius:28px 28px 0 0;
+    max-height:88%;overflow-y:auto;padding:10px 22px 34px;animation:up .22s ease-out;border-top:1px solid var(--border);
+  }
+  @keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+  .grab{width:44px;height:4px;border-radius:2px;background:var(--border);margin:6px auto 16px}
+  .sheetcard h2{font-size:21px;font-weight:800;letter-spacing:-.4px;margin-bottom:4px}
+  .pricerow{display:flex;align-items:baseline;gap:10px;margin:12px 0}
+  .pricerow .now{font-size:30px;font-weight:800;color:var(--accent)}
+  .pricerow .old{font-size:15px;color:var(--muted);text-decoration:line-through}
+  .pricerow .off{font-size:13px;font-weight:800;color:var(--good)}
+  .drow{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--border);font-size:13.5px}
+  .drow .k{color:var(--muted);width:86px;flex-shrink:0;font-weight:600}
+  .drow .v{font-weight:600}
+  .cta{width:100%;padding:15px;border-radius:14px;background:var(--accent);color:#fff;border:none;
+    font-size:15px;font-weight:800;cursor:pointer;margin-top:14px;font-family:inherit}
+  .cta.ghost{background:var(--surface2);color:var(--ink);border:1px solid var(--border)}
+  .srcnote{font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.5}
+
+  .side{max-width:340px;color:#8a8494}
+  .side h2{color:var(--ink);font-size:20px;font-weight:800;margin-bottom:10px}
+  .side p,.side li{font-size:13.5px;line-height:1.65}
+  .side ul{margin:10px 0 0 18px}
+  .side .tag{display:inline-block;background:#1b191f;border:1px solid #2e2b35;border-radius:8px;
+    padding:4px 10px;font-size:11.5px;font-weight:700;margin:14px 8px 0 0;color:#b9b2c4}
+  .note{font-size:11px;color:#6c6677;margin-top:18px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<div class="side">
+  <h2>KarachiFoodDeals — interactive prototype</h2>
+  <p>Karachi ki 7-day food deals ka app mockup. Try karo:</p>
+  <ul>
+    <li>Area / cuisine <b>filter chips</b></li>
+    <li>Deal card pe <b>tap</b> → full detail sheet</li>
+    <li><b>Save</b> button → Saved tab</li>
+    <li>Bottom tabs: Home, Map, Add Deal, Saved, Profile</li>
+    <li>Source badges: YouTube / Instagram / TikTok / Google / Verified</li>
+  </ul>
+  <span class="tag">Explore surface</span><span class="tag">Dark mode default</span><span class="tag">Flutter target</span>
+  <p class="note">⚠️ Prototype mein deals <b>demo data</b> hain (real venues se sample kiye gaye, prices/validity confirm nahi). Production app mein yeh curated + crowdsourced data hoga — DESIGN.md padho.</p>
+</div>
+
+<div class="phone">
+  <div class="statusbar"><span>18:50</span><span>▮▮▮ ᯤ 92%</span></div>
+
+  <div class="appheader" id="hdr">
+    <h1>Deals Karachi 🌶️</h1>
+    <div class="sub"><b id="count">…</b> live deals · next 7 days · <span id="areaLabel">All areas</span></div>
+  </div>
+
+  <div class="chips" id="chips"></div>
+  <div class="feed" id="feed"></div>
+
+  <div class="tabbar" id="tabbar">
+    <button class="tab on" data-t="home"><span class="ico">🔥</span>Deals</button>
+    <button class="tab" data-t="map"><span class="ico">🗺️</span>Map</button>
+    <button class="tab" data-t="add"><span class="ico">➕</span>Add</button>
+    <button class="tab" data-t="saved"><span class="ico">❤️</span>Saved</button>
+    <button class="tab" data-t="me"><span class="ico">👤</span>Me</button>
+  </div>
+
+  <div class="sheet" id="sheet"><div class="sheetcard" id="sheetcard"></div></div>
+</div>
+
+<script>
+const DEALS=[
+ {id:1,t:"Hashim Food — Shinwari Karahi + Zinger Platter",emoji:"🍗",area:"Federal B Area",price:2299,was:5500,cuisine:"BBQ",src:["yt","tt","ig"],hrs:96,addr:"Federal B Area Block 19, near Masjid-e-Aqsa",phone:"0328-1330099",time:"7 PM – 4 AM",note:"Platter + cold drink free dono deals pe. Source: Hashim Food deal video, Sep 2026."},
+ {id:2,t:"Karachi Red Rock — All-Day Buffet 999/-",emoji:"🍛",area:"Liberty",price:999,was:2500,cuisine:"Buffet",src:["ig","gg"],hrs:20,addr:"Karachi Red Rock, Liberty Market",phone:"0314-4349849",time:"2 PM – 8 PM",note:"Thursday & Friday slots. Booking required."},
+ {id:3,t:"Desi Foods — 1 KG Dum Pulao + 3 Free Delights",emoji:"🍚",area:"Gulshan",price:850,was:1400,cuisine:"Desi",src:["ig","yt"],hrs:120,addr:"Abdullah Centre Block 16, Rashid Minhas Rd",phone:"0300-2926900",time:"12 PM – 11 PM",note:"Gulshan + Nazimabad dono branches valid."},
+ {id:4,t:"Eats N Bites — Double Fish Fillet Burger 900/-",emoji:"🐟",area:"Samanabad",price:900,was:1400,cuisine:"Fast Food",src:["ig","gg"],hrs:70,addr:"Samanabad & Model Town Link Rd branches",phone:"—",time:"All day",note:"Winter special. Dine-in + delivery."},
+ {id:5,t:"Fresh Grounds — Froyo Tub Weekend Deal",emoji:"🍨",area:"DHA Phase 6",price:750,was:1100,cuisine:"Dessert",src:["ig"],hrs:14,addr:"DHA Phase 6 (also at Soul Festival this weekend)",phone:"—",time:"Weekend only",note:"Dark Roast Daddy flavour — limited time."},
+ {id:6,t:"Hafiz G Food Master — Chicken Steak + Broast Combo",emoji:"🥩",area:"Islampura",price:650,was:1000,cuisine:"Fast Food",src:["yt"],hrs:48,addr:"Saadi Road, Islampura",phone:"0335-0466505",time:"5 PM – 1 AM",note:"Economical combo, delivery available."},
+ {id:7,t:"Hot N Spicy — Family Biryani Handi Deal",emoji:"🍲",area:"Bahadurabad",price:1800,was:2600,cuisine:"Desi",src:["gg","cr"],hrs:150,addr:"Bahadurabad Chowrangi",phone:"—",time:"All day",note:"Verified deal — team ne khud visit kar ke confirm kiya."},
+ {id:8,t:"Pizza Next — Large 2-Topping 1+1 Tuesday",emoji:"🍕",area:"Nazimabad",price:1299,was:2200,cuisine:"Fast Food",src:["tt","gg"],hrs:8,addr:"Nazimabad No. 2",phone:"—",time:"Tuesday only",note:"Sirf aaj — 8 ghante baad expire."},
+ {id:9,t:"Al Madni Traders — Free Zam Zam with 1KG Dates",emoji:"🌴",area:"Saddar",price:2200,was:2600,cuisine:"Grocery",src:["ig"],hrs:200,addr:"Al Madni Traders, Saddar",phone:"—",time:"While stocks last",note:"Imported Saudi dates promo."},
+ {id:10,t:"Bundu Khan — Weekend BBQ Family Feast 30% Off",emoji:"🔥",area:"Clifton",price:3400,was:4900,cuisine:"BBQ",src:["yt","gg"],hrs:60,addr:"Clifton Block 5",phone:"—",time:"Fri–Sun",note:"Dine-in only. Sehri/Ramzan timing alag."}
+];
+const AREAS=["All areas","DHA Phase 6","Clifton","Gulshan","Nazimabad","Bahadurabad","Saddar","Federal B Area","Liberty","Samanabad","Islampura"];
+const CUIS=["All","BBQ","Desi","Fast Food","Buffet","Dessert","Grocery"];
+let state={area:"All areas",cuis:"All",saved:new Set(),tab:"home"};
+
+const chipsEl=document.getElementById("chips");
+function renderChips(){
+  chipsEl.innerHTML="";
+  const all=[...AREAS.map(a=>({g:"area",v:a,l:a==="All areas"?"📍 "+a:a})),
+             ...CUIS.map(c=>({g:"cuis",v:c,l:c==="All"?"🍽️ All food":c}))];
+  all.forEach(o=>{
+    const cur=state[o.g], isOn=cur===o.v||(o.g==="area"&&o.v==="All areas"&&cur==="All areas")||(o.g==="cuis"&&o.v==="All"&&cur==="All");
+    const b=document.createElement("button");
+    b.className="chip"+(isOn?" on":"");b.textContent=o.l;
+    b.onclick=()=>{state[o.g]=o.v;renderChips();render();};
+    chipsEl.appendChild(b);
+  });
+}
+function fmtHrs(h){if(h<24)return h+"h left";const d=Math.floor(h/24);return d+" day"+(d>1?"s":"")+" left";}
+function render(){
+  const list=DEALS.filter(d=>
+    (state.area==="All areas"||d.area===state.area)&&
+    (state.cuis==="All"||d.cuisine===state.cuis)
+  ).sort((a,b)=>a.hrs-b.hrs);
+  document.getElementById("count").textContent=list.length;
+  document.getElementById("areaLabel").textContent=state.area==="All areas"?"All areas":state.area;
+  const feed=document.getElementById("feed");
+  if(state.tab!=="home"){feed.innerHTML="";return;}
+  if(!list.length){feed.innerHTML='<div style="padding:48px 24px;text-align:center;color:var(--muted);font-size:14px;line-height:1.7">Is area mein abhi koi live deal nahi 😕<br><span style="font-size:12px">🔔 Notification on karo — deal aate hi pata chalega</span></div>';return;}
+  feed.innerHTML="";
+  list.forEach(d=>{
+    const c=document.createElement("div");c.className="card";
+    const off=Math.round((1-d.price/d.was)*100);
+    c.innerHTML=`
+      <div class="thumb"><span class="dish">${d.emoji}</span>
+        <div class="srcbadges">${d.src.map(s=>`<span class="src ${s}">${{yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓ Verified"}[s]}</span>`).join("")}</div>
+        <div class="pricepill">Rs ${d.price.toLocaleString()}<span class="was">Rs ${d.was.toLocaleString()}</span></div>
+      </div>
+      <div class="cardbody">
+        <h3>${d.t}</h3>
+        <div class="meta"><span>${d.area}</span><span class="dot"></span><span>${d.cuisine}</span><span class="dot"></span><span>${off}% off</span></div>
+        <div class="expiry"><span class="timer ${d.hrs<24?"urgent":""}">⏳ ${fmtHrs(d.hrs)}</span>
+          <button class="savebtn ${state.saved.has(d.id)?"saved":""}" data-id="${d.id}">${state.saved.has(d.id)?"❤️ Saved":"🤍 Save"}</button>
+        </div>
+      </div>`;
+    c.querySelector(".savebtn").addEventListener("click",e=>{
+      e.stopPropagation();
+      state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);
+      render();
+    });
+    c.addEventListener("click",()=>openDetail(d));
+    feed.appendChild(c);
+  });
+}
+function openDetail(d){
+  const off=Math.round((1-d.price/d.was)*100);
+  const sh=document.getElementById("sheet"),sc=document.getElementById("sheetcard");
+  sc.innerHTML=`
+    <div class="grab"></div>
+    <h2>${d.t}</h2>
+    <div class="meta"><span>${d.emoji} ${d.cuisine}</span><span class="dot"></span><span>${d.area}</span><span class="dot"></span><span>⏳ ${fmtHrs(d.hrs)}</span></div>
+    <div class="pricerow"><span class="now">Rs ${d.price.toLocaleString()}</span><span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${off}% OFF</span></div>
+    <div class="drow"><span class="k">📍 Address</span><span class="v">${d.addr}</span></div>
+    <div class="drow"><span class="k"> timings</span><span class="v">${d.time}</span></div>
+    <div class="drow"><span class="k">📞 Contact</span><span class="v">${d.phone}</span></div>
+    <div class="drow"><span class="k">📡 Sources</span><span class="v">${d.src.map(s=>`<span class="src ${s}" style="margin-right:6px">${{yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓ Verified"}[s]}</span>`).join("")}</span></div>
+    <div class="drow"><span class="k">📝 Notes</span><span class="v" style="font-weight:500">${d.note}</span></div>
+    <button class="cta">🗺️ Open in Google Maps</button>
+    <button class="cta ghost">${state.saved.has(d.id)?"❤️ Remove from Saved":"❤️ Save + expiry reminder"}</button>
+    <p class="srcnote">Yeh deal social posts se aggregate hui hai — final price/timing restaurant se confirm karein. Prototype note: demo data.</p>`;
+  sc.querySelectorAll(".cta")[1].onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);render();openDetail(d);};
+  sh.classList.add("open");
+  sh.onclick=e=>{if(e.target===sh)sh.classList.remove("open");};
+}
+document.getElementById("tabbar").addEventListener("click",e=>{
+  const b=e.target.closest(".tab");if(!b)return;
+  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("on"));b.classList.add("on");
+  state.tab=b.dataset.t;
+  const feed=document.getElementById("feed");
+  if(state.tab==="saved"){
+    const list=DEALS.filter(d=>state.saved.has(d.id));
+    feed.innerHTML=list.length?"":'<div style="padding:48px 24px;text-align:center;color:var(--muted);font-size:14px;line-height:1.7">Koi deal saved nahi 🤍<br><span style="font-size:12px">Deals tab se ❤️ tap karo</span></div>';
+    if(list.length){state.tab="home";render();} // reuse card renderer for saved
+    return;
+  }
+  const msgs={
+    map:'<div style="padding:48px 20px;text-align:center;color:var(--muted);font-size:14px;line-height:1.8">🗺️ <b style="color:var(--ink)">Map view</b><br>Production: Google Maps SDK + deal pins,<br>cluster + distance from current location.<br><span style="font-size:12px">Prototype placeholder</span></div>',
+    add:'<div style="padding:48px 20px;text-align:center;color:var(--muted);font-size:14px;line-height:1.8">➕ <b style="color:var(--ink)">Deal submit karo</b><br>Photo + restaurant + price + Insta/TikTok link.<br>Moderation ke baad ✓ Verified badge.<br><span style="font-size:12px">Prototype placeholder</span></div>',
+    me:'<div style="padding:48px 20px;text-align:center;color:var(--muted);font-size:14px;line-height:1.8">👤 <b style="color:var(--ink)">Profile</b><br>Google sign-in · saved deals · area alerts<br>Notification settings · Urdu/English toggle<br><span style="font-size:12px">Prototype placeholder</span></div>'
+  };
+  if(msgs[state.tab]){feed.innerHTML=msgs[state.tab];}
+  else render();
+});
+renderChips();render();
+</script>
+</body>
+</html>
