@@ -257,6 +257,10 @@ def main():
     ids_path = DATA / "channel_ids.json"
     ids = json.load(open(ids_path)) if ids_path.exists() else {}
 
+    # enrichment cache: videoId -> extra fields (price/phone/addr/coords/links)
+    cache_path = DATA / "deal_cache.json"
+    cache = json.load(open(cache_path)) if cache_path.exists() else {}
+
     fresh = []
     idx = 1
     seen = set()
@@ -275,10 +279,19 @@ def main():
                 continue
             seen.add(v["id"])
             d = video_to_deal(v, idx)
-            d = enrich_from_desc(d, video_desc(v["id"]))
+            if v["id"] in cache:
+                # cached enrichment (phone/coords/links) dobara apply karo
+                for k, val in cache[v["id"]].items():
+                    if k not in ("t", "hrs", "published"):
+                        d[k] = val
+                d["t"] = video_to_deal(v, idx)["t"]
+            else:
+                d = enrich_from_desc(d, video_desc(v["id"]))
+                cache[v["id"]] = {k: d[k] for k in ("price", "phone", "addr", "lat", "lng", "links", "src", "area") if k in d}
             fresh.append(d)
             idx += 1
     ids_path.write_text(json.dumps(ids, indent=1))
+    cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
 
     ids_path.parent.mkdir(exist_ok=True)
     deals = curated["deals"] + fresh
