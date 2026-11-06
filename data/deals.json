@@ -1,17 +1,334 @@
 {
-  "app": "Karachi Pulse",
-  "updated": "2026-11-06T09:30:00+05:00",
-  "version": 2,
-  "deals": [
-    {"id":1,"t":"Hashim Food — Shinwari Karahi + Zinger Platter","emoji":"🍗","area":"Federal B Area","lat":24.9432,"lng":67.0826,"price":2299,"was":5500,"cuisine":"BBQ","src":["yt","tt","ig"],"hrs":96,"addr":"Federal B Area Block 19, near Masjid-e-Aqsa","phone":"0328-1330099","time":"7 PM – 4 AM","note":"Platter + cold drink free dono deals pe. Demo data — prices confirm karein.","links":{"yt":"https://www.youtube.com/watch?v=rlhWabUWIcE","tt":"https://www.tiktok.com/search?q=hashim%20food%20karachi","ig":"https://www.instagram.com/explore/tags/karachifooddeals/","gg":"https://maps.google.com/?q=Hashim+Food+Federal+B+Area+Karachi"}},
-    {"id":2,"t":"Karachi Red Rock — All-Day Buffet 999/-","emoji":"🍛","area":"Liberty","lat":24.8710,"lng":67.0440,"price":999,"was":2500,"cuisine":"Buffet","src":["ig","gg"],"hrs":20,"addr":"Karachi Red Rock, Liberty Market","phone":"0314-4349849","time":"2 PM – 8 PM","note":"Thu & Fri slots, booking required. Demo data.","links":{"ig":"https://www.instagram.com/explore/tags/karachibuffet/","gg":"https://maps.google.com/?q=Karachi+Red+Rock+Liberty"}},
-    {"id":3,"t":"Desi Foods — 1 KG Dum Pulao + 3 Free Delights","emoji":"🍚","area":"Gulshan","lat":24.9200,"lng":67.0970,"price":850,"was":1400,"cuisine":"Desi","src":["ig","yt"],"hrs":120,"addr":"Abdullah Centre Block 16, Rashid Minhas Rd","phone":"0300-2926900","time":"12 PM – 11 PM","note":"Gulshan + Nazimabad branches. Demo data.","links":{"gg":"https://maps.app.goo.gl/EWmUWnkjK5Q52xt67","ig":"https://www.instagram.com/explore/tags/pulao/"}},
-    {"id":4,"t":"Eats N Bites — Double Fish Fillet Burger 900/-","emoji":"🐟","area":"Samanabad","lat":24.8660,"lng":67.0660,"price":900,"was":1400,"cuisine":"Fast Food","src":["ig","gg"],"hrs":70,"addr":"Samanabad & Model Town Link Rd branches","phone":"—","time":"All day","note":"Winter special. Demo data.","links":{"ig":"https://www.instagram.com/eatsnbitesofficial/","gg":"https://maps.google.com/?q=Eats+n+Bites+Samanabad+Karachi"}},
-    {"id":5,"t":"Fresh Grounds — Froyo Tub Weekend Deal","emoji":"🍨","area":"DHA Phase 6","lat":24.8220,"lng":67.0350,"price":750,"was":1100,"cuisine":"Dessert","src":["ig"],"hrs":14,"addr":"DHA Phase 6 (Soul Festival this weekend)","phone":"—","time":"Weekend only","note":"Dark Roast Daddy flavour. Demo data.","links":{"ig":"https://www.instagram.com/explore/tags/froyokarachi/","gg":"https://maps.google.com/?q=Fresh+Grounds+DHA+Phase+6+Karachi"}},
-    {"id":6,"t":"Hafiz G Food Master — Chicken Steak + Broast Combo","emoji":"🥩","area":"Islampura","lat":24.8950,"lng":67.0450,"price":650,"was":1000,"cuisine":"Fast Food","src":["yt"],"hrs":48,"addr":"Saadi Road, Islampura","phone":"0335-0466505","time":"5 PM – 1 AM","note":"Delivery available. Demo data.","links":{"yt":"https://www.youtube.com/results?search_query=hafiz+g+food+master+karachi","gg":"https://maps.google.com/?q=Saadi+Road+Islampura+Karachi"}},
-    {"id":7,"t":"Hot N Spicy — Family Biryani Handi Deal","emoji":"🍲","area":"Bahadurabad","lat":24.8690,"lng":67.0600,"price":1800,"was":2600,"cuisine":"Desi","src":["gg","cr"],"hrs":150,"addr":"Bahadurabad Chowrangi","phone":"—","time":"All day","note":"Verified — team ne khud visit kar ke confirm kiya (demo).","links":{"gg":"https://maps.google.com/?q=Hot+n+Spicy+Bahadurabad+Karachi"}},
-    {"id":8,"t":"Pizza Next — Large 2-Topping 1+1 Tuesday","emoji":"🍕","area":"Nazimabad","lat":24.9180,"lng":67.0330,"price":1299,"was":2200,"cuisine":"Fast Food","src":["tt","gg"],"hrs":8,"addr":"Nazimabad No. 2","phone":"—","time":"Tuesday only","note":"Sirf aaj — 8 ghante baad expire. Demo data.","links":{"tt":"https://www.tiktok.com/search?q=karachi%20pizza%20deal","gg":"https://maps.google.com/?q=Pizza+Next+Nazimabad+Karachi"}},
-    {"id":9,"t":"Al Madni Traders — Free Zam Zam with 1KG Dates","emoji":"🌴","area":"Saddar","lat":24.8530,"lng":67.0060,"price":2200,"was":2600,"cuisine":"Grocery","src":["ig"],"hrs":200,"addr":"Al Madni Traders, Saddar","phone":"—","time":"While stocks last","note":"Imported Saudi dates promo. Demo data.","links":{"ig":"https://www.instagram.com/explore/tags/saddarkarachi/","gg":"https://maps.google.com/?q=Al+Madni+Traders+Saddar+Karachi"}},
-    {"id":10,"t":"Bundu Khan — Weekend BBQ Family Feast 30% Off","emoji":"🔥","area":"Clifton","lat":24.8130,"lng":67.0300,"price":3400,"was":4900,"cuisine":"BBQ","src":["yt","gg"],"hrs":60,"addr":"Clifton Block 5","phone":"—","time":"Fri–Sun","note":"Dine-in only. Demo data.","links":{"yt":"https://www.youtube.com/results?search_query=bundu+khan+karachi+deal","gg":"https://maps.google.com/?q=Bundu+Khan+Clifton+Karachi"}}
-  ]
+ "app": "Karachi Pulse",
+ "updated": "2026-11-06T10:36:31+05:00",
+ "version": 3,
+ "deals": [
+  {
+   "id": 101,
+   "t": "Domino's — Cricket Craze: 2 Medium Pizzas",
+   "emoji": "🍕",
+   "area": "Saddar",
+   "lat": 24.855,
+   "lng": 67.011,
+   "price": 1999,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "All Domino's branches, Karachi",
+   "phone": "111-364-667",
+   "time": "All day",
+   "note": "Current Nov 2026 menu (kfoods) — 2 medium pizzas Rs 1999. Ongoing menu deal.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Domino's+Pizza+Karachi"
+   },
+   "source": "https://kfoods.com/restaurant/domino_s_pizza_res406",
+   "published": "2026-11-01"
+  },
+  {
+   "id": 102,
+   "t": "Domino's — MY BOX (Pizza + Sides + Dessert)",
+   "emoji": "📦",
+   "area": "Saddar",
+   "lat": 24.855,
+   "lng": 67.011,
+   "price": 899,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "All Domino's branches, Karachi",
+   "phone": "111-364-667",
+   "time": "All day",
+   "note": "MY BOX Rs 899 — pizzas, sides, desserts, chicken corner. Nov 2026 menu.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Domino's+Pizza+Karachi"
+   },
+   "source": "https://kfoods.com/restaurant/domino_s_pizza_res406",
+   "published": "2026-11-01"
+  },
+  {
+   "id": 103,
+   "t": "Kababjees Express — Family Mix BBQ Platter",
+   "emoji": "🍢",
+   "area": "North Nazimabad",
+   "lat": 24.942,
+   "lng": 67.04,
+   "price": 2750,
+   "was": 0,
+   "cuisine": "BBQ",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Kababjees Express, North Nazimabad Block L",
+   "phone": "—",
+   "time": "11 AM – 2 AM",
+   "note": "Reshmi/Seekh/Hunzai kabab + Kastoori/Tandoor/Chicken boti + 4 parathas. Live Foodpanda menu.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Kababjees+Express+North+Nazimabad"
+   },
+   "source": "https://www.foodpanda.pk/restaurant/aayi/kababjees-express-north-nazimabad-block-l",
+   "published": "2026-11-06"
+  },
+  {
+   "id": 104,
+   "t": "Kababjees Express — 4 Chicken Chatni Roll Deal",
+   "emoji": "🌯",
+   "area": "North Nazimabad",
+   "lat": 24.942,
+   "lng": 67.04,
+   "price": 1099,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "Kababjees Express, North Nazimabad Block L",
+   "phone": "—",
+   "time": "Weekdays",
+   "note": "Weekday deal — 4 chicken chatni rolls Rs 1099. Live Foodpanda menu.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Kababjees+Express+North+Nazimabad"
+   },
+   "source": "https://www.foodpanda.pk/restaurant/aayi/kababjees-express-north-nazimabad-block-l",
+   "published": "2026-11-06"
+  },
+  {
+   "id": 105,
+   "t": "BTB & More — BTB Platter (was 2150 → 1720)",
+   "emoji": "🍗",
+   "area": "Gulshan",
+   "lat": 24.92,
+   "lng": 67.097,
+   "price": 1720,
+   "was": 2150,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "BTB & More, Karachi",
+   "phone": "—",
+   "time": "All day",
+   "note": "4 wings + 4 strips + 4 mozzarella bites + 4 onion rings. Live Foodpanda discount.",
+   "links": {
+    "gg": "https://maps.google.com/?q=BTB+and+More+Karachi"
+   },
+   "source": "https://www.foodpanda.pk/restaurant/s9ok/btb-and-more",
+   "published": "2026-11-06"
+  },
+  {
+   "id": 106,
+   "t": "BTB & More — Burger + Fries + Drink Combo",
+   "emoji": "🍔",
+   "area": "Gulshan",
+   "lat": 24.92,
+   "lng": 67.097,
+   "price": 1450,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "BTB & More, Karachi",
+   "phone": "—",
+   "time": "All day",
+   "note": "BTB Deal 1 — any 1 burger, 1 fries, 1 drink. Live Foodpanda menu.",
+   "links": {
+    "gg": "https://maps.google.com/?q=BTB+and+More+Karachi"
+   },
+   "source": "https://www.foodpanda.pk/restaurant/s9ok/btb-and-more",
+   "published": "2026-11-06"
+  },
+  {
+   "id": 107,
+   "t": "Chaupal Seaview — Dinner Buffet 2699+tax",
+   "emoji": "🍽️",
+   "area": "Clifton",
+   "lat": 24.788,
+   "lng": 67.087,
+   "price": 2699,
+   "was": 0,
+   "cuisine": "Buffet",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Chaupal Seaview, DHA Karachi",
+   "phone": "—",
+   "time": "7–9 PM, 9:30 PM–12 AM",
+   "note": "Daily dinner buffet, kids (4-7) Rs 1325+tax. 2026 menu page.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Chaupal+Seaview+Karachi"
+   },
+   "source": "https://kfoods.com/restaurant/chaupal-buffet_res2712",
+   "published": "2026-11-01"
+  },
+  {
+   "id": 108,
+   "t": "Chandni Restaurant — Dinner Buffet Cash Deal 2499",
+   "emoji": "🍛",
+   "area": "Saddar",
+   "lat": 24.86,
+   "lng": 67.01,
+   "price": 2499,
+   "was": 2999,
+   "cuisine": "Buffet",
+   "src": [
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "Chandni Restaurant, Karachi",
+   "phone": "—",
+   "time": "Evening slots",
+   "note": "Cash-only deal Rs 2499 (menu Rs 2999+tax). 2026 deals page.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Chandni+Restaurant+Karachi"
+   },
+   "source": "https://kfoods.com/restaurant/chandni-restaurant_res446",
+   "published": "2026-11-01"
+  },
+  {
+   "id": 109,
+   "t": "Hashim Food — Shinwari Karahi + Zinger Platter",
+   "emoji": "🔥",
+   "area": "Federal B Area",
+   "lat": 24.9432,
+   "lng": 67.0826,
+   "price": 2299,
+   "was": 5500,
+   "cuisine": "BBQ",
+   "src": [
+    "yt",
+    "tt",
+    "ig"
+   ],
+   "hrs": 168,
+   "addr": "Federal B Area Block 19, near Masjid-e-Aqsa",
+   "phone": "0328-1330099",
+   "time": "7 PM – 4 AM",
+   "note": "REAL video (Sep 26, 2026) — platter + cold drink deals 1599/2299. Video mein full detail.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=rlhWabUWIcE",
+    "tt": "https://www.tiktok.com/@ramnafaisal261",
+    "gg": "https://maps.google.com/?q=Hashim+Food+Federal+B+Area+Karachi"
+   },
+   "source": "https://www.youtube.com/watch?v=rlhWabUWIcE",
+   "published": "2026-09-26"
+  },
+  {
+   "id": 110,
+   "t": "Karachi Red Rock — All-Day Buffet 999/-",
+   "emoji": "🍖",
+   "area": "Liberty",
+   "lat": 24.871,
+   "lng": 67.044,
+   "price": 999,
+   "was": 2500,
+   "cuisine": "Buffet",
+   "src": [
+    "ig",
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "Karachi Red Rock, Liberty Market",
+   "phone": "0314-4349849",
+   "time": "2 PM – 8 PM",
+   "note": "Thu & Fri slots — booking required. Real Instagram post.",
+   "links": {
+    "ig": "https://www.instagram.com/explore/tags/karachifooddeals/",
+    "gg": "https://maps.google.com/?q=Karachi+Red+Rock+Liberty+Karachi"
+   },
+   "source": "Instagram food blogger post (via Modash index)",
+   "published": "2026-10-25"
+  },
+  {
+   "id": 111,
+   "t": "Desi Foods — 1 KG Dum Pulao + 3 Free Delights",
+   "emoji": "🍚",
+   "area": "Gulshan",
+   "lat": 24.921,
+   "lng": 67.098,
+   "price": 850,
+   "was": 1400,
+   "cuisine": "Desi",
+   "src": [
+    "ig",
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "Abdullah Centre Block 16, Rashid Minhas Rd",
+   "phone": "0300-2926900",
+   "time": "12 PM – 11 PM",
+   "note": "Gulshan + Nazimabad branches. Real Instagram promo post.",
+   "links": {
+    "gg": "https://maps.app.goo.gl/EWmUWnkjK5Q52xt67",
+    "ig": "https://www.instagram.com/explore/tags/karachifood/"
+   },
+   "source": "Instagram promo post",
+   "published": "2026-10-20"
+  },
+  {
+   "id": 112,
+   "t": "Eats N Bites — Double Fish Fillet Burger 900/-",
+   "emoji": "🐟",
+   "area": "Samanabad",
+   "lat": 24.866,
+   "lng": 67.066,
+   "price": 900,
+   "was": 1400,
+   "cuisine": "Fast Food",
+   "src": [
+    "ig",
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "Samanabad & Model Town Link Rd branches",
+   "phone": "—",
+   "time": "All day",
+   "note": "Winter special. Real Instagram post.",
+   "links": {
+    "ig": "https://www.instagram.com/eatsnbitesofficial/",
+    "gg": "https://maps.google.com/?q=Eats+n+Bites+Samanabad+Karachi"
+   },
+   "source": "https://www.instagram.com/eatsnbitesofficial/",
+   "published": "2026-10-28"
+  },
+  {
+   "id": 113,
+   "t": "Saltanat — Shahi Turkish Deal (2 Person)",
+   "emoji": "🥙",
+   "area": "Gulshan",
+   "lat": 24.893,
+   "lng": 67.068,
+   "price": 2999,
+   "was": 0,
+   "cuisine": "BBQ",
+   "src": [
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "Saltanat Restaurant, Stadium Road",
+   "phone": "—",
+   "time": "All day",
+   "note": "Kabab + boti + yakhni rice + naan + 2 drinks. 2026 menu page.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Saltanat+Restaurant+Stadium+Road+Karachi"
+   },
+   "source": "https://kfoods.com/restaurant/saltanat-restaurant_res3800",
+   "published": "2026-09-15"
+  }
+ ]
 }

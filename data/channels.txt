@@ -1,0 +1,3 @@
+# Karachi food channels to watch (one @handle per line).
+# Deals app mein sirf 7 din ke andar ke "deal/offer/buffet/price" wale videos aate hain.
+@ramnafaisal
