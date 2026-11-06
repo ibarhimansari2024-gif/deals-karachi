@@ -1,0 +1,39 @@
+name: Daily data update
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 8 AM Pakistan time — daily
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh deals.json timestamp
+        run: |
+          python3 - <<'EOF'
+          import json, datetime
+          p = 'data/deals.json'
+          d = json.load(open(p, encoding='utf-8'))
+          d['updated'] = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5))).isoformat(timespec='seconds')
+          # sanity: each deal must have required fields
+          keep = []
+          for x in d['deals']:
+              if all(k in x for k in ('id','t','price','lat','lng')) and 24.6 < x['lat'] < 25.6:
+                  keep.append(x)
+          d['deals'] = keep
+          json.dump(d, open(p,'w',encoding='utf-8'), ensure_ascii=False, indent=1)
+          print('updated:', d['updated'], '| deals:', len(keep))
+          EOF
+
+      - name: Commit
+        run: |
+          git config user.name "pulse-bot"
+          git config user.email "pulse-bot@users.noreply.github.com"
+          git add data/deals.json
+          git diff --cached --quiet || git commit -m "daily data refresh $(date -u +%F)"
+          git push
