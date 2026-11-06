@@ -24,6 +24,8 @@ PKT = datetime.timezone(datetime.timedelta(hours=5))
 
 # videos must mention a deal-ish keyword to become an app deal
 DEAL_WORDS = re.compile(r"\b(deal|deals|offer|sale|buffet|platter|free|discount|combo|price|rs\.?)\b", re.I)
+# food context filter — market/crockery/gadget videos ko rokta hai
+FOOD_WORDS = re.compile(r"food|biryani|pizza|burger|buffet|karahi|bbq|platter|roll|kabab|kebab|dessert|ice\s?cream|chai|nihari|broast|fries|shawarma|manda|mandi|pulao|biryani|chat|chaat|sweets|bakery|iftar|drink|juice|fried|grill|steak|sandwich|wrap|paratha|chicken|mutton|beef|fish", re.I)
 PRICE_RE = re.compile(r"rs\.?\s*([\d,]{3,6})", re.I)
 AREA_WORDS = ["DHA", "Clifton", "Gulshan", "Nazimabad", "Bahadurabad", "Saddar",
               "Malir", "Samanabad", "Federal B", "North Nazimabad", "Karachi"]
@@ -47,29 +49,183 @@ def parse_iso(ts):
     return datetime.datetime.fromisoformat(ts.replace("Z", "+00:00"))
 
 
-def fetch_channel_videos(channel_id):
-    """Return recent public videos from the official RSS feed."""
+def age_to_published(rel):
+    """'2 days ago' / '2 دن قبل' -> ISO timestamp approx now - 2 days."""
+    units_en = {"minute": 60, "hour": 3600, "day": 86400, "week": 604800,
+                "month": 2592000, "year": 31536000, "second": 1}
+    units_ur = {"سیکنڈ": 1, "منٹ": 60, "گھنٹہ": 3600, "گھنٹے": 3600, "دن": 86400,
+                "ہفتہ": 604800, "ہفتے": 604800, "ماہ": 2592000, "سال": 31536000}
+    m = re.search(r"(\d+)\s*([a-zA-Z\u0600-\u06FF]+)\s*(?:ago|قبل)", rel or "")
+    if not m:
+        return datetime.datetime.now(datetime.timezone.utc).isoformat()
+    n = int(m.group(1))
+    unit = m.group(2)
+    mult = units_en.get(unit.lower()) or units_ur.get(unit)
+    if mult is None:
+        return datetime.datetime.now(datetime.timezone.utc).isoformat()
+    dt = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(seconds=n * mult)
+    return dt.isoformat()
+
+
+def fetch_channel_videos(cid_or_handle):
+    """Recent public videos from the channel /videos page (keyless, public)."""
+    if cid_or_handle.startswith("UC"):
+        url = f"https://www.youtube.com/channel/{cid_or_handle}/videos"
+    else:
+        url = f"https://www.youtube.com/@{cid_or_handle.lstrip('@')}/videos"
     try:
-        xml = http(f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}", timeout=30).decode("utf-8", "ignore")
+        html = http(url, timeout=40).decode("utf-8", "ignore")
     except Exception as e:
-        print(f"  feed fail {channel_id}: {e}")
+        print(f"  videos-page fail {cid_or_handle}: {e}")
+        return []
+    m = re.search(r"var ytInitialData = (\{.*?\});</script>", html)
+    if not m:
+        print(f"  no ytInitialData for {cid_or_handle}")
+        return []
+    try:
+        data = json.loads(m.group(1))
+    except Exception as e:
+        print(f"  ytInitialData parse fail {cid_or_handle}: {e}")
         return []
     out = []
-    for entry in re.findall(r"<entry>(.*?)</entry>", xml, re.S):
-        vid = re.search(r"<yt:videoId>([\w-]{11})</yt:videoId>", entry)
-        title = re.search(r"<title>(.*?)</title>", entry)
-        pub = re.search(r"<published>(.*?)</published>", entry)
-        if not (vid and title and pub):
-            continue
-        out.append({"id": vid.group(1), "t": title.group(1), "published": pub.group(1)})
+
+    def from_lockup(lv):
+        """Extract (id, title, published) from the new lockupViewModel layout."""
+        try:
+            vid = lv["contentId"]
+            title = lv["metadata"]["lockupMetadataViewModel"]["title"]["content"]
+            parts = []
+            for row in lv["metadata"]["lockupMetadataViewModel"].get("metadata", {}).get("contentMetadataViewModel", {}).get("metadataRows", []):
+                for p in row.get("metadataParts", []):
+                    parts.append(p.get("text", {}).get("content", ""))
+            rel = " ".join(parts)
+            out.append({"id": vid, "t": title, "published": age_to_published(rel)})
+        except Exception:
+            pass
+
+    def walk(o):
+        if isinstance(o, dict):
+            if "videoRenderer" in o:
+                vr = o["videoRenderer"]
+                try:
+                    vid = vr["videoId"]
+                    title = "".join(r.get("text", "") for r in vr["title"]["runs"])
+                    rel = vr.get("publishedTimeText", {}).get("simpleText", "")
+                    out.append({"id": vid, "t": title, "published": age_to_published(rel)})
+                except Exception:
+                    pass
+            if "lockupViewModel" in o:
+                from_lockup(o["lockupViewModel"])
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(data)
     return out
+
+
+def extract_price(title):
+    """Price nikalo: 'Rs 2299', 'Just 599', '450 Mey Pizza', '999/-'."""
+    prices = [int(p.replace(",", "")) for p in PRICE_RE.findall(title)]
+    prices = [p for p in prices if 100 <= p <= 100000]
+    if prices:
+        return min(prices)
+    m = re.findall(r"\b(?:just|only|sirf|mey|me|in|from|se)\s+([\d,]{3,6})\b", title, re.I)
+    nums = [int(x.replace(",", "")) for x in m if 100 <= int(x.replace(",", "")) <= 100000]
+    if nums:
+        return min(nums)
+    m = re.findall(r"([\d,]{3,6})\s*/\s*-", title)
+    nums = [int(x.replace(",", "")) for x in m if 100 <= int(x.replace(",", "")) <= 100000]
+    if nums:
+        return min(nums)
+    return 0
+
+
+def video_desc(vid):
+    """Fetch a video's watch page and pull its description (proper unicode decode)."""
+    try:
+        html = http(f"https://www.youtube.com/watch?v={vid}", timeout=40).decode("utf-8", "ignore")
+    except Exception:
+        return ""
+    m = re.search(r'"shortDescription":"((?:[^"\\]|\\.)*)"', html)
+    if not m:
+        return ""
+    try:
+        return json.loads('"' + m.group(1) + '"')
+    except Exception:
+        return m.group(1).encode().decode("unicode_escape", errors="ignore")
+
+
+def resolve_maps_shortlink(url):
+    """maps.app.goo.gl short link -> (lat, lng) via redirect URL."""
+    try:
+        req = urllib.request.Request(url, headers=UA)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            final = r.geturl()
+        m = re.search(r"@(-?\d+\.\d+),(-?\d+\.\d+)", final) or re.search(r"!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)", final)
+        if m:
+            return float(m.group(1)), float(m.group(2))
+    except Exception:
+        pass
+    return None
+
+
+def enrich_from_desc(deal, desc):
+    """Fill price/phone/address/area/links (real TikTok/Insta/Maps) from description."""
+    if not desc:
+        return deal
+    deal["note"] = (desc[:180] + ("…" if len(desc) > 180 else ""))
+    p = extract_price(desc)
+    if p and not deal["price"]:
+        deal["price"] = p
+    if not deal["price"]:
+        m = re.findall(r"([\d,]{3,6})\s*(?:rupees|روپے)", desc, re.I)
+        nums = [int(x.replace(",", "")) for x in m if 100 <= int(x.replace(",", "")) <= 100000]
+        if nums:
+            deal["price"] = min(nums)
+    m = re.search(r"\b03\d{2}[-\s]?\d{7}\b", desc)
+    if m:
+        deal["phone"] = m.group(0).replace(" ", "")
+    # real Google Maps short link -> sources + coords
+    gm = re.search(r"https://maps\.app\.goo\.gl/[\w-]+", desc)
+    if gm:
+        deal["links"]["gg"] = gm.group(0)
+        if "gg" not in deal["src"]:
+            deal["src"].append("gg")
+        coords = resolve_maps_shortlink(deal["links"]["gg"])
+        if coords and 24.6 < coords[0] < 25.6 and 66.6 < coords[1] < 68.0:
+            deal["lat"], deal["lng"] = coords
+            deal["addr"] = f"Exact location map pe — {deal['addr'] if len(deal['addr'])>12 else 'link se kholo'}"
+    # real TikTok / Instagram from description
+    tm = re.search(r"https://www\.tiktok\.com/@[\w.\-?=_]+", desc)
+    if tm:
+        deal["links"]["tt"] = tm.group(0).split("?")[0]
+        if "tt" not in deal["src"]:
+            deal["src"].append("tt")
+    im = re.search(r"https://www\.instagram\.com/[\w.\-]+/", desc)
+    if im:
+        deal["links"]["ig"] = im.group(0)
+        if "ig" not in deal["src"]:
+            deal["src"].append("ig")
+    # postal address line: a line mentioning Karachi + area keywords (not hashtags)
+    for line in desc.splitlines():
+        l = line.strip()
+        if l.startswith("#") or "http" in l or len(l) < 15:
+            continue
+        if re.search(r"karachi", l, re.I) and re.search(r"area|block|road|chowrangi|market|phase|sector|town", l, re.I):
+            deal["addr"] = re.sub(r"[#*📍🏷️]+", "", l).strip()[:120]
+            break
+    area = next((a for a in AREA_WORDS if a.lower() in desc.lower()), None)
+    if area:
+        deal["area"] = area
+    return deal
 
 
 def video_to_deal(v, idx):
     """Turn a YouTube video that looks like a deal post into a feed entry."""
     title = v["t"]
-    prices = [int(p.replace(",", "")) for p in PRICE_RE.findall(title)]
-    price = min([p for p in prices if 100 <= p <= 100000], default=0)
+    price = extract_price(title)
     area = next((a for a in AREA_WORDS if a.lower() in title.lower()), "Karachi")
     age = datetime.datetime.now(datetime.timezone.utc) - parse_iso(v["published"])
     hrs = max(1, min(168, int(7 * 24 - age.total_seconds() / 3600)))  # feed window = 7 days
@@ -115,10 +271,12 @@ def main():
             age = datetime.datetime.now(datetime.timezone.utc) - parse_iso(v["published"])
             if age.total_seconds() > 7 * 86400 or v["id"] in seen:
                 continue
-            if not DEAL_WORDS.search(v["t"]):
+            if not DEAL_WORDS.search(v["t"]) or not FOOD_WORDS.search(v["t"]):
                 continue
             seen.add(v["id"])
-            fresh.append(video_to_deal(v, idx))
+            d = video_to_deal(v, idx)
+            d = enrich_from_desc(d, video_desc(v["id"]))
+            fresh.append(d)
             idx += 1
     ids_path.write_text(json.dumps(ids, indent=1))
 

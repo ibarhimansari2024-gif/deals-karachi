@@ -246,11 +246,11 @@ function render(){
     c.innerHTML=`
       <div class="thumb"><span class="dish">${d.emoji}</span>
         <div class="srcbadges">${d.src.map(s=>`<span class="src ${s}">${({yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓ Verified"})[s]}</span>`).join("")}</div>
-        <div class="pricepill">Rs ${d.price.toLocaleString()}<span class="was">Rs ${d.was.toLocaleString()}</span></div>
+        <div class="pricepill">${d.price>0?`Rs ${d.price.toLocaleString()}`:"🎬 Video mein price"}${d.was>d.price?`<span class="was">Rs ${d.was.toLocaleString()}</span>`:""}</div>
       </div>
       <div class="cardbody">
         <h3>${d.t}</h3>
-        <div class="meta"><span>${d.area}</span><span class="dot"></span><span>${d.cuisine}</span><span class="dot"></span><span>${off}% off</span></div>
+        <div class="meta"><span>${d.area}</span><span class="dot"></span><span>${d.cuisine}</span>${d.was>d.price?`<span class="dot"></span><span>${Math.round((1-d.price/d.was)*100)}% off</span>`:""}</div>
         <div class="expiry"><span class="timer ${d.hrs<24?"urgent":""}">⏳ ${fmtHrs(d.hrs)}</span>
           <button class="savebtn ${state.saved.has(d.id)?"saved":""}" data-id="${d.id}">${state.saved.has(d.id)?"❤️ Saved":"🤍 Save"}</button>
         </div>
@@ -269,7 +269,7 @@ function openDetail(d){
     <div class="grab"></div>
     <h2>${d.t}</h2>
     <div class="meta"><span>${d.emoji} ${d.cuisine}</span><span class="dot"></span><span>${d.area}</span><span class="dot"></span><span>⏳ ${fmtHrs(d.hrs)}</span></div>
-    <div class="pricerow"><span class="now">Rs ${d.price.toLocaleString()}</span><span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${off}% OFF</span></div>
+    <div class="pricerow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${Math.round((1-d.price/d.was)*100)}% OFF</span>`:""}`:`<span class="now" style="font-size:17px">🎬 Price video mein confirm karo</span>`}</div>
     <div class="drow"><span class="k">📍 Address</span><span class="v">${d.addr}</span></div>
     <div class="drow"><span class="k">🕒 Timings</span><span class="v">${d.time}</span></div>
     <div class="drow"><span class="k">📞 Contact</span><span class="v">${d.phone}</span></div>
