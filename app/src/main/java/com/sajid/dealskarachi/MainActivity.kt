@@ -15,7 +15,7 @@ class MainActivity : Activity() {
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.statusBarColor = Color.parseColor("#070b19")
+        window.statusBarColor = Color.parseColor("#001a4b")
         window.navigationBarColor = Color.parseColor("#0d1630")
         web = WebView(this)
         web.setBackgroundColor(Color.parseColor("#070b19"))

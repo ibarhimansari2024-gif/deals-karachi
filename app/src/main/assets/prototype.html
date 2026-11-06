@@ -7,9 +7,18 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
   :root{
+    --bg:#eef1f8; --surface:#ffffff; --surface2:#f5f7fd; --ink:#0d1330; --muted:#5a6482;
+    --accent:#fa1d3f; --deal:#d97706; --good:#0bb07b; --border:#e2e7f2;
+    --headerbg:linear-gradient(135deg,#001a4b 0%,#00266a 100%); --headerink:#ffffff; --headermuted:#aebbe0;
+    --thumbbg:linear-gradient(160deg,#dbe4f6 0%,#eef1f8 100%);
+    --radius:16px; --shadow:0 8px 24px rgba(13,19,48,.10);
+  }
+  body.dark{
     --bg:#070b19; --surface:#0d1630; --surface2:#101a38; --ink:#eef2ff; --muted:#8a93b8;
-    --accent:#2f6bff; --deal:#ffb020; --good:#22d3a7; --border:#1c2a52;
-    --radius:16px; --shadow:0 8px 24px rgba(0,0,0,.5);
+    --accent:#fa1d3f; --deal:#ffb020; --good:#22d3a7; --border:#1c2a52;
+    --headerbg:#070b19; --headerink:#eef2ff; --headermuted:#8a93b8;
+    --thumbbg:linear-gradient(160deg,#0a1440 0%,#0d1630 100%);
+    --shadow:0 8px 24px rgba(0,0,0,.5);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
@@ -25,18 +34,18 @@
   .side h2{color:var(--ink);font-size:20px;margin-bottom:10px}
   .side li{font-size:13.5px;line-height:1.7;margin-left:18px}
   .statusbar{height:30px;display:flex;justify-content:space-between;align-items:center;padding:0 22px;font-size:11.5px;color:var(--muted);flex-shrink:0}
-  .appheader{padding:4px 18px 10px;flex-shrink:0;display:flex;justify-content:space-between;align-items:center}
-  .appheader h1{font-size:23px;font-weight:800;letter-spacing:-.5px}
+  .appheader{padding:6px 18px 12px;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;background:var(--headerbg);color:var(--headerink)}
+  .appheader h1{font-size:23px;font-weight:800;letter-spacing:-.5px;color:var(--headerink)}
   .appheader h1 b{color:var(--accent)}
-  .appheader .sub{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .appheader .sub{font-size:11.5px;color:var(--headermuted);margin-top:2px}
   .appheader .sub b{color:var(--deal)}
   .refreshwrap{text-align:right}
-  .refreshbtn{background:var(--surface2);border:1px solid var(--border);color:var(--ink);border-radius:12px;
-    padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+  .refreshbtn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:var(--headerink);border-radius:12px;
+    padding:9px 12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;margin-left:6px}
   .refreshbtn:active{transform:scale(.94)}
   .refreshbtn.spin .ic{display:inline-block;animation:spin .8s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .lastupd{font-size:10px;color:var(--muted);margin-top:4px}
+  .lastupd{font-size:10px;color:var(--headermuted);margin-top:4px}
   .chips{display:flex;gap:8px;overflow-x:auto;padding:4px 18px 10px;scrollbar-width:none;flex-shrink:0}
   .chips::-webkit-scrollbar{display:none}
   .chip{padding:8px 14px;border-radius:100px;border:1px solid var(--border);background:transparent;
@@ -46,8 +55,7 @@
   .feed::-webkit-scrollbar{display:none}
   .card{background:var(--surface);border-radius:var(--radius);overflow:hidden;cursor:pointer;border:1px solid var(--border)}
   .card:active{transform:scale(.985)}
-  .thumb{height:120px;position:relative;display:flex;align-items:flex-end;padding:12px;
-    background:linear-gradient(160deg,#0a1440 0%,#0d1630 100%)}
+  .thumb{height:120px;position:relative;display:flex;align-items:flex-end;padding:12px;background:var(--thumbbg)}
   .thumb .dish{font-size:38px;line-height:1}
   .pricepill{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;font-weight:800;
     font-size:14px;padding:6px 12px;border-radius:100px}
@@ -126,7 +134,7 @@
       <div class="sub"><b id="count">…</b> live deals · next 7 days · <span id="areaLabel">All areas</span></div>
     </div>
     <div class="refreshwrap">
-      <button class="refreshbtn" id="refreshBtn"><span class="ic">⟳</span> Refresh</button>
+      <button class="refreshbtn" id="themeBtn" title="Theme">🌙</button><button class="refreshbtn" id="refreshBtn"><span class="ic">⟳</span> Refresh</button>
       <div class="lastupd" id="lastupd"></div>
     </div>
   </div>
@@ -329,6 +337,16 @@ function switchTab(t){
 document.getElementById("tabbar").addEventListener("click",e=>{
   const b=e.target.closest(".tab");if(b)switchTab(b.dataset.t);
 });
+/* ---- theme (reference: navy header + white cards + red accent; dark optional) ---- */
+const themeBtn=document.getElementById("themeBtn");
+function applyTheme(t){
+  document.body.classList.toggle("dark", t==="dark");
+  themeBtn.textContent = t==="dark" ? "☀️" : "🌙";
+  try{localStorage.setItem("kp_theme",t);}catch(e){}
+}
+themeBtn.addEventListener("click",()=>applyTheme(document.body.classList.contains("dark")?"light":"dark"));
+try{ applyTheme(localStorage.getItem("kp_theme")||"light"); }catch(e){ applyTheme("light"); }
+
 updLabel();renderChips();render();
 </script>
 </body>
