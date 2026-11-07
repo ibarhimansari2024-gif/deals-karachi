@@ -2,153 +2,196 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Karachi Pulse</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
   :root{
-    --bg:#eef1f8; --surface:#ffffff; --surface2:#f5f7fd; --ink:#0d1330; --muted:#5a6482;
-    --accent:#fa1d3f; --deal:#d97706; --good:#0bb07b; --border:#e2e7f2;
-    --headerbg:linear-gradient(135deg,#001a4b 0%,#00266a 100%); --headerink:#ffffff; --headermuted:#aebbe0;
-    --thumbbg:linear-gradient(160deg,#dbe4f6 0%,#eef1f8 100%);
-    --radius:16px; --shadow:0 8px 24px rgba(13,19,48,.10);
+    --bg:#f1f3f9; --surface:#ffffff; --surface2:#f4f6fb; --ink:#0e1430; --muted:#6b7490;
+    --accent:#fa1d3f; --accent-dark:#d8102f; --deal:#d97706; --good:#0bb07b; --border:#e6eaf4;
+    --headerbg:linear-gradient(135deg,#001a4b 0%,#013a8f 60%,#00266a 100%);
+    --headerink:#ffffff; --headermuted:#b8c4e2; --thumbbg:#dfe6f4;
+    --r:18px; --shadow:0 6px 20px rgba(14,19,48,.08); --shadow-lg:0 16px 40px rgba(13,19,48,.16);
   }
   body.dark{
-    --bg:#070b19; --surface:#0d1630; --surface2:#101a38; --ink:#eef2ff; --muted:#8a93b8;
-    --accent:#fa1d3f; --deal:#ffb020; --good:#22d3a7; --border:#1c2a52;
-    --headerbg:#070b19; --headerink:#eef2ff; --headermuted:#8a93b8;
-    --thumbbg:linear-gradient(160deg,#0a1440 0%,#0d1630 100%);
-    --shadow:0 8px 24px rgba(0,0,0,.5);
+    --bg:#070b19; --surface:#111a36; --surface2:#182242; --ink:#eef2ff; --muted:#8a93b8;
+    --accent:#ff4d6a; --deal:#ffb020; --good:#22d3a7; --border:#212c50;
+    --headerbg:linear-gradient(135deg,#020b22 0%,#041633 100%);
+    --thumbbg:#0d1630; --shadow:0 8px 24px rgba(0,0,0,.5);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
   html,body{height:100%}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",Roboto,sans-serif}
-  .phone{width:100vw;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+  body{background:#05070f;color:var(--ink);font-family:'Plus Jakarta Sans',-apple-system,"Segoe UI",Roboto,sans-serif}
+  .phone{width:100vw;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
   @media (min-width:481px){
-    body{display:flex;align-items:center;justify-content:center;gap:48px;padding:32px 16px;flex-wrap:wrap}
-    .phone{width:390px;height:820px;max-height:96vh;border-radius:44px;border:1px solid #1c2a52;
-      box-shadow:0 30px 80px rgba(0,0,0,.7)}
+    body{display:flex;align-items:center;justify-content:center;gap:44px;padding:32px 16px;flex-wrap:wrap}
+    .phone{width:400px;height:840px;max-height:96vh;border-radius:44px;border:1px solid #10142a;box-shadow:0 30px 80px rgba(0,0,0,.6)}
     .side{display:block}
   }
-  .side{display:none;max-width:340px;color:#8a93b8}
-  .side h2{color:var(--ink);font-size:20px;margin-bottom:10px}
-  .side li{font-size:13.5px;line-height:1.7;margin-left:18px}
-  .statusbar{height:30px;display:flex;justify-content:space-between;align-items:center;padding:0 22px;font-size:11.5px;color:var(--muted);flex-shrink:0}
-  .appheader{padding:6px 18px 12px;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;background:var(--headerbg);color:var(--headerink)}
-  .appheader h1{font-size:23px;font-weight:800;letter-spacing:-.5px;color:var(--headerink)}
-  .appheader h1 b{color:var(--accent)}
-  .appheader .sub{font-size:11.5px;color:var(--headermuted);margin-top:2px}
-  .appheader .sub b{color:var(--deal)}
-  .refreshwrap{text-align:right}
-  .refreshbtn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:var(--headerink);border-radius:12px;
-    padding:9px 12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;margin-left:6px}
-  .refreshbtn:active{transform:scale(.94)}
-  .refreshbtn.spin .ic{display:inline-block;animation:spin .8s linear infinite}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .lastupd{font-size:10px;color:var(--headermuted);margin-top:4px}
-  .chips{display:flex;gap:8px;overflow-x:auto;padding:4px 18px 10px;scrollbar-width:none;flex-shrink:0}
-  .chips::-webkit-scrollbar{display:none}
-  .chip{padding:8px 14px;border-radius:100px;border:1px solid var(--border);background:transparent;
-    color:var(--muted);font-size:13px;font-weight:600;white-space:nowrap;cursor:pointer;font-family:inherit}
-  .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
-  .feed{flex:1;overflow-y:auto;padding:2px 14px 10px;display:flex;flex-direction:column;gap:12px;min-height:0}
-  .feed::-webkit-scrollbar{display:none}
-  .card{background:var(--surface);border-radius:var(--radius);overflow:hidden;cursor:pointer;border:1px solid var(--border)}
-  .card:active{transform:scale(.985)}
-  .thumb{height:150px;position:relative;display:flex;align-items:flex-end;padding:12px;background:var(--thumbbg);overflow:hidden}
-  .thumb .timg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .thumb .tshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,25,0) 30%,rgba(7,11,25,.55) 100%)}
-  .thumb .dish{font-size:38px;line-height:1;position:relative}
-  .newbadge{background:var(--good);color:#04150d;font-size:10px;font-weight:800;padding:4px 8px;border-radius:7px;animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
-  .card{animation:fadein .3s ease-out both}
-  @keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-  .pricepill{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;font-weight:800;
-    font-size:14px;padding:6px 12px;border-radius:100px}
-  .was{font-size:11px;font-weight:600;text-decoration:line-through;color:rgba(255,255,255,.6);margin-left:6px}
-  .srcbadges{position:absolute;top:12px;left:12px;display:flex;gap:5px}
-  .src{font-size:10px;font-weight:800;padding:4px 8px;border-radius:7px}
+  .side{display:none;max-width:330px;color:#8a93b8}
+  .side h2{color:#fff;font-size:19px;margin-bottom:10px}
+  .side li{font-size:13px;line-height:1.7;margin-left:18px}
+
+  /* header */
+  .hdr{background:var(--headerbg);color:#fff;padding:14px 20px 18px;border-radius:0 0 26px 26px;flex-shrink:0}
+  .hdr-top{display:flex;justify-content:space-between;align-items:center}
+  .hdr h1{font-size:21px;font-weight:800;letter-spacing:-.4px}
+  .hdr h1 b{color:#ff6b81}
+  .hdr .loc{font-size:11.5px;color:#aebbe0;display:flex;align-items:center;gap:4px;margin-top:2px}
+  .hdrbtns{display:flex;gap:6px}
+  .hbtn{width:38px;height:38px;border-radius:12px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);
+    color:#fff;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .searchwrap{margin-top:14px;position:relative}
+  .search{width:100%;padding:13px 44px 13px 42px;border-radius:14px;border:none;background:rgba(255,255,255,.95);
+    color:#0e1330;font-size:14px;font-weight:600;font-family:inherit;outline:none;box-shadow:0 4px 16px rgba(0,0,0,.18)}
+  .search:focus{box-shadow:0 0 0 3px rgba(250,29,63,.35)}
+  .searchico{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:15px;opacity:.55}
+
+  /* categories */
+  .cats{display:flex;gap:10px;overflow-x:auto;padding:14px 16px 6px;scrollbar-width:none;flex-shrink:0}
+  .cats::-webkit-scrollbar{display:none}
+  .cat{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer;width:64px}
+  .cat .ci{width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:24px;
+    background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);transition:.15s}
+  .cat.on .ci-ico{background:var(--accent);box-shadow:0 4px 12px rgba(250,29,63,.35)}
+  .cat span{font-size:10.5px;font-weight:700;color:var(--muted)}
+  .cat.on span{color:var(--accent)}
+  .ci-ico{width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:24px;
+    background:var(--surface);border:1px solid var(--border)}
+
+  /* feed */
+  .scroll{flex:1;overflow-y:auto;padding:4px 16px 14px;min-height:0}
+  .scroll::-webkit-scrollbar{display:none}
+  .sect{display:flex;justify-content:space-between;align-items:center;margin:14px 2px 10px}
+  .sect h2{font-size:16.5px;font-weight:800;color:var(--ink);letter-spacing:-.3px}
+  .sect span{font-size:11.5px;font-weight:700;color:var(--accent);cursor:pointer}
+  /* featured horizontal cards */
+  .frow{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 4px;scrollbar-width:none}
+  .frow::-webkit-scrollbar{display:none}
+  .fcard{min-width:78%;scroll-snap-align:start;background:var(--surface);border-radius:var(--r);overflow:hidden;
+    box-shadow:var(--shadow);border:1px solid var(--border);cursor:pointer;flex-shrink:0}
+  .fcard .thumb{height:170px;position:relative;overflow:hidden;background:var(--thumbbg)}
+  .fcard .timg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .fcard .tshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,25,.05) 40%,rgba(7,11,25,.65) 100%)}
+  .fbtm{position:absolute;left:12px;right:12px;bottom:10px;color:#fff}
+  .fbt{font-size:14.5px;font-weight:800;text-shadow:0 1px 8px rgba(0,0,0,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .fbm{font-size:11px;opacity:.92;margin-top:2px;display:flex;gap:8px;align-items:center}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .card{background:var(--surface);border-radius:var(--r);overflow:hidden;cursor:pointer;box-shadow:var(--shadow);
+    border:1px solid var(--border);animation:fadein .3s ease-out both}
+  @keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .thumb{height:110px;position:relative;background:var(--thumbbg);overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .timg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .tshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,25,0) 30%,rgba(7,11,25,.5) 100%)}
+  .dish{font-size:34px;position:relative}
+  .pricepill{position:absolute;top:10px;right:10px;background:var(--accent);color:#fff;font-weight:800;font-size:12.5px;
+    padding:5px 10px;border-radius:100px;box-shadow:0 4px 12px rgba(250,29,63,.4)}
+  .srcbadges{position:absolute;top:10px;left:10px;display:flex;gap:4px;flex-wrap:wrap}
+  .src{font-size:9px;font-weight:800;padding:3px 7px;border-radius:6px}
   .src.yt{background:#ff0033;color:#fff}.src.ig{background:#d6249f;color:#fff}
   .src.tt{background:#00f2ea;color:#00141f}.src.gg{background:#4285f4;color:#fff}
   .src.cr{background:var(--good);color:#04150d}
-  .cardbody{padding:12px 14px 14px}
-  .cardbody h3{font-size:15px;font-weight:800;letter-spacing:-.2px}
-  .meta{display:flex;gap:10px;align-items:center;margin-top:6px;font-size:12px;color:var(--muted);flex-wrap:wrap}
-  .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
-  .expiry{margin-top:10px;display:flex;justify-content:space-between;align-items:center}
-  .timer{font-size:12px;font-weight:700;color:var(--deal)}
-  .timer.urgent{color:#ff5a3c}
-  .savebtn{background:var(--surface2);border:1px solid var(--border);color:var(--muted);border-radius:10px;
-    padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+  .newbadge{background:var(--good);color:#fff;font-size:9px;font-weight:800;padding:4px 7px;border-radius:7px;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  .cardbody{padding:10px 12px 12px}
+  .cardbody h3{font-size:13px;font-weight:800;line-height:1.35;color:var(--ink);height:38px;overflow:hidden;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+  .meta{display:flex;gap:6px;align-items:center;margin-top:6px;font-size:11px;color:var(--muted);flex-wrap:wrap}
+  .cfoot{display:flex;justify-content:space-between;align-items:center;margin-top:9px}
+  .timer{font-size:11px;font-weight:800;color:var(--deal)}
+  .timer.urgent{color:var(--accent)}
+  .savebtn{background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:5px 9px;font-size:11px;font-weight:800;cursor:pointer;font-family:inherit;color:var(--muted)}
   .savebtn.saved{background:var(--accent);border-color:var(--accent);color:#fff}
+  .skel{background:linear-gradient(90deg,var(--surface2) 25%,var(--bg) 50%,var(--surface2) 75%);
+    background-size:200% 100%;animation:shimmer 1.3s infinite;border-radius:var(--r);height:210px}
+  .empty{grid-column:1/-1;text-align:center;padding:48px 20px;color:var(--muted);font-size:14px;line-height:1.8}
+  .empty small{font-size:11.5px}
+  .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+  @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
   #mapview{flex:1;display:none;min-height:0}
-  #map{width:100%;height:100%;background:var(--bg)}
+  #map{width:100%;height:100%}
   .leaflet-container{background:var(--bg)}
-  .tabbar{flex-shrink:0;display:flex;border-top:1px solid var(--border);background:var(--surface);padding:6px 8px 18px}
-  .tab{flex:1;background:none;border:none;color:var(--muted);font-size:10.5px;font-weight:700;cursor:pointer;
-    padding:8px 4px;border-radius:12px;font-family:inherit;display:flex;flex-direction:column;gap:4px;align-items:center}
-  .tab .ico{font-size:20px}
+
+  .tabbar{flex-shrink:0;display:flex;border-top:1px solid var(--border);background:var(--surface);padding:8px 10px 18px}
+  .tab{flex:1;background:none;border:none;color:var(--muted);font-size:10px;font-weight:700;cursor:pointer;
+    padding:8px 4px;border-radius:14px;font-family:inherit;display:flex;flex-direction:column;gap:3px;align-items:center}
+  .tab .ico{font-size:19px}
   .tab.on{color:var(--accent)}
-  .sheet{position:absolute;inset:0;background:rgba(0,0,0,.6);z-index:40;display:none}
+
+  .sheet{position:absolute;inset:0;background:rgba(5,7,15,.6);z-index:40;display:none}
   .sheet.open{display:block}
   .sheetcard{position:absolute;left:0;right:0;bottom:0;background:var(--surface);border-radius:28px 28px 0 0;
-    max-height:88%;overflow-y:auto;padding:10px 22px 34px;animation:up .22s ease-out;border-top:1px solid var(--border)}
-  @keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
-  .grab{width:44px;height:4px;border-radius:2px;background:var(--border);margin:6px auto 16px}
-  .sheetcard h2{font-size:20px;font-weight:800;margin-bottom:4px}
-  .pricerow{display:flex;align-items:baseline;gap:10px;margin:12px 0}
-  .pricerow .now{font-size:29px;font-weight:800;color:var(--accent)}
+    max-height:90%;overflow-y:auto;padding:10px 22px 34px;animation:up .25s cubic-bezier(.2,.9,.3,1)}
+  @keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+  .grab{width:44px;height:4px;border-radius:2px;background:var(--border);margin:6px auto 14px}
+  .sheetcard h2{font-size:19px;font-weight:800;color:var(--ink);line-height:1.25;margin-bottom:2px}
+  .pricerow{display:flex;align-items:baseline;gap:10px;margin:10px 0 4px}
+  .pricerow .now{font-size:28px;font-weight:800;color:var(--accent)}
   .pricerow .old{font-size:15px;color:var(--muted);text-decoration:line-through}
-  .pricerow .off{font-size:13px;font-weight:800;color:var(--good)}
+  .pricerow .off{font-size:12px;font-weight:800;color:var(--good);background:color-mix(in srgb,var(--good) 14%,transparent);padding:3px 8px;border-radius:7px}
   .drow{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--border);font-size:13px}
-  .drow .k{color:var(--muted);width:82px;flex-shrink:0;font-weight:600}
-  .drow .v{font-weight:600}
-  .srclinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-  .srclinks a{font-size:12px;font-weight:700;padding:8px 12px;border-radius:10px;text-decoration:none;
-    border:1px solid var(--border);background:var(--surface2);color:var(--ink)}
-  .srclinks a.yt{border-color:#ff0033;color:#ff6680}.srclinks a.ig{border-color:#d6249f;color:#e879c1}
-  .srclinks a.tt{border-color:#00f2ea;color:#00f2ea}.srclinks a.gg{border-color:#4285f4;color:#7aa5ff}
-  .cta{width:100%;padding:14px;border-radius:14px;background:var(--accent);color:#fff;border:none;
-    font-size:15px;font-weight:800;cursor:pointer;margin-top:14px;font-family:inherit}
-  .cta.ghost{background:var(--surface2);color:var(--ink);border:1px solid var(--border)}
-  .srcnote{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.5}
-  .toast{position:absolute;left:50%;bottom:110px;transform:translateX(-50%);background:var(--good);color:#04150d;
-    padding:10px 18px;border-radius:100px;font-size:13px;font-weight:800;z-index:50;display:none;white-space:nowrap}
+  .drow .k{color:var(--muted);width:82px;flex-shrink:0;font-weight:700}
+  .drow .v{font-weight:600;color:var(--ink)}
+  .srclinks{display:flex;gap:8px;flex-wrap:wrap}
+  .srclinks a{font-size:12px;font-weight:800;padding:8px 12px;border-radius:10px;text-decoration:none;border:1.5px solid var(--border);color:var(--ink)}
+  .cta{width:100%;padding:14px;border-radius:14px;background:var(--accent);color:#fff;border:none;font-size:14.5px;
+    font-weight:800;cursor:pointer;margin-top:14px;font-family:inherit;box-shadow:0 6px 16px rgba(250,29,63,.3)}
+  .cta.ghost{background:var(--surface2);color:var(--ink);border:1.5px solid var(--border);box-shadow:none}
+  .srcnote{font-size:10.5px;color:var(--muted);margin-top:12px;line-height:1.5}
+  .toast{position:absolute;left:50%;bottom:110px;transform:translateX(-50%);background:var(--ink);color:var(--bg);
+    padding:10px 18px;border-radius:100px;font-size:12.5px;font-weight:800;z-index:50;display:none;white-space:nowrap}
   .toast.show{display:block;animation:up .2s ease-out}
-  .toast.err{background:#ff5a3c;color:#fff}
-  .pill-upd{background:var(--surface2);border:1px solid var(--border);border-radius:100px;padding:4px 10px;font-size:10.5px;color:var(--muted);display:inline-block;margin-bottom:8px}
+  .toast.err{background:var(--accent);color:#fff}
 </style>
 </head>
 <body>
 
 <div class="side">
-  <h2>Karachi Pulse v2.0</h2>
+  <h2>Karachi Pulse v3.0 — pro redesign</h2>
   <ul>
-    <li>🔄 <b>Refresh button</b> — live deals.json GitHub se fetch hota hai (daily cron updates)</li>
-    <li>🗺️ <b>Map tab</b> — OpenStreetMap pe deal pins (internet chahiye)</li>
-    <li>🔗 Har deal ke <b>source links</b> — YouTube / Insta / TikTok / Google Maps</li>
-    <li>Area/cuisine filters, save, detail sheet</li>
+    <li>🔍 Search bar + category icons (Foodpanda-style)</li>
+    <li>⭐ Featured carousel + 2-column deal grid</li>
+    <li>📸 Real YouTube thumbnails on cards</li>
+    <li>🔄 Auto-update: jsDelivr CDN → GitHub fallback, 15-min refresh</li>
+    <li>Call / Share / Directions in every deal</li>
+    <li>Light (reference) + dark theme</li>
   </ul>
 </div>
 
 <div class="phone">
-  <div class="statusbar"><span>09:30</span><span>▮▮▮ ᯤ 92%</span></div>
-
-  <div class="appheader">
-    <div>
-      <h1>Karachi <b>Pulse</b> 🌶️</h1>
-      <div class="sub"><b id="count">…</b> live deals · next 7 days · <span id="areaLabel">All areas</span></div>
+  <div class="hdr">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start">
+      <div>
+        <h1>Karachi <b>Pulse</b> 🌶️</h1>
+        <div class="loc">📍 Karachi · <span id="count">…</span> live deals · <span id="lastupd" style="opacity:.8"></span></div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <button class="hbtn" id="themeBtn">🌙</button>
+        <button class="hbtn" id="refreshBtn"><span class="ic">⟳</span></button>
+      </div>
     </div>
-    <div class="refreshwrap">
-      <button class="refreshbtn" id="themeBtn" title="Theme">🌙</button><button class="refreshbtn" id="refreshBtn"><span class="ic">⟳</span> Refresh</button>
-      <div class="lastupd" id="lastupd"></div>
+    <div style="position:relative;margin-top:14px">
+      <span class="searchico">🔍</span>
+      <input id="search" class="search" placeholder="Biryani, pizza, buffet… dhoondo" autocomplete="off">
     </div>
   </div>
 
-  <div class="chips" id="chips"></div>
-  <div class="feed" id="feed"></div>
+  <div class="cats" id="cats"></div>
+  <div class="scroll" id="feedwrap">
+    <div id="featwrap" style="display:none">
+      <div class="sect"><h2>⭐ Featured deals</h2><span id="seeall">Sab dekho →</span></div>
+      <div class="frow" id="feat"></div>
+    </div>
+    <div class="sect"><h2 id="listtitle">🔥 Live deals</h2><span id="sortlbl">Expiry ke hisab se</span></div>
+    <div id="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px"></div>
+    <div id="skeletons" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="skel"></div><div class="skel" style="animation-delay:.1s"></div><div class="skel" style="animation-delay:.2s"></div><div class="skel" style="animation-delay:.3s"></div>
+    </div>
+  </div>
 
-  <div id="mapview"><div id="map"></div></div>
+  <div id="mapview" style="flex:1;display:none;min-height:0"><div id="map" style="width:100%;height:100%"></div></div>
 
   <div class="tabbar" id="tabbar">
     <button class="tab on" data-t="home"><span class="ico">🔥</span>Deals</button>
@@ -168,27 +211,19 @@ const FEED_URLS=[
   "https://cdn.jsdelivr.net/gh/ibarhimansari2024-gif/deals-karachi@main/data/deals.json",
   "https://raw.githubusercontent.com/ibarhimansari2024-gif/deals-karachi/main/data/deals.json"
 ];
-const FALLBACK = { app:"Karachi Pulse", updated:"built-in v2.0", version:2, deals:[
- {"id":1,"t":"Hashim Food — Shinwari Karahi + Zinger Platter","emoji":"🍗","area":"Federal B Area","lat":24.9432,"lng":67.0826,"price":2299,"was":5500,"cuisine":"BBQ","src":["yt","tt","ig"],"hrs":96,"addr":"Federal B Area Block 19, near Masjid-e-Aqsa","phone":"0328-1330099","time":"7 PM – 4 AM","note":"Built-in demo data.","links":{"yt":"https://www.youtube.com/watch?v=rlhWabUWIcE","tt":"https://www.tiktok.com/search?q=hashim%20food%20karachi","ig":"https://www.instagram.com/explore/tags/karachifooddeals/","gg":"https://maps.google.com/?q=Hashim+Food+Federal+B+Area+Karachi"}},
- {"id":2,"t":"Karachi Red Rock — All-Day Buffet 999/-","emoji":"🍛","area":"Liberty","lat":24.8710,"lng":67.0440,"price":999,"was":2500,"cuisine":"Buffet","src":["ig","gg"],"hrs":20,"addr":"Karachi Red Rock, Liberty Market","phone":"0314-4349849","time":"2 PM – 8 PM","note":"Thu & Fri slots. Built-in demo data.","links":{"ig":"https://www.instagram.com/explore/tags/karachibuffet/","gg":"https://maps.google.com/?q=Karachi+Red+Rock+Liberty"}},
- {"id":3,"t":"Desi Foods — 1 KG Dum Pulao + 3 Free Delights","emoji":"🍚","area":"Gulshan","lat":24.9200,"lng":67.0970,"price":850,"was":1400,"cuisine":"Desi","src":["ig","yt"],"hrs":120,"addr":"Abdullah Centre Block 16, Rashid Minhas Rd","phone":"0300-2926900","time":"12 PM – 11 PM","note":"Built-in demo data.","links":{"gg":"https://maps.app.goo.gl/EWmUWnkjK5Q52xt67"}},
- {"id":4,"t":"Eats N Bites — Double Fish Fillet Burger 900/-","emoji":"🐟","area":"Samanabad","lat":24.8660,"lng":67.0660,"price":900,"was":1400,"cuisine":"Fast Food","src":["ig","gg"],"hrs":70,"addr":"Samanabad & Model Town Link Rd","phone":"—","time":"All day","note":"Built-in demo data.","links":{"gg":"https://maps.google.com/?q=Eats+n+Bites+Samanabad+Karachi"}},
- {"id":5,"t":"Fresh Grounds — Froyo Tub Weekend Deal","emoji":"🍨","area":"DHA Phase 6","lat":24.8220,"lng":67.0350,"price":750,"was":1100,"cuisine":"Dessert","src":["ig"],"hrs":14,"addr":"DHA Phase 6","phone":"—","time":"Weekend only","note":"Built-in demo data.","links":{"gg":"https://maps.google.com/?q=Fresh+Grounds+DHA+Phase+6+Karachi"}},
- {"id":6,"t":"Hot N Spicy — Family Biryani Handi Deal","emoji":"🍲","area":"Bahadurabad","lat":24.8690,"lng":67.0600,"price":1800,"was":2600,"cuisine":"Desi","src":["gg","cr"],"hrs":150,"addr":"Bahadurabad Chowrangi","phone":"—","time":"All day","note":"Verified (demo). Built-in data.","links":{"gg":"https://maps.google.com/?q=Hot+n+Spicy+Bahadurabad+Karachi"}},
- {"id":7,"t":"Pizza Next — Large 2-Topping 1+1 Tuesday","emoji":"🍕","area":"Nazimabad","lat":24.9180,"lng":67.0330,"price":1299,"was":2200,"cuisine":"Fast Food","src":["tt","gg"],"hrs":8,"addr":"Nazimabad No. 2","phone":"—","time":"Tuesday only","note":"8 ghante baad expire. Built-in demo.","links":{"tt":"https://www.tiktok.com/search?q=karachi%20pizza%20deal","gg":"https://maps.google.com/?q=Pizza+Next+Nazimabad+Karachi"}},
- {"id":8,"t":"Bundu Khan — Weekend BBQ Family Feast 30% Off","emoji":"🔥","area":"Clifton","lat":24.8130,"lng":67.0300,"price":3400,"was":4900,"cuisine":"BBQ","src":["yt","gg"],"hrs":60,"addr":"Clifton Block 5","phone":"—","time":"Fri–Sun","note":"Built-in demo data.","links":{"yt":"https://www.youtube.com/results?search_query=bundu+khan+karachi+deal","gg":"https://maps.google.com/?q=Bundu+Khan+Clifton+Karachi"}}
+const FALLBACK={app:"Karachi Pulse",updated:"first load",version:3,deals:[
+ {"id":1,"t":"Hashim Food — Shinwari Karahi + Zinger Platter","emoji":"🍗","area":"Federal B Area","lat":24.9548,"lng":67.0773,"price":2299,"was":5500,"cuisine":"BBQ","src":["yt","tt"],"hrs":96,"addr":"Federal B Area Block 19, near Masjid-e-Aqsa","phone":"0328-1330099","time":"7 PM – 4 AM","note":"Internet se update hone par real deals aayengi.","links":{"yt":"https://www.youtube.com/watch?v=rlhWabUWIcE","gg":"https://maps.google.com/?q=Hashim+Food+Federal+B+Area+Karachi"}}
 ]};
 
-/* ---- SECURITY: strict validation of every fetched deal ---- */
-const LINK_RE = /^https:\/\/(www\.)?(youtube\.com|youtu\.be|instagram\.com|tiktok\.com|maps\.app\.goo\.gl|maps\.google\.com|google\.com)\//;
-function cleanStr(v,max){ return (typeof v==="string") ? v.slice(0,max) : ""; }
+const LINK_RE=/^https:\/\/(www\.)?(youtube\.com|youtu\.be|instagram\.com|tiktok\.com|maps\.app\.goo\.gl|maps\.google\.com|google\.com|kfoods\.com|foodpanda\.pk)\//;
+function cleanStr(v,max){return (typeof v==="string")?v.slice(0,max):""}
 function validateDeals(raw){
-  if(!raw || !Array.isArray(raw.deals)) return null;
+  if(!raw||!Array.isArray(raw.deals)) return null;
   const out=[];
-  for(const d of raw.deals.slice(0,50)){
+  for(const d of raw.deals.slice(0,60)){
     if(typeof d.id!=="number"||typeof d.price!=="number"||typeof d.was!=="number") continue;
     if(d.price<0||d.price>1000000||!Number.isFinite(d.lat)||!Number.isFinite(d.lng)) continue;
-    if(d.lat<24.6||d.lat>25.6||d.lng<66.6||d.lng>68.0) continue; /* Karachi bounding box */
+    if(d.lat<24.6||d.lat>25.6||d.lng<66.6||d.lng>68.0) continue;
     const links={};
     if(d.links&&typeof d.links==="object") for(const k of Object.keys(d.links).slice(0,4))
       if(typeof d.links[k]==="string"&&LINK_RE.test(d.links[k])&&d.links[k].length<300) links[k]=d.links[k];
@@ -202,24 +237,15 @@ function validateDeals(raw){
   return out.length?{updated:cleanStr(raw.updated,40),deals:out}:null;
 }
 
-/* ---- state ---- */
-let DATA=FALLBACK, state={area:"All areas",cuis:"All",saved:new Set(),tab:"home"}, map=null, markers=[];
-try{
-  const c=localStorage.getItem("kp_cache");
-  if(c){const v=validateDeals(JSON.parse(c)); if(v) DATA=v;}
-}catch(e){}
-const AREAS=["All areas","DHA Phase 6","Clifton","Gulshan","Nazimabad","Bahadurabad","Saddar","Federal B Area","Liberty","Samanabad","Islampura"];
-const CUIS=["All","BBQ","Desi","Fast Food","Buffet","Dessert"];
+let DATA=null, state={area:"All areas",cat:"All",q:"",saved:new Set(),tab:"home"}, map=null, markers=[];
+try{ const c=localStorage.getItem("kp_cache"); if(c){const v=validateDeals(JSON.parse(c)); if(v) DATA=v;} }catch(e){}
+const CATS=[["All","🍽️"],["BBQ","🍢"],["Desi","🍛"],["Fast Food","🍔"],["Buffet","🍽️"],["Pizza","🍕"],["Dessert","🍨"],["Grocery","🛒"]];
 
-function toast(msg,err){const t=document.getElementById("toast");t.textContent=msg;t.className="toast show"+(err?" err":"");setTimeout(()=>t.className="toast"+(err?" err":""),2500);}
-function updLabel(){document.getElementById("lastupd").textContent="Updated: "+DATA.updated;}
-
-/* ---- daily/fetch system ---- */
 async function fetchDeals(manual){
-  const btn=document.getElementById("refreshBtn");
-  btn.classList.add("spin");
-  let ok=false, lastErr=null;
-  for(const u of FEED_URLS){
+  const btn=document.getElementById("refreshBtn"); btn.classList.add("spin");
+  let ok=false;
+  for(const u of ["https://cdn.jsdelivr.net/gh/ibarhimansari2024-gif/deals-karachi@main/data/deals.json",
+                  "https://raw.githubusercontent.com/ibarhimansari2024-gif/deals-karachi/main/data/deals.json"]){
     try{
       const r=await fetch(u+"?t="+Date.now(),{cache:"no-store"});
       if(!r.ok) throw new Error("HTTP "+r.status);
@@ -227,156 +253,192 @@ async function fetchDeals(manual){
       if(!v) throw new Error("bad data");
       DATA=v; ok=true;
       try{localStorage.setItem("kp_cache",JSON.stringify(DATA));localStorage.setItem("kp_last",String(Date.now()));}catch(e){}
-      updLabel();renderChips();render();
+      updLabel();renderAll();
       break;
-    }catch(e){ lastErr=e; }
+    }catch(e){}
   }
   btn.classList.remove("spin");
+  document.getElementById("skeletons").style.display="none";
   if(ok) toast(manual?"✓ Deals updated":"✓ Auto-update ✓");
-  else if(manual) toast("⚠ Update fail — cached data dikh raha hai",true);
+  else if(manual) toast("⚠ Offline — cached data",true);
 }
 document.getElementById("refreshBtn").addEventListener("click",()=>fetchDeals(true));
-/* auto-check once per 6h on launch + every 15 min while app open + on resume */
 try{ if(Date.now()-Number(localStorage.getItem("kp_last")||0) > 6*3600e3) fetchDeals(false);}catch(e){}
 setInterval(()=>{ if(navigator.onLine) fetchDeals(false); }, 15*60*1000);
-document.addEventListener("visibilitychange",()=>{
-  if(!document.hidden && navigator.onLine && Date.now()-Number(localStorage.getItem("kp_last")||0) > 30*60e3) fetchDeals(false);
-});
+document.addEventListener("visibilitychange",()=>{ if(!document.hidden&&navigator.onLine&&Date.now()-Number(localStorage.getItem("kp_last")||0)>30*60e3) fetchDeals(false); });
 
-/* ---- UI ---- */
-const chipsEl=document.getElementById("chips");
-function renderChips(){
-  chipsEl.innerHTML="";
-  [...AREAS.map(a=>({g:"area",v:a,l:a==="All areas"?"📍 "+a:a})),
-   ...CUIS.map(c=>({g:"cuis",v:c,l:c==="All"?"🍽️ All food":c}))].forEach(o=>{
-    const b=document.createElement("button");
-    b.className="chip"+(state[o.g]===o.v?" on":"");b.textContent=o.l;
-    b.onclick=()=>{state[o.g]=o.v;renderChips();render();};
-    chipsEl.appendChild(b);
-  });
+function toast(msg,err){const t=document.getElementById("toast");t.textContent=msg;t.className="toast show"+(err?" err":"");setTimeout(()=>t.className="toast"+(err?" err":""),2500);}
+function updLabel(){const el=document.getElementById("lastupd"); if(el) el.textContent="· upd "+(DATA.updated||"").slice(5,16);}
+function filtered(){
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  return DATA.deals.filter(d=>
+    (state.area==="All areas"||d.area===state.area)&&
+    (state.cat==="All"||d.cuisine===state.cat)&&
+    (!q||d.t.toLowerCase().includes(q)||d.area.toLowerCase().includes(q)||d.cuisine.toLowerCase().includes(q))
+  ).sort((a,b)=>a.hrs-b.hrs);
 }
-function fmtHrs(h){if(h<24)return h+"h left";const d=Math.floor(h/24);return d+" day"+(d>1?"s":"")+" left";}
-function render(){
-  const list=DATA.deals.filter(d=>(state.area==="All areas"||d.area===state.area)&&(state.cuis==="All"||d.cuisine===state.cuis))
-                       .sort((a,b)=>a.hrs-b.hrs);
-  document.getElementById("count").textContent=list.length;
-  document.getElementById("areaLabel").textContent=state.area;
-  const feed=document.getElementById("feed");
-  if(state.tab!=="home"&&state.tab!=="saved"){feed.innerHTML="";return;}
-  if(!list.length){feed.innerHTML='<div style="padding:48px 24px;text-align:center;color:var(--muted);font-size:14px;line-height:1.7">Yahan abhi koi live deal nahi 😕<br><span style="font-size:12px">🔄 Refresh dabao ya 🔔 alerts on karo</span></div>';return;}
-  feed.innerHTML="";
-  list.forEach(d=>{
-    const c=document.createElement("div");c.className="card";
-    const off=Math.round((1-d.price/d.was)*100);
+/* merged into main renderAll below */
+
+/* featured + grid */
+function renderFeatured(){
+  const list=filtered().slice(0,4);
+  const el=document.getElementById("feat");
+  el.innerHTML=list.map((d,i)=>{
     const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
-    const isNew=d.hrs>160;
-    c.innerHTML=`
-      <div class="thumb">${yid?`<img class="timg" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" onerror="this.remove()" alt=""><div class="tshade"></div>`:""}<span class="dish">${yid?"":d.emoji}</span>
-        <div class="srcbadges">${isNew?'<span class="newbadge">NEW</span>':""}${d.src.map(s=>`<span class="src ${s}">${({yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓ Verified"})[s]}</span>`).join("")}</div>
-        <div class="pricepill">${d.price>0?`Rs ${d.price.toLocaleString()}`:"🎬 Video mein price"}${d.was>d.price?`<span class="was">Rs ${d.was.toLocaleString()}</span>`:""}</div>
-      </div>
-      <div class="cardbody">
-        <h3>${d.t}</h3>
-        <div class="meta"><span>${d.area}</span><span class="dot"></span><span>${d.cuisine}</span>${d.was>d.price?`<span class="dot"></span><span>${Math.round((1-d.price/d.was)*100)}% off</span>`:""}</div>
-        <div class="expiry"><span class="timer ${d.hrs<24?"urgent":""}">⏳ ${fmtHrs(d.hrs)}</span>
-          <button class="savebtn ${state.saved.has(d.id)?"saved":""}" data-id="${d.id}">${state.saved.has(d.id)?"❤️ Saved":"🤍 Save"}</button>
-        </div>
-      </div>`;
-    c.querySelector(".savebtn").addEventListener("click",e=>{e.stopPropagation();
-      state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);render();});
+    return `<div class="fcard" data-id="${d.id}" style="animation-delay:${i*60}ms">
+      <div class="thumb">${yid?`<img class="timg" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" onerror="this.remove()"><div class="tshade"></div>`:""}
+        <div class="srcbadges" style="position:absolute;top:10px;left:10px;display:flex;gap:4px">${d.src.map(s=>`<span class="src ${s}">${({yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓"})[s]}</span>`).join("")}</div>
+        <div class="fbtm"><div class="fbt">${d.t}</div><div class="fbm"><b style="color:#ffb020">Rs ${d.price>0?d.price.toLocaleString():"video mein"}</b> · ${d.area} · ⏳ ${fmtHrs(d.hrs)}</div></div>
+      </div></div>`;
+  }).join("");
+  el.querySelectorAll(".fcard").forEach(c=>c.addEventListener("click",()=>{const d=DATA.deals.find(x=>x.id===Number(c.dataset.id)); if(d) openDetail(d);}));
+}
+function renderGrid(){
+  const list=filtered().filter(d=>!filtered().slice(0,4).includes(d)||filtered().length<=4);
+  const g=document.getElementById("grid"); g.innerHTML="";
+  if(!list.length){g.innerHTML='<div class="empty">😕 Koi deal nahi mili<br><small>🔄 Refresh ya doosra area try karo</small></div>';return;}
+  list.forEach((d,i)=>{
+    const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
+    const c=document.createElement("div");c.className="card";c.style.animationDelay=(i%8)*50+"ms";
+    c.innerHTML=`<div class="thumb">${yid?`<img class="timg" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" onerror="this.remove()" alt=""><div class="tshade"></div>`:`<span style="font-size:44px">${d.emoji}</span>`}
+      <div class="srcbadges">${d.src.map(s=>`<span class="src ${s}">${({yt:"YT",ig:"IG",tt:"TT",gg:"GO",cr:"✓"})[s]}</span>`).join("")}</div>
+      <div class="pricepill">${d.price>0?"Rs "+d.price.toLocaleString():"🎬 Video"}</div></div>
+      <div class="cardbody"><h3>${d.t}</h3>
+      <div class="meta"><span>📍 ${d.area}</span><span class="dot"></span><span class="timer ${d.hrs<24?"urgent":""}">⏳ ${fmtHrs(d.hrs)}</span></div></div>`;
     c.addEventListener("click",()=>openDetail(d));
-    feed.appendChild(c);
+    g.appendChild(c);
   });
 }
+function renderAll(){
+  document.getElementById("count").textContent=filtered().length;
+  document.getElementById("skeletons").style.display="none";
+  renderChips();renderFeatured();renderGrid();
+  if(state.tab==="saved") renderSaved();
+}
+function fmtHrs(h){if(h<24)return h+"h";const d=Math.floor(h/24);return d+"d";}
 function openDetail(d){
-  const off=Math.round((1-d.price/d.was)*100);
   const sh=document.getElementById("sheet"),sc=document.getElementById("sheetcard");
-  const srcNames={yt:"▶ YouTube",ig:"📷 Insta",tt:"🎵 TikTok",gg:"🗺️ Google Maps",cr:"✓ Verified"};
+  const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
+  const srcNames={yt:"▶ YouTube",ig:"📷 Insta",tt:"🎵 TikTok",gg:"🗺️ Maps",cr:"✓ Verified"};
   sc.innerHTML=`
     <div class="grab"></div>
-    <h2>${d.t}</h2>
+    ${yid?`<div style="height:170px;border-radius:16px;overflow:hidden;margin-bottom:12px"><img src="https://i.ytimg.com/vi/${yid}/maxresdefault.jpg" onerror="this.src='https://i.ytimg.com/vi/${yid}/hqdefault.jpg'" style="width:100%;height:100%;object-fit:cover" alt=""></div>`:`<div style="height:90px;display:flex;align-items:center;justify-content:center;font-size:56px;background:var(--surface2);border-radius:16px">${d.emoji}</div>`}
+    <h2 style="font-size:19px;font-weight:800;color:var(--ink)">${d.t}</h2>
     <div class="meta"><span>${d.emoji} ${d.cuisine}</span><span class="dot"></span><span>${d.area}</span><span class="dot"></span><span>⏳ ${fmtHrs(d.hrs)}</span></div>
-    <div class="pricerow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${Math.round((1-d.price/d.was)*100)}% OFF</span>`:""}`:`<span class="now" style="font-size:17px">🎬 Price video mein confirm karo</span>`}</div>
+    <div class="pricerow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${Math.round((1-d.price/d.was)*100)}% OFF</span>`:""}`:`<span class="now" style="font-size:16px">🎬 Price video mein</span>`}</div>
     <div class="drow"><span class="k">📍 Address</span><span class="v">${d.addr}</span></div>
     <div class="drow"><span class="k">🕒 Timings</span><span class="v">${d.time}</span></div>
     <div class="drow"><span class="k">📞 Contact</span><span class="v">${d.phone}</span></div>
-    <div class="drow"><span class="k">🔗 Sources</span><span class="srclinks">${Object.keys(d.links).map(k=>`<a href="${d.links[k]}" target="_blank" rel="noopener" class="${k}">${srcNames[k]||k}</a>`).join("")||"<span style='color:var(--muted);font-size:12px'>—</span>"}</span></div>
+    <div class="drow"><span class="k">🔗 Sources</span><span class="srclinks">${Object.keys(d.links).map(k=>`<a href="${d.links[k]}" target="_blank" rel="noopener" class="${k}">${({yt:"▶ YouTube",ig:"📷 Insta",tt:"🎵 TikTok",gg:"🗺️ Maps"})[k]||k}</a>`).join("")}</span></div>
     <div class="drow"><span class="k">📝 Notes</span><span class="v" style="font-weight:500">${d.note}</span></div>
-    <button class="cta" id="mapcta">🗺️ Directions</button>
+    <button class="cta" id="mapcta">🧭 Directions</button>
     <div style="display:flex;gap:8px">
-      ${d.phone!=="—"?`<button class="cta ghost" style="flex:1;margin-top:12px" id="callcta">📞 Call</button>`:""}
-      <button class="cta ghost" style="flex:1;margin-top:12px" id="sharecta">🔗 Share</button>
-      <button class="cta ghost" style="flex:1;margin-top:12px" id="savecta">${state.saved.has(d.id)?"❤️ Saved":"🤍 Save"}</button>
+      ${d.phone!=="—"?`<button class="cta ghost" style="margin-top:10px" id="callcta">📞 Call</button>`:""}
+      <button class="cta ghost" style="margin-top:10px" id="sharecta">🔗 Share</button>
+      <button class="cta ghost" style="margin-top:10px" id="savecta">${state.saved.has(d.id)?"❤️":"🤍"}</button>
     </div>
-    <p class="srcnote">Real data — sources: YouTube/Instagram/TikTok/Google via automated daily pipeline. Final price/timing restaurant se confirm karein.</p>`;
-  document.getElementById("mapcta").onclick=()=>{sh.classList.remove("open");switchTab("map");setTimeout(()=>focusDeal(d),400);};
+    <p class="srcnote">Real data — automated daily pipeline. Price/timing restaurant se confirm karein.</p>`;
+  document.getElementById("mapcta").onclick=()=>{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;};
   const callB=document.getElementById("callcta"); if(callB) callB.onclick=()=>{window.location.href="tel:"+d.phone.replace(/[^0-9+]/g,"");};
   document.getElementById("sharecta").onclick=()=>{
     const txt=d.t+" — Rs "+(d.price||"?")+" | "+d.addr+"\n"+(d.links.yt||d.links.gg||"");
     if(navigator.share) navigator.share({title:"Karachi Pulse",text:txt}).catch(()=>{});
-    else { try{ navigator.clipboard.writeText(txt); toast("✓ Copy ho gaya"); }catch(e){} }
+    else { try{navigator.clipboard.writeText(txt);toast("✓ Copy ho gaya");}catch(e){} }
   };
-  document.getElementById("savecta").onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);render();openDetail(d);};
-  sh.classList.add("open");
-  sh.onclick=e=>{if(e.target===sh)sh.classList.remove("open");};
+  document.getElementById("savecta").onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);renderAll();openDetail(d);};
+  sh.classList.add("open"); sh.onclick=e=>{if(e.target===sh)sh.classList.remove("open");};
 }
 
-/* ---- MAP ---- */
+/* chips — area/cuisine categories */
+const AREA_ICON={"All areas":"📍","DHA Phase 6":"🏙️","Clifton":"🌊","Gulshan":"🏢","Nazimabad":"🏠","Bahadurabad":"🍢","Saddar":"🛍️","Federal B Area":"🍗","North Nazimabad":"🏘️","Malir":"🌾","Liberty":"🛎️","Karachi":"📍"};
+function renderChips(){
+  const areas=[...new Set(DATA.deals.map(d=>d.area))].slice(0,7);
+  const el=document.getElementById("cats");
+  el.innerHTML=[["All","🍽️"],...areas.map(a=>[a,AREA_ICON[a]||"📍"])].map(([a,ico])=>{
+    const active=(a==="All"&&state.cat==="All"&&state.area==="All areas")||state.cat===a||state.area===a;
+    return `<div class="cat ${active?"on":""}" data-a="${a}"><div class="ci-ico">${ico}</div><span>${a==="All"?"Sab":a.replace(" North"," N.")}</span></div>`;
+  }).join("");
+  el.querySelectorAll(".cat").forEach(c=>c.addEventListener("click",()=>{
+    const a=c.dataset.a;
+    if(a==="All"){state.area="All areas";state.cat="All";}
+    else if(DATA.deals.some(d=>d.cuisine===a)) state.cat=state.cat===a?"All":a;
+    else state.area=state.area===a?"All areas":a;
+    renderAll();
+  }));
+}
+
+/* map */
 function initMap(){
   if(map) return;
-  if(typeof L==="undefined"){document.getElementById("map").innerHTML='<div style="padding:48px 24px;text-align:center;color:var(--muted);font-size:14px">🗺️ Map load nahi hua — internet check karo</div>';return;}
+  if(typeof L==="undefined"){document.getElementById("map").innerHTML='<div style="padding:48px 24px;text-align:center;color:var(--muted)">🗺️ Map ke liye internet chahiye</div>';return;}
   map=L.map("map").setView([24.875,67.035],12);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"© OpenStreetMap"}).addTo(map);
-  markers.forEach(m=>m.addTo(map));
-}
-function focusDeal(d){
-  if(!map) initMap();
-  if(!map) return;
-  map.setView([d.lat,d.lng],15);
-  markers.forEach(m=>{if(m._dealId===d.id) m.openPopup();});
+  drawMarkers();
 }
 function drawMarkers(){
   if(!map) return;
   markers.forEach(m=>map.removeLayer(m));markers=[];
   DATA.deals.forEach(d=>{
-    const urgent=d.hrs<24;
-    const m=L.circleMarker([d.lat,d.lng],{radius:10,color:urgent?"#ff5a3c":"#2f6bff",fillColor:urgent?"#ffb020":"#2f6bff",fillOpacity:.9,weight:2}).addTo(map);
-    m._dealId=d.id;
-    m.bindPopup(`<b>${d.t}</b><br>Rs ${d.price.toLocaleString()} · ${d.area}<br><small>tap for detail</small>`);
+    const m=L.circleMarker([d.lat,d.lng],{radius:9,color:d.hrs<24?"#fa1d3f":"#013a8f",fillColor:d.hrs<24?"#ffb020":"#013a8f",fillOpacity:.9,weight:2}).addTo(map);
+    m.bindPopup(`<b>${d.t.slice(0,50)}</b><br>Rs ${d.price>0?d.price.toLocaleString():"video mein"} · ${d.area}`);
     m.on("click",()=>openDetail(d));
     markers.push(m);
+  });
+}
+function focusDeal(d){
+  if(!map) initMap();
+  if(!map) return;
+  map.setView([d.lat,d.lng],15);
+}
+
+/* tabs */
+function renderSaved(){
+  const list=DATA.deals.filter(d=>state.saved.has(d.id));
+  const g=document.getElementById("grid");
+  document.getElementById("featwrap").style.display="none";
+  g.innerHTML="";
+  if(!list.length){g.innerHTML='<div class="empty">🤍 Koi saved deal nahi<br><small>Deals mein tap kar ke ❤️ karo</small></div>';return;}
+  list.forEach(d=>{
+    const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
+    const c=document.createElement("div");c.className="card";
+    c.innerHTML=`<div class="thumb">${yid?`<img class="timg" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" onerror="this.remove()">`:`<span style="font-size:44px">${d.emoji}</span>`}</div>
+      <div class="cardbody"><h3>${d.t}</h3><div class="meta"><span>📍 ${d.area}</span><span class="dot"></span><b style="color:var(--accent)">Rs ${d.price>0?d.price.toLocaleString():"?"}</b></div></div>`;
+    c.addEventListener("click",()=>openDetail(d));
+    g.appendChild(c);
   });
 }
 function switchTab(t){
   state.tab=t;
   document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x.dataset.t===t));
-  const feed=document.getElementById("feed"),mv=document.getElementById("mapview");
+  const feed=document.getElementById("feedwrap"),mv=document.getElementById("mapview");
   const onMap=t==="map";
-  feed.style.display=onMap?"none":"flex";mv.style.display=onMap?"block":"none";
-  if(onMap){initMap();drawMarkers();setTimeout(()=>map&&map.invalidateSize(),100);return;}
-  if(t==="saved"){
-    const list=DATA.deals.filter(d=>state.saved.has(d.id));
-    if(!list.length){feed.innerHTML='<div style="padding:48px 24px;text-align:center;color:var(--muted);font-size:14px;line-height:1.7">Koi deal saved nahi 🤍</div>';return;}
-    state._savedOnly=true;
-  } else state._savedOnly=false;
-  if(t==="add") feed.innerHTML='<div style="padding:48px 20px;text-align:center;color:var(--muted);font-size:14px;line-height:1.8">➕ <b style="color:var(--ink)">Deal submit karo</b><br>Photo + restaurant + price + link<br>Moderation ke baad ✓ Verified badge</div>';
-  else if(t==="me") feed.innerHTML='<div style="padding:48px 20px;text-align:center;color:var(--muted);font-size:14px;line-height:1.8">👤 <b style="color:var(--ink)">Profile</b><br>Daily auto-update 6-hourly check<br>Alerts · Urdu toggle (coming)</div>';
-  else render();
+  feed.style.display=onMap?"none":"block";mv.style.display=onMap?"block":"none";
+  if(onMap){initMap();setTimeout(()=>map&&map.invalidateSize(),100);return;}
+  if(t==="saved"){renderSaved();return;}
+  if(t==="add"){document.getElementById("featwrap").style.display="none";document.getElementById("grid").innerHTML='<div class="empty">➕ Deal submit karo<br><small>Photo + restaurant + price + link<br>Moderation ke baad ✓ Verified badge</small></div>';return;}
+  if(t==="me"){document.getElementById("featwrap").style.display="none";document.getElementById("grid").innerHTML=`<div class="empty">👤 <b style="color:var(--ink)">Karachi Pulse v3.0</b><br>Daily auto-update: har 15 min check<br>Updated: ${DATA.updated}<br><small>Light/Dark 🌙 · Urdu coming soon</small></div>`;return;}
+  document.getElementById("featwrap").style.display="block";
+  renderAll();
 }
 document.getElementById("tabbar").addEventListener("click",e=>{
   const b=e.target.closest(".tab");if(b)switchTab(b.dataset.t);
 });
-/* ---- theme (reference: navy header + white cards + red accent; dark optional) ---- */
+document.getElementById("search").addEventListener("input",()=>{state.q=document.getElementById("search").value;renderAll();});
+document.getElementById("seeall").addEventListener("click",()=>{switchTab("home");});
+
+/* theme */
 const themeBtn=document.getElementById("themeBtn");
 function applyTheme(t){
-  document.body.classList.toggle("dark", t==="dark");
-  themeBtn.textContent = t==="dark" ? "☀️" : "🌙";
+  document.body.classList.toggle("dark",t==="dark");
+  themeBtn.textContent=t==="dark"?"☀️":"🌙";
   try{localStorage.setItem("kp_theme",t);}catch(e){}
 }
 themeBtn.addEventListener("click",()=>applyTheme(document.body.classList.contains("dark")?"light":"dark"));
-try{ applyTheme(localStorage.getItem("kp_theme")||"light"); }catch(e){ applyTheme("light"); }
+try{applyTheme(localStorage.getItem("kp_theme")||"light");}catch(e){applyTheme("light");}
 
-updLabel();renderChips();render();
+/* init */
+if(!DATA) DATA=FALLBACK;
+updLabel();renderAll();
 </script>
 </body>
 </html>
