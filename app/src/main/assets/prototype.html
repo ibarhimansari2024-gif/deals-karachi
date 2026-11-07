@@ -55,8 +55,14 @@
   .feed::-webkit-scrollbar{display:none}
   .card{background:var(--surface);border-radius:var(--radius);overflow:hidden;cursor:pointer;border:1px solid var(--border)}
   .card:active{transform:scale(.985)}
-  .thumb{height:120px;position:relative;display:flex;align-items:flex-end;padding:12px;background:var(--thumbbg)}
-  .thumb .dish{font-size:38px;line-height:1}
+  .thumb{height:150px;position:relative;display:flex;align-items:flex-end;padding:12px;background:var(--thumbbg);overflow:hidden}
+  .thumb .timg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .thumb .tshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,25,0) 30%,rgba(7,11,25,.55) 100%)}
+  .thumb .dish{font-size:38px;line-height:1;position:relative}
+  .newbadge{background:var(--good);color:#04150d;font-size:10px;font-weight:800;padding:4px 8px;border-radius:7px;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+  .card{animation:fadein .3s ease-out both}
+  @keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
   .pricepill{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;font-weight:800;
     font-size:14px;padding:6px 12px;border-radius:100px}
   .was{font-size:11px;font-weight:600;text-decoration:line-through;color:rgba(255,255,255,.6);margin-left:6px}
@@ -158,7 +164,10 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const FEED_URL = "https://raw.githubusercontent.com/ibarhimansari2024-gif/deals-karachi/main/data/deals.json";
+const FEED_URLS=[
+  "https://cdn.jsdelivr.net/gh/ibarhimansari2024-gif/deals-karachi@main/data/deals.json",
+  "https://raw.githubusercontent.com/ibarhimansari2024-gif/deals-karachi/main/data/deals.json"
+];
 const FALLBACK = { app:"Karachi Pulse", updated:"built-in v2.0", version:2, deals:[
  {"id":1,"t":"Hashim Food — Shinwari Karahi + Zinger Platter","emoji":"🍗","area":"Federal B Area","lat":24.9432,"lng":67.0826,"price":2299,"was":5500,"cuisine":"BBQ","src":["yt","tt","ig"],"hrs":96,"addr":"Federal B Area Block 19, near Masjid-e-Aqsa","phone":"0328-1330099","time":"7 PM – 4 AM","note":"Built-in demo data.","links":{"yt":"https://www.youtube.com/watch?v=rlhWabUWIcE","tt":"https://www.tiktok.com/search?q=hashim%20food%20karachi","ig":"https://www.instagram.com/explore/tags/karachifooddeals/","gg":"https://maps.google.com/?q=Hashim+Food+Federal+B+Area+Karachi"}},
  {"id":2,"t":"Karachi Red Rock — All-Day Buffet 999/-","emoji":"🍛","area":"Liberty","lat":24.8710,"lng":67.0440,"price":999,"was":2500,"cuisine":"Buffet","src":["ig","gg"],"hrs":20,"addr":"Karachi Red Rock, Liberty Market","phone":"0314-4349849","time":"2 PM – 8 PM","note":"Thu & Fri slots. Built-in demo data.","links":{"ig":"https://www.instagram.com/explore/tags/karachibuffet/","gg":"https://maps.google.com/?q=Karachi+Red+Rock+Liberty"}},
@@ -209,22 +218,30 @@ function updLabel(){document.getElementById("lastupd").textContent="Updated: "+D
 async function fetchDeals(manual){
   const btn=document.getElementById("refreshBtn");
   btn.classList.add("spin");
-  try{
-    const r=await fetch(FEED_URL+"?t="+Date.now(),{cache:"no-store"});
-    if(!r.ok) throw new Error("HTTP "+r.status);
-    const v=validateDeals(await r.json());
-    if(!v) throw new Error("bad data");
-    DATA=v;
-    try{localStorage.setItem("kp_cache",JSON.stringify(DATA));localStorage.setItem("kp_last",String(Date.now()));}catch(e){}
-    updLabel();renderChips();render();
-    toast(manual?"✓ Deals updated":"✓ Daily update mila");
-  }catch(e){
-    toast(manual?"⚠ Update fail — offline/cached data":"",true);
-  }finally{btn.classList.remove("spin");}
+  let ok=false, lastErr=null;
+  for(const u of FEED_URLS){
+    try{
+      const r=await fetch(u+"?t="+Date.now(),{cache:"no-store"});
+      if(!r.ok) throw new Error("HTTP "+r.status);
+      const v=validateDeals(await r.json());
+      if(!v) throw new Error("bad data");
+      DATA=v; ok=true;
+      try{localStorage.setItem("kp_cache",JSON.stringify(DATA));localStorage.setItem("kp_last",String(Date.now()));}catch(e){}
+      updLabel();renderChips();render();
+      break;
+    }catch(e){ lastErr=e; }
+  }
+  btn.classList.remove("spin");
+  if(ok) toast(manual?"✓ Deals updated":"✓ Auto-update ✓");
+  else if(manual) toast("⚠ Update fail — cached data dikh raha hai",true);
 }
 document.getElementById("refreshBtn").addEventListener("click",()=>fetchDeals(true));
-/* auto-check once per 6h on launch */
+/* auto-check once per 6h on launch + every 15 min while app open + on resume */
 try{ if(Date.now()-Number(localStorage.getItem("kp_last")||0) > 6*3600e3) fetchDeals(false);}catch(e){}
+setInterval(()=>{ if(navigator.onLine) fetchDeals(false); }, 15*60*1000);
+document.addEventListener("visibilitychange",()=>{
+  if(!document.hidden && navigator.onLine && Date.now()-Number(localStorage.getItem("kp_last")||0) > 30*60e3) fetchDeals(false);
+});
 
 /* ---- UI ---- */
 const chipsEl=document.getElementById("chips");
@@ -251,9 +268,11 @@ function render(){
   list.forEach(d=>{
     const c=document.createElement("div");c.className="card";
     const off=Math.round((1-d.price/d.was)*100);
+    const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
+    const isNew=d.hrs>160;
     c.innerHTML=`
-      <div class="thumb"><span class="dish">${d.emoji}</span>
-        <div class="srcbadges">${d.src.map(s=>`<span class="src ${s}">${({yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓ Verified"})[s]}</span>`).join("")}</div>
+      <div class="thumb">${yid?`<img class="timg" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" onerror="this.remove()" alt=""><div class="tshade"></div>`:""}<span class="dish">${yid?"":d.emoji}</span>
+        <div class="srcbadges">${isNew?'<span class="newbadge">NEW</span>':""}${d.src.map(s=>`<span class="src ${s}">${({yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓ Verified"})[s]}</span>`).join("")}</div>
         <div class="pricepill">${d.price>0?`Rs ${d.price.toLocaleString()}`:"🎬 Video mein price"}${d.was>d.price?`<span class="was">Rs ${d.was.toLocaleString()}</span>`:""}</div>
       </div>
       <div class="cardbody">
@@ -283,11 +302,21 @@ function openDetail(d){
     <div class="drow"><span class="k">📞 Contact</span><span class="v">${d.phone}</span></div>
     <div class="drow"><span class="k">🔗 Sources</span><span class="srclinks">${Object.keys(d.links).map(k=>`<a href="${d.links[k]}" target="_blank" rel="noopener" class="${k}">${srcNames[k]||k}</a>`).join("")||"<span style='color:var(--muted);font-size:12px'>—</span>"}</span></div>
     <div class="drow"><span class="k">📝 Notes</span><span class="v" style="font-weight:500">${d.note}</span></div>
-    <button class="cta" id="mapcta">🗺️ Map pe dekho</button>
-    <button class="cta ghost">${state.saved.has(d.id)?"❤️ Remove from Saved":"❤️ Save + expiry reminder"}</button>
-    <p class="srcnote">Deal social posts se aggregate hai — final price/timing restaurant se confirm karein. Demo data (v2.0).</p>`;
-  sc.querySelectorAll(".cta")[1].onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);render();openDetail(d);};
+    <button class="cta" id="mapcta">🗺️ Directions</button>
+    <div style="display:flex;gap:8px">
+      ${d.phone!=="—"?`<button class="cta ghost" style="flex:1;margin-top:12px" id="callcta">📞 Call</button>`:""}
+      <button class="cta ghost" style="flex:1;margin-top:12px" id="sharecta">🔗 Share</button>
+      <button class="cta ghost" style="flex:1;margin-top:12px" id="savecta">${state.saved.has(d.id)?"❤️ Saved":"🤍 Save"}</button>
+    </div>
+    <p class="srcnote">Real data — sources: YouTube/Instagram/TikTok/Google via automated daily pipeline. Final price/timing restaurant se confirm karein.</p>`;
   document.getElementById("mapcta").onclick=()=>{sh.classList.remove("open");switchTab("map");setTimeout(()=>focusDeal(d),400);};
+  const callB=document.getElementById("callcta"); if(callB) callB.onclick=()=>{window.location.href="tel:"+d.phone.replace(/[^0-9+]/g,"");};
+  document.getElementById("sharecta").onclick=()=>{
+    const txt=d.t+" — Rs "+(d.price||"?")+" | "+d.addr+"\n"+(d.links.yt||d.links.gg||"");
+    if(navigator.share) navigator.share({title:"Karachi Pulse",text:txt}).catch(()=>{});
+    else { try{ navigator.clipboard.writeText(txt); toast("✓ Copy ho gaya"); }catch(e){} }
+  };
+  document.getElementById("savecta").onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);render();openDetail(d);};
   sh.classList.add("open");
   sh.onclick=e=>{if(e.target===sh)sh.classList.remove("open");};
 }

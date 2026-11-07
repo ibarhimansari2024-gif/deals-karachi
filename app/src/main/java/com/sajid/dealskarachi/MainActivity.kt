@@ -31,7 +31,16 @@ class MainActivity : Activity() {
                 val host = url.host ?: return false
                 val internal = host == "raw.githubusercontent.com" ||
                         host == "unpkg.com" ||
+                        host == "cdn.jsdelivr.net" ||
+                        host == "i.ytimg.com" ||
                         host.endsWith(".tile.openstreetmap.org")
+                // tel/geo/mailto go to the system dialer/maps — never inside the WebView
+                if (scheme == "tel" || scheme == "geo" || scheme == "mailto") {
+                    try { startActivity(Intent(Intent.ACTION_DIAL, url)) } catch (_: Exception) {
+                        try { startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (_: Exception) {}
+                    }
+                    return true
+                }
                 return if (scheme == "http" || (scheme == "https" && !internal)) {
                     try { startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (_: Exception) {}
                     true
