@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-07T14:20:04+05:00",
+ "updated": "2026-11-08T08:40:33+05:00",
  "version": 3,
  "deals": [
   {
@@ -331,260 +331,86 @@
    "published": "2026-09-15"
   },
   {
+   "id": 114,
+   "t": "Adnan loji — Broast + Zinger + Club Sandwich 1000/-",
+   "emoji": "🍔",
+   "area": "Lyari",
+   "lat": 24.867,
+   "lng": 66.99,
+   "price": 1000,
+   "was": 1600,
+   "cuisine": "Fast Food",
+   "src": [
+    "yt",
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "Gharib Shah Market, Lyari, near Lahoti Medicos",
+   "phone": "—",
+   "time": "All day",
+   "note": "Real video deal (Jan 2026) — 3 items only Rs 1000.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=r8doWITKmpY",
+    "gg": "https://maps.google.com/?q=Gharib+Shah+Market+Lyari+Karachi"
+   },
+   "source": "https://www.youtube.com/watch?v=r8doWITKmpY",
+   "published": "2026-01-15"
+  },
+  {
+   "id": 115,
+   "t": "Bang Bang Brothers — Albaik Seven Star Deal (7 items)",
+   "emoji": "🔥",
+   "area": "North Karachi",
+   "lat": 24.946,
+   "lng": 67.08,
+   "price": 1750,
+   "was": 2600,
+   "cuisine": "Fast Food",
+   "src": [
+    "yt",
+    "gg"
+   ],
+   "hrs": 168,
+   "addr": "Iqbal Plaza, Nagan Chowrangi Flyover, Sector 11-C/1",
+   "phone": "0315-2882176",
+   "time": "All day",
+   "note": "7 items: 3 Zingers + Albaik Broast + Singaporean Rice + Chinese Pasta. 5-6 logon ke liye.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=_Qgs5FFpvl8",
+    "gg": "https://goo.gl/maps/sfVGq2rLjZnXycf5A"
+   },
+   "source": "https://www.youtube.com/watch?v=_Qgs5FFpvl8",
+   "published": "2026-02-01"
+  },
+  {
    "id": 10001,
-   "t": "Karachi Cheapest Food Deal | Family Deal | Chatkhara Platter | Cold Drink Free #viralvideo",
+   "t": "11.11 Food Deal | Karachi Cheapest Food Deal | Family Deal | Cold Drink Free #viralvideo",
    "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
+   "area": "Federal B",
+   "lat": 24.954798,
+   "lng": 67.0773498,
    "price": 0,
    "was": 0,
    "cuisine": "Video Deal",
    "src": [
-    "yt"
+    "yt",
+    "gg",
+    "tt"
    ],
    "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
+   "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
+   "phone": "0328-1330099",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "11.11 Food Deal | Karachi Cheapest Food Deal | Family Deal | Cold Drink Free #viralvideo\n\n#karachifoodstreet #karachifamousrestaurant #karachicheapfooddeals\n\nFederal B Area Block-1…",
    "links": {
-    "yt": "https://www.youtube.com/watch?v=rlhWabUWIcE"
+    "yt": "https://www.youtube.com/watch?v=Ug8DAzaLtSY",
+    "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
+    "tt": "https://www.tiktok.com/@ramnafaisal261"
    },
    "auto": true
   },
   {
    "id": 10002,
-   "t": "Karachi Cheapest Food Deal | Family Deal |Khandani Platter #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=j7ATGK8LHl0"
-   },
-   "auto": true
-  },
-  {
-   "id": 10003,
-   "t": "Karachi Ki Sabse Sasti Mini Deg wo Bhi Offer ke Sat| Ramzan Special 1KG Mutton Kunna #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=x4JD1Btd3xA"
-   },
-   "auto": true
-  },
-  {
-   "id": 10004,
-   "t": "Ramadan Special Cheapest BBQ Platter | Food Deal | Family Platter | Fine Dine Restaurant #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=Wef5a8FyTVw"
-   },
-   "auto": true
-  },
-  {
-   "id": 10005,
-   "t": "Karachi's CHEAPEST Sea Food Platter | Family Food Deal | Winter Food Deal | Family Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=5ahBiBHb1Kk"
-   },
-   "auto": true
-  },
-  {
-   "id": 10006,
-   "t": "Karachi Famous Restaurant Grand New Year Celebration | Family Deal | Winter Food Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=7AJRf2QZr4Q"
-   },
-   "auto": true
-  },
-  {
-   "id": 10007,
-   "t": "Daily Food Restaurant New Year Offer | Food Deals | Winter Food Deal | Family Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=cdP9Rup-SRc"
-   },
-   "auto": true
-  },
-  {
-   "id": 10008,
-   "t": "Karachi's CHEAPEST Winter Food Deals | Winter Food Deal | Winter Platter | Family Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=XIjH5PXQkDs"
-   },
-   "auto": true
-  },
-  {
-   "id": 10009,
-   "t": "Karachi ke Famous Restaurant ki Free Food Offer | December Food Deal | Winter Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=EcvdIYRfOAc"
-   },
-   "auto": true
-  },
-  {
-   "id": 10010,
-   "t": "Testing Karachi’s CHEAPEST Food Deals (11.11 Specials)",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=xr6b1XV6Na4"
-   },
-   "auto": true
-  },
-  {
-   "id": 10011,
-   "t": "North Karachi Famous Food Spot | Cheapest Food | Family Platter | Fine Dine Family Room #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=YQLj9bRaR2A"
-   },
-   "auto": true
-  },
-  {
-   "id": 10012,
    "t": "Hashim Food Celebration of 2nd Grand Anniversary | Pizza Platter | Family Deals #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -602,7 +428,7 @@
    "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
    "phone": "0328-1330099",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=ViQprerdgpg",
     "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
@@ -611,7 +437,7 @@
    "auto": true
   },
   {
-   "id": 10013,
+   "id": 10003,
    "t": "Karachi Cheapest Food Deal |Patakha Platter | Family Deal #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -629,7 +455,7 @@
    "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
    "phone": "0328-1330099",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=ScutTYulVOY",
     "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
@@ -638,7 +464,7 @@
    "auto": true
   },
   {
-   "id": 10014,
+   "id": 10004,
    "t": "Karachi Cheapest Rabi-ul-Awwal Food Deal | Family Deal | Rabi-ul-Awwal Offer #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -656,7 +482,7 @@
    "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
    "phone": "0328-1330099",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=0tLmKErpS6Y",
     "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
@@ -665,7 +491,7 @@
    "auto": true
   },
   {
-   "id": 10015,
+   "id": 10005,
    "t": "Karachi Ke Famous Restaurant ki Azadi Deal | Family Deal | Cheapest Food Deal #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -683,7 +509,7 @@
    "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
    "phone": "0328-1330099",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=VqumEWRMSQg",
     "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
@@ -692,7 +518,7 @@
    "auto": true
   },
   {
-   "id": 10016,
+   "id": 10006,
    "t": "Famous Food Spot in Karachi | Family Deals | Cheapest Food Deals #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -710,7 +536,7 @@
    "addr": "Federal B Area Block-14 Near PTCL Exchange Karachi, Pakistan.",
    "phone": "03151091373",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=zHGUwEw4Zqs",
     "gg": "https://maps.app.goo.gl/UmHm7CXxJWqj69fi6",
@@ -719,7 +545,7 @@
    "auto": true
   },
   {
-   "id": 10017,
+   "id": 10007,
    "t": "GRAND OPENING PE BUMPER OFFER | FREE COLD DRINK | FAST FOOD DEAL | BBQ PLATTER #viralvideo",
    "emoji": "🎥",
    "area": "Gulshan",
@@ -737,7 +563,7 @@
    "addr": "Gulshan-e-Maymaar Sector Z6 Karachi, Pakistan.",
    "phone": "0321-3313350",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=Rhgn70HWQdc",
     "gg": "https://maps.app.goo.gl/WFK1YWhYxTT2VBmJ6",
@@ -746,7 +572,7 @@
    "auto": true
   },
   {
-   "id": 10018,
+   "id": 10008,
    "t": "Karachi Ke Famous Restaurant ki Buffet Deal | Eid Deal | Family Deal #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -764,7 +590,7 @@
    "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
    "phone": "0328-1330099",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=AT6xIzx-F6c",
     "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
@@ -773,7 +599,7 @@
    "auto": true
   },
   {
-   "id": 10019,
+   "id": 10009,
    "t": "Pakistan ki Sab Se Sasti Pizza Deals | 450 Mey Pizza-Zinger #viralvideo",
    "emoji": "🎥",
    "area": "Karachi",
@@ -791,7 +617,7 @@
    "addr": "Exact location map pe — link se kholo",
    "phone": "0328-7033208",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=byi8Nlc-vPA",
     "gg": "https://maps.app.goo.gl/3BwEcznPzmEiGFPF6",
@@ -800,7 +626,7 @@
    "auto": true
   },
   {
-   "id": 10020,
+   "id": 10010,
    "t": "Eid Special Food Deal Just 599 | Pizza Platter | Fast Food Deal | Summer Food Deals #viralvideo",
    "emoji": "🎥",
    "area": "Nazimabad",
@@ -818,7 +644,7 @@
    "addr": "Exact location map pe — link se kholo",
    "phone": "03702701381",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=8Sn3LG5jtII",
     "gg": "https://maps.app.goo.gl/4f38NNrjtsGvxEez6",
@@ -827,7 +653,7 @@
    "auto": true
   },
   {
-   "id": 10021,
+   "id": 10011,
    "t": "Karachi ke Famous Restaurant Ki Summer Food Deal | Karachi Cheapest Food Deals #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -845,7 +671,7 @@
    "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
    "phone": "0328-1330099",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=YYq-vz7QkWg",
     "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
@@ -854,7 +680,7 @@
    "auto": true
   },
   {
-   "id": 10022,
+   "id": 10012,
    "t": "Pakistan ki Sab Se Sasti Pizza Deals | Summer Pizza Deal 450 #viralvideo",
    "emoji": "🎥",
    "area": "Gulshan",
@@ -871,7 +697,7 @@
    "addr": "Sector X-1 Near Town Hall Road Gulshan-e-Maymaar Karachi, Pakistan.",
    "phone": "0311-1097562",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=Y6i5YsVDwVM",
     "tt": "https://www.tiktok.com/@ramnafaisal261"
@@ -879,7 +705,7 @@
    "auto": true
   },
   {
-   "id": 10023,
+   "id": 10013,
    "t": "I Visited Newly Opened CHICAGO FOODS at KARACHI | Discount Our Subscribers #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -896,7 +722,7 @@
    "addr": "Federal B Area Block-15, Near Ayub Manzil, Karachi, Pakistan.",
    "phone": "0331-2082975",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=0Yvgze3qni8",
     "tt": "https://www.tiktok.com/@ramnafaisal261"
@@ -904,7 +730,7 @@
    "auto": true
   },
   {
-   "id": 10024,
+   "id": 10014,
    "t": "Karachi ke Famous Restaurant Ki EID Food Deals | Karachi Cheapest Food Deals #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -922,7 +748,7 @@
    "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
    "phone": "0328-1330099",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=i6q4aOZA460",
     "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
@@ -931,7 +757,7 @@
    "auto": true
   },
   {
-   "id": 10025,
+   "id": 10015,
    "t": "GRAND OPENING PE FREE OFFER | HYDERABADI BEEF PULAO | CHANA PULAO | BEEF HALEEM #viralvideo",
    "emoji": "🎥",
    "area": "Karachi",
@@ -949,7 +775,7 @@
    "addr": "Exact location map pe — link se kholo",
    "phone": "0321-2210353",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=pmFIjWAnmlE",
     "gg": "https://maps.app.goo.gl/mU42hxc9zt47neH56",
@@ -958,7 +784,7 @@
    "auto": true
   },
   {
-   "id": 10026,
+   "id": 10016,
    "t": "Karachi Ki Sabse Sasti Mini Deg wo Bhi Offer ke Sat| Makta Biryani| Pioneer of Mini Daig #viralvideo",
    "emoji": "🎥",
    "area": "Nazimabad",
@@ -975,7 +801,7 @@
    "addr": "Karachi",
    "phone": "0300-1199925",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=ijjrOeC2ft8",
     "tt": "https://www.tiktok.com/@ramnafaisal261"
@@ -983,29 +809,75 @@
    "auto": true
   },
   {
-   "id": 10027,
-   "t": "Grand Opening Offer Buy 2 Get 1 Free | Food Station | Ramzan Offer #viralvideo",
+   "id": 10017,
+   "t": "KARACHI BEST ROOFTOP HIGH TEA BUFFET 🍱| KOYLA CHAI RESTAURANT ☕️ | 35+ DISHES 🍔| FULL REVIEW #hitea ",
    "emoji": "🎥",
-   "area": "Federal B",
+   "area": "Clifton",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 950,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "src": [
+    "yt",
+    "tt",
+    "ig"
+   ],
+   "hrs": 167,
+   "addr": "Koyla Chai, Clifton Block 2, Bilawal Chowrangi (Next to Shell Pump), Karachi",
+   "phone": "03202828280",
+   "time": "—",
+   "note": "Koyla Chai High Tea Buffet Karachi | FULL REVIEW 35+ Dishes for 1500 PKR! BEST Hi Tea in Karachi?** 🇵🇰 | Shariq Khan Vlogs\n\n**🔥 ULTIMATE Koyla Chai Hi Tea Buffet Experience! Roof T…",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=XGjyXNkpe5g",
+    "tt": "https://www.tiktok.com/@shariqkhanvlog",
+    "ig": "https://www.instagram.com/shariq_khan_vlogs/"
+   },
+   "auto": true
+  },
+  {
+   "id": 10018,
+   "t": "Rs 1100 MEIN 11 ZINGER BURGERS 🍔🍔| LIMITED TIME OFFER | CHEAPEST FAST FOOD DEAL OF KARACHI #foodvlog",
+   "emoji": "🎥",
+   "area": "DHA",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 1100,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "src": [
+    "yt"
+   ],
+   "hrs": 167,
+   "addr": "Karachi",
+   "phone": "—",
+   "time": "—",
+   "note": "🤯 11 Zinger Burgers for Rs. 1100?! 🍔 Karachi's CRAZIEST FAST FOOD DEAL EVER! | Al Sayyad Fast Food - Shariq Khan Vlogs 🤯\n\nHey Foodie Fam! 👋 Get ready to have your mind BLOWN! 💥 Sha…",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=wO6Q6x6Wt0E"
+   },
+   "auto": true
+  },
+  {
+   "id": 10019,
+   "t": "IBN E BATTUTA RESTAURANT PER FARAZ KI DAWAT KERDI | 50+ DISHES | KARACHI CHEAPEST HI TEA BUFFET 🍗🍔😋",
+   "emoji": "🎥",
+   "area": "Nazimabad",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
    "cuisine": "Video Deal",
    "src": [
-    "yt",
-    "gg",
-    "tt"
+    "yt"
    ],
    "hrs": 167,
-   "addr": "Federal B Area Block-12 Near Gulberg Police Station Karachi, Pakistan.",
-   "phone": "0321-2210353",
+   "addr": "Address: Plot No F99, Service Lane, Block B, North Nazimabad Town, Karachi, Sindh.",
+   "phone": "0330-3009944",
    "time": "—",
-   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "note": "🔥 50+ DISHES! 🤯 We Ate Karachi's CHEAPEST & BIGGEST Hi-Tea Buffet at Ibne Batuta!\n\nGet ready for the food vlog of a lifetime! Your favorite vlogger, Shariq Khan, and his buddy Fara…",
    "links": {
-    "yt": "https://www.youtube.com/watch?v=b-TzBxXHdC4",
-    "gg": "https://maps.app.goo.gl/MN9cUocpwGbj7Fgg8",
-    "tt": "https://www.tiktok.com/@ramnafaisal261"
+    "yt": "https://www.youtube.com/watch?v=isSnOUCdCtE"
    },
    "auto": true
   }

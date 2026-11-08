@@ -280,5 +280,69 @@
    "tt"
   ],
   "area": "Federal B"
+ },
+ "Ug8DAzaLtSY": {
+  "price": 0,
+  "phone": "0328-1330099",
+  "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
+  "lat": 24.954798,
+  "lng": 67.0773498,
+  "links": {
+   "yt": "https://www.youtube.com/watch?v=Ug8DAzaLtSY",
+   "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
+   "tt": "https://www.tiktok.com/@ramnafaisal261"
+  },
+  "src": [
+   "yt",
+   "gg",
+   "tt"
+  ],
+  "area": "Federal B"
+ },
+ "XGjyXNkpe5g": {
+  "price": 950,
+  "phone": "03202828280",
+  "addr": "Koyla Chai, Clifton Block 2, Bilawal Chowrangi (Next to Shell Pump), Karachi",
+  "lat": 24.875,
+  "lng": 67.035,
+  "links": {
+   "yt": "https://www.youtube.com/watch?v=XGjyXNkpe5g",
+   "tt": "https://www.tiktok.com/@shariqkhanvlog",
+   "ig": "https://www.instagram.com/shariq_khan_vlogs/"
+  },
+  "src": [
+   "yt",
+   "tt",
+   "ig"
+  ],
+  "area": "Clifton"
+ },
+ "wO6Q6x6Wt0E": {
+  "price": 1100,
+  "phone": "—",
+  "addr": "Karachi",
+  "lat": 24.875,
+  "lng": 67.035,
+  "links": {
+   "yt": "https://www.youtube.com/watch?v=wO6Q6x6Wt0E"
+  },
+  "src": [
+   "yt"
+  ],
+  "area": "DHA"
+ },
+ "isSnOUCdCtE": {
+  "price": 0,
+  "phone": "0330-3009944",
+  "addr": "Address: Plot No F99, Service Lane, Block B, North Nazimabad Town, Karachi, Sindh.",
+  "lat": 24.875,
+  "lng": 67.035,
+  "links": {
+   "yt": "https://www.youtube.com/watch?v=isSnOUCdCtE"
+  },
+  "src": [
+   "yt"
+  ],
+  "area": "Nazimabad"
  }
 }
