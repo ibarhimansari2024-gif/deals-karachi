@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-08T08:50:55+05:00",
+ "updated": "2026-11-08T09:16:03+05:00",
  "version": 3,
  "deals": [
   {
@@ -1177,259 +1177,6 @@
   },
   {
    "id": 10002,
-   "t": "Karachi Cheapest Food Deal | Family Deal | Chatkhara Platter | Cold Drink Free #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=rlhWabUWIcE"
-   },
-   "auto": true
-  },
-  {
-   "id": 10003,
-   "t": "Karachi Cheapest Food Deal | Family Deal |Khandani Platter #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=j7ATGK8LHl0"
-   },
-   "auto": true
-  },
-  {
-   "id": 10004,
-   "t": "Karachi Ki Sabse Sasti Mini Deg wo Bhi Offer ke Sat| Ramzan Special 1KG Mutton Kunna #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=x4JD1Btd3xA"
-   },
-   "auto": true
-  },
-  {
-   "id": 10005,
-   "t": "Ramadan Special Cheapest BBQ Platter | Food Deal | Family Platter | Fine Dine Restaurant #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=Wef5a8FyTVw"
-   },
-   "auto": true
-  },
-  {
-   "id": 10006,
-   "t": "Karachi's CHEAPEST Sea Food Platter | Family Food Deal | Winter Food Deal | Family Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=5ahBiBHb1Kk"
-   },
-   "auto": true
-  },
-  {
-   "id": 10007,
-   "t": "Karachi Famous Restaurant Grand New Year Celebration | Family Deal | Winter Food Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=7AJRf2QZr4Q"
-   },
-   "auto": true
-  },
-  {
-   "id": 10008,
-   "t": "Daily Food Restaurant New Year Offer | Food Deals | Winter Food Deal | Family Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=cdP9Rup-SRc"
-   },
-   "auto": true
-  },
-  {
-   "id": 10009,
-   "t": "Karachi's CHEAPEST Winter Food Deals | Winter Food Deal | Winter Platter | Family Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=XIjH5PXQkDs"
-   },
-   "auto": true
-  },
-  {
-   "id": 10010,
-   "t": "Karachi ke Famous Restaurant ki Free Food Offer | December Food Deal | Winter Deal #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=EcvdIYRfOAc"
-   },
-   "auto": true
-  },
-  {
-   "id": 10011,
-   "t": "Testing Karachi’s CHEAPEST Food Deals (11.11 Specials)",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=xr6b1XV6Na4"
-   },
-   "auto": true
-  },
-  {
-   "id": 10012,
-   "t": "North Karachi Famous Food Spot | Cheapest Food | Family Platter | Fine Dine Family Room #viralvideo",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "src": [
-    "yt"
-   ],
-   "hrs": 167,
-   "addr": "Karachi",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=YQLj9bRaR2A"
-   },
-   "auto": true
-  },
-  {
-   "id": 10013,
    "t": "Hashim Food Celebration of 2nd Grand Anniversary | Pizza Platter | Family Deals #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1457,7 +1204,7 @@
    "auto": true
   },
   {
-   "id": 10014,
+   "id": 10003,
    "t": "Karachi Cheapest Food Deal |Patakha Platter | Family Deal #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1485,7 +1232,7 @@
    "auto": true
   },
   {
-   "id": 10015,
+   "id": 10004,
    "t": "Karachi Cheapest Rabi-ul-Awwal Food Deal | Family Deal | Rabi-ul-Awwal Offer #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1513,7 +1260,7 @@
    "auto": true
   },
   {
-   "id": 10016,
+   "id": 10005,
    "t": "Karachi Ke Famous Restaurant ki Azadi Deal | Family Deal | Cheapest Food Deal #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1541,7 +1288,7 @@
    "auto": true
   },
   {
-   "id": 10017,
+   "id": 10006,
    "t": "Famous Food Spot in Karachi | Family Deals | Cheapest Food Deals #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1569,7 +1316,7 @@
    "auto": true
   },
   {
-   "id": 10018,
+   "id": 10007,
    "t": "GRAND OPENING PE BUMPER OFFER | FREE COLD DRINK | FAST FOOD DEAL | BBQ PLATTER #viralvideo",
    "emoji": "🎥",
    "area": "Gulshan",
@@ -1597,7 +1344,7 @@
    "auto": true
   },
   {
-   "id": 10019,
+   "id": 10008,
    "t": "Karachi Ke Famous Restaurant ki Buffet Deal | Eid Deal | Family Deal #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1625,7 +1372,7 @@
    "auto": true
   },
   {
-   "id": 10020,
+   "id": 10009,
    "t": "Pakistan ki Sab Se Sasti Pizza Deals | 450 Mey Pizza-Zinger #viralvideo",
    "emoji": "🎥",
    "area": "Karachi",
@@ -1653,7 +1400,7 @@
    "auto": true
   },
   {
-   "id": 10021,
+   "id": 10010,
    "t": "Eid Special Food Deal Just 599 | Pizza Platter | Fast Food Deal | Summer Food Deals #viralvideo",
    "emoji": "🎥",
    "area": "Nazimabad",
@@ -1681,7 +1428,7 @@
    "auto": true
   },
   {
-   "id": 10022,
+   "id": 10011,
    "t": "Karachi ke Famous Restaurant Ki Summer Food Deal | Karachi Cheapest Food Deals #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1709,7 +1456,7 @@
    "auto": true
   },
   {
-   "id": 10023,
+   "id": 10012,
    "t": "Pakistan ki Sab Se Sasti Pizza Deals | Summer Pizza Deal 450 #viralvideo",
    "emoji": "🎥",
    "area": "Gulshan",
@@ -1735,7 +1482,7 @@
    "auto": true
   },
   {
-   "id": 10024,
+   "id": 10013,
    "t": "I Visited Newly Opened CHICAGO FOODS at KARACHI | Discount Our Subscribers #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1761,7 +1508,7 @@
    "auto": true
   },
   {
-   "id": 10025,
+   "id": 10014,
    "t": "Karachi ke Famous Restaurant Ki EID Food Deals | Karachi Cheapest Food Deals #viralvideo",
    "emoji": "🎥",
    "area": "Federal B",
@@ -1789,7 +1536,7 @@
    "auto": true
   },
   {
-   "id": 10026,
+   "id": 10015,
    "t": "GRAND OPENING PE FREE OFFER | HYDERABADI BEEF PULAO | CHANA PULAO | BEEF HALEEM #viralvideo",
    "emoji": "🎥",
    "area": "Karachi",
@@ -1817,7 +1564,7 @@
    "auto": true
   },
   {
-   "id": 10027,
+   "id": 10016,
    "t": "Karachi Ki Sabse Sasti Mini Deg wo Bhi Offer ke Sat| Makta Biryani| Pioneer of Mini Daig #viralvideo",
    "emoji": "🎥",
    "area": "Nazimabad",
@@ -1860,7 +1607,7 @@
    "addr": "Karachi",
    "phone": "0324-2524868",
    "time": "—",
-   "note": "Liaquatabad Karachi furniture factory direct wholesale rates! Is video mein HK Sofa Center ka live visit aur karkhane ke saste sofa cum bed, bubble bed, aur luxury sofa sets dikhay…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=zpvYZI86zYc"
    },
@@ -1884,7 +1631,7 @@
    "addr": "11.11 Mega Sale shuru ho chuki hai! Shafiq Plaza (Gul Plaza back side), Karachi me Osama Crockery par electronics, kitch",
    "phone": "—",
    "time": "—",
-   "note": "11.11 Mega Sale shuru ho chuki hai! Shafiq Plaza (Gul Plaza back side), Karachi me Osama Crockery par electronics, kitchen appliances aur crockery market se aadhay rate par mil rah…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=Qd4TM-ohBuY"
    },
@@ -1908,7 +1655,7 @@
    "addr": "Karachi",
    "phone": "0300-3465211",
    "time": "—",
-   "note": "Port Grand Karachi me fireworks, patakhay aur aatishbazi par zabardast mega sale shuru ho chuki hai! Is video me hum aapko dikha rahe hain Port Grand Karachi ka complete tour jahan…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=niEzkSpay9g"
    },
@@ -1932,7 +1679,7 @@
    "addr": "Karachi Jodia Bazaar me barhti hui mehangai ke dauran aam awam aur shopkeepers ke liye sasta mahana ration package aur w",
    "phone": "0335-1020817",
    "time": "—",
-   "note": "Karachi Jodia Bazaar me barhti hui mehangai ke dauran aam awam aur shopkeepers ke liye sasta mahana ration package aur wholesale rate par dalen, chawal, aur masalajat dastiyab hain…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=S7SlcJVa-T8"
    },
@@ -1956,7 +1703,7 @@
    "addr": "RJ Shopping Mall Karachi 10th Anniversary Mega Sale 2026! Gulistan-e-Johar Rashid Minhas Road par waqia RJ Shopping Mall",
    "phone": "0311-9304015",
    "time": "—",
-   "note": "RJ Shopping Mall Karachi 10th Anniversary Mega Sale 2026! Gulistan-e-Johar Rashid Minhas Road par waqia RJ Shopping Mall aur Nexus Management ki janib se 6, 7, 8 aur 9 November ko …",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=R7eAQthUtWQ"
    },
@@ -1980,7 +1727,7 @@
    "addr": "Gas load shedding se pareshan aawam ke liye behtareen aur sasta hal! Aaj ki video mein hum cover kar rahe hain Liaquatab",
    "phone": "0317-2883972",
    "time": "—",
-   "note": "Gas load shedding se pareshan aawam ke liye behtareen aur sasta hal! Aaj ki video mein hum cover kar rahe hain Liaquatabad Karachi ki mashhoor crockery market jahan sirf Rs. 1200 m…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=NNi_2Kd8BGc"
    },
@@ -2004,7 +1751,7 @@
    "addr": "Agar aap Karachi mein bartan wholesale market ki talash mein hain ya apne ghar ke liye home essentials aur home decor ki",
    "phone": "0313-2101265",
    "time": "—",
-   "note": "Kya aap bhi market se aadhe daam mein crockery khareedna chahte hain? Is video mein hum aapko le kar aaye hain Liaquatabad ki sabse famous crockery wholesale market jahan milte hai…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=GGH7RXiuOyU"
    },
@@ -2029,7 +1776,7 @@
    "addr": "3 Days Dhamaka Sale! 😱 Rs 790 Me Original 3-Piece Branded Suit Market Karachi | Rao Brand Collection.",
    "phone": "0321-2055229",
    "time": "—",
-   "note": "3 Days Dhamaka Sale! 😱 Rs 790 Me Original 3-Piece Branded Suit Market Karachi | Rao Brand Collection.\n\nKarachi ki wholesale market mein ab 3 din ki zabardast dhamaka sale shuru ho …",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=alqBywFk6jM",
     "gg": "https://maps.app.goo.gl/xxe4pQiuREv7UJ9N8"
@@ -2054,7 +1801,7 @@
    "addr": "Pansar Wholesale Market Karachi Empress Market Saddar ke mashoor Golden Island Pansar Store par Rs 500 mein live machine",
    "phone": "03458399126",
    "time": "—",
-   "note": "Pansar Wholesale Market Karachi Empress Market Saddar ke mashoor Golden Island Pansar Store par Rs 500 mein live machine ke zariye herbal hair oil aur 10KG khalis Beri shehad, Balo…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=XFhm2-WlabU"
    },
@@ -2078,7 +1825,7 @@
    "addr": "Rs 400 me 2-piece unstitched ladies suit! Aj Market Bhai me hum apko le kar aye hain Boltan Market Karachi (Iqbal Market",
    "phone": "0311-8277382",
    "time": "—",
-   "note": "Rs 400 me 2-piece unstitched ladies suit! Aj Market Bhai me hum apko le kar aye hain Boltan Market Karachi (Iqbal Market, Memon Masjid ke peeche) jahan par wholesale rate me ladies…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=oHk42ugXM0Y"
    },
@@ -2102,7 +1849,7 @@
    "addr": "Karachi ki sab se sasti crockery aur wholesale cookware market! Aaj Market Bhai aapko le kar aye hain Al-Dawood Crockery",
    "phone": "0317-2839724",
    "time": "—",
-   "note": "Karachi ki sab se sasti crockery aur wholesale cookware market! Aaj Market Bhai aapko le kar aye hain Al-Dawood Crockery Liaquatabad, jahan 18 glasses (3 boxes) ka mega pack sirf R…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=iLsk2YNU00U"
    },
@@ -2126,7 +1873,7 @@
    "addr": "Karachi",
    "phone": "0317-8500055",
    "time": "—",
-   "note": "Rs 25 Mein Aatishbazi! Aj ki video mein hum apko le kar aye hain Karachi ki wholesale fireworks aur wedding decor shop par jahan shadi biah, barat, mayun aur mehndi ke tamam items …",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=RmWLU6s--ZI"
    },
@@ -2150,7 +1897,7 @@
    "addr": "Karachi ki sab se sasti Smart LED TV wholesale market! Aaj Market Bhai aapko leke aaya hai Regal Chowk (Khatm-e-Nabuwwat",
    "phone": "0309-9216001",
    "time": "—",
-   "note": "Karachi ki sab se sasti Smart LED TV wholesale market! Aaj Market Bhai aapko leke aaya hai Regal Chowk (Khatm-e-Nabuwwat Chowk) Saddar Karachi ki mashoor Dubai Market mein, jahan S…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=ORZGQrhVOKs"
    },
@@ -2174,7 +1921,7 @@
    "addr": "Rs 750 mein stitched suit aur 1500 mein 2 readymade ladies dresses! Aaj ki video mein hum aapko lekar aaye hain Karachi ",
    "phone": "0319-8941091",
    "time": "—",
-   "note": "Rs 750 mein stitched suit aur 1500 mein 2 readymade ladies dresses! Aaj ki video mein hum aapko lekar aaye hain Karachi ki wholesale market mein jahan Noor Bhai de rahe hain stitch…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=TTZLFqksjwo"
    },
@@ -2198,7 +1945,7 @@
    "addr": "Assalam o Alaikum viewers! Aaj Market Bhai aapko lekar aaya hai Karachi Expo Centre jahan lagi hai 3 din ki zabardast So",
    "phone": "—",
    "time": "—",
-   "note": "Expo Center Karachi 2026 Today 😱 Solar Panel, Lithium Battery & Inverter Wholesale Sale\n\nAssalam o Alaikum viewers! Aaj Market Bhai aapko lekar aaya hai Karachi Expo Centre jahan l…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=7F-QG_p31ZU"
    },
@@ -2222,7 +1969,7 @@
    "addr": "Karachi",
    "phone": "—",
    "time": "—",
-   "note": "Assalam-o-Alaikum dosto! ❤️\n\nAaj ki video mein hum aaye hain Faisal Baba ki LED shop par, jahan LEDs bohat hi kam prices mein mil rahi hain! 😱📺 Agar aap bhi apne ghar ke liye LED T…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=eStrJk2TGlc"
    },
@@ -2246,7 +1993,7 @@
    "addr": "Jodia Bazar Karachi | 11.11 Mega Sale | Wholesale Grocery Market | Price Update Chawal,daal,cheni",
    "phone": "0343-2703933",
    "time": "—",
-   "note": "Jodia Bazar Karachi | 11.11 Mega Sale | Wholesale Grocery Market | Price Update Chawal,daal,cheni\n\n\n11.11 Mega Sale | Grocery Sale | Jodia Bazaar Karachi | Chawal 110Rs.Kg | Pulses…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=eVFKvbLuPZ8"
    },
@@ -2270,7 +2017,7 @@
    "addr": "Plastic Crockery Wholesale, one dollar shop in karachi, essential kitchen tools kitchen gadgets, Daily Discover Pk, chea",
    "phone": "0319-2718146",
    "time": "—",
-   "note": "Mega Sale 100 Rs.|Wholesale Baba PLastic Shop | house Hold Item & Kitchen item Smart Kitchen Gadgets\n\nاسلام علیکم دوستوں \nآج ہمنے بابر پلاسٹک پر وزٹ کیا جس میں ہم نے wo 100 روپے وا…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=0xk-Dj6R1hw"
    },
@@ -2294,7 +2041,7 @@
    "addr": "Karachi",
    "phone": "—",
    "time": "—",
-   "note": "شاپنگ، فوڈ اور فیملی انٹرٹینمنٹ\nبڑے برانڈز ہی نہیں، پہلا فلور گل پلازہ کے متاثرہ دکانداروں کی نئی پہچان بن گیا\nجہاں نقصان کے بعد امید کا نیا آغاز دیکھنے کو ملا\nچورنگی گلستانِ جوہر …",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=cny0YQLbIgI"
    },
@@ -2318,7 +2065,7 @@
    "addr": "Karachi",
    "phone": "0319-2718146",
    "time": "—",
-   "note": "Mega Sale 5-50 & 100Rs| Kitchen Gadgets,House Hold Items,Plastic Kitchen Crockery Wholesale Karachi \n\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\nSHOP…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=RUM_kJys3l4"
    },
@@ -2342,7 +2089,7 @@
    "addr": "Karachi",
    "phone": "0313-2994821",
    "time": "—",
-   "note": "Summer Clearance Sale | Winter New Collection | Mens Fashion | Asif Jeans Collection Water Pump\n\nLooking for the latest men's fashion at wholesale prices? 👖🔥 Explore the amazing **…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=uMCtVE0Nowg"
    },
@@ -2366,7 +2113,7 @@
    "addr": "Used Mobile Market Karachi",
    "phone": "03488367609",
    "time": "—",
-   "note": "7 Days Sale | IPhone 11,12,13,14,15+ | IPhone 13 Box Pack | iPhone 7 PTA Approved 128gb PTA Approved | Sirf 1000 Rupe Mein Mobile Lejao | Mobile Installment in Karachi .\n\nSale Vali…",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=0NgBtpTt5p8"
    },
@@ -2390,7 +2137,7 @@
    "addr": "Jodia Bazaar Karachi mein chawal sirf 110 rupay kilo se shuru! 😱 Is video mein dekhein Jodia Bazaar ki sasti grocery mar",
    "phone": "—",
    "time": "—",
-   "note": "Jodia Bazaar Karachi mein chawal sirf 110 rupay kilo se shuru | Raja Traders Biggest Sale | #rice \n\n\nJodia Bazaar Karachi mein chawal sirf 110 rupay kilo se shuru! 😱 Is video mein …",
+   "note": "Real video posted 2026-11-08 — price/timing video mein confirm karein.",
    "links": {
     "yt": "https://www.youtube.com/watch?v=Xk5rNI-VS3I"
    },

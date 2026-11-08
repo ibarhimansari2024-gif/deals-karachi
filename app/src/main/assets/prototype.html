@@ -244,24 +244,26 @@ const CATS=[["All","🍽️"],["BBQ","🍢"],["Desi","🍛"],["Fast Food","🍔"
 
 async function fetchDeals(manual){
   const btn=document.getElementById("refreshBtn"); btn.classList.add("spin");
-  let ok=false;
-  for(const u of ["https://cdn.jsdelivr.net/gh/ibarhimansari2024-gif/deals-karachi@main/data/deals.json",
-                  "https://raw.githubusercontent.com/ibarhimansari2024-gif/deals-karachi/main/data/deals.json"]){
+  let best=null;
+  for(const u of ["https://raw.githubusercontent.com/ibarhimansari2024-gif/deals-karachi/main/data/deals.json",
+                  "https://cdn.jsdelivr.net/gh/ibarhimansari2024-gif/deals-karachi@main/data/deals.json"]){
     try{
       const r=await fetch(u+"?t="+Date.now(),{cache:"no-store"});
-      if(!r.ok) throw new Error("HTTP "+r.status);
+      if(!r.ok) continue;
       const v=validateDeals(await r.json());
-      if(!v) throw new Error("bad data");
-      DATA=v; ok=true;
-      try{localStorage.setItem("kp_cache",JSON.stringify(DATA));localStorage.setItem("kp_last",String(Date.now()));}catch(e){}
-      updLabel();renderAll();
-      break;
+      if(!v) continue;
+      if(!best || v.deals.length>best.deals.length) best=v;
+      if(best.deals.length>=60) break;
     }catch(e){}
   }
   btn.classList.remove("spin");
   document.getElementById("skeletons").style.display="none";
-  if(ok) toast(manual?"✓ Deals updated":"✓ Auto-update ✓");
-  else if(manual) toast("⚠ Offline — cached data",true);
+  if(best){
+    DATA=best;
+    try{localStorage.setItem("kp_cache",JSON.stringify(DATA));localStorage.setItem("kp_last",String(Date.now()));}catch(e){}
+    updLabel();renderAll();
+    toast(manual?"✓ Deals updated":"✓ Auto-update ✓");
+  } else if(manual) toast("⚠ Offline — cached data",true);
 }
 document.getElementById("refreshBtn").addEventListener("click",()=>fetchDeals(true));
 try{ if(Date.now()-Number(localStorage.getItem("kp_last")||0) > 6*3600e3) fetchDeals(false);}catch(e){}
@@ -273,8 +275,7 @@ function updLabel(){const el=document.getElementById("lastupd"); if(el) el.textC
 function filtered(){
   const q=document.getElementById("search").value.trim().toLowerCase();
   return DATA.deals.filter(d=>
-    (state.area==="All areas"||d.area===state.area)&&
-    (state.cat==="All"||d.cat===state.cat)&&
+    (state.cat==="All"||(d.cat||"Food")===state.cat)&&
     (!q||d.t.toLowerCase().includes(q)||d.area.toLowerCase().includes(q)||d.cuisine.toLowerCase().includes(q))
   ).sort((a,b)=>a.hrs-b.hrs);
 }
