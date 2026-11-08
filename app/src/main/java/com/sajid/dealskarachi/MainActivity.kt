@@ -15,10 +15,10 @@ class MainActivity : Activity() {
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.statusBarColor = Color.parseColor("#001a4b")
-        window.navigationBarColor = Color.parseColor("#0d1630")
+        window.statusBarColor = Color.parseColor("#000000")
+        window.navigationBarColor = Color.parseColor("#000000")
         web = WebView(this)
-        web.setBackgroundColor(Color.parseColor("#070b19"))
+        web.setBackgroundColor(Color.parseColor("#000000"))
         web.settings.javaScriptEnabled = true
         web.settings.domStorageEnabled = true
         // SECURITY: external links (YouTube/Instagram/TikTok/Maps) open in the real
