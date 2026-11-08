@@ -99,19 +99,20 @@ def parse_iso(ts):
 
 
 def age_to_published(rel):
-    """'2 days ago' / '2 دن قبل' -> ISO timestamp approx now - 2 days."""
+    """'2 days ago' / '2 دن قبل' -> ISO timestamp. Returns None if unparseable
+    (assuming 'now' made 8-month-old videos look fresh — real bug)."""
     units_en = {"minute": 60, "hour": 3600, "day": 86400, "week": 604800,
                 "month": 2592000, "year": 31536000, "second": 1}
     units_ur = {"سیکنڈ": 1, "منٹ": 60, "گھنٹہ": 3600, "گھنٹے": 3600, "دن": 86400,
                 "ہفتہ": 604800, "ہفتے": 604800, "ماہ": 2592000, "سال": 31536000}
     m = re.search(r"(\d+)\s*([a-zA-Z\u0600-\u06FF]+)\s*(?:ago|قبل)", rel or "")
     if not m:
-        return datetime.datetime.now(datetime.timezone.utc).isoformat()
+        return None
     n = int(m.group(1))
     unit = m.group(2)
     mult = units_en.get(unit.lower()) or units_ur.get(unit)
     if mult is None:
-        return datetime.datetime.now(datetime.timezone.utc).isoformat()
+        return None
     dt = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(seconds=n * mult)
     return dt.isoformat()
 
@@ -148,7 +149,10 @@ def fetch_channel_videos(cid_or_handle):
                 for p in row.get("metadataParts", []):
                     parts.append(p.get("text", {}).get("content", ""))
             rel = " ".join(parts)
-            out.append({"id": vid, "t": title, "published": age_to_published(rel)})
+            pub = age_to_published(rel)
+            if pub is None:
+                return  # no real date -> reject (was showing as "fresh" — bug)
+            out.append({"id": vid, "t": title, "published": pub})
         except Exception:
             pass
 
@@ -160,7 +164,11 @@ def fetch_channel_videos(cid_or_handle):
                     vid = vr["videoId"]
                     title = "".join(r.get("text", "") for r in vr["title"]["runs"])
                     rel = vr.get("publishedTimeText", {}).get("simpleText", "")
-                    out.append({"id": vid, "t": title, "published": age_to_published(rel)})
+                    pub = age_to_published(rel)
+                    if pub is None:
+                        pass  # no real date -> skip
+                    else:
+                        out.append({"id": vid, "t": title, "published": pub})
                 except Exception:
                     pass
             if "lockupViewModel" in o:

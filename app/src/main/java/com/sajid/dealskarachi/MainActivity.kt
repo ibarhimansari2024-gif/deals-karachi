@@ -28,25 +28,33 @@ class MainActivity : Activity() {
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 val url = request?.url ?: return false
                 val scheme = url.scheme ?: return false
-                val host = url.host ?: return false
-                val internal = host == "raw.githubusercontent.com" ||
-                        host == "unpkg.com" ||
-                        host == "cdn.jsdelivr.net" ||
-                        host == "i.ytimg.com" ||
-                        host.endsWith(".tile.openstreetmap.org")
-                // tel → dialer, geo/mailto → system apps — never inside the WebView
+                // NOTE: scheme checks MUST come before host access — geo:/tel: URIs
+                // have a NULL host, and returning false on null host caused
+                // net::ERR_UNKNOWN_URL_SCHEME instead of opening the Maps/dialer.
                 if (scheme == "tel") {
                     try { startActivity(Intent(Intent.ACTION_DIAL, url)) } catch (_: Exception) {}
                     return true
                 }
-                if (scheme == "geo" || scheme == "mailto") {
+                if (scheme == "geo" || scheme == "mailto" || scheme == "whatsapp" || scheme == "sms") {
                     try { startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (_: Exception) {}
                     return true
                 }
-                return if (scheme == "http" || (scheme == "https" && !internal)) {
-                    try { startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (_: Exception) {}
-                    true
-                } else false
+                if (scheme == "http" || scheme == "https") {
+                    val host = url.host ?: return false
+                    val internal = host == "raw.githubusercontent.com" ||
+                            host == "unpkg.com" ||
+                            host == "cdn.jsdelivr.net" ||
+                            host == "i.ytimg.com" ||
+                            host.endsWith(".tile.openstreetmap.org")
+                    if (!internal) {
+                        try { startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (_: Exception) {}
+                        return true
+                    }
+                    return false
+                }
+                // intent:// and any other scheme → system
+                try { startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (_: Exception) {}
+                return true
             }
         }
         setContentView(web)
