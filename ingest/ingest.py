@@ -26,9 +26,58 @@ PKT = datetime.timezone(datetime.timedelta(hours=5))
 DEAL_WORDS = re.compile(r"\b(deal|deals|offer|sale|buffet|platter|free|discount|combo|price|rs\.?)\b", re.I)
 # food context filter — market/crockery/gadget videos ko rokta hai
 FOOD_WORDS = re.compile(r"food|biryani|pizza|burger|buffet|karahi|bbq|platter|roll|kabab|kebab|dessert|ice\s?cream|chai|nihari|broast|fries|shawarma|manda|mandi|pulao|biryani|chat|chaat|sweets|bakery|iftar|drink|juice|fried|grill|steak|sandwich|wrap|paratha|chicken|mutton|beef|fish", re.I)
+# fashion/clothing/shopping keywords
+FASHION_WORDS = re.compile(r"kurti|kurta|lawn|unstitched|pret|suit|suits|kapray|kapre|clothes|clothing|shoes|sandal|sneaker|jeans|shirt|frock|hoodie|sweatshirt|bag|purse|makeup|cosmetic|perfume|jewellery|jewelry|watch|sale|sale\b|bazaar|market|mall|outlet|brand|wear|fashion|crocery|grocery|crockery|gadget|mobile|phone|shopping|kitchen", re.I)
 PRICE_RE = re.compile(r"rs\.?\s*([\d,]{3,6})", re.I)
 AREA_WORDS = ["DHA", "Clifton", "Gulshan", "Nazimabad", "Bahadurabad", "Saddar",
               "Malir", "Samanabad", "Federal B", "North Nazimabad", "Karachi"]
+
+
+def classify(text):
+    """Deal text -> category."""
+    if FOOD_WORDS.search(text):
+        return "Food"
+    if FASHION_WORDS.search(text):
+        return "Fashion"
+    return "Shopping"
+
+
+BT_URL = "https://www.brandtijara.com/in-store/karachi"
+
+
+def fetch_brandtijara():
+    """Fashion/clothing brand sales in Karachi — brandtijara.com (public, robots-allowed,
+    daily-checked data). Returns list of deals."""
+    try:
+        html = http(BT_URL, timeout=40).decode("utf-8", "ignore")
+    except Exception as e:
+        print(f"  brandtijara fail: {e}")
+        return []
+    pairs = re.findall(r'href="(/brands/[a-z0-9-]+)">([^<]+)<span[^>]*>Up to (\d+)%</span></a>', html)
+    out = []
+    for i, (slug, brand, pct) in enumerate(pairs[:25]):
+        brand = brand.strip()
+        out.append({
+            "id": 50000 + i,
+            "t": f"{brand} — Sale up to {pct}%",
+            "emoji": "👗",
+            "area": "Karachi",
+            "lat": 24.875, "lng": 67.035,
+            "price": 0, "was": 0,
+            "cuisine": "Fashion",
+            "cat": "Fashion",
+            "src": ["cr"],
+            "hrs": 168,
+            "addr": f"{brand} outlets across Karachi — nearest branch map/link se",
+            "phone": "—",
+            "time": "Live today",
+            "note": f"Up to {pct}% off — brandtijara ne aaj check kiya ({brand} outlets Karachi mein).",
+            "links": {"gg": f"https://www.google.com/maps/search/{brand}+Karachi"},
+            "source": f"https://www.brandtijara.com{slug}",
+            "auto": True,
+            "cat": "Fashion",
+        })
+    return out
 
 
 def http(url, timeout=30):
@@ -238,6 +287,7 @@ def video_to_deal(v, idx):
         "price": price or 0,
         "was": 0,
         "cuisine": "Video Deal",
+        "cat": classify(title),
         "src": ["yt"],
         "hrs": hrs,
         "addr": area,
@@ -275,7 +325,7 @@ def main():
             age = datetime.datetime.now(datetime.timezone.utc) - parse_iso(v["published"])
             if age.total_seconds() > 7 * 86400 or v["id"] in seen:
                 continue
-            if not DEAL_WORDS.search(v["t"]) or not FOOD_WORDS.search(v["t"]):
+            if not DEAL_WORDS.search(v["t"]) or not (FOOD_WORDS.search(v["t"]) or FASHION_WORDS.search(v["t"])):
                 continue
             seen.add(v["id"])
             d = video_to_deal(v, idx)
@@ -294,7 +344,11 @@ def main():
     cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
 
     ids_path.parent.mkdir(exist_ok=True)
-    deals = curated["deals"] + fresh
+    # curated deals: default category Food agar missing hai
+    for d in curated["deals"]:
+        d.setdefault("cat", "Food")
+    bt = fetch_brandtijara()
+    deals = curated["deals"] + bt + fresh
     out = {
         "app": "Karachi Pulse",
         "updated": now.isoformat(timespec="seconds"),
@@ -302,7 +356,7 @@ def main():
         "deals": deals,
     }
     DEALS.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"OK: {len(curated['deals'])} curated + {len(fresh)} fresh video deals = {len(deals)} total, updated {out['updated']}")
+    print(f"OK: {len(curated['deals'])} curated + {len(bt)} brand sales + {len(fresh)} fresh video deals = {len(deals)} total, updated {out['updated']}")
 
 
 if __name__ == "__main__":

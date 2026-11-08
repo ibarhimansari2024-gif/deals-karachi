@@ -229,7 +229,8 @@ function validateDeals(raw){
       if(typeof d.links[k]==="string"&&LINK_RE.test(d.links[k])&&d.links[k].length<300) links[k]=d.links[k];
     out.push({id:d.id,t:cleanStr(d.t,120),emoji:/^\p{Extended_Pictographic}$/u.test(d.emoji||"")?d.emoji:"🍽️",
       area:cleanStr(d.area,40),lat:d.lat,lng:d.lng,price:Math.round(d.price),was:Math.round(d.was),
-      cuisine:cleanStr(d.cuisine,30),src:Array.isArray(d.src)?d.src.filter(s=>["yt","ig","tt","gg","cr"].includes(s)).slice(0,4):[],
+      cuisine:cleanStr(d.cuisine,30),cat:["Food","Fashion","Shopping","Grocery","Electronics"].includes(d.cat)?d.cat:"Food",
+      src:Array.isArray(d.src)?d.src.filter(s=>["yt","ig","tt","gg","cr"].includes(s)).slice(0,4):[],
       hrs:(typeof d.hrs==="number"&&d.hrs>=0&&d.hrs<=10080)?d.hrs:168,
       addr:cleanStr(d.addr,140),phone:cleanStr(d.phone,25),time:cleanStr(d.time,40),
       note:cleanStr(d.note,200),links});
@@ -273,7 +274,7 @@ function filtered(){
   const q=document.getElementById("search").value.trim().toLowerCase();
   return DATA.deals.filter(d=>
     (state.area==="All areas"||d.area===state.area)&&
-    (state.cat==="All"||d.cuisine===state.cat)&&
+    (state.cat==="All"||d.cat===state.cat)&&
     (!q||d.t.toLowerCase().includes(q)||d.area.toLowerCase().includes(q)||d.cuisine.toLowerCase().includes(q))
   ).sort((a,b)=>a.hrs-b.hrs);
 }
@@ -349,20 +350,26 @@ function openDetail(d){
   sh.classList.add("open"); sh.onclick=e=>{if(e.target===sh)sh.classList.remove("open");};
 }
 
-/* chips — area/cuisine categories */
-const AREA_ICON={"All areas":"📍","DHA Phase 6":"🏙️","Clifton":"🌊","Gulshan":"🏢","Nazimabad":"🏠","Bahadurabad":"🍢","Saddar":"🛍️","Federal B Area":"🍗","North Nazimabad":"🏘️","Malir":"🌾","Liberty":"🛎️","Karachi":"📍"};
+/* chips — categories (Food/Fashion/Shopping) + areas */
+const CAT_ICON={"All":"🍽️","Food":"🍗","Fashion":"👗","Shopping":"🛍️","Grocery":"🛒","Electronics":"📱"};
+const AREA_ICON={"All areas":"📍","DHA Phase 6":"🏙️","Clifton":"🌊","Gulshan":"🏢","Nazimabad":"🏠","Bahadurabad":"🍢","Saddar":"🛍️","Federal B Area":"🍗","North Nazimabad":"🏘️","Malir":"🌾","Liberty":"🛎️","Karachi":"📍","Lyari":"⚓","Tariq Road":"🛣️","North Karachi":"🏘️"};
 function renderChips(){
-  const areas=[...new Set(DATA.deals.map(d=>d.area))].slice(0,7);
+  const cats=[...new Set(DATA.deals.map(d=>d.cat||"Food"))];
+  const areas=[...new Set(DATA.deals.map(d=>d.area))].filter(a=>a!=="Karachi").slice(0,6);
   const el=document.getElementById("cats");
-  el.innerHTML=[["All","🍽️"],...areas.map(a=>[a,AREA_ICON[a]||"📍"])].map(([a,ico])=>{
-    const active=(a==="All"&&state.cat==="All"&&state.area==="All areas")||state.cat===a||state.area===a;
-    return `<div class="cat ${active?"on":""}" data-a="${a}"><div class="ci-ico">${ico}</div><span>${a==="All"?"Sab":a.replace(" North"," N.")}</span></div>`;
-  }).join("");
+  const catChips=["All",...cats].map(c=>{
+    const active=state.cat==="All"?c==="All":state.cat===c;
+    return `<div class="cat ${active?"on":""}" data-k="cat" data-v="${c}"><div class="ci-ico">${CAT_ICON[c]||"🏷️"}</div><span>${c==="All"?"Sab":c}</span></div>`;
+  });
+  const areaChips=areas.map(a=>{
+    const active=state.area===a;
+    return `<div class="cat ${active?"on":""}" data-k="area" data-v="${a}"><div class="ci-ico">${AREA_ICON[a]||"📍"}</div><span>${a.replace(" North"," N.")}</span></div>`;
+  });
+  el.innerHTML=catChips.concat(areaChips).join("");
   el.querySelectorAll(".cat").forEach(c=>c.addEventListener("click",()=>{
-    const a=c.dataset.a;
-    if(a==="All"){state.area="All areas";state.cat="All";}
-    else if(DATA.deals.some(d=>d.cuisine===a)) state.cat=state.cat===a?"All":a;
-    else state.area=state.area===a?"All areas":a;
+    const k=c.dataset.k,v=c.dataset.v;
+    if(k==="cat"){ state.cat=state.cat===v?"All":v; if(v==="All") state.area="All areas"; }
+    else { state.area=state.area===v?"All areas":v; state.cat="All"; }
     renderAll();
   }));
 }
