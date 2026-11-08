@@ -105,7 +105,7 @@ def age_to_published(rel):
                 "month": 2592000, "year": 31536000, "second": 1}
     units_ur = {"سیکنڈ": 1, "منٹ": 60, "گھنٹہ": 3600, "گھنٹے": 3600, "دن": 86400,
                 "ہفتہ": 604800, "ہفتے": 604800, "ماہ": 2592000, "سال": 31536000}
-    m = re.search(r"(\d+)\s*([a-zA-Z\u0600-\u06FF]+)\s*(?:ago|قبل)", rel or "")
+    m = re.search(r"(\d+)\s*([a-zA-Z\u0600-\u06FF]+)\s*(?:ago|قبل|پہلے)", rel or "")
     if not m:
         return None
     n = int(m.group(1))

@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-08T19:10:22+05:00",
+ "updated": "2026-11-08T19:15:34+05:00",
  "version": 3,
  "deals": [
   {
@@ -1145,6 +1145,226 @@
     "gg": "https://www.google.com/maps/search/Khas Stores+Karachi"
    },
    "source": "https://www.brandtijara.com/brands/khas-stores",
+   "auto": true
+  },
+  {
+   "id": 10001,
+   "t": "11.11 Food Deal | Karachi Cheapest Food Deal | Family Deal | Cold Drink Free #viralvideo",
+   "emoji": "🎥",
+   "area": "Federal B",
+   "lat": 24.954798,
+   "lng": 67.0773498,
+   "price": 0,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Food",
+   "src": [
+    "yt",
+    "gg",
+    "tt"
+   ],
+   "hrs": 147,
+   "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
+   "phone": "0328-1330099",
+   "time": "—",
+   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=Ug8DAzaLtSY",
+    "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
+    "tt": "https://www.tiktok.com/@ramnafaisal261"
+   },
+   "auto": true
+  },
+  {
+   "id": 10002,
+   "t": "Sofa Cum Bed Sirf Rs 18,000! 😱 Liaquatabad Furniture Factory Karachi | 11.11 Sale",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 18000,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 119,
+   "addr": "Karachi",
+   "phone": "0324-2524868",
+   "time": "—",
+   "note": "Real video posted 2026-11-06 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=zpvYZI86zYc"
+   },
+   "auto": true
+  },
+  {
+   "id": 10003,
+   "t": "11.11 Sale! 50% Off Wholesale Crockery & Electronics 😱 Rs 2000 Per KG Non Stick | Karachi",
+   "emoji": "🎥",
+   "area": "DHA",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 2000,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 95,
+   "addr": "11.11 Mega Sale shuru ho chuki hai! Shafiq Plaza (Gul Plaza back side), Karachi me Osama Crockery par electronics, kitch",
+   "phone": "—",
+   "time": "—",
+   "note": "Real video posted 2026-11-05 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=Qd4TM-ohBuY"
+   },
+   "auto": true
+  },
+  {
+   "id": 10004,
+   "t": "Port Grand Karachi Me Patakhay Aur Fireworks Mega Sale! 😱 Sirf Rs 50 Se Shuru",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 100,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 71,
+   "addr": "Karachi",
+   "phone": "0300-3465211",
+   "time": "—",
+   "note": "Real video posted 2026-11-04 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=niEzkSpay9g"
+   },
+   "auto": true
+  },
+  {
+   "id": 10005,
+   "t": "Mehangai Me Bada Relief! Jodia Bazaar Me Chawal Rs 110 Aur Sasta Ration 11.11 Sale",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 110,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 47,
+   "addr": "Karachi Jodia Bazaar me barhti hui mehangai ke dauran aam awam aur shopkeepers ke liye sasta mahana ration package aur w",
+   "phone": "0335-1020817",
+   "time": "—",
+   "note": "Real video posted 2026-11-03 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=S7SlcJVa-T8"
+   },
+   "auto": true
+  },
+  {
+   "id": 10006,
+   "t": "RJ Shopping Mall 10th Anniversary Mega Sale 😱 Rs 150 Branded Stoller & Rs 650 Bedsheet! Karachi",
+   "emoji": "🎥",
+   "area": "DHA",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 150,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 23,
+   "addr": "RJ Shopping Mall Karachi 10th Anniversary Mega Sale 2026! Gulistan-e-Johar Rashid Minhas Road par waqia RJ Shopping Mall",
+   "phone": "0311-9304015",
+   "time": "—",
+   "note": "Real video posted 2026-11-02 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=R7eAQthUtWQ"
+   },
+   "auto": true
+  },
+  {
+   "id": 10007,
+   "t": "Jodia Bazar Karachi | 11.11 Mega Sale | Wholesale Grocery Market | Price Update Chawal,daal,cheni",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 110,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 143,
+   "addr": "Jodia Bazar Karachi | 11.11 Mega Sale | Wholesale Grocery Market | Price Update Chawal,daal,cheni",
+   "phone": "0343-2703933",
+   "time": "—",
+   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=eVFKvbLuPZ8"
+   },
+   "auto": true
+  },
+  {
+   "id": 10008,
+   "t": "Mega Sale 100 Rs.|Wholesale Baba PLastic Shop | house Hold Item & Kitchen item Smart Kitchen Gadgets",
+   "emoji": "🎥",
+   "area": "Nazimabad",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 100,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 95,
+   "addr": "Plastic Crockery Wholesale, one dollar shop in karachi, essential kitchen tools kitchen gadgets, Daily Discover Pk, chea",
+   "phone": "0319-2718146",
+   "time": "—",
+   "note": "Real video posted 2026-11-05 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=0xk-Dj6R1hw"
+   },
+   "auto": true
+  },
+  {
+   "id": 10009,
+   "t": "Mega Sale Mega Mall Gulistan-e-johar Karachi | Biggest sale#superspace #viralvideo  #funplaces ",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 0,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 95,
+   "addr": "Karachi",
+   "phone": "—",
+   "time": "—",
+   "note": "Real video posted 2026-11-05 — price/timing video mein confirm karein.",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=cny0YQLbIgI"
+   },
    "auto": true
   }
  ]
