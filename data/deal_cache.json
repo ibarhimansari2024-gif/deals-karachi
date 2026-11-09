@@ -668,5 +668,33 @@
    "yt"
   ],
   "area": "Karachi"
+ },
+ "UeRjuiEelXw": {
+  "price": 100,
+  "phone": "0311-2205715",
+  "addr": "Irani Kalin aur Turkish Arabic Majlis wholesale rates par! Aaj Market Bhai aapko le kar pohanchay hain Sohrab Goth Karac",
+  "lat": 24.875,
+  "lng": 67.035,
+  "links": {
+   "yt": "https://www.youtube.com/watch?v=UeRjuiEelXw"
+  },
+  "src": [
+   "yt"
+  ],
+  "area": "Karachi"
+ },
+ "bqzfObJmVL8": {
+  "price": 0,
+  "phone": "03122672459",
+  "addr": "Gajak Wholesale Market in Karachi | Cheapest Price Dry Fruits | Winter Special Chiki Price Pakistan",
+  "lat": 24.875,
+  "lng": 67.035,
+  "links": {
+   "yt": "https://www.youtube.com/watch?v=bqzfObJmVL8"
+  },
+  "src": [
+   "yt"
+  ],
+  "area": "Karachi"
  }
 }

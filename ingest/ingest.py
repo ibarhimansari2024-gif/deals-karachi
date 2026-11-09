@@ -57,6 +57,15 @@ def fetch_brandtijara():
     out = []
     for i, (slug, brand, pct) in enumerate(pairs[:25]):
         brand = brand.strip()
+        thumb = ""
+        try:  # brand page ka og:image = real store photo/logo (public, keyless)
+            bhtml = http("https://www.brandtijara.com" + slug, timeout=25).decode("utf-8", "ignore")
+            om = re.search(r'property="og:image"\s+content="(https://[^"]+)"', bhtml) or \
+                 re.search(r'content="(https://[^"]+)"\s+property="og:image"', bhtml)
+            if om:
+                thumb = om.group(1)
+        except Exception:
+            pass
         out.append({
             "id": 50000 + i,
             "t": f"{brand} — Sale up to {pct}%",
@@ -74,6 +83,7 @@ def fetch_brandtijara():
             "note": f"Up to {pct}% off — brandtijara ne aaj check kiya ({brand} outlets Karachi mein).",
             "links": {"gg": f"https://www.google.com/maps/search/{brand}+Karachi"},
             "source": f"https://www.brandtijara.com{slug}",
+            "thumb": thumb,
             "auto": True,
             "cat": "Fashion",
         })
@@ -265,6 +275,15 @@ def enrich_from_desc(deal, desc):
         deal["links"]["ig"] = im.group(0)
         if "ig" not in deal["src"]:
             deal["src"].append("ig")
+    # TikTok oEmbed thumbnail (keyless, public API) — deal ke liye real photo
+    if not deal.get("thumb") and deal["links"].get("tt"):
+        try:
+            oe = json.loads(http("https://www.tiktok.com/oembed?url=" + deal["links"]["tt"], timeout=20).decode("utf-8", "ignore"))
+            tu = oe.get("thumbnail_url", "")
+            if tu.startswith("https://"):
+                deal["thumb"] = tu
+        except Exception:
+            pass
     # postal address line: a line mentioning Karachi + area keywords (not hashtags)
     for line in desc.splitlines():
         l = line.strip()
@@ -302,6 +321,7 @@ def video_to_deal(v, idx):
         "phone": "—",
         "time": "—",
         "note": f"Real video posted {v['published'][:10]} — price/timing video mein confirm karein.",
+        "thumb": f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg",
         "links": {"yt": f"https://www.youtube.com/watch?v={v['id']}"},
         "auto": True,
     }
@@ -357,6 +377,13 @@ def main():
         d.setdefault("cat", "Food")
     bt = fetch_brandtijara()
     deals = curated["deals"] + bt + fresh
+    # thumbnails: har deal pe ek image honi chahiye — yt/shorts link se derive karo
+    YTID = re.compile(r"(?:v=|youtu\.be/|shorts/|embed/|live/)([\w-]{11})")
+    for d in deals:
+        if not d.get("thumb") and (d.get("links") or {}).get("yt"):
+            m = YTID.search(d["links"]["yt"])
+            if m:
+                d["thumb"] = f"https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg"
     out = {
         "app": "Karachi Pulse",
         "updated": now.isoformat(timespec="seconds"),

@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-09T15:28:17+05:00",
+ "updated": "2026-11-10T00:38:06+05:00",
  "version": 3,
  "deals": [
   {
@@ -235,7 +235,8 @@
    },
    "source": "https://www.youtube.com/watch?v=rlhWabUWIcE",
    "published": "2026-09-26",
-   "cat": "Food"
+   "cat": "Food",
+   "thumb": "https://i.ytimg.com/vi/rlhWabUWIcE/hqdefault.jpg"
   },
   {
    "id": 110,
@@ -368,7 +369,8 @@
    },
    "source": "https://www.youtube.com/watch?v=r8doWITKmpY",
    "published": "2026-01-15",
-   "cat": "Food"
+   "cat": "Food",
+   "thumb": "https://i.ytimg.com/vi/r8doWITKmpY/hqdefault.jpg"
   },
   {
    "id": 115,
@@ -395,7 +397,8 @@
     "gg": "https://goo.gl/maps/sfVGq2rLjZnXycf5A"
    },
    "source": "https://www.youtube.com/watch?v=_Qgs5FFpvl8",
-   "published": "2026-02-01"
+   "published": "2026-02-01",
+   "thumb": "https://i.ytimg.com/vi/_Qgs5FFpvl8/hqdefault.jpg"
   },
   {
    "id": 116,
@@ -523,628 +526,257 @@
    "published": "2026-11-08"
   },
   {
-   "id": 50000,
-   "t": "Bata — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
+   "id": 10001,
+   "t": "11.11 Food Deal | Karachi Cheapest Food Deal | Family Deal | Cold Drink Free #viralvideo",
+   "emoji": "🎥",
+   "area": "Federal B",
+   "lat": 24.954798,
+   "lng": 67.0773498,
    "price": 0,
    "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
+   "cuisine": "Video Deal",
+   "cat": "Food",
    "src": [
-    "cr"
+    "yt",
+    "gg",
+    "tt"
    ],
-   "hrs": 168,
-   "addr": "Bata outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Bata outlets Karachi mein).",
+   "hrs": 119,
+   "addr": "Federal B Area Block-19 Near Powerhouse Masjid-e-Aqsa Karachi, Pakistan.",
+   "phone": "0328-1330099",
+   "time": "—",
+   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/Ug8DAzaLtSY/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Bata+Karachi"
+    "yt": "https://www.youtube.com/watch?v=Ug8DAzaLtSY",
+    "gg": "https://maps.app.goo.gl/gC4gaoejvQEzqSeV9",
+    "tt": "https://www.tiktok.com/@ramnafaisal261"
    },
-   "source": "https://www.brandtijara.com/brands/bata",
    "auto": true
   },
   {
-   "id": 50001,
-   "t": "Diners — Sale up to 50%",
-   "emoji": "👗",
+   "id": 10002,
+   "t": "Irani Kalin Aur Arabic Majlis Wholesale Market Karachi 😱 Rs 40 Square Feet Carpet & Kambal",
+   "emoji": "🎥",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
-   "price": 0,
+   "price": 100,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "Diners outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Diners outlets Karachi mein).",
+   "hrs": 143,
+   "addr": "Irani Kalin aur Turkish Arabic Majlis wholesale rates par! Aaj Market Bhai aapko le kar pohanchay hain Sohrab Goth Karac",
+   "phone": "0311-2205715",
+   "time": "—",
+   "note": "Irani Kalin aur Turkish Arabic Majlis wholesale rates par! Aaj Market Bhai aapko le kar pohanchay hain Sohrab Goth Karachi ki mashoor Kalin Wali Gali ke wholesale godown mein, jaha…",
+   "thumb": "https://i.ytimg.com/vi/UeRjuiEelXw/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Diners+Karachi"
+    "yt": "https://www.youtube.com/watch?v=UeRjuiEelXw"
    },
-   "source": "https://www.brandtijara.com/brands/diners",
    "auto": true
   },
   {
-   "id": 50002,
-   "t": "Bonanza Satrangi — Sale up to 50%",
-   "emoji": "👗",
+   "id": 10003,
+   "t": "Sofa Cum Bed Sirf Rs 18,000! 😱 Liaquatabad Furniture Factory Karachi | 11.11 Sale",
+   "emoji": "🎥",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
-   "price": 0,
+   "price": 18000,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "Bonanza Satrangi outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Bonanza Satrangi outlets Karachi mein).",
+   "hrs": 71,
+   "addr": "Karachi",
+   "phone": "0324-2524868",
+   "time": "—",
+   "note": "Real video posted 2026-11-05 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/zpvYZI86zYc/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Bonanza Satrangi+Karachi"
+    "yt": "https://www.youtube.com/watch?v=zpvYZI86zYc"
    },
-   "source": "https://www.brandtijara.com/brands/bonanza-satrangi",
    "auto": true
   },
   {
-   "id": 50003,
-   "t": "Edenrobe — Sale up to 61%",
-   "emoji": "👗",
-   "area": "Karachi",
+   "id": 10004,
+   "t": "11.11 Sale! 50% Off Wholesale Crockery & Electronics 😱 Rs 2000 Per KG Non Stick | Karachi",
+   "emoji": "🎥",
+   "area": "DHA",
    "lat": 24.875,
    "lng": 67.035,
-   "price": 0,
+   "price": 2000,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "Edenrobe outlets across Karachi — nearest branch map/link se",
+   "hrs": 47,
+   "addr": "11.11 Mega Sale shuru ho chuki hai! Shafiq Plaza (Gul Plaza back side), Karachi me Osama Crockery par electronics, kitch",
    "phone": "—",
-   "time": "Live today",
-   "note": "Up to 61% off — brandtijara ne aaj check kiya (Edenrobe outlets Karachi mein).",
+   "time": "—",
+   "note": "Real video posted 2026-11-04 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/Qd4TM-ohBuY/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Edenrobe+Karachi"
+    "yt": "https://www.youtube.com/watch?v=Qd4TM-ohBuY"
    },
-   "source": "https://www.brandtijara.com/brands/edenrobe",
    "auto": true
   },
   {
-   "id": 50004,
-   "t": "Gul Ahmed — Sale up to 50%",
-   "emoji": "👗",
+   "id": 10005,
+   "t": "Port Grand Karachi Me Patakhay Aur Fireworks Mega Sale! 😱 Sirf Rs 50 Se Shuru",
+   "emoji": "🎥",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
-   "price": 0,
+   "price": 100,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "Gul Ahmed outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Gul Ahmed outlets Karachi mein).",
+   "hrs": 47,
+   "addr": "Karachi",
+   "phone": "0300-3465211",
+   "time": "—",
+   "note": "Real video posted 2026-11-04 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/niEzkSpay9g/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Gul Ahmed+Karachi"
+    "yt": "https://www.youtube.com/watch?v=niEzkSpay9g"
    },
-   "source": "https://www.brandtijara.com/brands/gul-ahmed",
    "auto": true
   },
   {
-   "id": 50005,
-   "t": "1st Step — Sale up to 50%",
-   "emoji": "👗",
+   "id": 10006,
+   "t": "Mehangai Me Bada Relief! Jodia Bazaar Me Chawal Rs 110 Aur Sasta Ration 11.11 Sale",
+   "emoji": "🎥",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
-   "price": 0,
+   "price": 110,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "1st Step outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (1st Step outlets Karachi mein).",
+   "hrs": 23,
+   "addr": "Karachi Jodia Bazaar me barhti hui mehangai ke dauran aam awam aur shopkeepers ke liye sasta mahana ration package aur w",
+   "phone": "0335-1020817",
+   "time": "—",
+   "note": "Real video posted 2026-11-03 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/S7SlcJVa-T8/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/1st Step+Karachi"
+    "yt": "https://www.youtube.com/watch?v=S7SlcJVa-T8"
    },
-   "source": "https://www.brandtijara.com/brands/1st-step",
    "auto": true
   },
   {
-   "id": 50006,
-   "t": "Hush Puppies — Sale up to 60%",
-   "emoji": "👗",
+   "id": 10007,
+   "t": "Gajak Wholesale Market in Karachi | Cheapest Price Dry Fruits | Winter Special Chiki Price Pakistan ",
+   "emoji": "🎥",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "Hush Puppies outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 60% off — brandtijara ne aaj check kiya (Hush Puppies outlets Karachi mein).",
+   "hrs": 157,
+   "addr": "Gajak Wholesale Market in Karachi | Cheapest Price Dry Fruits | Winter Special Chiki Price Pakistan",
+   "phone": "03122672459",
+   "time": "—",
+   "note": "Gajak Wholesale Market in Karachi | Cheapest Price Dry Fruits | Winter Special Chiki Price Pakistan \n\nGazzak Wholesale Market in Karachi | Biggest Gazzak market in Karachi | Cheape…",
+   "thumb": "https://i.ytimg.com/vi/bqzfObJmVL8/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Hush Puppies+Karachi"
+    "yt": "https://www.youtube.com/watch?v=bqzfObJmVL8"
    },
-   "source": "https://www.brandtijara.com/brands/hush-puppies",
    "auto": true
   },
   {
-   "id": 50007,
-   "t": "Walkeaze — Sale up to 50%",
-   "emoji": "👗",
+   "id": 10008,
+   "t": "Jodia Bazar Karachi | 11.11 Mega Sale | Wholesale Grocery Market | Price Update Chawal,daal,cheni",
+   "emoji": "🎥",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
-   "price": 0,
+   "price": 110,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "Walkeaze outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Walkeaze outlets Karachi mein).",
+   "hrs": 119,
+   "addr": "Jodia Bazar Karachi | 11.11 Mega Sale | Wholesale Grocery Market | Price Update Chawal,daal,cheni",
+   "phone": "0343-2703933",
+   "time": "—",
+   "note": "Real video posted 2026-11-07 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/eVFKvbLuPZ8/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Walkeaze+Karachi"
+    "yt": "https://www.youtube.com/watch?v=eVFKvbLuPZ8"
    },
-   "source": "https://www.brandtijara.com/brands/walkeaze",
    "auto": true
   },
   {
-   "id": 50008,
-   "t": "Alkaram Studio — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
+   "id": 10009,
+   "t": "Mega Sale 100 Rs.|Wholesale Baba PLastic Shop | house Hold Item & Kitchen item Smart Kitchen Gadgets",
+   "emoji": "🎥",
+   "area": "Nazimabad",
    "lat": 24.875,
    "lng": 67.035,
-   "price": 0,
+   "price": 100,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "Alkaram Studio outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Alkaram Studio outlets Karachi mein).",
+   "hrs": 71,
+   "addr": "Plastic Crockery Wholesale, one dollar shop in karachi, essential kitchen tools kitchen gadgets, Daily Discover Pk, chea",
+   "phone": "0319-2718146",
+   "time": "—",
+   "note": "Real video posted 2026-11-05 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/0xk-Dj6R1hw/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Alkaram Studio+Karachi"
+    "yt": "https://www.youtube.com/watch?v=0xk-Dj6R1hw"
    },
-   "source": "https://www.brandtijara.com/brands/alkaram-studio",
    "auto": true
   },
   {
-   "id": 50009,
-   "t": "Generation — Sale up to 50%",
-   "emoji": "👗",
+   "id": 10010,
+   "t": "Mega Sale Mega Mall Gulistan-e-johar Karachi | Biggest sale#superspace #viralvideo  #funplaces ",
+   "emoji": "🎥",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "cuisine": "Fashion",
+   "cuisine": "Video Deal",
    "cat": "Fashion",
    "src": [
-    "cr"
+    "yt"
    ],
-   "hrs": 168,
-   "addr": "Generation outlets across Karachi — nearest branch map/link se",
+   "hrs": 47,
+   "addr": "Karachi",
    "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Generation outlets Karachi mein).",
+   "time": "—",
+   "note": "Real video posted 2026-11-04 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/cny0YQLbIgI/hqdefault.jpg",
    "links": {
-    "gg": "https://www.google.com/maps/search/Generation+Karachi"
+    "yt": "https://www.youtube.com/watch?v=cny0YQLbIgI"
    },
-   "source": "https://www.brandtijara.com/brands/generation",
-   "auto": true
-  },
-  {
-   "id": 50010,
-   "t": "Cambridge — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Cambridge outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Cambridge outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Cambridge+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/cambridge",
-   "auto": true
-  },
-  {
-   "id": 50011,
-   "t": "Borjan — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Borjan outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Borjan outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Borjan+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/borjan",
-   "auto": true
-  },
-  {
-   "id": 50012,
-   "t": "Saeed Ghani — Sale up to 30%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Saeed Ghani outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 30% off — brandtijara ne aaj check kiya (Saeed Ghani outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Saeed Ghani+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/saeed-ghani",
-   "auto": true
-  },
-  {
-   "id": 50013,
-   "t": "Cross Stitch — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Cross Stitch outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Cross Stitch outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Cross Stitch+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/cross-stitch",
-   "auto": true
-  },
-  {
-   "id": 50014,
-   "t": "Limelight — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Limelight outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/limelight",
-   "auto": true
-  },
-  {
-   "id": 50015,
-   "t": "Insignia — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Insignia outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Insignia outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Insignia+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/insignia",
-   "auto": true
-  },
-  {
-   "id": 50016,
-   "t": "Lakhany — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Lakhany outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Lakhany outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Lakhany+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/lakhany",
-   "auto": true
-  },
-  {
-   "id": 50017,
-   "t": "Shahzeb Saeed — Sale up to 44%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Shahzeb Saeed outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 44% off — brandtijara ne aaj check kiya (Shahzeb Saeed outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Shahzeb Saeed+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/shahzeb-saeed",
-   "auto": true
-  },
-  {
-   "id": 50018,
-   "t": "Amir Adnan — Sale up to 80%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Amir Adnan outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 80% off — brandtijara ne aaj check kiya (Amir Adnan outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Amir Adnan+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/amir-adnan",
-   "auto": true
-  },
-  {
-   "id": 50019,
-   "t": "Outfitters — Sale up to 53%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Outfitters outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 53% off — brandtijara ne aaj check kiya (Outfitters outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/outfitters",
-   "auto": true
-  },
-  {
-   "id": 50020,
-   "t": "Servis — Sale up to 25%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Servis outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 25% off — brandtijara ne aaj check kiya (Servis outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Servis+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/servis",
-   "auto": true
-  },
-  {
-   "id": 50021,
-   "t": "Breakout — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Breakout outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Breakout outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Breakout+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/breakout",
-   "auto": true
-  },
-  {
-   "id": 50022,
-   "t": "Dhanak — Sale up to 40%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Dhanak outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 40% off — brandtijara ne aaj check kiya (Dhanak outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Dhanak+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/dhanak",
-   "auto": true
-  },
-  {
-   "id": 50023,
-   "t": "Engine — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Engine outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Engine outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Engine+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/engine",
-   "auto": true
-  },
-  {
-   "id": 50024,
-   "t": "Khas Stores — Sale up to 50%",
-   "emoji": "👗",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 0,
-   "was": 0,
-   "cuisine": "Fashion",
-   "cat": "Fashion",
-   "src": [
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Khas Stores outlets across Karachi — nearest branch map/link se",
-   "phone": "—",
-   "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Khas Stores outlets Karachi mein).",
-   "links": {
-    "gg": "https://www.google.com/maps/search/Khas Stores+Karachi"
-   },
-   "source": "https://www.brandtijara.com/brands/khas-stores",
    "auto": true
   }
  ]

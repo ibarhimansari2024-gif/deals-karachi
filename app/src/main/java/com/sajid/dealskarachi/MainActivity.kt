@@ -60,6 +60,7 @@ class MainActivity : Activity() {
                             host == "unpkg.com" ||
                             host == "cdn.jsdelivr.net" ||
                             host == "i.ytimg.com" ||
+                            host == "images.weserv.nl" ||   // thumbnail fallback proxy
                             host.endsWith(".tile.openstreetmap.org")
                     if (!internal) {
                         try { startActivity(Intent(Intent.ACTION_VIEW, url)) } catch (_: Exception) {}

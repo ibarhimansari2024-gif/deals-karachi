@@ -83,9 +83,10 @@
   .card:active{transform:scale(.97)}
   @keyframes cardin{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
   .thumb{height:110px;position:relative;background:var(--thumbbg);overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .mono{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  .mono{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
     font-size:clamp(30px,9vw,40px);font-weight:800;letter-spacing:-1px;
     background:linear-gradient(145deg,#232329 0%,#0d0d0d 100%);color:#e8e8ec;position:relative}
+  .mono .memoji{font-size:26px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
   body.light .mono{background:linear-gradient(145deg,#e8ecf6 0%,#d5dcec 100%);color:#3a4460}
   .timg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
   .timg.on{opacity:1}
@@ -167,7 +168,8 @@
   .hbtn{transition:transform .15s,background-color .25s}
   .hbtn:active{transform:scale(.88)}
   @media (prefers-reduced-motion: reduce){
-    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+    /* NOTE: ye query jaan-boojh ke DISABLED hai — phone ki "remove animations"
+       setting pe poora app dead lagta tha. Animations hamesha chalengi. */
   }
 </style>
 </head>
@@ -261,6 +263,7 @@ function validateDeals(raw){
       area:cleanStr(d.area,40),lat:d.lat,lng:d.lng,price:Math.round(d.price),was:Math.round(d.was),
       cuisine:cleanStr(d.cuisine,30),cat:["Food","Fashion","Shopping","Grocery","Electronics"].includes(d.cat)?d.cat:"Food",
       src:Array.isArray(d.src)?d.src.filter(s=>["yt","ig","tt","gg","cr"].includes(s)).slice(0,4):[],
+      thumb:(typeof d.thumb==="string"&&cleanStr(d.thumb,300).startsWith("https://"))?cleanStr(d.thumb,300):"",
       hrs:(typeof d.hrs==="number"&&d.hrs>=0&&d.hrs<=10080)?d.hrs:168,
       addr:cleanStr(d.addr,140),phone:cleanStr(d.phone,25),time:cleanStr(d.time,40),
       note:cleanStr(d.note,200),links});
@@ -334,19 +337,26 @@ function brandMono(t){
   const a=(words[0]||"D")[0], b=(words[1]||"")[0];
   return (a+(b||"")).toUpperCase();
 }
-function thumbImg(yid,big){
-  const f=big?"maxresdefault.jpg":"hqdefault.jpg";
-  return `<img class="timg" loading="lazy" src="https://i.ytimg.com/vi/${yid}/${f}" alt="" onload="this.classList.add('on')"
-    onerror="if(!this.dataset.f){this.dataset.f='1';this.src='https://images.weserv.nl/?url=i.ytimg.com/vi/${yid}/hqdefault.jpg&w=480'}else{this.style.display='none'}">`;
+/* thumbnail picking: feed thumb field → YouTube id (watch/shorts/embed/live) → null (designed tile) */
+const YTID_RE=/(?:v=|youtu\.be\/|shorts\/|embed\/|live\/)([\w-]{11})/;
+function pickThumb(d){
+  if(d.thumb) return d.thumb;
+  const yid=(d.links&&d.links.yt&&d.links.yt.match(YTID_RE)||[])[1];
+  return yid?`https://i.ytimg.com/vi/${yid}/hqdefault.jpg`:"";
+}
+function thumbImg(d,big){
+  const u=pickThumb(d);
+  if(!u) return "";
+  return `<img class="timg" loading="lazy" src="${u}" alt="" onload="this.classList.add('on')"
+    onerror="if(!this.dataset.f){this.dataset.f='1';this.src='https://images.weserv.nl/?url='+encodeURIComponent('${u}'.replace(/^https:\\/\\//,''))+'&w=480'}else{this.style.display='none'}">`;
 }
 function renderFeatured(){
   const list=filtered().slice(0,4);
   document.getElementById("featwrap").style.display=list.length?"block":"none";
   const el=document.getElementById("feat");
   el.innerHTML=list.map((d,i)=>{
-    const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
     return `<div class="fcard" data-id="${d.id}" style="animation-delay:${i*60}ms">
-      <div class="thumb"><div class="mono">${brandMono(d.t)}</div>${yid?thumbImg(yid,true):""}<div class="tshade"></div>
+      <div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,true)}<div class="tshade"></div>
         <div class="srcbadges" style="position:absolute;top:10px;left:10px;display:flex;gap:4px">${d.src.map(s=>`<span class="src ${s}">${({yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓"})[s]}</span>`).join("")}</div>
         <div class="fbtm"><div class="fbt">${d.t}</div><div class="fbm"><b style="color:#ffb020">Rs ${d.price>0?d.price.toLocaleString():"video mein"}</b> · ${d.area} · ⏳ ${fmtHrs(d.hrs)}</div></div>
       </div></div>`;
@@ -358,9 +368,8 @@ function renderGrid(){
   const g=document.getElementById("grid"); g.innerHTML="";
   if(!list.length){g.innerHTML='<div class="empty">😕 Koi deal nahi mili<br><small>🔄 Refresh ya doosra area try karo</small></div>';return;}
   list.forEach((d,i)=>{
-    const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
     const c=document.createElement("div");c.className="card";c.style.animationDelay=(i%8)*50+"ms";
-    c.innerHTML=`<div class="thumb"><div class="mono">${brandMono(d.t)}</div>${yid?thumbImg(yid,false):""}
+    c.innerHTML=`<div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}
       <div class="srcbadges">${d.src.map(s=>`<span class="src ${s}">${({yt:"YT",ig:"IG",tt:"TT",gg:"GO",cr:"✓"})[s]}</span>`).join("")}</div>
       <div class="pricepill">${d.price>0?"Rs "+d.price.toLocaleString():"🎬 Video"}</div></div>
       <div class="cardbody"><h3>${d.t}</h3>
@@ -378,11 +387,11 @@ function renderAll(){
 function fmtHrs(h){if(h<24)return h+"h";const d=Math.floor(h/24);return d+"d";}
 function openDetail(d){
   const sh=document.getElementById("sheet"),sc=document.getElementById("sheetcard");
-  const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
+  const hasThumb=!!pickThumb(d);
   const srcNames={yt:"▶ YouTube",ig:"📷 Insta",tt:"🎵 TikTok",gg:"🗺️ Maps",cr:"✓ Verified"};
   sc.innerHTML=`
     <div class="grab"></div>
-    ${yid?`<div style="height:170px;border-radius:16px;overflow:hidden;margin-bottom:12px;position:relative"><div class="mono">${brandMono(d.t)}</div>${thumbImg(yid,true)}</div>`:`<div style="height:90px;display:flex;align-items:center;justify-content:center;font-size:56px;background:var(--surface2);border-radius:16px">${d.emoji}</div>`}
+    ${hasThumb?`<div style="height:170px;border-radius:16px;overflow:hidden;margin-bottom:12px;position:relative"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,true)}</div>`:`<div style="height:90px;display:flex;align-items:center;justify-content:center;font-size:56px;background:var(--surface2);border-radius:16px">${d.emoji}</div>`}
     <h2 style="font-size:19px;font-weight:800;color:var(--ink)">${d.t}</h2>
     <div class="meta"><span>${d.emoji} ${d.cuisine}</span><span class="dot"></span><span>${d.area}</span><span class="dot"></span><span>⏳ ${fmtHrs(d.hrs)}</span></div>
     <div class="pricerow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${Math.round((1-d.price/d.was)*100)}% OFF</span>`:""}`:`<span class="now" style="font-size:16px">🎬 Price video mein</span>`}</div>
@@ -465,9 +474,8 @@ function renderSaved(){
   g.innerHTML="";
   if(!list.length){g.innerHTML='<div class="empty">🤍 Koi saved deal nahi<br><small>Deals mein tap kar ke ❤️ karo</small></div>';return;}
   list.forEach(d=>{
-    const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
     const c=document.createElement("div");c.className="card";
-    c.innerHTML=`<div class="thumb"><div class="mono">${brandMono(d.t)}</div>${yid?thumbImg(yid,false):""}</div>
+    c.innerHTML=`<div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}</div>
       <div class="cardbody"><h3>${d.t}</h3><div class="meta"><span>📍 ${d.area}</span><span class="dot"></span><b style="color:var(--accent)">Rs ${d.price>0?d.price.toLocaleString():"?"}</b></div></div>`;
     c.addEventListener("click",()=>openDetail(d));
     g.appendChild(c);
