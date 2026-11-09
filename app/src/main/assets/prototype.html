@@ -220,11 +220,16 @@ const FALLBACK={app:"Karachi Pulse",updated:"first load",version:3,deals:[
 ]};
 
 const LINK_RE=/^https:\/\/(www\.)?(youtube\.com|youtu\.be|instagram\.com|tiktok\.com|maps\.app\.goo\.gl|maps\.google\.com|google\.com|kfoods\.com|foodpanda\.pk)\//;
-function cleanStr(v,max){return (typeof v==="string")?v.slice(0,max):""}
+function cleanStr(v,max){
+  if(typeof v!=="string") return "";
+  // SECURITY: strip all HTML-ish chars — feed strings are plain text only.
+  return v.replace(/[<>"'`]/g,"").replace(/\u0000/g,"").trim().slice(0,max);
+}
 function validateDeals(raw){
   if(!raw||!Array.isArray(raw.deals)) return null;
   const out=[];
   for(const d of raw.deals.slice(0,60)){
+    if(!d || typeof d!=="object") continue;  // null/garbage elements — skip, don't crash
     if(typeof d.id!=="number"||typeof d.price!=="number"||typeof d.was!=="number") continue;
     if(d.price<0||d.price>1000000||!Number.isFinite(d.lat)||!Number.isFinite(d.lng)) continue;
     if(d.lat<24.6||d.lat>25.6||d.lng<66.6||d.lng>68.0) continue;
@@ -243,6 +248,11 @@ function validateDeals(raw){
 }
 
 let DATA=null, state={area:"All areas",cat:"All",q:"",saved:new Set(),tab:"home"}, map=null, markers=[];
+try{
+  const s=JSON.parse(localStorage.getItem("kp_saved")||"[]");
+  if(Array.isArray(s)) state.saved=new Set(s.filter(x=>typeof x==="number"));
+}catch(e){}
+function persistSaved(){ try{ localStorage.setItem("kp_saved", JSON.stringify([...state.saved])); }catch(e){} }
 try{ const c=localStorage.getItem("kp_cache"); if(c){const v=validateDeals(JSON.parse(c)); if(v) DATA=v;} }catch(e){}
 const CATS=[["All","🍽️"],["BBQ","🍢"],["Desi","🍛"],["Fast Food","🍔"],["Buffet","🍽️"],["Pizza","🍕"],["Dessert","🍨"],["Grocery","🛒"]];
 
@@ -358,7 +368,7 @@ function openDetail(d){
     if(navigator.share) navigator.share({title:"Karachi Pulse",text:txt}).catch(()=>{});
     else { try{navigator.clipboard.writeText(txt);toast("✓ Copy ho gaya");}catch(e){} }
   };
-  document.getElementById("savecta").onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);renderAll();openDetail(d);};
+  document.getElementById("savecta").onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);persistSaved();renderAll();openDetail(d);};
   sh.classList.add("open"); sh.onclick=e=>{if(e.target===sh)sh.classList.remove("open");};
 }
 
