@@ -11,8 +11,8 @@ android {
         applicationId "com.sajid.dealskarachi"
         minSdk 24
         targetSdk 35
-        versionCode 13
-        versionName "3.7"
+        versionCode 14
+        versionName "3.8"
     }
 
     buildTypes {

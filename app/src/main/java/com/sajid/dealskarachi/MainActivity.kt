@@ -4,7 +4,9 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.view.WindowInsets
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -21,6 +23,19 @@ class MainActivity : Activity() {
         web.setBackgroundColor(Color.parseColor("#000000"))
         web.settings.javaScriptEnabled = true
         web.settings.domStorageEnabled = true
+        // Android 15 (targetSdk 35) forces edge-to-edge: the app draws UNDER the
+        // status/navigation bars, and WebView ignores CSS safe-area insets —
+        // the UI looked shifted up / cut off. Fix: pad the WebView by the real
+        // system-bar + cutout insets so content starts BELOW the status bar.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            web.setOnApplyWindowInsetsListener { v, insets ->
+                val bars = insets.getInsets(
+                    WindowInsets.Type.systemBars() or WindowInsets.Type.displayCutout()
+                )
+                v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+                insets
+            }
+        }
         // SECURITY: external links (YouTube/Instagram/TikTok/Maps) open in the real
         // app via the system — never navigate inside our own WebView. Cleartext HTTP
         // is blocked at manifest level (usesCleartextTraffic=false).
