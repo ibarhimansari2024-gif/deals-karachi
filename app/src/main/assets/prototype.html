@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
 <title>Karachi Pulse</title>
 <link rel="stylesheet" href="leaflet.css">
 <style>
@@ -21,9 +21,9 @@
     --thumbbg:#dfe6f4;
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-  html,body{height:100%}
+  html,body{height:100%;overscroll-behavior:none}
   body{background:#05070f;color:var(--ink);font-family:'Plus Jakarta Sans',-apple-system,"Segoe UI",Roboto,sans-serif}
-  .phone{width:100vw;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
+  .phone{width:100vw;height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
   @media (min-width:481px){
     body{display:flex;align-items:center;justify-content:center;gap:44px;padding:32px 16px;flex-wrap:wrap}
     .phone{width:400px;height:840px;max-height:96vh;border-radius:44px;border:1px solid #10142a;box-shadow:0 30px 80px rgba(0,0,0,.6)}
@@ -34,7 +34,7 @@
   .side li{font-size:13px;line-height:1.7;margin-left:18px}
 
   /* header */
-  .hdr{background:var(--headerbg);color:#fff;padding:14px 20px 18px;border-radius:0 0 26px 26px;flex-shrink:0}
+  .hdr{background:var(--headerbg);color:#fff;padding:14px 20px 18px;padding-top:max(14px, env(safe-area-inset-top));border-radius:0 0 26px 26px;flex-shrink:0}
   .hdr-top{display:flex;justify-content:space-between;align-items:center}
   .hdr h1{font-size:21px;font-weight:800;letter-spacing:-.4px}
   .hdr h1 b{color:var(--muted)}
@@ -278,9 +278,20 @@ async function fetchDeals(manual){
     updLabel();renderAll();
     toast(manual?"✓ Deals updated":"✓ Auto-update ✓");
   } else if(manual) toast("⚠ Offline — cached data",true);
+  return !!best;
 }
 document.getElementById("refreshBtn").addEventListener("click",()=>fetchDeals(true));
-try{ if(Date.now()-Number(localStorage.getItem("kp_last")||0) > 6*3600e3) fetchDeals(false);}catch(e){}
+/* boot: fetch on load, aggressive retry until success (fallback pe atakna = broken app) */
+let bootTries=0, booting=false;
+async function boot(){
+  if(booting) return; booting=true;
+  const ok=await fetchDeals(false);
+  booting=false;
+  if(!ok && bootTries<6){ bootTries++; setTimeout(boot, 2500*bootTries); }
+  else if(!ok) toast("⚠ Offline — data cache se", true);
+}
+window.addEventListener("online",()=>{bootTries=0;boot();});
+boot();
 setInterval(()=>{ if(navigator.onLine) fetchDeals(false); }, 15*60*1000);
 document.addEventListener("visibilitychange",()=>{ if(!document.hidden&&navigator.onLine&&Date.now()-Number(localStorage.getItem("kp_last")||0)>30*60e3) fetchDeals(false); });
 
@@ -302,6 +313,11 @@ function brandMono(t){
   const a=(words[0]||"D")[0], b=(words[1]||"")[0];
   return (a+(b||"")).toUpperCase();
 }
+function thumbImg(yid,big){
+  const f=big?"maxresdefault.jpg":"hqdefault.jpg";
+  return `<img class="timg" loading="lazy" src="https://i.ytimg.com/vi/${yid}/${f}" alt=""
+    onerror="if(!this.dataset.f){this.dataset.f='1';this.src='https://images.weserv.nl/?url=i.ytimg.com/vi/${yid}/hqdefault.jpg&w=480'}else{this.style.display='none'}">`;
+}
 function renderFeatured(){
   const list=filtered().slice(0,4);
   document.getElementById("featwrap").style.display=list.length?"block":"none";
@@ -309,7 +325,7 @@ function renderFeatured(){
   el.innerHTML=list.map((d,i)=>{
     const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
     return `<div class="fcard" data-id="${d.id}" style="animation-delay:${i*60}ms">
-      <div class="thumb">${yid?`<img class="timg" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" onerror="this.remove()"><div class="tshade"></div>`:""}
+      <div class="thumb"><div class="mono">${brandMono(d.t)}</div>${yid?thumbImg(yid,true):""}<div class="tshade"></div>
         <div class="srcbadges" style="position:absolute;top:10px;left:10px;display:flex;gap:4px">${d.src.map(s=>`<span class="src ${s}">${({yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓"})[s]}</span>`).join("")}</div>
         <div class="fbtm"><div class="fbt">${d.t}</div><div class="fbm"><b style="color:#ffb020">Rs ${d.price>0?d.price.toLocaleString():"video mein"}</b> · ${d.area} · ⏳ ${fmtHrs(d.hrs)}</div></div>
       </div></div>`;
@@ -323,7 +339,7 @@ function renderGrid(){
   list.forEach((d,i)=>{
     const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
     const c=document.createElement("div");c.className="card";c.style.animationDelay=(i%8)*50+"ms";
-    c.innerHTML=`<div class="thumb">${yid?`<img class="timg" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" onerror="this.remove()" alt=""><div class="tshade"></div>`:`<div class="mono">${brandMono(d.t)}</div>`}
+    c.innerHTML=`<div class="thumb"><div class="mono">${brandMono(d.t)}</div>${yid?thumbImg(yid,false):""}
       <div class="srcbadges">${d.src.map(s=>`<span class="src ${s}">${({yt:"YT",ig:"IG",tt:"TT",gg:"GO",cr:"✓"})[s]}</span>`).join("")}</div>
       <div class="pricepill">${d.price>0?"Rs "+d.price.toLocaleString():"🎬 Video"}</div></div>
       <div class="cardbody"><h3>${d.t}</h3>
@@ -345,7 +361,7 @@ function openDetail(d){
   const srcNames={yt:"▶ YouTube",ig:"📷 Insta",tt:"🎵 TikTok",gg:"🗺️ Maps",cr:"✓ Verified"};
   sc.innerHTML=`
     <div class="grab"></div>
-    ${yid?`<div style="height:170px;border-radius:16px;overflow:hidden;margin-bottom:12px"><img src="https://i.ytimg.com/vi/${yid}/maxresdefault.jpg" onerror="this.src='https://i.ytimg.com/vi/${yid}/hqdefault.jpg'" style="width:100%;height:100%;object-fit:cover" alt=""></div>`:`<div style="height:90px;display:flex;align-items:center;justify-content:center;font-size:56px;background:var(--surface2);border-radius:16px">${d.emoji}</div>`}
+    ${yid?`<div style="height:170px;border-radius:16px;overflow:hidden;margin-bottom:12px;position:relative"><div class="mono">${brandMono(d.t)}</div>${thumbImg(yid,true)}</div>`:`<div style="height:90px;display:flex;align-items:center;justify-content:center;font-size:56px;background:var(--surface2);border-radius:16px">${d.emoji}</div>`}
     <h2 style="font-size:19px;font-weight:800;color:var(--ink)">${d.t}</h2>
     <div class="meta"><span>${d.emoji} ${d.cuisine}</span><span class="dot"></span><span>${d.area}</span><span class="dot"></span><span>⏳ ${fmtHrs(d.hrs)}</span></div>
     <div class="pricerow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${Math.round((1-d.price/d.was)*100)}% OFF</span>`:""}`:`<span class="now" style="font-size:16px">🎬 Price video mein</span>`}</div>
@@ -430,7 +446,7 @@ function renderSaved(){
   list.forEach(d=>{
     const yid=(d.links&&d.links.yt&&d.links.yt.match(/(?:v=|youtu\.be\/)([\w-]{11})/)||[])[1];
     const c=document.createElement("div");c.className="card";
-    c.innerHTML=`<div class="thumb">${yid?`<img class="timg" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" onerror="this.remove()">`:`<span style="font-size:44px">${d.emoji}</span>`}</div>
+    c.innerHTML=`<div class="thumb"><div class="mono">${brandMono(d.t)}</div>${yid?thumbImg(yid,false):""}</div>
       <div class="cardbody"><h3>${d.t}</h3><div class="meta"><span>📍 ${d.area}</span><span class="dot"></span><b style="color:var(--accent)">Rs ${d.price>0?d.price.toLocaleString():"?"}</b></div></div>`;
     c.addEventListener("click",()=>openDetail(d));
     g.appendChild(c);
