@@ -44,6 +44,68 @@ def classify(text):
 
 BT_URL = "https://www.brandtijara.com/in-store/karachi"
 
+# brand -> domain: deal title se brand pehchan kar us ki picture lagate hain
+# (har deal pe picture chahiye — user demand; sources keyless hain)
+BRAND_SITES = {
+    "domino": "dominos.pk",
+    "kababjees": "kababjees.com",
+    "btb": "btbmore.com",
+    "khaadi": "khaadi.com",
+    "gul ahmed": "gulahmedshop.com",
+    "limelight": "limelight.pk",
+    "outfitters": "outfitters.com.pk",
+    "bata": "bata.com.pk",
+    "hashim food": "hashimfood.com",
+}
+# cuisine-matched real photos (Wikimedia Commons, CC-licensed) — brands with no
+# known domain inke liye. Ingest HEAD-verify karta hai; fail ho to skip.
+CUISINE_IMG = {
+    "buffet": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600",
+    "pulao": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Biryani_combo.jpg?width=600",
+    "biryani": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Biryani_combo.jpg?width=600",
+    "bbq": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600",
+    "turkish": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600",
+    "burger": "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600",
+    "grill": "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600",
+    "fish": "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600",
+}
+
+
+def brand_image(deal):
+    """Deal ke liye picture dhoondo: brand site og:image -> icon.horse logo -> cuisine photo."""
+    t = (deal.get("t") or "").lower()
+    domain = next((d for k, d in BRAND_SITES.items() if k in t), None)
+    if domain:
+        # 1) brand website ka og:image (real photo — CI network pe chalta hai)
+        try:
+            html = http(f"https://www.{domain}", timeout=20).decode("utf-8", "ignore")
+            om = re.search(r'property=["\']og:image["\'][^>]*content=["\'](https://[^"\']+)', html) or \
+                 re.search(r'content=["\'](https://[^"\']+)["\'][^>]*property=["\']og:image', html)
+            if om:
+                return om.group(1)
+        except Exception:
+            pass
+        # 2) icon.horse — domain ka logo (keyless, verified working)
+        try:
+            req = urllib.request.Request(f"https://icon.horse/icon/{domain}", headers=UA)
+            with urllib.request.urlopen(req, timeout=20) as r:
+                if r.status == 200 and (r.headers.get("Content-Type") or "").startswith("image"):
+                    return f"https://icon.horse/icon/{domain}"
+        except Exception:
+            pass
+    # 3) cuisine-matched Commons photo (HEAD-verify; fail -> skip)
+    for key, url in CUISINE_IMG.items():
+        if key in t:
+            try:
+                req = urllib.request.Request(url, headers=UA, method="HEAD")
+                with urllib.request.urlopen(req, timeout=20) as r:
+                    if r.status == 200:
+                        return url
+            except Exception:
+                pass
+            break
+    return ""
+
 
 def fetch_brandtijara():
     """Fashion/clothing brand sales in Karachi — brandtijara.com (public, robots-allowed,
@@ -384,6 +446,9 @@ def main():
             m = YTID.search(d["links"]["yt"])
             if m:
                 d["thumb"] = f"https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg"
+        # bina image wali deals: brand ki picture internet se (og:image / logo / cuisine photo)
+        if not d.get("thumb"):
+            d["thumb"] = brand_image(d)
     out = {
         "app": "Karachi Pulse",
         "updated": now.isoformat(timespec="seconds"),
