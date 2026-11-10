@@ -148,6 +148,18 @@
   .drow .v{font-weight:600;color:var(--ink)}
   .srclinks{display:flex;gap:8px;flex-wrap:wrap}
   .srclinks a{font-size:12px;font-weight:800;padding:8px 12px;border-radius:10px;text-decoration:none;border:1.5px solid var(--border);color:var(--ink)}
+  /* "kya karna hai" steps — deal confuse na ho */
+  .steps{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin:12px 0 4px}
+  .steps h4{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.4px;text-transform:uppercase;margin-bottom:8px}
+  .steps .stp{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.45;color:var(--ink);padding:5px 0}
+  .steps .stp b{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--accent-ink);
+    font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .srcbox{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin-top:10px}
+  .srcbox h4{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.4px;text-transform:uppercase;margin-bottom:8px}
+  .srcrow{display:flex;gap:10px;align-items:center;padding:7px 0;font-size:13px;color:var(--ink);text-decoration:none;font-weight:700}
+  .srcrow:active{opacity:.7}
+  .srcrow .si{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+  .srcrow small{display:block;font-weight:600;color:var(--muted);font-size:11px}
   .cta{width:100%;padding:14px;border-radius:14px;background:var(--accent);color:var(--accent-ink);border:none;font-size:14.5px;
     font-weight:800;cursor:pointer;margin-top:14px;font-family:inherit}
   .cta.ghost{background:var(--surface2);color:var(--ink);border:1.5px solid var(--border);box-shadow:none}
@@ -389,27 +401,42 @@ function fmtHrs(h){if(h<24)return h+"h";const d=Math.floor(h/24);return d+"d";}
 function openDetail(d){
   const sh=document.getElementById("sheet"),sc=document.getElementById("sheetcard");
   const hasThumb=!!pickThumb(d);
-  const srcNames={yt:"▶ YouTube",ig:"📷 Insta",tt:"🎵 TikTok",gg:"🗺️ Maps",cr:"✓ Verified"};
+  const srcIcons={yt:["▶","#ff0033"],ig:["📷","#d6249f"],tt:["🎵","#00f2ea"],gg:["🗺️","#4285f4"],cr:["✓","#0bb07b"]};
+  const srcLabels={yt:["YouTube video","Deal is video se aayi hai"],ig:["Instagram post","Deal is post se aayi hai"],
+    tt:["TikTok video","Deal is video se aayi hai"],gg:["Google Maps","Location ka source"],cr:["Brand tijara","Brand ki official sale page"]};
+  const posted=()=>{const left=d.hrs||168;return left<168?`~${168-left>24?Math.floor((168-left)/24)+" din":(168-left)+" ghante"} pehle post hui`:"purani deal";};
+  const srcRows=Object.keys(d.links).map(k=>{
+    const ic=srcIcons[k]||["🔗","#888"],lb=srcLabels[k]||[k,""];
+    return `<a class="srcrow" href="${d.links[k]}" target="_blank" rel="noopener">
+      <span class="si" style="background:${ic[1]}22;color:${ic[1]}">${ic[0]}</span>
+      <span>${lb[0]}<small>${lb[1]}</small></span></a>`;
+  }).join("");
   sc.innerHTML=`
     <div class="grab"></div>
     ${hasThumb?`<div style="height:170px;border-radius:16px;overflow:hidden;margin-bottom:12px;position:relative"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,true)}</div>`:`<div style="height:90px;display:flex;align-items:center;justify-content:center;font-size:56px;background:var(--surface2);border-radius:16px">${d.emoji}</div>`}
     <h2 style="font-size:19px;font-weight:800;color:var(--ink)">${d.t}</h2>
-    <div class="meta"><span>${d.emoji} ${d.cuisine}</span><span class="dot"></span><span>${d.area}</span><span class="dot"></span><span>⏳ ${fmtHrs(d.hrs)}</span></div>
+    <div class="meta"><span>${d.emoji} ${d.cuisine}</span><span class="dot"></span><span>${d.area}</span><span class="dot"></span><span>⏳ ${fmtHrs(d.hrs)} baqi</span></div>
     <div class="pricerow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${Math.round((1-d.price/d.was)*100)}% OFF</span>`:""}`:`<span class="now" style="font-size:16px">🎬 Price video mein</span>`}</div>
+    <div class="steps">
+      <h4>Kya karna hai</h4>
+      <div class="stp"><b>1</b><span>${hasThumb?"Neeche source video dekho — deal sach hai ya nahi, poora detail video mein hai":"Pehle price aur jagah check karo"}</span></div>
+      <div class="stp"><b>2</b><span>${d.phone&&d.phone!=="—"?`📞 Restaurant ko call karo (<b style="color:var(--accent)">${d.phone}</b>) — price/timing confirm karo`:"📞 Restaurant ki details se price confirm karo"}</span></div>
+      <div class="stp"><b>3</b><span>🧭 Directions se restaurant pohanch jao — jaldi karo, offer mehdood hai (${fmtHrs(d.hrs)} baqi)</span></div>
+    </div>
     <div class="drow"><span class="k">📍 Address</span><span class="v">${d.addr}</span></div>
     <div class="drow"><span class="k">🕒 Timings</span><span class="v">${d.time}</span></div>
-    <div class="drow"><span class="k">📞 Contact</span><span class="v">${d.phone}</span></div>
-    <div class="drow"><span class="k">🔗 Sources</span><span class="srclinks">${Object.keys(d.links).map(k=>`<a href="${d.links[k]}" target="_blank" rel="noopener" class="${k}">${({yt:"▶ YouTube",ig:"📷 Insta",tt:"🎵 TikTok",gg:"🗺️ Maps"})[k]||k}</a>`).join("")}</span></div>
-    <div class="drow"><span class="k">📝 Notes</span><span class="v" style="font-weight:500">${d.note}</span></div>
-    <button class="cta" id="mapcta">🧭 Directions</button>
+    ${d.note?`<div class="drow"><span class="k">📝 Note</span><span class="v" style="font-weight:500">${d.note}</span></div>`:""}
+    ${srcRows?`<div class="srcbox"><h4>Ye deal kahan se aayi — ${posted()}</h4>${srcRows}</div>`:""}
+    <button class="cta" id="callcta">${d.phone&&d.phone!=="—"?"📞 Call karo — "+d.phone:"🧭 Directions"}</button>
     <div style="display:flex;gap:8px">
-      ${d.phone!=="—"?`<button class="cta ghost" style="margin-top:10px" id="callcta">📞 Call</button>`:""}
+      ${d.phone&&d.phone!=="—"?`<button class="cta ghost" style="margin-top:10px" id="dircta">🧭 Directions</button>`:""}
       <button class="cta ghost" style="margin-top:10px" id="sharecta">🔗 Share</button>
       <button class="cta ghost" style="margin-top:10px" id="savecta">${state.saved.has(d.id)?"❤️":"🤍"}</button>
     </div>
     <p class="srcnote">Real data — automated daily pipeline. Price/timing restaurant se confirm karein.</p>`;
-  document.getElementById("mapcta").onclick=()=>{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;};
-  const callB=document.getElementById("callcta"); if(callB) callB.onclick=()=>{window.location.href="tel:"+d.phone.replace(/[^0-9+]/g,"");};
+  const openCall=()=>{if(d.phone&&d.phone!=="—"){window.location.href="tel:"+d.phone.replace(/[^0-9+]/g,"");}else{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;}};
+  document.getElementById("callcta").onclick=openCall;
+  const dirB=document.getElementById("dircta"); if(dirB) dirB.onclick=()=>{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;};
   document.getElementById("sharecta").onclick=()=>{
     const txt=d.t+" — Rs "+(d.price||"?")+" | "+d.addr+"\n"+(d.links.yt||d.links.gg||"");
     if(navigator.share) navigator.share({title:"Karachi Pulse",text:txt}).catch(()=>{});
