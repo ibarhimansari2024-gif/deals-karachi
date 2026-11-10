@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
 import android.webkit.WebResourceRequest
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 
@@ -23,6 +24,11 @@ class MainActivity : Activity() {
         web.setBackgroundColor(Color.parseColor("#000000"))
         web.settings.javaScriptEnabled = true
         web.settings.domStorageEnabled = true
+        // PERF: renderer ko background me kill hone se bachao (scroll lag/freeze fix)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            web.setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, false)
+        }
+        web.settings.cacheMode = WebSettings.LOAD_DEFAULT
         // Android 15 (targetSdk 35) forces edge-to-edge: the app draws UNDER the
         // status/navigation bars, and WebView ignores CSS safe-area insets —
         // the UI looked shifted up / cut off. Fix: pad the WebView by the real
