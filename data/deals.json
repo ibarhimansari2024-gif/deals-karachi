@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-12T00:06:54+05:00",
+ "updated": "2026-11-12T00:32:22+05:00",
  "version": 3,
  "deals": [
   {
@@ -541,6 +541,303 @@
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
    "thumb": "http://www.bata.com.pk/cdn/shop/files/1200x628.png?v=1760687193"
+  },
+  {
+   "id": 121,
+   "t": "Burger Lab — Dynamite Duo (2 Dynamite + Reg. Fries)",
+   "emoji": "🍔",
+   "area": "Tariq Road",
+   "lat": 24.8679,
+   "lng": 67.0453,
+   "price": 1149,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Burger Lab, Tariq Road, SMCHS, Karachi",
+   "phone": "021-111-112-522",
+   "time": "11 AM–1 AM",
+   "note": "2 Dynamite burgers + regular fries. Standing menu deal (kfoods menu page).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Burger+Lab+Tariq+Road+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/burger-lab_res3206",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/44bzep1761848278.jpg"
+  },
+  {
+   "id": 122,
+   "t": "Burger Lab — Easypaisa Deal: Kruncher + Fries 295",
+   "emoji": "🔥",
+   "area": "Tariq Road",
+   "lat": 24.8679,
+   "lng": 67.0453,
+   "price": 295,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Burger Lab, Tariq Road, SMCHS, Karachi",
+   "phone": "021-111-112-522",
+   "time": "All day",
+   "note": "Kruncher + regular fries Rs 295 via Easypaisa Mini App + Rs 200 cashback.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Burger+Lab+Tariq+Road+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/burger-lab_res3206",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg"
+  },
+  {
+   "id": 123,
+   "t": "Burger Lab — 2 Big Bang + Large Fries 1999",
+   "emoji": "🍔",
+   "area": "Tariq Road",
+   "lat": 24.8679,
+   "lng": 67.0453,
+   "price": 1999,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Burger Lab, Tariq Road, SMCHS, Karachi",
+   "phone": "021-111-112-522",
+   "time": "11 AM–1 AM",
+   "note": "2 Big Bang burgers + large fries. Menu deal (kfoods menu page).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Burger+Lab+Tariq+Road+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/burger-lab_res3206",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/44bzep1761848278.jpg"
+  },
+  {
+   "id": 124,
+   "t": "Burger Lab — 4 Nugg Chuckers + Fries 429",
+   "emoji": "🍗",
+   "area": "Tariq Road",
+   "lat": 24.8679,
+   "lng": 67.0453,
+   "price": 429,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Burger Lab, Tariq Road, SMCHS, Karachi",
+   "phone": "021-111-112-522",
+   "time": "11 AM–1 AM",
+   "note": "4 nugget chuckers + fries — budget snack deal (kfoods menu page).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Burger+Lab+Tariq+Road+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/burger-lab_res3206",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg"
+  },
+  {
+   "id": 125,
+   "t": "Burger Lab — Family Feast (Dynamites + Crisps + Nuggets + 1.5L)",
+   "emoji": "👨‍👩‍👧",
+   "area": "Tariq Road",
+   "lat": 24.8679,
+   "lng": 67.0453,
+   "price": 2290,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Burger Lab, Tariq Road, SMCHS, Karachi",
+   "phone": "021-111-112-522",
+   "time": "11 AM–1 AM",
+   "note": "2 spicy crisps + 2 dynamites + nugget chucker packet + 1.5L drink. 4 logon ke liye.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Burger+Lab+Tariq+Road+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/burger-lab_res3206",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/44bzep1761848278.jpg"
+  },
+  {
+   "id": 126,
+   "t": "Foods Inn — Zinger Burger + Fries + Drink 680",
+   "emoji": "🍔",
+   "area": "SMCHS",
+   "lat": 24.8643,
+   "lng": 67.0369,
+   "price": 680,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Foods Inn, Allama I.I. Qazi Chowk, Block A, SMCHS, Karachi",
+   "phone": "—",
+   "time": "All day",
+   "note": "Zinger burger + fries + coleslaw + drink. Standing deal (kfoods menu page).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Foods+Inn+SMCHS+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/foods-inn_res3799",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg"
+  },
+  {
+   "id": 127,
+   "t": "Foods Inn — Chicken Handi + Malai Boti + 3 Naan Deal 2520",
+   "emoji": "🍛",
+   "area": "SMCHS",
+   "lat": 24.8643,
+   "lng": 67.0369,
+   "price": 2520,
+   "was": 0,
+   "cuisine": "Desi",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Foods Inn, Allama I.I. Qazi Chowk, Block A, SMCHS, Karachi",
+   "phone": "—",
+   "time": "All day",
+   "note": "Chicken handi + malai boti + paratha + 3 naan + 1.5L drink. Family deal.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Foods+Inn+SMCHS+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/foods-inn_res3799",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg"
+  },
+  {
+   "id": 128,
+   "t": "Foods Inn — 2 Chicken Rolls (Chatni + Mayo Garlic) 510",
+   "emoji": "🌯",
+   "area": "SMCHS",
+   "lat": 24.8643,
+   "lng": 67.0369,
+   "price": 510,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Foods Inn, Allama I.I. Qazi Chowk, Block A, SMCHS, Karachi",
+   "phone": "—",
+   "time": "All day",
+   "note": "1 chicken chatni roll + 1 chicken mayo garlic roll. Online deal (kfoods).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Foods+Inn+SMCHS+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/foods-inn_res3799",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/swo87v1763595282.jpg"
+  },
+  {
+   "id": 129,
+   "t": "Dong Bunsik — Korean Lunch Special (Main + Soup + Rice) 599",
+   "emoji": "🥢",
+   "area": "DHA Phase 6",
+   "lat": 24.8263,
+   "lng": 67.0481,
+   "price": 599,
+   "was": 0,
+   "cuisine": "Asian",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Dong Bunsik, Paradise Towers, DHA Phase 6, Karachi",
+   "phone": "0311-1188840",
+   "time": "12–3 PM weekdays",
+   "note": "Set lunch: main course + side + soup + rice. Weekdays only (kfoods page).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Dong+Bunsik+Paradise+Towers+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/dong-bunsik-restaurant_res3804",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/wuyd2h1765655837.jpg"
+  },
+  {
+   "id": 130,
+   "t": "Das Numberi — Double Decker Beef Burger 595",
+   "emoji": "🍔",
+   "area": "PECHS",
+   "lat": 24.858,
+   "lng": 67.058,
+   "price": 595,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Das Numberi, 44 Tipu Sultan Road, PECHS, Karachi",
+   "phone": "0349-6862374",
+   "time": "12 PM–3 AM",
+   "note": "Double decker beef burger with pickles, relish, iceberg & tomato (kfoods menu).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Das+Numberi+Tipu+Sultan+Road+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/das-numberi_res3803",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg"
+  },
+  {
+   "id": 131,
+   "t": "Das Numberi — Chicken Boti Roll 269",
+   "emoji": "🌯",
+   "area": "PECHS",
+   "lat": 24.858,
+   "lng": 67.058,
+   "price": 269,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Das Numberi, 44 Tipu Sultan Road, PECHS, Karachi",
+   "phone": "0349-6862374",
+   "time": "12 PM–3 AM",
+   "note": "Chicken boti roll Rs 269 — late-night street food spot (12 AM tak khula).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Das+Numberi+Tipu+Sultan+Road+Karachi"
+   },
+   "source": "https://www.kfoods.com/restaurant/das-numberi_res3803",
+   "published": "2026-11-12",
+   "cat": "Food",
+   "thumb": "https://www.themealdb.com/images/media/meals/swo87v1763595282.jpg"
   },
   {
    "id": 50000,
