@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-11T01:16:49+05:00",
+ "updated": "2026-11-11T14:55:41+05:00",
  "version": 3,
  "deals": [
   {
@@ -622,7 +622,7 @@
   },
   {
    "id": 50003,
-   "t": "Edenrobe — Sale up to 61%",
+   "t": "Edenrobe — Sale up to 60%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
@@ -638,7 +638,7 @@
    "addr": "Edenrobe outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 61% off — brandtijara ne aaj check kiya (Edenrobe outlets Karachi mein).",
+   "note": "Up to 60% off — brandtijara ne aaj check kiya (Edenrobe outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Edenrobe+Karachi"
    },
@@ -752,7 +752,7 @@
   },
   {
    "id": 50008,
-   "t": "Alkaram Studio — Sale up to 40%",
+   "t": "Alkaram Studio — Sale up to 50%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
@@ -768,7 +768,7 @@
    "addr": "Alkaram Studio outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 40% off — brandtijara ne aaj check kiya (Alkaram Studio outlets Karachi mein).",
+   "note": "Up to 50% off — brandtijara ne aaj check kiya (Alkaram Studio outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Alkaram Studio+Karachi"
    },
@@ -908,7 +908,7 @@
   },
   {
    "id": 50014,
-   "t": "Limelight — Sale up to 36%",
+   "t": "Limelight — Sale up to 50%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
@@ -924,7 +924,7 @@
    "addr": "Limelight outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 36% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
+   "note": "Up to 50% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
