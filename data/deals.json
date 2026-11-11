@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-11T14:55:41+05:00",
+ "updated": "2026-11-12T00:06:54+05:00",
  "version": 3,
  "deals": [
   {
@@ -28,7 +28,7 @@
    "source": "https://kfoods.com/restaurant/domino_s_pizza_res406",
    "published": "2026-11-01",
    "cat": "Food",
-   "thumb": "https://icon.horse/icon/dominos.pk"
+   "thumb": "https://www.themealdb.com/images/media/meals/wf49qs1763075222.jpg"
   },
   {
    "id": 102,
@@ -55,7 +55,7 @@
    "source": "https://kfoods.com/restaurant/domino_s_pizza_res406",
    "published": "2026-11-01",
    "cat": "Food",
-   "thumb": "https://icon.horse/icon/dominos.pk"
+   "thumb": "https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg"
   },
   {
    "id": 103,
@@ -82,7 +82,7 @@
    "source": "https://www.foodpanda.pk/restaurant/aayi/kababjees-express-north-nazimabad-block-l",
    "published": "2026-11-06",
    "cat": "Food",
-   "thumb": "https://icon.horse/icon/kababjees.com"
+   "thumb": "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"
   },
   {
    "id": 104,
@@ -108,7 +108,7 @@
    "source": "https://www.foodpanda.pk/restaurant/aayi/kababjees-express-north-nazimabad-block-l",
    "published": "2026-11-06",
    "cat": "Food",
-   "thumb": "https://icon.horse/icon/kababjees.com"
+   "thumb": "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"
   },
   {
    "id": 105,
@@ -135,7 +135,7 @@
    "source": "https://www.foodpanda.pk/restaurant/s9ok/btb-and-more",
    "published": "2026-11-06",
    "cat": "Food",
-   "thumb": "https://icon.horse/icon/btbmore.com"
+   "thumb": "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"
   },
   {
    "id": 106,
@@ -161,7 +161,7 @@
    "source": "https://www.foodpanda.pk/restaurant/s9ok/btb-and-more",
    "published": "2026-11-06",
    "cat": "Food",
-   "thumb": "https://icon.horse/icon/btbmore.com"
+   "thumb": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg"
   },
   {
    "id": 107,
@@ -328,7 +328,7 @@
    "source": "https://www.instagram.com/eatsnbitesofficial/",
    "published": "2026-10-28",
    "cat": "Food",
-   "thumb": "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600"
+   "thumb": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg"
   },
   {
    "id": 113,
@@ -354,7 +354,7 @@
    "source": "https://kfoods.com/restaurant/saltanat-restaurant_res3800",
    "published": "2026-09-15",
    "cat": "Food",
-   "thumb": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600"
+   "thumb": "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"
   },
   {
    "id": 114,
@@ -462,7 +462,7 @@
    },
    "source": "https://www.gulahmedshop.com/blogs/news/11-11-sale",
    "published": "2026-11-06",
-   "thumb": "https://icon.horse/icon/gulahmedshop.com"
+   "thumb": "http://www.gulahmedshop.com/cdn/shop/files/Ideas_by_Gul_Ahmed_logo.png?v=1759390612"
   },
   {
    "id": 118,
@@ -514,7 +514,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://icon.horse/icon/outfitters.com.pk"
+   "thumb": "http://outfitters.com.pk/cdn/shop/files/resize_otr_logo_jpg.jpg?v=1780894993"
   },
   {
    "id": 120,
@@ -540,7 +540,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://icon.horse/icon/bata.com.pk"
+   "thumb": "http://www.bata.com.pk/cdn/shop/files/1200x628.png?v=1760687193"
   },
   {
    "id": 50000,
