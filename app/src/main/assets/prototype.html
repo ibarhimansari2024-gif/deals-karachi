@@ -93,6 +93,7 @@
   body.dark .mono{background:linear-gradient(145deg,#232329 0%,#0d0d0d 100%);color:#e8e8ec}
   .timg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
   .timg.on{opacity:1}
+  .timg.klogo{object-fit:contain;padding:22px}
   .tshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,25,0) 30%,rgba(7,11,25,.5) 100%)}
   .dish{font-size:34px;position:relative}
   .pricepill{position:absolute;top:10px;left:10px;background:var(--good);color:#fff;font-weight:800;font-size:11.5px;
@@ -406,7 +407,8 @@ function pickThumb(d){
 function thumbImg(d,big){
   const u=pickThumb(d);
   if(!u) return "";
-  return `<img class="timg" loading="lazy" src="${u}" alt="" onload="this.classList.add('on')"
+  const logo=u.indexOf("icon.horse")>=0;
+  return `<img class="timg${logo?" klogo":""}" loading="lazy" referrerpolicy="no-referrer" src="${u}" alt="" onload="this.classList.add('on')"
     onerror="if(!this.dataset.f){this.dataset.f='1';this.src='https://images.weserv.nl/?url='+encodeURIComponent('${u}'.replace(/^https:\\/\\//,''))+'&w=480'}else{this.style.display='none'}">`;
 }
 function renderFeatured(){
@@ -458,7 +460,7 @@ function renderHome(){
       <p>Aaj Karachi mein <b style="color:var(--accent)">${deals.length} live deals</b> hain — category chuno aur sasti deal pakro 🌶️</p>
     </div>
     ${top[0]?`<div class="hbanner" id="hbanner">
-      ${pickThumb(top[0])?`<img src="${pickThumb(top[0])}" alt="" onerror="this.style.display='none'">`:""}
+      ${pickThumb(top[0])?`<img src="${pickThumb(top[0])}" alt="" referrerpolicy="no-referrer" onerror="this.style.display='none'">`:""}
       <div class="ht"><small>Aaj ka sab se bara deal</small><h2>${top[0].t.slice(0,48)}</h2></div>
       <button class="hb">Dekho →</button></div>`:""}
     <div class="hometiles">

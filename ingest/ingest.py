@@ -57,35 +57,94 @@ BRAND_SITES = {
     "bata": "bata.com.pk",
     "hashim food": "hashimfood.com",
 }
-# cuisine-matched real photos (Wikimedia Commons, CC-licensed) — brands with no
-# known domain inke liye. Ingest HEAD-verify karta hai; fail ho to skip.
-CUISINE_IMG = {
-    "buffet": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600",
-    "pulao": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Biryani_combo.jpg?width=600",
-    "biryani": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Biryani_combo.jpg?width=600",
-    "bbq": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600",
-    "turkish": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600",
-    "burger": "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600",
-    "grill": "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600",
-    "fish": "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600",
+# dish-matched REAL photos — har URL curl-verified 200 image/jpeg
+# (TheMealDB CDN + 3 Commons files jo CI pe proven hain). Pool mein se deal id
+# pe rotate hota hai taake ek hi dish ke deals pe same photo na lage.
+DISH_IMG = {
+    "biryani": ["https://www.themealdb.com/images/media/meals/xrttsx1487339558.jpg",  # Lamb Biryani
+                "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Biryani_combo.jpg?width=600"],
+    "pulao":   ["https://www.themealdb.com/images/media/meals/kos9av1699014767.jpg",  # Lamb Pilaf (Plov)
+                "https://commons.wikimedia.org/wiki/Special:FilePath/Chicken_Biryani_combo.jpg?width=600"],
+    "bbq":     ["https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600",
+                "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"],  # Adana kebab
+    "barbecue": ["https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600"],
+    "kabab":   ["https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"],
+    "kebab":   ["https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"],
+    "seekh":   ["https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"],
+    "tikka":   ["https://www.themealdb.com/images/media/meals/04axct1763793018.jpg",
+                "https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600"],
+    "grill":   ["https://commons.wikimedia.org/wiki/Special:FilePath/Grilled%20Chicken%20Tikka%20served%20on%20a%20sizzling%20platter%20with%20vegetables.jpg?width=600",
+                "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"],
+    "turkish": ["https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"],
+    "karahi":  ["https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg"],  # Chicken Handi
+    "handi":   ["https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg"],
+    "masala":  ["https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg"],
+    "curry":   ["https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg"],  # Thai Green Curry
+    "nihari":  ["https://www.themealdb.com/images/media/meals/k07k271782502861.jpg"],  # Beef stew
+    "haleem":  ["https://www.themealdb.com/images/media/meals/k07k271782502861.jpg"],
+    "stew":    ["https://www.themealdb.com/images/media/meals/k07k271782502861.jpg"],
+    "mutton":  ["https://www.themealdb.com/images/media/meals/k07k271782502861.jpg"],
+    "fish":    ["https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg",   # Fish fofos
+                "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg"],  # Fish pie
+    "prawn":   ["https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg"],
+    "seafood": ["https://www.themealdb.com/images/media/meals/5r5rvx1763287943.jpg"],  # Seafood rice
+    "burger":  ["https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg",   # kofta burgers
+                "https://www.themealdb.com/images/media/meals/44bzep1761848278.jpg"],  # Aussie burger
+    "pizza":   ["https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg",   # Margherita
+                "https://www.themealdb.com/images/media/meals/wf49qs1763075222.jpg"],  # Matambre pizza
+    "shawarma": ["https://www.themealdb.com/images/media/meals/kcv6hj1598733479.jpg",
+                 "https://www.themealdb.com/images/media/meals/swo87v1763595282.jpg"],
+    "wrap":    ["https://www.themealdb.com/images/media/meals/kcv6hj1598733479.jpg"],
+    "roll":    ["https://www.themealdb.com/images/media/meals/swo87v1763595282.jpg"],
+    "noodle":  ["https://www.themealdb.com/images/media/meals/2wx8cm1763373419.jpg"],  # pad kee mao
+    "chowmein": ["https://www.themealdb.com/images/media/meals/2wx8cm1763373419.jpg"],
+    "chinese": ["https://www.themealdb.com/images/media/meals/wuyd2h1765655837.jpg"],  # Chicken Fried Rice
+    "fried rice": ["https://www.themealdb.com/images/media/meals/wuyd2h1765655837.jpg"],
+    "rice":    ["https://www.themealdb.com/images/media/meals/wuyd2h1765655837.jpg"],
+    "sandwich": ["https://www.themealdb.com/images/media/meals/djdg8l1784578885.jpg"],  # Cuban sandwich
+    "platter": ["https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600",
+                "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"],
+    "buffet":  ["https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600"],
 }
 
 
 def brand_image(deal):
-    """Deal ke liye picture dhoondo: brand site og:image -> icon.horse logo -> cuisine photo."""
+    """Deal ke liye REAL picture: brand og:image (verified, relative URLs bhi)
+    -> dish-matched photo (title/cuisine match, deal id se rotate) -> icon.horse
+    logo (last resort). Pehle sirf 3 Commons photos theen — ab 19+ verified."""
     t = (deal.get("t") or "").lower()
     domain = next((d for k, d in BRAND_SITES.items() if k in t), None)
     if domain:
         # 1) brand website ka og:image (real photo — CI network pe chalta hai)
         try:
             html = http(f"https://www.{domain}", timeout=20).decode("utf-8", "ignore")
-            om = re.search(r'property=["\']og:image["\'][^>]*content=["\'](https://[^"\']+)', html) or \
-                 re.search(r'content=["\'](https://[^"\']+)["\'][^>]*property=["\']og:image', html)
+            om = re.search(r'property=["\']og:image["\'][^>]*content=["\']([^"\']+)', html) or \
+                 re.search(r'content=["\']([^"\']+)["\'][^>]*property=["\']og:image', html)
             if om:
-                return om.group(1)
+                u = om.group(1).strip()
+                if u.startswith("//"):
+                    u = "https:" + u
+                elif u.startswith("/"):
+                    u = f"https://www.{domain}{u}"
+                if (u.startswith("https://") or u.startswith("http://")) and ".svg" not in u.lower():
+                    try:  # marre hue og:images app mein broken dikhte hain — HEAD-verify
+                        req = urllib.request.Request(u, headers=UA, method="HEAD")
+                        with urllib.request.urlopen(req, timeout=15) as r:
+                            ct = (r.headers.get("Content-Type") or "").lower()
+                            if r.status == 200 and ct.startswith("image") and "svg" not in ct:
+                                return u
+                    except Exception:
+                        pass
         except Exception:
             pass
-        # 2) icon.horse — domain ka logo (keyless, verified working)
+    # 2) dish-matched real photo — pehle title, phir cuisine field
+    for text in (t, (deal.get("cuisine") or "").lower()):
+        keys = sorted((k for k in DISH_IMG if k in text), key=len, reverse=True)
+        if keys:
+            pool = DISH_IMG[keys[0]]
+            return pool[(deal.get("id") or 0) % len(pool)]
+    # 3) icon.horse — domain ka logo (last resort; food pe dish photo behtar)
+    if domain:
         try:
             req = urllib.request.Request(f"https://icon.horse/icon/{domain}", headers=UA)
             with urllib.request.urlopen(req, timeout=20) as r:
@@ -93,17 +152,6 @@ def brand_image(deal):
                     return f"https://icon.horse/icon/{domain}"
         except Exception:
             pass
-    # 3) cuisine-matched Commons photo (HEAD-verify; fail -> skip)
-    for key, url in CUISINE_IMG.items():
-        if key in t:
-            try:
-                req = urllib.request.Request(url, headers=UA, method="HEAD")
-                with urllib.request.urlopen(req, timeout=20) as r:
-                    if r.status == 200:
-                        return url
-            except Exception:
-                pass
-            break
     return ""
 
 
