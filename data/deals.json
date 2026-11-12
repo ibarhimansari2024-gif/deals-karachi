@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-12T00:32:22+05:00",
+ "updated": "2026-11-12T15:24:16+05:00",
  "version": 3,
  "deals": [
   {
@@ -919,7 +919,7 @@
   },
   {
    "id": 50003,
-   "t": "Edenrobe — Sale up to 60%",
+   "t": "Edenrobe — Sale up to 61%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
@@ -935,7 +935,7 @@
    "addr": "Edenrobe outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 60% off — brandtijara ne aaj check kiya (Edenrobe outlets Karachi mein).",
+   "note": "Up to 61% off — brandtijara ne aaj check kiya (Edenrobe outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Edenrobe+Karachi"
    },
@@ -997,7 +997,7 @@
   },
   {
    "id": 50006,
-   "t": "Hush Puppies — Sale up to 60%",
+   "t": "Hush Puppies — Sale up to 50%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
@@ -1013,7 +1013,7 @@
    "addr": "Hush Puppies outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 60% off — brandtijara ne aaj check kiya (Hush Puppies outlets Karachi mein).",
+   "note": "Up to 50% off — brandtijara ne aaj check kiya (Hush Puppies outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Hush Puppies+Karachi"
    },
