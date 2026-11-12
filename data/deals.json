@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-12T15:24:16+05:00",
+ "updated": "2026-11-12T23:26:20+05:00",
  "version": 3,
  "deals": [
   {
@@ -838,6 +838,168 @@
    "published": "2026-11-12",
    "cat": "Food",
    "thumb": "https://www.themealdb.com/images/media/meals/swo87v1763595282.jpg"
+  },
+  {
+   "id": 132,
+   "t": "Cheezious — Small Pizza Deal (Pizza + Drink) 720",
+   "emoji": "🍕",
+   "price": 720,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "note": "Any Local/Sooper flavor pizza + regular drink. Menu deal (cheezious.com).",
+   "links": {
+    "gg": "https://www.google.com/maps?q=Cheezious+Hussainabad+Karachi"
+   },
+   "source": "https://cheezious.com/menu",
+   "thumb": "https://assets.cheezious.com/products/1787053483735-Small%20Pizza%20Deal.jpg",
+   "area": "Hussainabad",
+   "lat": 24.9206,
+   "lng": 67.0648,
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Cheezious Bite, Main Hussainabad, FB Area Block 2, Karachi",
+   "phone": "0319-2409618",
+   "time": "11 AM–3 AM",
+   "published": "2026-11-12",
+   "cat": "Food"
+  },
+  {
+   "id": 133,
+   "t": "Cheezious — Regular Pizza Deal (Pizza + 2 Drinks) 1390",
+   "emoji": "🍕",
+   "price": 1390,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "note": "1 regular pizza + 2 regular drinks. Menu deal (cheezious.com).",
+   "links": {
+    "gg": "https://www.google.com/maps?q=Cheezious+Hussainabad+Karachi"
+   },
+   "source": "https://cheezious.com/menu",
+   "thumb": "https://assets.cheezious.com/products/1784807115169-Chicken%20Tikka%20Pan.jpg",
+   "area": "Hussainabad",
+   "lat": 24.9206,
+   "lng": 67.0648,
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Cheezious Bite, Main Hussainabad, FB Area Block 2, Karachi",
+   "phone": "0319-2409618",
+   "time": "11 AM–3 AM",
+   "published": "2026-11-12",
+   "cat": "Food"
+  },
+  {
+   "id": 134,
+   "t": "Cheezious — Large Pizza Deal (Pizza + 1L Drink) 1900",
+   "emoji": "🍕",
+   "price": 1900,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "note": "Any flavor large pizza + 1 litre drink. Menu deal (cheezious.com).",
+   "links": {
+    "gg": "https://www.google.com/maps?q=Cheezious+Hussainabad+Karachi"
+   },
+   "source": "https://cheezious.com/menu",
+   "thumb": "https://assets.cheezious.com/products/1787053542950-Large%20Pizza%20Deal.jpg",
+   "area": "Hussainabad",
+   "lat": 24.9206,
+   "lng": 67.0648,
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Cheezious Bite, Main Hussainabad, FB Area Block 2, Karachi",
+   "phone": "0319-2409618",
+   "time": "11 AM–3 AM",
+   "published": "2026-11-12",
+   "cat": "Food"
+  },
+  {
+   "id": 135,
+   "t": "Cheezious — Classic Roll Platter (8 Rolls + Fries) 1150",
+   "emoji": "🌯",
+   "price": 1150,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "note": "4 Behari rolls + 4 Arabic rolls + fries & sauce. Platter deal.",
+   "links": {
+    "gg": "https://www.google.com/maps?q=Cheezious+Hussainabad+Karachi"
+   },
+   "source": "https://cheezious.com/menu",
+   "thumb": "https://assets.cheezious.com/products/1785076443054-Behari_Rolls_optimized_500.jpg",
+   "area": "Hussainabad",
+   "lat": 24.9206,
+   "lng": 67.0648,
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Cheezious Bite, Main Hussainabad, FB Area Block 2, Karachi",
+   "phone": "0319-2409618",
+   "time": "11 AM–3 AM",
+   "published": "2026-11-12",
+   "cat": "Food"
+  },
+  {
+   "id": 136,
+   "t": "Cheezious — Special Roasted Platter (4 Rolls + 6 Wings) 1150",
+   "emoji": "🍗",
+   "price": 1150,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "note": "4 Behari rolls + 6 oven-baked wings + fries & sauce.",
+   "links": {
+    "gg": "https://www.google.com/maps?q=Cheezious+Hussainabad+Karachi"
+   },
+   "source": "https://cheezious.com/menu",
+   "thumb": "https://assets.cheezious.com/products/1785076351620-Oven_Baked_Wings_optimized_500.jpg",
+   "area": "Hussainabad",
+   "lat": 24.9206,
+   "lng": 67.0648,
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Cheezious Bite, Main Hussainabad, FB Area Block 2, Karachi",
+   "phone": "0319-2409618",
+   "time": "11 AM–3 AM",
+   "published": "2026-11-12",
+   "cat": "Food"
+  },
+  {
+   "id": 137,
+   "t": "Cheezious — Somewhat Amazing (2 Bazinga + Fries + 2 Drinks) 1190",
+   "emoji": "🍔",
+   "price": 1190,
+   "was": 0,
+   "cuisine": "Fast Food",
+   "note": "2 Bazinga burgers + regular fries + 2 regular drinks. Combo deal.",
+   "links": {
+    "gg": "https://www.google.com/maps?q=Cheezious+Hussainabad+Karachi"
+   },
+   "source": "https://cheezious.com/menu",
+   "thumb": "https://assets.cheezious.com/products/1785073097896-Bazinga%20Burger%20(1).jpg",
+   "area": "Hussainabad",
+   "lat": 24.9206,
+   "lng": 67.0648,
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Cheezious Bite, Main Hussainabad, FB Area Block 2, Karachi",
+   "phone": "0319-2409618",
+   "time": "11 AM–3 AM",
+   "published": "2026-11-12",
+   "cat": "Food"
   },
   {
    "id": 50000,
