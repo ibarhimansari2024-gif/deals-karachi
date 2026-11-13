@@ -94,6 +94,13 @@
   .timg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
   .timg.on{opacity:1}
   .timg.klogo{object-fit:contain;padding:22px}
+  /* photo mosaic — saari deals bina parhe dikh jayein */
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:2px 14px 18px}
+  .ptile{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--thumbbg);cursor:pointer;transform:translateZ(0)}
+  .ptile:active{transform:scale(.96)}
+  .ptile .thumb{position:absolute;inset:0;height:auto}
+  .ptile .pprice{position:absolute;bottom:6px;left:6px;background:var(--good);color:#fff;font-weight:800;font-size:10.5px;padding:3px 7px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.3);z-index:2}
+  .ptile .pcat{position:absolute;top:6px;right:6px;font-size:15px;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.55)}
   .tshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,11,25,0) 30%,rgba(7,11,25,.5) 100%)}
   .dish{font-size:34px;position:relative}
   .pricepill{position:absolute;top:10px;left:10px;background:var(--good);color:#fff;font-weight:800;font-size:11.5px;
@@ -473,10 +480,23 @@ function renderHome(){
           <small>${n?n+" deals live":"abhi koi deal nahi"}</small></div>`;
       }).join("")}
     </div>
+    <div class="sect"><h2>📸 Saari deals — tasveeron mein</h2><span id="allgrid">${deals.length} pics</span></div>
+    <div class="pgrid" id="pgrid">
+      ${deals.map(d=>`
+        <div class="ptile" data-id="${d.id}">
+          <div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}</div>
+          <span class="pcat">${d.emoji}</span>
+          <span class="pprice">${d.price?("Rs "+d.price):"Deal"}</span>
+        </div>`).join("")}
+    </div>
     <div class="sect"><h2>🔥 Khatam hone wali deals</h2><span id="homeall">Sab dekho →</span></div>
     <div class="grid" id="homegrid"></div>`;
   const hg=hs.querySelector("#homegrid");
   top.forEach((d,i)=>hg.appendChild(buildCard(d,i)));
+  hs.querySelectorAll(".ptile").forEach(t=>t.addEventListener("click",()=>{
+    const d=deals.find(x=>x.id==t.dataset.id);
+    if(d) openDetail(d);
+  }));
   hs.querySelectorAll(".htile").forEach(t=>t.addEventListener("click",()=>{
     const c=t.dataset.cat;
     state.cat=(c==="Sab deals")?"All":c; state.homeView="feed"; showHomeView("slidein-r");
