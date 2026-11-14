@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-13T15:09:54+05:00",
+ "updated": "2026-11-14T14:33:48+05:00",
  "version": 3,
  "deals": [
   {
@@ -1367,7 +1367,7 @@
   },
   {
    "id": 50014,
-   "t": "Limelight — Sale up to 50%",
+   "t": "Limelight — Sale up to 46%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
@@ -1383,7 +1383,7 @@
    "addr": "Limelight outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
+   "note": "Up to 46% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
@@ -1445,7 +1445,7 @@
   },
   {
    "id": 50017,
-   "t": "Shahzeb Saeed — Sale up to 44%",
+   "t": "Shahzeb Saeed — Sale up to 43%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
@@ -1461,7 +1461,7 @@
    "addr": "Shahzeb Saeed outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 44% off — brandtijara ne aaj check kiya (Shahzeb Saeed outlets Karachi mein).",
+   "note": "Up to 43% off — brandtijara ne aaj check kiya (Shahzeb Saeed outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Shahzeb Saeed+Karachi"
    },
