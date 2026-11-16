@@ -56,7 +56,44 @@ BRAND_SITES = {
     "outfitters": "outfitters.com.pk",
     "bata": "bata.com.pk",
     "hashim food": "hashimfood.com",
+    # fashion/shoes brands (user demand: brand ki apni REAL product photo)
+    "hush puppies": "hushpuppies.com.pk",
+    "diners": "diners.com.pk",
+    "edenrobe": "edenrobe.com",
+    "servis": "servis.pk",
+    "borjan": "borjan.com.pk",
+    "alkaram": "alkaramstudio.com",
+    "generation": "generation.com.pk",
+    "walkeaze": "walkeaze.com",
+    "1st step": "1ststep.pk",
+    "khas": "khasstores.com",
+    "engine": "engine.com.pk",
+    "dhanak": "dhanak.com.pk",
+    "lakhany": "lakhanyonline.com",
+    "amir adnan": "amiradnan.com",
+    "cross stitch": "crossstitch.pk",
+    "insignia": "insignia.com.pk",
 }
+
+# Shopify catalog: /products.json — brand ki REAL product photos (shoes/dresses).
+# Logo thumbnails card mein cover-crop se blur/phaate lagte hain — user ne bola
+# har brand ki asli picture ho. 15/16 PK fashion stores pe khula hai (khaadi.com
+# nahi — uska og:image path chalega).
+def brand_product_image(domain):
+    try:
+        raw = http(f"https://www.{domain}/products.json?limit=20", timeout=25)
+        j = json.loads(raw.decode("utf-8", "ignore"))
+        for p in j.get("products", []):
+            for im in p.get("images") or []:
+                src = (im.get("src") or "").strip()
+                if src.startswith("http"):
+                    return src.split("?")[0] if "?v=" in src else src
+    except Exception:
+        pass
+    return ""
+
+# ye pattern logo-type thumbnails pakarta hai ( Shopify og:images aksar logo hi hote hain)
+LOGO_HINT = re.compile(r"logo|favicon|\.svg|_120x|_150x|120px|700x105|916x", re.I)
 # dish-matched REAL photos — har URL curl-verified 200 image/jpeg
 # (TheMealDB CDN + 3 Commons files jo CI pe proven hain). Pool mein se deal id
 # pe rotate hota hai taake ek hi dish ke deals pe same photo na lage.
@@ -109,12 +146,19 @@ DISH_IMG = {
 
 
 def brand_image(deal):
-    """Deal ke liye REAL picture: brand og:image (verified, relative URLs bhi)
-    -> dish-matched photo (title/cuisine match, deal id se rotate) -> icon.horse
-    logo (last resort). Pehle sirf 3 Commons photos theen — ab 19+ verified."""
+    """Deal ke liye REAL picture: fashion brand ho to uski APNI product photo
+    (Shopify /products.json) -> og:image (verified, relative URLs bhi) ->
+    dish-matched photo (title/cuisine match, deal id se rotate) -> icon.horse
+    logo (last resort)."""
     t = (deal.get("t") or "").lower()
+    fashion = (deal.get("cat") or "").lower() == "fashion" or (deal.get("cuisine") or "") in ("clothing", "footwear", "fashion")
     domain = next((d for k, d in BRAND_SITES.items() if k in t), None)
     if domain:
+        # 1) fashion: brand ki APNI product photo (logo nahi — user demand)
+        if fashion:
+            pi = brand_product_image(domain)
+            if pi:
+                return pi
         # 1) brand website ka og:image (real photo — CI network pe chalta hai)
         try:
             html = http(f"https://www.{domain}", timeout=20).decode("utf-8", "ignore")
@@ -490,6 +534,16 @@ def main():
     # thumbnails: har deal pe ek image honi chahiye — yt/shorts link se derive karo
     YTID = re.compile(r"(?:v=|youtu\.be/|shorts/|embed/|live/)([\w-]{11})")
     for d in deals:
+        # fashion: brand ki APNI product photo (Shopify catalog) — logo/favicon
+        # thumbnails card mein blur/phaate lagte hain (user complaint). Known brand
+        # ho to hamesha pehle product photo try karo, milti hai to replace.
+        isfash = (d.get("cat") or "").lower() == "fashion" or (d.get("cuisine") or "") in ("Clothing", "Footwear", "Fashion")
+        if isfash:
+            dom = next((dm for k, dm in BRAND_SITES.items() if k in (d.get("t") or "").lower()), None)
+            if dom:
+                pi = brand_product_image(dom)
+                if pi:
+                    d["thumb"] = pi
         if not d.get("thumb") and (d.get("links") or {}).get("yt"):
             m = YTID.search(d["links"]["yt"])
             if m:
