@@ -12,7 +12,7 @@ Output: data/deals.json (the live feed the app fetches every refresh).
 
 Nothing here is scraped behind login walls; no API keys are needed.
 """
-import json, re, sys, urllib.request, datetime, pathlib
+import json, re, sys, urllib.request, datetime, pathlib, zlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -235,12 +235,92 @@ def fetch_brandtijara():
             "phone": "—",
             "time": "Live today",
             "note": f"Up to {pct}% off — brandtijara ne aaj check kiya ({brand} outlets Karachi mein).",
-            "links": {"gg": f"https://www.google.com/maps/search/{brand}+Karachi"},
+            "links": {"gg": f"https://www.google.com/maps/search/{brand}+Karachi",
+                      "cr": f"https://www.brandtijara.com{slug}"},
             "source": f"https://www.brandtijara.com{slug}",
             "thumb": thumb,
             "auto": True,
             "cat": "Fashion",
         })
+    return out
+
+
+# Shopify catalog sales: brand ki APNI site pe LIVE sale products — real price,
+# real was-price, real product photo. Har deal pe picture guaranteed (user
+# demand: bohot sari deals, sab pics ke sath). Sirf wahi stores jinke
+# /products.json khule hain (khaadi/bonanza/cambridge closed — bt se aate hain).
+SHOPIFY_STORES = [
+    ("bata.com.pk", "Bata", "👟"), ("hushpuppies.com.pk", "Hush Puppies", "👟"),
+    ("servis.pk", "Servis", "👟"), ("borjan.com.pk", "Borjan", "👟"),
+    ("limelight.pk", "Limelight", "👗"), ("outfitters.com.pk", "Outfitters", "👕"),
+    ("gulahmedshop.com", "Gul Ahmed", "🧵"), ("diners.com.pk", "Diners", "👔"),
+    ("edenrobe.com", "Edenrobe", "👔"), ("alkaramstudio.com", "Alkaram Studio", "👗"),
+    ("generation.com.pk", "Generation", "👗"), ("walkeaze.com", "Walkeaze", "👟"),
+    ("1ststep.pk", "1st Step", "👟"), ("khasstores.com", "Khas Stores", "👗"),
+    ("engine.com.pk", "Engine", "👕"), ("dhanak.com.pk", "Dhanak", "🧕"),
+    ("lakhanyonline.com", "Lakhany", "🧵"), ("amiradnan.com", "Amir Adnan", "👔"),
+    ("crossstitch.pk", "Cross Stitch", "👗"), ("insignia.com.pk", "Insignia", "👟"),
+]
+PER_STORE_CAP = 3
+
+
+def fetch_shopify_sales():
+    out = []
+    seen = set()
+    for dom, brand, emo in SHOPIFY_STORES:
+        try:
+            raw = http(f"https://www.{dom}/products.json?limit=80", timeout=25)
+            j = json.loads(raw.decode("utf-8", "ignore"))
+        except Exception:
+            continue
+        sales = []
+        for p in j.get("products", []):
+            handle = p.get("handle") or ""
+            if not handle or handle in seen:
+                continue
+            sv = None
+            for v in p.get("variants") or []:
+                try:
+                    if float(v.get("compare_at_price") or 0) > float(v.get("price") or 0):
+                        sv = v
+                        break
+                except Exception:
+                    pass
+            if not sv:
+                continue
+            try:
+                price = int(float(sv["price"]))
+                was = int(float(sv["compare_at_price"]))
+            except Exception:
+                continue
+            if price <= 0 or was <= price or was < 1000:  # chhote prices skip
+                continue
+            img = ((p.get("images") or [{}])[0].get("src") or "")
+            if not img.startswith("http"):
+                continue
+            off = round((1 - price / was) * 100)
+            sales.append((off, price, was, img, handle, p.get("title") or brand))
+        sales.sort(reverse=True)  # sab se bara discount pehle
+        for off, price, was, img, handle, ptitle in sales[:PER_STORE_CAP]:
+            seen.add(handle)
+            out.append({
+                "id": 60000 + zlib.crc32(handle.encode()) % 29999,
+                "t": f"{brand} — {ptitle[:52]} (was {was} → {price})",
+                "emoji": emo, "area": "Karachi (online)",
+                "lat": 24.8607, "lng": 67.0011,
+                "price": price, "was": was,
+                "cuisine": "Footwear" if emo == "👟" else "Clothing",
+                "cat": "Fashion", "src": ["gg", "cr"], "hrs": 168,
+                "addr": f"{brand} — official site, delivery across Karachi",
+                "phone": "—",
+                "time": "Online sale — jab tak stock hai",
+                "note": f"{brand} ki official site pe live sale: {off}% off ({was} → {price}).",
+                "links": {"web": f"https://www.{dom}/products/{handle}",
+                          "gg": f"https://www.google.com/maps/search/{brand.replace(' ', '+')}+Karachi"},
+                "source": f"https://www.{dom}/products/{handle}",
+                "published": datetime.datetime.now(PKT).date().isoformat(),
+                "thumb": img, "auto": True,
+            })
     return out
 
 
@@ -530,7 +610,8 @@ def main():
     for d in curated["deals"]:
         d.setdefault("cat", "Food")
     bt = fetch_brandtijara()
-    deals = curated["deals"] + bt + fresh
+    shop = fetch_shopify_sales()
+    deals = curated["deals"] + bt + shop + fresh
     # thumbnails: har deal pe ek image honi chahiye — yt/shorts link se derive karo
     YTID = re.compile(r"(?:v=|youtu\.be/|shorts/|embed/|live/)([\w-]{11})")
     for d in deals:
@@ -558,7 +639,7 @@ def main():
         "deals": deals,
     }
     DEALS.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"OK: {len(curated['deals'])} curated + {len(bt)} brand sales + {len(fresh)} fresh video deals = {len(deals)} total, updated {out['updated']}")
+    print(f"OK: {len(curated['deals'])} curated + {len(bt)} brand sales + {len(shop)} shopify sale products + {len(fresh)} fresh video deals = {len(deals)} total, updated {out['updated']}")
 
 
 if __name__ == "__main__":

@@ -526,9 +526,10 @@ function fmtHrs(h){if(h<24)return h+"h";const d=Math.floor(h/24);return d+"d";}
 function openDetail(d){
   const sh=document.getElementById("sheet"),sc=document.getElementById("sheetcard");
   const hasThumb=!!pickThumb(d);
-  const srcIcons={yt:["▶","#ff0033"],ig:["📷","#d6249f"],tt:["🎵","#00f2ea"],gg:["🗺️","#4285f4"],cr:["✓","#0bb07b"]};
+  const srcIcons={yt:["▶","#ff0033"],ig:["📷","#d6249f"],tt:["🎵","#00f2ea"],gg:["🗺️","#4285f4"],cr:["✓","#0bb07b"],web:["🛒","#ff6b35"]};
   const srcLabels={yt:["YouTube video","Deal is video se aayi hai"],ig:["Instagram post","Deal is post se aayi hai"],
-    tt:["TikTok video","Deal is video se aayi hai"],gg:["Google Maps","Location ka source"],cr:["Brand tijara","Brand ki official sale page"]};
+    tt:["TikTok video","Deal is video se aayi hai"],gg:["Google Maps","Location ka source"],cr:["Brand tijara","Brand ki official sale page"],
+    web:["Brand website","Deal brand ki apni official site se hai"]};
   const posted=()=>{const left=d.hrs||168;return left<168?`~${168-left>24?Math.floor((168-left)/24)+" din":(168-left)+" ghante"} pehle post hui`:"purani deal";};
   const srcRows=Object.keys(d.links).map(k=>{
     const ic=srcIcons[k]||["🔗","#888"],lb=srcLabels[k]||[k,""];
