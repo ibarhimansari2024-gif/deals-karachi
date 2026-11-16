@@ -15,6 +15,15 @@ import android.webkit.WebViewClient
 class MainActivity : Activity() {
     private lateinit var web: WebView
 
+    // Back button: pehle WebView ke andar ka state undo karo (detail sheet ->
+    // feed -> dashboard). Home root pe app minimize (moveTaskToBack) — kill nahi,
+    // dobara kholne pe turant wahi state wapas. Bina is ke back = app exit.
+    override fun onBackPressed() {
+        web.evaluateJavascript(
+            "(function(){try{return window.kpBack?window.kpBack():'exit';}catch(e){return 'exit';}})()"
+        ) { r -> if (r != "\"handled\"") moveTaskToBack(true) }
+    }
+
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

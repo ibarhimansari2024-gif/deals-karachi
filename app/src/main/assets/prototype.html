@@ -333,6 +333,14 @@ function validateDeals(raw){
 }
 
 let DATA=null, state={area:"All areas",cat:"All",q:"",saved:new Set(),tab:"home",homeView:"dash"}, map=null, markers=[];
+/* Android back button ke levels: detail sheet -> feed -> dashboard -> minimize */
+window.kpBack=function(){
+  const sh=document.getElementById("sheet");
+  if(sh&&sh.classList.contains("open")){sh.classList.remove("open");return "handled";}
+  if(state.tab==="home"&&state.homeView==="feed"){state.homeView="dash";showHomeView("slidein-l");return "handled";}
+  if(state.tab!=="home"){switchTab("home");return "handled";}
+  return "exit";
+};
 try{
   const s=JSON.parse(localStorage.getItem("kp_saved")||"[]");
   if(Array.isArray(s)) state.saved=new Set(s.filter(x=>typeof x==="number"));
