@@ -420,6 +420,16 @@ function thumbImg(d,big){
   return `<img class="timg${logo?" klogo":""}" loading="lazy" referrerpolicy="no-referrer" src="${u}" alt="" onload="this.classList.add('on')"
     onerror="if(!this.dataset.f){this.dataset.f='1';this.src='https://images.weserv.nl/?url='+encodeURIComponent('${u}'.replace(/^https:\\/\\//,''))+'&w=480'}else{this.style.display='none'}">`;
 }
+/* price=0 deals (brand sales): "Price video mein" sirf jab video ho — warna
+   % off title/field se, warna source hint. User complaint fix. */
+function priceLabel(d){
+  if(d.price>0) return "Rs "+d.price.toLocaleString();
+  if(d.off) return "Up to "+d.off+"% OFF";
+  const m=(d.t||"").match(/up to (\d+)\s*%/i);
+  if(m) return "Up to "+m[1]+"% OFF";
+  if(d.links&&d.links.yt) return "🎬 Video mein";
+  return "🏷️ Sale live";
+}
 function renderFeatured(){
   const list=filtered().slice(0,4);
   document.getElementById("featwrap").style.display=list.length?"block":"none";
@@ -428,7 +438,7 @@ function renderFeatured(){
     return `<div class="fcard" data-id="${d.id}" style="animation-delay:${i*60}ms">
       <div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,true)}<div class="tshade"></div>
         <div class="srcbadges" style="position:absolute;top:10px;left:10px;display:flex;gap:4px">${d.src.map(s=>`<span class="src ${s}">${({yt:"YouTube",ig:"Insta",tt:"TikTok",gg:"Google",cr:"✓"})[s]}</span>`).join("")}</div>
-        <div class="fbtm"><div class="fbt">${d.t}</div><div class="fbm"><b style="color:#ffb020">Rs ${d.price>0?d.price.toLocaleString():"video mein"}</b> · ${d.area} · ⏳ ${fmtHrs(d.hrs)}</div></div>
+        <div class="fbtm"><div class="fbt">${d.t}</div><div class="fbm"><b style="color:#ffb020">${priceLabel(d)}</b> · ${d.area} · ⏳ ${fmtHrs(d.hrs)}</div></div>
       </div></div>`;
   }).join("");
   el.querySelectorAll(".fcard").forEach(c=>c.addEventListener("click",()=>{const d=DATA.deals.find(x=>x.id===Number(c.dataset.id)); if(d) openDetail(d);}));
@@ -437,9 +447,9 @@ function buildCard(d,i){
   const c=document.createElement("div");c.className="card";if(i!==undefined)c.style.animationDelay=(i%8)*50+"ms";
   c.innerHTML=`<div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}
     <div class="srcbadges">${d.src.map(s=>`<span class="src ${s}">${({yt:"YT",ig:"IG",tt:"TT",gg:"GO",cr:"✓"})[s]}</span>`).join("")}</div>
-    ${d.was>d.price?`<div class="pricepill">${Math.round((1-d.price/d.was)*100)}% OFF</div>`:`<div class="pricepill">${d.price>0?"Rs "+d.price.toLocaleString():"🎬 Video"}</div>`}</div>
+    ${d.was>d.price?`<div class="pricepill">${Math.round((1-d.price/d.was)*100)}% OFF</div>`:`<div class="pricepill">${d.price>0?"Rs "+d.price.toLocaleString():(priceLabel(d)==="🏷️ Sale live"?"🏷️ Sale":priceLabel(d))}</div>`}</div>
     <div class="cardbody"><h3>${d.t}</h3>
-    <div class="prow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span>`:""}`:`<span class="now" style="font-size:13px">🎬 Price video mein</span>`}</div>
+    <div class="prow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span>`:""}`:`<span class="now" style="font-size:13px">${priceLabel(d)}</span>`}</div>
     <div class="meta"><span>📍 ${d.area}</span><span class="dot"></span><span class="timer ${d.hrs<24?"urgent":""}">⏳ ${fmtHrs(d.hrs)} baqi</span></div></div>`;
   c.addEventListener("click",()=>openDetail(d));
   return c;
@@ -488,7 +498,7 @@ function renderHome(){
         <div class="ptile" data-id="${d.id}">
           <div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}</div>
           <span class="pcat">${d.emoji}</span>
-          <span class="pprice">${d.price?("Rs "+d.price):"Deal"}</span>
+          <span class="pprice">${priceLabel(d)}</span>
         </div>`).join("")}
     </div>
     <div class="sect"><h2>🔥 Khatam hone wali deals</h2><span id="homeall">Sab dekho →</span></div>
@@ -542,25 +552,25 @@ function openDetail(d){
     ${hasThumb?`<div style="height:170px;border-radius:16px;overflow:hidden;margin-bottom:12px;position:relative"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,true)}</div>`:`<div style="height:90px;display:flex;align-items:center;justify-content:center;font-size:56px;background:var(--surface2);border-radius:16px">${d.emoji}</div>`}
     <h2 style="font-size:19px;font-weight:800;color:var(--ink)">${d.t}</h2>
     <div class="meta"><span>${d.emoji} ${d.cuisine}</span><span class="dot"></span><span>${d.area}</span><span class="dot"></span><span>⏳ ${fmtHrs(d.hrs)} baqi</span></div>
-    <div class="pricerow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${Math.round((1-d.price/d.was)*100)}% OFF</span>`:""}`:`<span class="now" style="font-size:16px">🎬 Price video mein</span>`}</div>
+    <div class="pricerow">${d.price>0?`<span class="now">Rs ${d.price.toLocaleString()}</span>${d.was>d.price?`<span class="old">Rs ${d.was.toLocaleString()}</span><span class="off">${Math.round((1-d.price/d.was)*100)}% OFF</span>`:""}`:`<span class="now" style="font-size:15px">${priceLabel(d)}</span><span style="font-size:11px;opacity:.6"> — source pe live prices dekho</span>`}</div>
     <div class="steps">
       <h4>Kya karna hai</h4>
-      <div class="stp"><b>1</b><span>${hasThumb?"Neeche source video dekho — deal sach hai ya nahi, poora detail video mein hai":"Pehle price aur jagah check karo"}</span></div>
+      <div class="stp"><b>1</b><span>${hasThumb&&d.links&&d.links.yt?"Neeche source video dekho — deal sach hai ya nahi, poora detail video mein hai":"Upar source link kholo — live prices, sizes aur styles wahan dekho"}</span></div>
       <div class="stp"><b>2</b><span>${d.phone&&d.phone!=="—"?`📞 Restaurant ko call karo (<b style="color:var(--accent)">${d.phone}</b>) — price/timing confirm karo`:"📞 Restaurant ki details se price confirm karo"}</span></div>
-      <div class="stp"><b>3</b><span>🧭 Directions se restaurant pohanch jao — jaldi karo, offer mehdood hai (${fmtHrs(d.hrs)} baqi)</span></div>
+      <div class="stp"><b>3</b><span>${(d.links&&d.links.web)?"🛒 Source link kholo — brand ki site se order/price confirm karo":"🧭 Directions se restaurant pohanch jao — jaldi karo, offer mehdood hai ("+fmtHrs(d.hrs)+" baqi)"}</span></div>
     </div>
     <div class="drow"><span class="k">📍 Address</span><span class="v">${d.addr}</span></div>
     <div class="drow"><span class="k">🕒 Timings</span><span class="v">${d.time}</span></div>
     ${d.note?`<div class="drow"><span class="k">📝 Note</span><span class="v" style="font-weight:500">${d.note}</span></div>`:""}
     ${srcRows?`<div class="srcbox"><h4>Ye deal kahan se aayi — ${posted()}</h4>${srcRows}</div>`:""}
-    <button class="cta" id="callcta">${d.phone&&d.phone!=="—"?"📞 Call karo — "+d.phone:"🧭 Directions"}</button>
+    <button class="cta" id="callcta">${d.phone&&d.phone!=="—"?"📞 Call karo — "+d.phone:((d.links&&d.links.web)?"🛒 Brand site pe dekho":"🧭 Directions")}</button>
     <div style="display:flex;gap:8px">
       ${d.phone&&d.phone!=="—"?`<button class="cta ghost" style="margin-top:10px" id="dircta">🧭 Directions</button>`:""}
       <button class="cta ghost" style="margin-top:10px" id="sharecta">🔗 Share</button>
       <button class="cta ghost" style="margin-top:10px" id="savecta">${state.saved.has(d.id)?"❤️":"🤍"}</button>
     </div>
     <p class="srcnote">Real data — automated daily pipeline. Price/timing restaurant se confirm karein.</p>`;
-  const openCall=()=>{if(d.phone&&d.phone!=="—"){window.location.href="tel:"+d.phone.replace(/[^0-9+]/g,"");}else{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;}};
+  const openCall=()=>{if(d.phone&&d.phone!=="—"){window.location.href="tel:"+d.phone.replace(/[^0-9+]/g,"");}else if(d.links&&d.links.web){window.open(d.links.web,"_blank","noopener");}else{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;}};
   document.getElementById("callcta").onclick=openCall;
   const dirB=document.getElementById("dircta"); if(dirB) dirB.onclick=()=>{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;};
   document.getElementById("sharecta").onclick=()=>{
@@ -609,7 +619,7 @@ function drawMarkers(){
   markers.forEach(m=>map.removeLayer(m));markers=[];
   DATA.deals.forEach(d=>{
     const m=L.circleMarker([d.lat,d.lng],{radius:9,color:d.hrs<24?"#fa1d3f":"#013a8f",fillColor:d.hrs<24?"#ffb020":"#013a8f",fillOpacity:.9,weight:2}).addTo(map);
-    m.bindPopup(`<b>${d.t.slice(0,50)}</b><br>Rs ${d.price>0?d.price.toLocaleString():"video mein"} · ${d.area}`);
+    m.bindPopup(`<b>${d.t.slice(0,50)}</b><br>${priceLabel(d)} · ${d.area}`);
     m.on("click",()=>openDetail(d));
     markers.push(m);
   });
@@ -630,7 +640,7 @@ function renderSaved(){
   list.forEach(d=>{
     const c=document.createElement("div");c.className="card";
     c.innerHTML=`<div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}</div>
-      <div class="cardbody"><h3>${d.t}</h3><div class="meta"><span>📍 ${d.area}</span><span class="dot"></span><b style="color:var(--accent)">Rs ${d.price>0?d.price.toLocaleString():"?"}</b></div></div>`;
+      <div class="cardbody"><h3>${d.t}</h3><div class="meta"><span>📍 ${d.area}</span><span class="dot"></span><b style="color:var(--accent)">${priceLabel(d)}</b></div></div>`;
     c.addEventListener("click",()=>openDetail(d));
     g.appendChild(c);
   });
