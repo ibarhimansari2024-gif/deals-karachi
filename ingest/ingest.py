@@ -226,7 +226,7 @@ def fetch_brandtijara():
             "emoji": "👗",
             "area": "Karachi",
             "lat": 24.875, "lng": 67.035,
-            "price": 0, "was": 0,
+            "price": 0, "was": 0, "off": int(pct),
             "cuisine": "Fashion",
             "cat": "Fashion",
             "src": ["cr"],
