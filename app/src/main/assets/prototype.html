@@ -296,8 +296,8 @@
 <script src="leaflet.js"></script>
 <script>
 const FEED_URLS=[
-  "https://cdn.jsdelivr.net/gh/ibarhimansari2024-gif/deals-karachi@main/data/deals.json",
-  "https://raw.githubusercontent.com/ibarhimansari2024-gif/deals-karachi/main/data/deals.json"
+  "https://raw.githubusercontent.com/ibarhimansari2024-gif/deals-karachi/main/data/deals.json",
+  "https://cdn.jsdelivr.net/gh/ibarhimansari2024-gif/deals-karachi@main/data/deals.json"
 ];
 const FALLBACK={app:"Karachi Pulse",updated:"first load",version:3,deals:[
  {"id":1,"t":"Hashim Food — Shinwari Karahi + Zinger Platter","emoji":"🍗","area":"Federal B Area","lat":24.9548,"lng":67.0773,"price":2299,"was":5500,"cuisine":"BBQ","src":["yt","tt"],"hrs":96,"addr":"Federal B Area Block 19, near Masjid-e-Aqsa","phone":"0328-1330099","time":"7 PM – 4 AM","note":"Internet se update hone par real deals aayengi.","links":{"yt":"https://www.youtube.com/watch?v=rlhWabUWIcE","gg":"https://maps.google.com/?q=Hashim+Food+Federal+B+Area+Karachi"}}
@@ -312,14 +312,18 @@ function cleanStr(v,max){
 function validateDeals(raw){
   if(!raw||!Array.isArray(raw.deals)) return null;
   const out=[];
-  for(const d of raw.deals.slice(0,60)){
+  for(const d of raw.deals.slice(0,200)){
     if(!d || typeof d!=="object") continue;  // null/garbage elements — skip, don't crash
     if(typeof d.id!=="number"||typeof d.price!=="number"||typeof d.was!=="number") continue;
     if(d.price<0||d.price>1000000||!Number.isFinite(d.lat)||!Number.isFinite(d.lng)) continue;
     if(d.lat<24.6||d.lat>25.6||d.lng<66.6||d.lng>68.0) continue;
     const links={};
+    // https:// sab allow — MainActivity external links system browser mein
+    // bhejta hai (WebView kabhi khud navigate nahi karta), to yahan sirf
+    // https + length check kaafi hai. brandtijara/brand sites pehle strip ho
+    // rahe thin — isliye source box khali tha (user bug).
     if(d.links&&typeof d.links==="object") for(const k of Object.keys(d.links).slice(0,4))
-      if(typeof d.links[k]==="string"&&LINK_RE.test(d.links[k])&&d.links[k].length<300) links[k]=d.links[k];
+      if(typeof d.links[k]==="string"&&d.links[k].length<300&&d.links[k].startsWith("https://")) links[k]=d.links[k];
     out.push({id:d.id,t:cleanStr(d.t,120),emoji:/^\p{Extended_Pictographic}$/u.test(d.emoji||"")?d.emoji:"🍽️",
       area:cleanStr(d.area,40),lat:d.lat,lng:d.lng,price:Math.round(d.price),was:Math.round(d.was),
       cuisine:cleanStr(d.cuisine,30),cat:["Food","Fashion","Shopping","Grocery","Electronics"].includes(d.cat)?d.cat:"Food",
@@ -394,6 +398,7 @@ function filtered(){
   const q=document.getElementById("search").value.trim().toLowerCase();
   return DATA.deals.filter(d=>
     (state.cat==="All"||(d.cat||"Food")===state.cat)&&
+    (state.area==="All areas"||d.area===state.area||(state.area==="Online"&&/online/i.test(d.area)))&&
     (!q||d.t.toLowerCase().includes(q)||d.area.toLowerCase().includes(q)||d.cuisine.toLowerCase().includes(q))
   ).sort((a,b)=>a.hrs-b.hrs);
 }
@@ -584,18 +589,26 @@ function openDetail(d){
 
 /* chips — categories (Food/Fashion/Shopping) + areas */
 const CAT_ICON={"All":"🍽️","Food":"🍗","Fashion":"👗","Shopping":"🛍️","Grocery":"🛒","Electronics":"📱"};
-const AREA_ICON={"All areas":"📍","DHA Phase 6":"🏙️","Clifton":"🌊","Gulshan":"🏢","Nazimabad":"🏠","Bahadurabad":"🍢","Saddar":"🛍️","Federal B Area":"🍗","North Nazimabad":"🏘️","Malir":"🌾","Liberty":"🛎️","Karachi":"📍","Lyari":"⚓","Tariq Road":"🛣️","North Karachi":"🏘️"};
+const AREA_ICON={"All areas":"📍","DHA Phase 6":"🏙️","Clifton":"🌊","Gulshan":"🏢","Nazimabad":"🏠","Bahadurabad":"🍢","Saddar":"🛍️","Federal B Area":"🍗","North Nazimabad":"🏘️","Malir":"🌾","Liberty":"🛎️","Karachi":"📍","Lyari":"⚓","Tariq Road":"🛣️","North Karachi":"🏘️","Online":"🛒","SMCHS":"🏢","PECHS":"🌆","Hussainabad":"🍢","Buffer Zone":"🏘️","Gulistan":"🏢"};
 function renderChips(){
   const cats=[...new Set(DATA.deals.map(d=>d.cat||"Food"))];
-  const areas=[...new Set(DATA.deals.map(d=>d.area))].filter(a=>a!=="Karachi").slice(0,6);
+  /* area chips: asli distribution — har area ka live count, top 8 + Online */
+  const areaCounts={};
+  DATA.deals.forEach(d=>{
+    const a=d.area||"Karachi";
+    // "Karachi"/online/city-wide chips manual Online chip se aate hain — duplicate na ho
+    if(a!=="Karachi"&&a!=="Karachi (online)"&&!/online/i.test(a)) areaCounts[a]=(areaCounts[a]||0)+1;
+  });
+  const areas=Object.entries(areaCounts).sort((x,y)=>y[1]-x[1]).slice(0,8);
   const el=document.getElementById("cats");
+  const online=DATA.deals.filter(d=>/online/i.test(d.area||"")).length;
   const catChips=["All",...cats].map(c=>{
     const active=state.cat==="All"?c==="All":state.cat===c;
     return `<div class="cat ${active?"on":""}" data-k="cat" data-v="${c}"><div class="ci-ico">${CAT_ICON[c]||"🏷️"}</div><span>${c==="All"?"Sab":c}</span></div>`;
   });
-  const areaChips=areas.map(a=>{
-    const active=state.area===a;
-    return `<div class="cat ${active?"on":""}" data-k="area" data-v="${a}"><div class="ci-ico">${AREA_ICON[a]||"📍"}</div><span>${a.replace(" North"," N.")}</span></div>`;
+  const areaChips=[["Online",online,"🛒"],...areas].map(([a,n,emo])=>{
+    const active=state.area===a||(a==="Online"&&state.area==="Online");
+    return `<div class="cat ${active?"on":""}" data-k="area" data-v="${a}"><div class="ci-ico">${emo||AREA_ICON[a]||"📍"}</div><span>${a.replace(" North"," N.")} <b style="opacity:.55">${n}</b></span></div>`;
   });
   el.innerHTML=catChips.concat(areaChips).join("");
   el.querySelectorAll(".cat").forEach(c=>c.addEventListener("click",()=>{
@@ -618,7 +631,9 @@ function drawMarkers(){
   if(!map) return;
   markers.forEach(m=>map.removeLayer(m));markers=[];
   DATA.deals.forEach(d=>{
-    const m=L.circleMarker([d.lat,d.lng],{radius:9,color:d.hrs<24?"#fa1d3f":"#013a8f",fillColor:d.hrs<24?"#ffb020":"#013a8f",fillOpacity:.9,weight:2}).addTo(map);
+    const j1=((d.id*7919)%997)/997-0.5, j2=((d.id*104729)%991)/991-0.5;
+    const mlat=d.id>=60000?d.lat+j1*0.012:d.lat, mlng=d.id>=60000?d.lng+j2*0.014:d.lng; // online: cluster jitter
+    const m=L.circleMarker([mlat,mlng],{radius:9,color:d.hrs<24?"#fa1d3f":"#013a8f",fillColor:d.hrs<24?"#ffb020":"#013a8f",fillOpacity:.9,weight:2}).addTo(map);
     m.bindPopup(`<b>${d.t.slice(0,50)}</b><br>${priceLabel(d)} · ${d.area}`);
     m.on("click",()=>openDetail(d));
     markers.push(m);
