@@ -103,25 +103,33 @@
   @keyframes tw{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.7;transform:scale(1.15)}}
   .cosmo{position:relative;width:250px;height:250px;margin-bottom:6px}
   .cosmo .orbits{position:absolute;inset:0;width:100%;height:100%}
-  .oring{fill:none;stroke:rgba(255,255,255,.85);stroke-width:1.6;stroke-linecap:round;
-    stroke-dasharray:360;stroke-dashoffset:360;animation:draw 1.4s cubic-bezier(.4,0,.2,1) forwards}
-  .oring.o2{stroke-width:1.3;animation-delay:.25s}
-  .oring.o3{stroke-width:1.1;animation-delay:.5s}
+  .oring{fill:none;stroke:rgba(255,255,255,.85);stroke-width:1.6;stroke-linecap:round;stroke-dashoffset:400;animation:draw 1.3s cubic-bezier(.4,0,.2,1) forwards}
+  .oring.o1{stroke-dasharray:390;stroke-dashoffset:390}
+  .oring.o2{stroke-width:1.3;stroke-dasharray:578;stroke-dashoffset:578;animation-delay:.2s}
+  .oring.o3{stroke-width:1.1;stroke-dasharray:716;stroke-dashoffset:716;animation-delay:.4s}
   @keyframes draw{to{stroke-dashoffset:0}}
-  .oring.o1{animation:draw 1.4s .1s cubic-bezier(.4,0,.2,1) forwards,ringfade 9s 2s ease forwards}
-  .oring.o2{animation:draw 1.4s .35s cubic-bezier(.4,0,.2,1) forwards,ringfade 9s 2s ease forwards}
-  .oring.o3{animation:draw 1.4s .6s cubic-bezier(.4,0,.2,1) forwards,ringfade 9s 2s ease forwards}
-  @keyframes ringfade{0%,78%{stroke-opacity:.85}100%{stroke-opacity:.35}}
   .core{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;
     background:rgba(255,255,255,.97);display:flex;align-items:center;justify-content:center;font-size:34px;
-    box-shadow:0 0 0 8px rgba(255,255,255,.14),0 0 34px rgba(255,255,255,.35);
-    transform:scale(0);animation:pop .8s 1.15s cubic-bezier(.34,1.56,.64,1) forwards,glowp 2.6s 2.2s ease-in-out infinite}
+    box-shadow:0 0 0 8px rgba(255,255,255,.14),0 0 30px rgba(255,255,255,.3);
+    transform:scale(0);animation:pop .8s 1.15s cubic-bezier(.34,1.56,.64,1) forwards}
+  .core::after{content:"";position:absolute;inset:-8px;border-radius:50%;background:rgba(255,255,255,.25);
+    animation:glowp 2.4s 2.2s ease-in-out infinite;pointer-events:none}
+  @keyframes glowp{0%,100%{opacity:.25;transform:scale(1)}50%{opacity:.6;transform:scale(1.12)}}
   @keyframes pop{to{transform:scale(1)}}
-  @keyframes glowp{0%,100%{box-shadow:0 0 0 8px rgba(255,255,255,.14),0 0 26px rgba(255,255,255,.3)}50%{box-shadow:0 0 0 11px rgba(255,255,255,.2),0 0 44px rgba(255,255,255,.5)}}
-  .orb{opacity:0;animation:orbin .5s ease forwards}
-  .orb.a{animation-delay:1.9s}.orb.b{animation-delay:2.25s}.orb.c{animation-delay:2.6s}
+  /* CSS orbit (GPU transform) — SMIL janky tha phones pe */
+  .orb{position:absolute;left:50%;top:50%;width:0;height:0;opacity:0;animation:orbin .5s ease forwards}
+  .orb.a{animation:orbin .5s 1.7s ease forwards,spin 8s 1.7s linear infinite}
+  .orb.b{animation:orbin .5s 2s ease forwards,spin 11s 2s linear infinite reverse}
+  .orb.c{animation:orbin .5s 2.3s ease forwards,spin 9.5s 2.3s linear infinite}
   @keyframes orbin{to{opacity:1}}
-  .orb text{font-size:19px}
+  @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  .orb span{position:absolute;font-size:19px;left:0;top:0}
+  .orb.a span{animation:orbA 8s 1.7s linear infinite}
+  .orb.b span{animation:orbB 11s 2s linear infinite}
+  .orb.c span{animation:orbC 9.5s 2.3s linear infinite}
+  @keyframes orbA{from{transform:translate(-50%,-50%) translateX(64px) rotate(0deg)}to{transform:translate(-50%,-50%) translateX(64px) rotate(-360deg)}}
+  @keyframes orbB{from{transform:translate(-50%,-50%) translateX(95px) rotate(0deg)}to{transform:translate(-50%,-50%) translateX(95px) rotate(360deg)}}
+  @keyframes orbC{from{transform:translate(-50%,-50%) translateX(118px) rotate(0deg)}to{transform:translate(-50%,-50%) translateX(118px) rotate(-360deg)}}
   .sbrand{color:#fff;font-size:31px;font-weight:800;letter-spacing:.3px;margin-top:14px;text-shadow:0 3px 14px rgba(0,0,0,.25);
     opacity:0;animation:fadein .8s 3.4s ease both}
   @keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -286,13 +294,13 @@
   <span class="star" style="top:44%;right:5%;font-size:11px">✦</span>
   <div class="cosmo">
     <svg class="orbits" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-      <ellipse class="oring o1" cx="120" cy="120" rx="62" ry="24"/>
-      <ellipse class="oring o2" cx="120" cy="120" rx="90" ry="35"/>
-      <ellipse class="oring o3" cx="120" cy="120" rx="114" ry="46"/>
-      <g class="orb a"><text>🍔<animateMotion dur="7s" begin="1.9s" repeatCount="indefinite" path="M120,120 m-90,0 a90,35 0 1,0 180,0 a90,35 0 1,0 -180,0"/></text></g>
-      <g class="orb b"><text>👟<animateMotion dur="9s" begin="2.25s" repeatCount="indefinite" path="M120,120 m-114,0 a114,46 0 1,1 228,0 a114,46 0 1,1 -228,0"/></text></g>
-      <g class="orb c"><text>👗<animateMotion dur="8s" begin="2.6s" repeatCount="indefinite" path="M120,120 m-62,0 a62,24 0 1,0 124,0 a62,24 0 1,0 -124,0"/></text></g>
+      <circle class="oring o1" cx="120" cy="120" r="62"/>
+      <circle class="oring o2" cx="120" cy="120" r="92"/>
+      <circle class="oring o3" cx="120" cy="120" r="114"/>
     </svg>
+    <div class="orb a"><span>🍔</span></div>
+    <div class="orb b"><span>👟</span></div>
+    <div class="orb c"><span>👗</span></div>
     <div class="core">🌶️</div>
   </div>
   <div class="sbrand">Karachi Pulse 🌶️</div>
@@ -410,7 +418,7 @@ try{
   if(Array.isArray(s)) state.saved=new Set(s.filter(x=>typeof x==="number"));
 }catch(e){}
 function persistSaved(){ try{ localStorage.setItem("kp_saved", JSON.stringify([...state.saved])); }catch(e){} }
-try{ const c=localStorage.getItem("kp_cache"); if(c){const v=validateDeals(JSON.parse(c)); if(v) DATA=v;} }catch(e){}
+try{ const c=localStorage.getItem("kp_cache"); if(c){const v=validateDeals(JSON.parse(c)); if(v){DATA=v; updLabel(); renderAll();}} }catch(e){}
 const CATS=[["All","🍽️"],["BBQ","🍢"],["Desi","🍛"],["Fast Food","🍔"],["Buffet","🍽️"],["Pizza","🍕"],["Dessert","🍨"],["Grocery","🛒"]];
 
 async function fetchDeals(manual){
@@ -455,7 +463,7 @@ function hideSplash(){
   const s=document.getElementById("splash");
   if(s){s.classList.add("done");setTimeout(()=>{s.style.display="none";},700);}
 }
-setTimeout(hideSplash,9000);
+setTimeout(hideSplash,6000);
 document.getElementById("splash").addEventListener("click",hideSplash);
 boot();
 setInterval(()=>{ if(navigator.onLine) fetchDeals(false); }, 15*60*1000);
@@ -617,7 +625,7 @@ function openDetail(d){
   const posted=()=>{const left=d.hrs||168;return left<168?`~${168-left>24?Math.floor((168-left)/24)+" din":(168-left)+" ghante"} pehle post hui`:"purani deal";};
   const srcRows=Object.keys(d.links).map(k=>{
     const ic=srcIcons[k]||["🔗","#888"],lb=srcLabels[k]||[k,""];
-    return `<a class="srcrow" href="${d.links[k]}" target="_blank" rel="noopener">
+    return `<a class="srcrow" href="${d.links[k]}">
       <span class="si" style="background:${ic[1]}22;color:${ic[1]}">${ic[0]}</span>
       <span>${lb[0]}<small>${lb[1]}</small></span></a>`;
   }).join("");
@@ -644,7 +652,7 @@ function openDetail(d){
       <button class="cta ghost" style="margin-top:10px" id="savecta">${state.saved.has(d.id)?"❤️":"🤍"}</button>
     </div>
     <p class="srcnote">Real data — automated daily pipeline. Price/timing restaurant se confirm karein.</p>`;
-  const openCall=()=>{if(d.phone&&d.phone!=="—"){window.location.href="tel:"+d.phone.replace(/[^0-9+]/g,"");}else if(d.links&&d.links.web){window.open(d.links.web,"_blank","noopener");}else{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;}};
+  const openCall=()=>{if(d.phone&&d.phone!=="—"){window.location.href="tel:"+d.phone.replace(/[^0-9+]/g,"");}else if(d.links&&d.links.web){window.location.href=d.links.web;}else{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;}};
   document.getElementById("callcta").onclick=openCall;
   const dirB=document.getElementById("dircta"); if(dirB) dirB.onclick=()=>{window.location.href=`geo:${d.lat},${d.lng}?q=${d.lat},${d.lng}`;};
   document.getElementById("sharecta").onclick=()=>{
