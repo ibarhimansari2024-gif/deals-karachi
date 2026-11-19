@@ -2,7 +2,7 @@
 <resources>
     <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">#E63348</item>
-        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:windowBackground">#E63348</item>
         <item name="android:navigationBarColor">#FFFFFF</item>
     </style>
 </resources>
