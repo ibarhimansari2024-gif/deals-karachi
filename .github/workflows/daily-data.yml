@@ -2,7 +2,7 @@ name: Daily data update
 
 on:
   schedule:
-    - cron: '0 3 * * *'   # 8 AM Pakistan time — daily
+    - cron: '*/10 * * * *'   # har 10 min — backend active, taaza deals din bhar (public repo = free)
   workflow_dispatch:
 
 jobs:
@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run real ingestion (YouTube RSS + curated)
-        run: python3 ingest/ingest.py
+      - name: Run real ingestion (Node.js backend — YouTube + brandtijara + Shopify)
+        run: node ingest/ingest.js
 
       - name: Commit refreshed feed
         run: |
