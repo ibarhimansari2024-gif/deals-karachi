@@ -94,31 +94,42 @@
   .timg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
   .timg.on{opacity:1}
   .timg.klogo{object-fit:contain;padding:22px}
-  /* ---- splash / loading screen (rocket mascot, brand red) ---- */
+  /* ---- splash / loading: cosmic animated logo reveal (~9s) ---- */
   .splash{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;
-    background:linear-gradient(165deg,#ff585b 0%,#e63348 55%,#c92b3e 100%);transition:opacity .55s ease;overflow:hidden}
+    background:linear-gradient(165deg,#ff585b 0%,#e63348 55%,#c92b3e 100%);transition:opacity .6s ease;overflow:hidden}
   .splash.done{opacity:0;pointer-events:none}
   .splash .star{position:absolute;color:#fff;opacity:.35;animation:tw 1.8s ease-in-out infinite}
-  .splash .star:nth-child(odd){animation-delay:.9s}
+  .splash .star:nth-of-type(odd){animation-delay:.9s}
   @keyframes tw{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.7;transform:scale(1.15)}}
-  .rwrap{position:relative;width:150px;height:210px;animation:bob 2.2s ease-in-out infinite}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
-  .rwrap svg{width:100%;height:100%;filter:drop-shadow(0 12px 22px rgba(0,0,0,.28))}
-  .flame{transform-origin:100px 150px;animation:flick .34s ease-in-out infinite alternate}
-  @keyframes flick{from{transform:scaleY(1) }to{transform:scaleY(1.35) scaleX(.82)}}
-  .puff{position:absolute;width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.5);
-    left:50%;top:172px;animation:puff 1.3s ease-out infinite}
-  .puff:nth-child(2){animation-delay:.45s;margin-left:-16px}
-  .puff:nth-child(3){animation-delay:.9s;margin-left:14px}
-  @keyframes puff{0%{transform:translate(-50%,0) scale(.6);opacity:.75}100%{transform:translate(-50%,34px) scale(1.7);opacity:0}}
-  .sbrand{color:#fff;font-size:31px;font-weight:800;letter-spacing:.3px;margin-top:26px;text-shadow:0 3px 14px rgba(0,0,0,.25);
-    animation:fadein .7s ease both}
+  .cosmo{position:relative;width:250px;height:250px;margin-bottom:6px}
+  .cosmo .orbits{position:absolute;inset:0;width:100%;height:100%}
+  .oring{fill:none;stroke:rgba(255,255,255,.85);stroke-width:1.6;stroke-linecap:round;
+    stroke-dasharray:360;stroke-dashoffset:360;animation:draw 1.4s cubic-bezier(.4,0,.2,1) forwards}
+  .oring.o2{stroke-width:1.3;animation-delay:.25s}
+  .oring.o3{stroke-width:1.1;animation-delay:.5s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .oring.o1{animation:draw 1.4s .1s cubic-bezier(.4,0,.2,1) forwards,ringfade 9s 2s ease forwards}
+  .oring.o2{animation:draw 1.4s .35s cubic-bezier(.4,0,.2,1) forwards,ringfade 9s 2s ease forwards}
+  .oring.o3{animation:draw 1.4s .6s cubic-bezier(.4,0,.2,1) forwards,ringfade 9s 2s ease forwards}
+  @keyframes ringfade{0%,78%{stroke-opacity:.85}100%{stroke-opacity:.35}}
+  .core{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;
+    background:rgba(255,255,255,.97);display:flex;align-items:center;justify-content:center;font-size:34px;
+    box-shadow:0 0 0 8px rgba(255,255,255,.14),0 0 34px rgba(255,255,255,.35);
+    transform:scale(0);animation:pop .8s 1.15s cubic-bezier(.34,1.56,.64,1) forwards,glowp 2.6s 2.2s ease-in-out infinite}
+  @keyframes pop{to{transform:scale(1)}}
+  @keyframes glowp{0%,100%{box-shadow:0 0 0 8px rgba(255,255,255,.14),0 0 26px rgba(255,255,255,.3)}50%{box-shadow:0 0 0 11px rgba(255,255,255,.2),0 0 44px rgba(255,255,255,.5)}}
+  .orb{opacity:0;animation:orbin .5s ease forwards}
+  .orb.a{animation-delay:1.9s}.orb.b{animation-delay:2.25s}.orb.c{animation-delay:2.6s}
+  @keyframes orbin{to{opacity:1}}
+  .orb text{font-size:19px}
+  .sbrand{color:#fff;font-size:31px;font-weight:800;letter-spacing:.3px;margin-top:14px;text-shadow:0 3px 14px rgba(0,0,0,.25);
+    opacity:0;animation:fadein .8s 3.4s ease both}
   @keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-  .stag{color:rgba(255,255,255,.75);font-size:13px;margin-top:7px;animation:fadein .9s .25s ease both}
-  .sdots{display:flex;gap:7px;margin-top:20px}
-  .sdots i{width:8px;height:8px;border-radius:50%;background:#fff;opacity:.9;animation:dotp 1.1s ease-in-out infinite}
+  .stag{color:rgba(255,255,255,.78);font-size:13px;margin-top:7px;opacity:0;animation:fadein .8s 4s ease both}
+  .sdots{display:flex;gap:7px;margin-top:18px;opacity:0;animation:fadein .8s 4.3s ease both}
+  .sdots i{width:8px;height:8px;border-radius:50%;background:#fff;animation:dotp 1.1s ease-in-out infinite}
   .sdots i:nth-child(2){animation-delay:.18s}.sdots i:nth-child(3){animation-delay:.36s}
-  @keyframes dotp{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(-7px);opacity:1}}
+  @keyframes dotp{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(-7px);opacity:1}}
   /* photo mosaic — saari deals bina parhe dikh jayein */
   .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:2px 14px 18px}
   .ptile{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--thumbbg);cursor:pointer;transform:translateZ(0)}
@@ -266,29 +277,26 @@
 <body>
 
 <div class="splash" id="splash">
-  <span class="star" style="top:14%;left:18%;font-size:18px">✦</span>
-  <span class="star" style="top:22%;right:20%;font-size:13px">✦</span>
-  <span class="star" style="top:58%;left:12%;font-size:11px">✦</span>
-  <span class="star" style="top:64%;right:14%;font-size:16px">✦</span>
-  <span class="star" style="top:9%;left:50%;font-size:12px">✦</span>
-  <div class="rwrap">
-    <svg viewBox="0 0 200 210" xmlns="http://www.w3.org/2000/svg">
-      <g class="flame">
-        <path d="M100 150 q11 26 0 40 q-11-14 0-40" fill="#ffd166"/>
-        <path d="M100 152 q6 18 0 28 q-6-10 0-28" fill="#ff7b54"/>
-      </g>
-      <path d="M100 22 q27 30 27 80 q0 26-9 44 h-36 q-9-18-9-44 q0-50 27-80z" fill="#ffffff"/>
-      <path d="M100 22 q13 14 17 34 h-34 q4-20 17-34z" fill="#ffd166"/>
-      <circle cx="100" cy="88" r="15" fill="#e63348"/>
-      <circle cx="100" cy="88" r="10.5" fill="#ffe3e5"/>
-      <text x="100" y="93" font-size="13" text-anchor="middle">🌶️</text>
-      <path d="M73 122 q-20 12-22 38 q17-5 28-16z" fill="#ffd166"/>
-      <path d="M127 122 q20 12 22 38 q-17-5-28-16z" fill="#ffd166"/>
+  <span class="star" style="top:13%;left:17%;font-size:18px">✦</span>
+  <span class="star" style="top:21%;right:19%;font-size:13px">✦</span>
+  <span class="star" style="top:57%;left:11%;font-size:11px">✦</span>
+  <span class="star" style="top:63%;right:13%;font-size:16px">✦</span>
+  <span class="star" style="top:8%;left:49%;font-size:12px">✦</span>
+  <span class="star" style="top:38%;left:6%;font-size:10px">✦</span>
+  <span class="star" style="top:44%;right:5%;font-size:11px">✦</span>
+  <div class="cosmo">
+    <svg class="orbits" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+      <ellipse class="oring o1" cx="120" cy="120" rx="62" ry="24"/>
+      <ellipse class="oring o2" cx="120" cy="120" rx="90" ry="35"/>
+      <ellipse class="oring o3" cx="120" cy="120" rx="114" ry="46"/>
+      <g class="orb a"><text>🍔<animateMotion dur="7s" begin="1.9s" repeatCount="indefinite" path="M120,120 m-90,0 a90,35 0 1,0 180,0 a90,35 0 1,0 -180,0"/></text></g>
+      <g class="orb b"><text>👟<animateMotion dur="9s" begin="2.25s" repeatCount="indefinite" path="M120,120 m-114,0 a114,46 0 1,1 228,0 a114,46 0 1,1 -228,0"/></text></g>
+      <g class="orb c"><text>👗<animateMotion dur="8s" begin="2.6s" repeatCount="indefinite" path="M120,120 m-62,0 a62,24 0 1,0 124,0 a62,24 0 1,0 -124,0"/></text></g>
     </svg>
-    <div class="puff"></div><div class="puff"></div><div class="puff"></div>
+    <div class="core">🌶️</div>
   </div>
   <div class="sbrand">Karachi Pulse 🌶️</div>
-  <div class="stag">Karachi ki deals ud kar aa rahi hain…</div>
+  <div class="stag">Karachi ki deals — sitaron se utar kar tumhare phone pe</div>
   <div class="sdots"><i></i><i></i><i></i></div>
 </div>
 
@@ -424,7 +432,7 @@ async function fetchDeals(manual){
   if(best){
     DATA=best;
     try{localStorage.setItem("kp_cache",JSON.stringify(DATA));localStorage.setItem("kp_last",String(Date.now()));}catch(e){}
-    updLabel();renderAll();hideSplash();
+    updLabel();renderAll();
     toast(manual?"✓ Deals updated":"✓ Auto-update ✓");
   } else if(manual) toast("⚠ Offline — cached data",true);
   return !!best;
@@ -440,18 +448,14 @@ async function boot(){
   else if(!ok) toast("⚠ Offline — data cache se", true);
 }
 window.addEventListener("online",()=>{bootTries=0;boot();});
-/* splash: data aate hi fade-out (min 1.4s taake animation nazar aaye); 4s max; tap = skip */
+/* splash: poora cosmic logo reveal ~9s chalta hai (user demand), phir fade; tap = skip */
 let splashGone=false;
-const splashT0=Date.now();
 function hideSplash(){
   if(splashGone) return; splashGone=true;
-  const wait=Math.max(0,1400-(Date.now()-splashT0));
-  setTimeout(()=>{
-    const s=document.getElementById("splash");
-    if(s){s.classList.add("done");setTimeout(()=>{s.style.display="none";},650);}
-  },wait);
+  const s=document.getElementById("splash");
+  if(s){s.classList.add("done");setTimeout(()=>{s.style.display="none";},700);}
 }
-setTimeout(hideSplash,4000);
+setTimeout(hideSplash,9000);
 document.getElementById("splash").addEventListener("click",hideSplash);
 boot();
 setInterval(()=>{ if(navigator.onLine) fetchDeals(false); }, 15*60*1000);
