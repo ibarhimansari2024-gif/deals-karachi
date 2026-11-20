@@ -101,40 +101,25 @@
   .splash .star{position:absolute;color:#fff;opacity:.35;animation:tw 1.8s ease-in-out infinite}
   .splash .star:nth-of-type(odd){animation-delay:.9s}
   @keyframes tw{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.7;transform:scale(1.15)}}
-  .cosmo{position:relative;width:250px;height:250px;margin-bottom:6px}
-  .cosmo .orbits{position:absolute;inset:0;width:100%;height:100%}
-  .oring{fill:none;stroke:rgba(255,255,255,.85);stroke-width:1.6;stroke-linecap:round;stroke-dashoffset:400;animation:draw 1.3s cubic-bezier(.4,0,.2,1) forwards}
-  .oring.o1{stroke-dasharray:390;stroke-dashoffset:390}
-  .oring.o2{stroke-width:1.3;stroke-dasharray:578;stroke-dashoffset:578;animation-delay:.2s}
-  .oring.o3{stroke-width:1.1;stroke-dasharray:716;stroke-dashoffset:716;animation-delay:.4s}
-  @keyframes draw{to{stroke-dashoffset:0}}
-  .core{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;
-    background:rgba(255,255,255,.97);display:flex;align-items:center;justify-content:center;font-size:34px;
-    box-shadow:0 0 0 8px rgba(255,255,255,.14),0 0 30px rgba(255,255,255,.3);
-    transform:scale(0);animation:pop .8s 1.15s cubic-bezier(.34,1.56,.64,1) forwards}
-  .core::after{content:"";position:absolute;inset:-8px;border-radius:50%;background:rgba(255,255,255,.25);
-    animation:glowp 2.4s 2.2s ease-in-out infinite;pointer-events:none}
-  @keyframes glowp{0%,100%{opacity:.25;transform:scale(1)}50%{opacity:.6;transform:scale(1.12)}}
-  @keyframes pop{to{transform:scale(1)}}
-  /* CSS orbit (GPU transform) — SMIL janky tha phones pe */
-  .orb{position:absolute;left:50%;top:50%;width:0;height:0;opacity:0;animation:orbin .5s ease forwards}
-  .orb.a{animation:orbin .5s 1.7s ease forwards,spin 8s 1.7s linear infinite}
-  .orb.b{animation:orbin .5s 2s ease forwards,spin 11s 2s linear infinite reverse}
-  .orb.c{animation:orbin .5s 2.3s ease forwards,spin 9.5s 2.3s linear infinite}
-  @keyframes orbin{to{opacity:1}}
-  @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-  .orb span{position:absolute;font-size:19px;left:0;top:0}
-  .orb.a span{animation:orbA 8s 1.7s linear infinite}
-  .orb.b span{animation:orbB 11s 2s linear infinite}
-  .orb.c span{animation:orbC 9.5s 2.3s linear infinite}
-  @keyframes orbA{from{transform:translate(-50%,-50%) translateX(64px) rotate(0deg)}to{transform:translate(-50%,-50%) translateX(64px) rotate(-360deg)}}
-  @keyframes orbB{from{transform:translate(-50%,-50%) translateX(95px) rotate(0deg)}to{transform:translate(-50%,-50%) translateX(95px) rotate(360deg)}}
-  @keyframes orbC{from{transform:translate(-50%,-50%) translateX(118px) rotate(0deg)}to{transform:translate(-50%,-50%) translateX(118px) rotate(-360deg)}}
+  .cosmo{position:relative;width:230px;height:230px;margin-bottom:4px}
+  .cosmo .halo{position:absolute;inset:28px;border-radius:50%;background:rgba(255,255,255,.18);
+    transform:scale(0);animation:halo 1s .35s cubic-bezier(.34,1.4,.64,1) forwards}
+  @keyframes halo{to{transform:scale(1)}}
+  .cosmo .halo2{position:absolute;inset:44px;border-radius:50%;background:rgba(255,255,255,.12);
+    transform:scale(0);animation:halo 1s .55s cubic-bezier(.34,1.4,.64,1) forwards}
+  .chili{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    transform:scale(0) rotate(-25deg);animation:chilipop 1s .3s cubic-bezier(.3,1.6,.5,1) forwards;
+    filter:drop-shadow(0 10px 22px rgba(0,0,0,.3))}
+  @keyframes chilipop{0%{transform:scale(0) rotate(-25deg)}70%{transform:scale(1.12) rotate(4deg)}100%{transform:scale(1) rotate(0deg)}}
+  .chili svg{width:150px;height:150px}
+  .chili .sway{transform-origin:60% 20%;animation:sway 2.6s 1.5s ease-in-out infinite}
+  @keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
   .sbrand{color:#fff;font-size:31px;font-weight:800;letter-spacing:.3px;margin-top:14px;text-shadow:0 3px 14px rgba(0,0,0,.25);
-    opacity:0;animation:fadein .8s 3.4s ease both}
+    opacity:0;animation:slidein .95s 1.35s cubic-bezier(.22,1,.36,1) both}
+  @keyframes slidein{0%{opacity:0;transform:translateX(-72px)}60%{opacity:1}100%{opacity:1;transform:translateX(0)}}
+  .stag{color:rgba(255,255,255,.78);font-size:13px;margin-top:7px;opacity:0;animation:fadein .7s 2.3s ease both}
   @keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-  .stag{color:rgba(255,255,255,.78);font-size:13px;margin-top:7px;opacity:0;animation:fadein .8s 4s ease both}
-  .sdots{display:flex;gap:7px;margin-top:18px;opacity:0;animation:fadein .8s 4.3s ease both}
+  .sdots{display:flex;gap:7px;margin-top:16px;opacity:0;animation:fadein .7s 2.6s ease both}
   .sdots i{width:8px;height:8px;border-radius:50%;background:#fff;animation:dotp 1.1s ease-in-out infinite}
   .sdots i:nth-child(2){animation-delay:.18s}.sdots i:nth-child(3){animation-delay:.36s}
   @keyframes dotp{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(-7px);opacity:1}}
@@ -293,18 +278,21 @@
   <span class="star" style="top:38%;left:6%;font-size:10px">✦</span>
   <span class="star" style="top:44%;right:5%;font-size:11px">✦</span>
   <div class="cosmo">
-    <svg class="orbits" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-      <circle class="oring o1" cx="120" cy="120" r="62"/>
-      <circle class="oring o2" cx="120" cy="120" r="92"/>
-      <circle class="oring o3" cx="120" cy="120" r="114"/>
-    </svg>
-    <div class="orb a"><span>🍔</span></div>
-    <div class="orb b"><span>👟</span></div>
-    <div class="orb c"><span>👗</span></div>
-    <div class="core">🌶️</div>
+    <div class="halo"></div>
+    <div class="halo2"></div>
+    <div class="chili">
+      <div class="sway">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M78 26 q10-14 22-16 q-4 10-14 16z" fill="#2e8b57"/>
+          <path d="M80 28 q3-8 12-12" stroke="#1d6b40" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M76 30 q22 6 20 34 q-3 34-38 44 q-16 5-26-2 q10-4 20-16 q16-20 10-40 q-2-10 4-18 q6-4 10-2z" fill="#e63348"/>
+          <path d="M88 44 q6 16-4 34" stroke="#ff8a94" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
   </div>
-  <div class="sbrand">Karachi Pulse 🌶️</div>
-  <div class="stag">Karachi ki deals — sitaron se utar kar tumhare phone pe</div>
+  <div class="sbrand">Karachi Pulse</div>
+  <div class="stag">Karachi ki live deals — sab se pehle tumhare phone pe</div>
   <div class="sdots"><i></i><i></i><i></i></div>
 </div>
 
