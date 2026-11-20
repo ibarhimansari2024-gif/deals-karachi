@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-20T23:35:54+05:00",
+ "updated": "2026-11-20T23:42:40+05:00",
  "version": 3,
  "deals": [
   {
@@ -3159,131 +3159,6 @@
    "source": "https://www.insignia.com.pk/products/casual-sneakers-ic7555-beige",
    "published": "2026-11-20",
    "thumb": "https://cdn.shopify.com/s/files/1/0490/2443/4341/files/1_e64617f6-d129-4a23-a989-6f2cb6c1be06.jpg",
-   "auto": true
-  },
-  {
-   "id": 10001,
-   "t": "Asia Ki Sab Se Badi Khajoor Market | Wholesale Khajoor Starting Rs 200/Kg",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 200,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "cat": "Fashion",
-   "src": [
-    "yt"
-   ],
-   "hrs": 144,
-   "addr": "Khajoor wholesale market Karachi (Lea Market / Khajoor Bazar) complete visit and wholesale price guide. Is video mein hu",
-   "phone": "0314-2208572",
-   "time": "—",
-   "note": "Real video posted 2026-11-19 — price/timing video mein confirm karein.",
-   "thumb": "https://i.ytimg.com/vi/MOwq2HBy2Jg/hqdefault.jpg",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=MOwq2HBy2Jg"
-   },
-   "auto": true
-  },
-  {
-   "id": 10002,
-   "t": "Rs 750 Me Japanese Thermos & Crockery Sale! 😱 Wholesale Market Karachi",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 750,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "cat": "Fashion",
-   "src": [
-    "yt"
-   ],
-   "hrs": 120,
-   "addr": "Shop Name: Al Dawood Crockery Location: Near Faizan-e-Muhammad Masjid, Ahead of Super Market, Karachi Contact Number: 03",
-   "phone": "—",
-   "time": "—",
-   "note": "Real video posted 2026-11-18 — price/timing video mein confirm karein.",
-   "thumb": "https://i.ytimg.com/vi/lUpaQsrNrl0/hqdefault.jpg",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=lUpaQsrNrl0"
-   },
-   "auto": true
-  },
-  {
-   "id": 10003,
-   "t": "Export Quality Towel Sale Rs 100 | Wholesale Market In Karachi | Bath Towel, Floor Mats Sale",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 100,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "cat": "Fashion",
-   "src": [
-    "yt"
-   ],
-   "hrs": 96,
-   "addr": "Export Quality Towel Sale sirf Rs. 100 se start! Aaj Market Bhai aapko lekar aya hai Kohinoor Jubilee Shopping Center Ka",
-   "phone": "0324-2541654",
-   "time": "—",
-   "note": "Real video posted 2026-11-17 — price/timing video mein confirm karein.",
-   "thumb": "https://i.ytimg.com/vi/x5KRgQgVjFU/hqdefault.jpg",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=x5KRgQgVjFU"
-   },
-   "auto": true
-  },
-  {
-   "id": 10004,
-   "t": "Liaquatabad Market Visit: Rs 900 Mein Ladies Sandals aur Gents Chappal",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 900,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "cat": "Fashion",
-   "src": [
-    "yt"
-   ],
-   "hrs": 72,
-   "addr": "Liaquatabad shoes market Karachi mein Tariq Road aur Hyderi quality ke fancy bridal shoes aur ladies sandals ab intihai ",
-   "phone": "0310-2575633",
-   "time": "—",
-   "note": "Real video posted 2026-11-16 — price/timing video mein confirm karein.",
-   "thumb": "https://i.ytimg.com/vi/JPHJw09DJk0/hqdefault.jpg",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=JPHJw09DJk0"
-   },
-   "auto": true
-  },
-  {
-   "id": 10005,
-   "t": "Rs 400 Me Cake Offer 3 Din Barha Di! 😱 Wholesale Bakery Karachi",
-   "emoji": "🎥",
-   "area": "Karachi",
-   "lat": 24.875,
-   "lng": 67.035,
-   "price": 400,
-   "was": 0,
-   "cuisine": "Video Deal",
-   "cat": "Food",
-   "src": [
-    "yt"
-   ],
-   "hrs": 24,
-   "addr": "Shop Name & Address: Jameel Sweet & Bakers Liaquatabad Block 2, Near Jhanda Chowk, Karachi Contact: 0318-0094478 / 0300-",
-   "phone": "0318-0094478",
-   "time": "—",
-   "note": "Real video posted 2026-11-14 — price/timing video mein confirm karein.",
-   "thumb": "https://i.ytimg.com/vi/CK9uxgWP0xY/hqdefault.jpg",
-   "links": {
-    "yt": "https://www.youtube.com/watch?v=CK9uxgWP0xY"
-   },
    "auto": true
   }
  ]
