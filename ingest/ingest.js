@@ -19,6 +19,9 @@ const DATA = path.join(ROOT, "data");
 const DEALS = path.join(DATA, "deals.json");
 const CURATED = path.join(DATA, "curated.json");
 const CHANNELS_FILE = path.join(DATA, "channels.txt");
+const CONTACTS_FILE = path.join(DATA, "brand_contacts.json");
+// module-scope: brandContact()/kfoodsContact() isi ko padhte hain
+let brandContacts = fs.existsSync(CONTACTS_FILE) ? JSON.parse(fs.readFileSync(CONTACTS_FILE, "utf8")) : {};
 const UA = "Mozilla/5.0 (compatible; KarachiPulse/2.0)";
 
 // videos must mention a deal-ish keyword to become an app deal
@@ -121,6 +124,58 @@ async function brandProductImage(domain) {
 
 // logo-type thumbnails pakarta hai (Shopify og:images aksar logo hi hote hain)
 const LOGO_HINT = /logo|favicon|\.svg|_120x|_150x|120px|700x105|916x/i;
+
+// brand contact numbers: brand ki site pe jo number ho wo cache karo
+// (brand_contacts.json committed — CI dubara scrape nahi karta). SIRF brand ke
+// apne domain se — kfoods pages ka helpline number restaurant ka NAHI hota.
+// phone patterns — TIGHT, sirf valid PK formats (loose regex ne product IDs /
+// timestamps ko bhi phone samajh liya tha: 2147483647 = 2^31-1 catch ho gaya tha):
+//   mobile: 03XX (0300-0349) ya +92-3XX | Karachi landline: 021-3xxxxxxx ya
+//   +92-21-3xxxxxxx | UAN: 111-xxx-xxx | toll-free: 0800-xxxxx
+const PHONE_RE = /\+?92[\s-]?3[0-4]\d[\s-]?\d{7}|\b03[0-4]\d[-\s]?\d{7}\b|\+?92[\s-]?21[\s-]?3\d{7}\b|\b021[-\s]?\d{3}[-\s]?\d{4,5}\b|\b0800[-\s]?\d{4,5}\b|\b111[-\s]?\d{3}[-\s]?\d{3}\b|\b042[-\s]?(?:111[-\s]?\d{3}[-\s]?\d{3}|\d{7,8})\b|\b051[-\s]?\d{7,8}\b/g;
+function normPhone(raw) {
+  if (raw.includes("*")) return ""; // kfoods masked numbers (+923****6888) bekaar
+  let num = raw.replace(/[()\s-]/g, "");
+  if (/^111\d{6}$/.test(num)) num = `021-111-${num.slice(3, 6)}-${num.slice(6)}`; // UAN mobile pe 021-111-... se dial hota hai
+  return num;
+}
+async function brandContact(dom) {
+  if (typeof dom !== "string") return "";
+  if (brandContacts[dom]) return brandContacts[dom];
+  for (const u of [`https://www.${dom}/pages/contact-us`, `https://www.${dom}/contact-us`, `https://www.${dom}/pages/contact`, `https://www.${dom}/contact`, `https://www.${dom}`]) {
+    try {
+      const html = (await http(u, 15000)).toString("utf8");
+      const all = [...new Set([...(html.match(PHONE_RE) || []), ...(html.match(/tel:[^"'\\s>]+/gi) || []).map(t => t.slice(4))])];
+      for (const raw of all) {
+        const num = normPhone(raw);
+        if (!num) continue;
+        brandContacts[dom] = num;
+        console.log(`  contact ${dom}: ${num}`);
+        return num;
+      }
+    } catch (e) { /* next path */ }
+  }
+  return ""; // negative-cache NAHI — agli run dubara try karegi
+}
+
+// kfoods restaurant pages: page ka JSON-LD number kfoods ki HELPLINE hota hai
+// (restaurant ka NAHI) — ld+json blocks nikaal ke sirf visible body text se lo.
+async function kfoodsContact(url) {
+  if (brandContacts[url]) return brandContacts[url];
+  try {
+    let html = (await http(url, 15000)).toString("utf8");
+    html = html.replace(/<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, " ");
+    const all = [...new Set(html.match(PHONE_RE) || [])];
+    for (const raw of all) {
+      const num = normPhone(raw);
+      if (!num) continue;
+      brandContacts[url] = num;
+      console.log(`  contact kfoods: ${num}`);
+      return num;
+    }
+  } catch (e) { /* page dead */ }
+  return "";
+}
 
 // dish-matched REAL photos — har URL curl-verified 200 image/jpeg
 // (TheMealDB CDN + 3 Commons files jo CI pe proven hain). Pool mein se deal id
@@ -570,6 +625,7 @@ async function main() {
   // enrichment cache: videoId -> extra fields (price/phone/addr/coords/links)
   const cachePath = path.join(DATA, "deal_cache.json");
   const cache = fs.existsSync(cachePath) ? JSON.parse(fs.readFileSync(cachePath, "utf8")) : {};
+  // brand contact numbers module-scope load ho chuke (brand_contacts.json)
 
   const fresh = [];
   let idx = 1;
@@ -612,7 +668,30 @@ async function main() {
   for (const d of curated.deals) if (!d.cat) d.cat = "Food";
   const bt = await fetchBrandtijara();
   const shop = await fetchShopifySales();
-  const deals = curated.deals.concat(bt, shop, fresh);
+  let deals = curated.deals.concat(bt, shop, fresh);
+  // PURANI deals feed se bahar (user: 2-3 mahine purani dikhti thin) — sab
+  // sources pe GLOBAL: published 30+ din purani = drop
+  const nowMs = Date.now();
+  const beforeAll = deals.length;
+  deals = deals.filter(d => {
+    const pub = Date.parse(d.published || "");
+    return !(pub && nowMs - pub > 30 * 86400e3);
+  });
+  console.log(`  freshness: ${beforeAll} -> ${deals.length} (30+ din purani hata di)`);
+  // contact numbers: jitni deals pe number nahi — pehle brand ki site
+  // (links.web ka domain sab se pakka, warna BRAND_SITES), phir kfoods page
+  // (cache: brand_contacts.json committed — CI dubara scrape nahi karta)
+  for (const d of deals) {
+    if (d.phone && d.phone !== "—") continue;
+    let dom = null;
+    const w = d.links && d.links.web;
+    if (w) { try { dom = new URL(w).hostname.replace(/^www\./, ""); } catch (e) {} }
+    if (!dom) dom = Object.entries(BRAND_SITES).find(([k]) => (d.t || "").toLowerCase().includes(k))?.[1];
+    let num = dom ? await brandContact(dom) : "";
+    if (!num && d.source && /kfoods\.com\/restaurant\//.test(d.source)) num = await kfoodsContact(d.source);
+    if (num) d.phone = num;
+  }
+  fs.writeFileSync(CONTACTS_FILE, JSON.stringify(brandContacts, null, 1));
   // thumbnails: har deal pe ek image honi chahiye — yt/shorts link se derive karo
   const YTID = /(?:v=|youtu\.be\/|shorts\/|embed\/|live\/)([\w-]{11})/;
   for (const d of deals) {
