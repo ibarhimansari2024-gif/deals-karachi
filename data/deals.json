@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-20T03:25:49+05:00",
+ "updated": "2026-11-20T08:38:53+05:00",
  "version": 3,
  "deals": [
   {
@@ -491,7 +491,7 @@
    },
    "source": "https://salecrab.com/limelight-anniversary-sale/",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1059SU-SML-034-3PieceSilkSuit-Embroidered_Pret_3.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3222SH-XSL-034-Marina-Shirt-_-Pret_-_2.jpg"
   },
   {
    "id": 119,
@@ -518,7 +518,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0094601414_2.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F1126103999.jpg"
   },
   {
    "id": 120,
@@ -1232,14 +1232,14 @@
   },
   {
    "id": 50008,
-   "t": "Alkaram Studio — Sale up to 50%",
+   "t": "Alkaram Studio — Sale up to 40%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 50,
+   "off": 40,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1249,7 +1249,7 @@
    "addr": "Alkaram Studio outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Alkaram Studio outlets Karachi mein).",
+   "note": "Up to 40% off — brandtijara ne aaj check kiya (Alkaram Studio outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Alkaram Studio+Karachi",
     "cr": "https://www.brandtijara.com/brands/alkaram-studio"
@@ -1316,14 +1316,14 @@
   },
   {
    "id": 50011,
-   "t": "Borjan — Sale up to 50%",
+   "t": "Borjan — Sale up to 60%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 50,
+   "off": 60,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1333,7 +1333,7 @@
    "addr": "Borjan outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Borjan outlets Karachi mein).",
+   "note": "Up to 60% off — brandtijara ne aaj check kiya (Borjan outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Borjan+Karachi",
     "cr": "https://www.brandtijara.com/brands/borjan"
@@ -1400,14 +1400,14 @@
   },
   {
    "id": 50014,
-   "t": "Limelight — Sale up to 44%",
+   "t": "Limelight — Sale up to 40%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 44,
+   "off": 40,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1417,13 +1417,13 @@
    "addr": "Limelight outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 44% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
+   "note": "Up to 40% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Limelight+Karachi",
     "cr": "https://www.brandtijara.com/brands/limelight"
    },
    "source": "https://www.brandtijara.com/brands/limelight",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1059SU-SML-034-3PieceSilkSuit-Embroidered_Pret_3.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3222SH-XSL-034-Marina-Shirt-_-Pret_-_2.jpg",
    "auto": true
   },
   {
@@ -1563,7 +1563,7 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0094601414_2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F1126103999.jpg",
    "auto": true
   },
   {
@@ -2080,7 +2080,7 @@
    },
    "source": "https://www.limelight.pk/products/p5750jk-sml-brd",
    "published": "2026-11-20",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1059SU-SML-034-3PieceSilkSuit-Embroidered_Pret_3.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3222SH-XSL-034-Marina-Shirt-_-Pret_-_2.jpg",
    "auto": true
   },
   {
@@ -2109,7 +2109,7 @@
    },
    "source": "https://www.limelight.pk/products/g0196tp-sml-034",
    "published": "2026-11-20",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1059SU-SML-034-3PieceSilkSuit-Embroidered_Pret_3.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3222SH-XSL-034-Marina-Shirt-_-Pret_-_2.jpg",
    "auto": true
   },
   {
@@ -2138,7 +2138,7 @@
    },
    "source": "https://www.limelight.pk/products/g0204tp-sml-034",
    "published": "2026-11-20",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1059SU-SML-034-3PieceSilkSuit-Embroidered_Pret_3.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3222SH-XSL-034-Marina-Shirt-_-Pret_-_2.jpg",
    "auto": true
   },
   {
@@ -2167,7 +2167,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0409-503",
    "published": "2026-11-20",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0094601414_2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F1126103999.jpg",
    "auto": true
   },
   {
@@ -2196,7 +2196,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0402-208-b",
    "published": "2026-11-20",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0094601414_2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F1126103999.jpg",
    "auto": true
   },
   {
@@ -2225,7 +2225,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0343-303",
    "published": "2026-11-20",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0094601414_2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F1126103999.jpg",
    "auto": true
   },
   {
