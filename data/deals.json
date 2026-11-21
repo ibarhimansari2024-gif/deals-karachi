@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-21T06:27:15+05:00",
+ "updated": "2026-11-21T13:33:28+05:00",
  "version": 3,
  "deals": [
   {
@@ -351,7 +351,7 @@
    },
    "source": "https://salecrab.com/limelight-anniversary-sale/",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W2331ST-SML-034-GripCo-ordSet-Embroidered_3.jpg"
   },
   {
    "id": 119,
@@ -378,7 +378,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0127619999_2_copy_fbd6284d-4139-400c-846d-b751dadbb77b.jpg"
   },
   {
    "id": 120,
@@ -405,7 +405,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/883-9122-_1.webp"
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/877-2756-_1.jpg"
   },
   {
    "id": 121,
@@ -891,7 +891,7 @@
     "cr": "https://www.brandtijara.com/brands/bata"
    },
    "source": "https://www.brandtijara.com/brands/bata",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/883-9122-_1.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/877-2756-_1.jpg",
    "auto": true
   },
   {
@@ -1087,7 +1087,7 @@
     "cr": "https://www.brandtijara.com/brands/walkeaze"
    },
    "source": "https://www.brandtijara.com/brands/walkeaze",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/women-formal-slingback-63208s-walkeaze-3464913.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/Smokycharcoalbottlewithreflectivesilverfoil-1_1.png",
    "auto": true
   },
   {
@@ -1255,7 +1255,7 @@
     "cr": "https://www.brandtijara.com/brands/cross-stitch"
    },
    "source": "https://www.brandtijara.com/brands/cross-stitch",
-   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_SAB02429.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
    "auto": true
   },
   {
@@ -1283,7 +1283,7 @@
     "cr": "https://www.brandtijara.com/brands/limelight"
    },
    "source": "https://www.brandtijara.com/brands/limelight",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W2331ST-SML-034-GripCo-ordSet-Embroidered_3.jpg",
    "auto": true
   },
   {
@@ -1395,7 +1395,7 @@
     "cr": "https://www.brandtijara.com/brands/amir-adnan"
    },
    "source": "https://www.brandtijara.com/brands/amir-adnan",
-   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/PolyViscoseJavaClassicFitEmbroideredSuit_2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
    "auto": true
   },
   {
@@ -1423,7 +1423,7 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0127619999_2_copy_fbd6284d-4139-400c-846d-b751dadbb77b.jpg",
    "auto": true
   },
   {
@@ -1563,7 +1563,36 @@
     "cr": "https://www.brandtijara.com/brands/khas-stores"
    },
    "source": "https://www.brandtijara.com/brands/khas-stores",
-   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-cambric-suit-kcce-4225-embroidered-khas-stores-773556.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
+   "auto": true
+  },
+  {
+   "id": 79902,
+   "t": "Bata — Sparx - Men (was 2199 → 659)",
+   "emoji": "👟",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 659,
+   "was": 2199,
+   "cuisine": "Footwear",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Bata — official site, delivery across Karachi",
+   "phone": "04232761261",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Bata ki official site pe live sale: 70% off (2199 → 659).",
+   "links": {
+    "web": "https://www.bata.com.pk/products/877-2756",
+    "gg": "https://www.google.com/maps/search/Bata+Karachi"
+   },
+   "source": "https://www.bata.com.pk/products/877-2756",
+   "published": "2026-11-21",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/877-2756-_1.jpg",
    "auto": true
   },
   {
@@ -1592,36 +1621,7 @@
    },
    "source": "https://www.bata.com.pk/products/367-0207",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/883-9122-_1.webp",
-   "auto": true
-  },
-  {
-   "id": 72301,
-   "t": "Bata — Floatz - Kids (5 Years - 10 Years) (was 1899 → 569)",
-   "emoji": "👟",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 569,
-   "was": 1899,
-   "cuisine": "Footwear",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Bata — official site, delivery across Karachi",
-   "phone": "04232761261",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Bata ki official site pe live sale: 70% off (1899 → 569).",
-   "links": {
-    "web": "https://www.bata.com.pk/products/367-2207",
-    "gg": "https://www.google.com/maps/search/Bata+Karachi"
-   },
-   "source": "https://www.bata.com.pk/products/367-2207",
-   "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/883-9122-_1.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/877-2756-_1.jpg",
    "auto": true
   },
   {
@@ -1650,7 +1650,7 @@
    },
    "source": "https://www.bata.com.pk/products/520-1172",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/883-9122-_1.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/products/877-2756-_1.jpg",
    "auto": true
   },
   {
@@ -1915,6 +1915,35 @@
    "auto": true
   },
   {
+   "id": 76678,
+   "t": "Limelight — 3 Piece Khaddar Suit-Embroidered (Pret) (was 332808 → 8999)",
+   "emoji": "👗",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 8999,
+   "was": 332808,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Limelight — official site, delivery across Karachi",
+   "phone": "021-111-300-800",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Limelight ki official site pe live sale: 97% off (332808 → 8999).",
+   "links": {
+    "web": "https://www.limelight.pk/products/a0829su-xsl-610",
+    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
+   },
+   "source": "https://www.limelight.pk/products/a0829su-xsl-610",
+   "published": "2026-11-21",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W2331ST-SML-034-GripCo-ordSet-Embroidered_3.jpg",
+   "auto": true
+  },
+  {
    "id": 82349,
    "t": "Limelight — Lawn Kurti-Printed (Pret) (was 2699 → 799)",
    "emoji": "👗",
@@ -1940,18 +1969,18 @@
    },
    "source": "https://www.limelight.pk/products/a2828tp-xsl-212",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W2331ST-SML-034-GripCo-ordSet-Embroidered_3.jpg",
    "auto": true
   },
   {
-   "id": 63831,
-   "t": "Limelight — 2 Piece Chiffon Suit-Embellished (Pret) (was 14999 → 6999)",
+   "id": 89704,
+   "t": "Limelight — Dangle Earrings (was 1099 → 499)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 6999,
-   "was": 14999,
+   "price": 499,
+   "was": 1099,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -1962,43 +1991,14 @@
    "addr": "Limelight — official site, delivery across Karachi",
    "phone": "021-111-300-800",
    "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 53% off (14999 → 6999).",
+   "note": "Limelight ki official site pe live sale: 55% off (1099 → 499).",
    "links": {
-    "web": "https://www.limelight.pk/products/a0475st-xsl-489",
+    "web": "https://www.limelight.pk/products/j3514er-fre-svr",
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
-   "source": "https://www.limelight.pk/products/a0475st-xsl-489",
+   "source": "https://www.limelight.pk/products/j3514er-fre-svr",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg",
-   "auto": true
-  },
-  {
-   "id": 66215,
-   "t": "Limelight — Wash & Wear Suit (was 6299 → 2999)",
-   "emoji": "👗",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 2999,
-   "was": 6299,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Limelight — official site, delivery across Karachi",
-   "phone": "021-111-300-800",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 52% off (6299 → 2999).",
-   "links": {
-    "web": "https://www.limelight.pk/products/a1267sk-xsl-091",
-    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
-   },
-   "source": "https://www.limelight.pk/products/a1267sk-xsl-091",
-   "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W2331ST-SML-034-GripCo-ordSet-Embroidered_3.jpg",
    "auto": true
   },
   {
@@ -2027,7 +2027,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0409-503",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0127619999_2_copy_fbd6284d-4139-400c-846d-b751dadbb77b.jpg",
    "auto": true
   },
   {
@@ -2056,7 +2056,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0127-225",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0127619999_2_copy_fbd6284d-4139-400c-846d-b751dadbb77b.jpg",
    "auto": true
   },
   {
@@ -2085,7 +2085,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0037-611",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0127619999_2_copy_fbd6284d-4139-400c-846d-b751dadbb77b.jpg",
    "auto": true
   },
   {
@@ -2404,7 +2404,7 @@
    },
    "source": "https://www.walkeaze.com/products/05409b-party-bag",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/women-formal-slingback-63208s-walkeaze-3464913.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/Smokycharcoalbottlewithreflectivesilverfoil-1_1.png",
    "auto": true
   },
   {
@@ -2433,7 +2433,7 @@
    },
    "source": "https://www.walkeaze.com/products/40269s-sandals",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/women-formal-slingback-63208s-walkeaze-3464913.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/Smokycharcoalbottlewithreflectivesilverfoil-1_1.png",
    "auto": true
   },
   {
@@ -2462,7 +2462,7 @@
    },
    "source": "https://www.walkeaze.com/products/74858s-block-heel",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/women-formal-slingback-63208s-walkeaze-3464913.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/Smokycharcoalbottlewithreflectivesilverfoil-1_1.png",
    "auto": true
   },
   {
@@ -2578,7 +2578,7 @@
    },
    "source": "https://www.khasstores.com/products/3pc-embroidered-unstitched-lawn-suit-kse-3798",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-cambric-suit-kcce-4225-embroidered-khas-stores-773556.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
    "auto": true
   },
   {
@@ -2607,7 +2607,7 @@
    },
    "source": "https://www.khasstores.com/products/3pc-printed-embroidered-linen-suit-klee-4344",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-cambric-suit-kcce-4225-embroidered-khas-stores-773556.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
    "auto": true
   },
   {
@@ -2636,7 +2636,7 @@
    },
    "source": "https://www.khasstores.com/products/3pc-printed-linen-suit-kle-4394",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-cambric-suit-kcce-4225-embroidered-khas-stores-773556.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
    "auto": true
   },
   {
@@ -2926,7 +2926,7 @@
    },
    "source": "https://www.amiradnan.com/products/slim-fit-black-emb-shirt-collar-suit",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/PolyViscoseJavaClassicFitEmbroideredSuit_2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
    "auto": true
   },
   {
@@ -2955,7 +2955,7 @@
    },
    "source": "https://www.amiradnan.com/products/slim-fit-reflecting-pond-emb-band-collar-slightly-defected-kurta-pajama",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/PolyViscoseJavaClassicFitEmbroideredSuit_2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
    "auto": true
   },
   {
@@ -2984,18 +2984,18 @@
    },
    "source": "https://www.amiradnan.com/products/classic-fit-blue-emb-shirt-collar-slightly-defected-kameez-shalwar",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/PolyViscoseJavaClassicFitEmbroideredSuit_2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
    "auto": true
   },
   {
-   "id": 60537,
-   "t": "Cross Stitch — PINK REVERIE-2PC ( SHIRT & DUPATTA ) (was 11500 → 8620)",
+   "id": 72566,
+   "t": "Cross Stitch — BLOSSOM WAVE (was 4550 → 2950)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 8620,
-   "was": 11500,
+   "price": 2950,
+   "was": 4550,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -3006,25 +3006,25 @@
    "addr": "Cross Stitch — official site, delivery across Karachi",
    "phone": "021-111-111-009",
    "time": "Online sale — jab tak stock hai",
-   "note": "Cross Stitch ki official site pe live sale: 25% off (11500 → 8620).",
+   "note": "Cross Stitch ki official site pe live sale: 35% off (4550 → 2950).",
    "links": {
-    "web": "https://www.crossstitch.pk/products/pink-reverie-rtw",
+    "web": "https://www.crossstitch.pk/products/blossom-wave",
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
-   "source": "https://www.crossstitch.pk/products/pink-reverie-rtw",
+   "source": "https://www.crossstitch.pk/products/blossom-wave",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_SAB02429.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
    "auto": true
   },
   {
-   "id": 84348,
-   "t": "Cross Stitch — SILVER ROSE-2PC (SHIRT & DUPATTA) (was 11950 → 8960)",
+   "id": 79162,
+   "t": "Cross Stitch — CLOUD SHEEN (was 2850 → 1850)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 8960,
-   "was": 11950,
+   "price": 1850,
+   "was": 2850,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -3035,25 +3035,25 @@
    "addr": "Cross Stitch — official site, delivery across Karachi",
    "phone": "021-111-111-009",
    "time": "Online sale — jab tak stock hai",
-   "note": "Cross Stitch ki official site pe live sale: 25% off (11950 → 8960).",
+   "note": "Cross Stitch ki official site pe live sale: 35% off (2850 → 1850).",
    "links": {
-    "web": "https://www.crossstitch.pk/products/silver-rose-rtw",
+    "web": "https://www.crossstitch.pk/products/cloud-sheen",
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
-   "source": "https://www.crossstitch.pk/products/silver-rose-rtw",
+   "source": "https://www.crossstitch.pk/products/cloud-sheen",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_SAB02429.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
    "auto": true
   },
   {
-   "id": 84599,
-   "t": "Cross Stitch — BROWNIE-2PC (SHIRT & DUPATTA) (was 10500 → 7870)",
+   "id": 77056,
+   "t": "Cross Stitch — SOFT HALO (was 4550 → 3410)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 7870,
-   "was": 10500,
+   "price": 3410,
+   "was": 4550,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -3064,14 +3064,14 @@
    "addr": "Cross Stitch — official site, delivery across Karachi",
    "phone": "021-111-111-009",
    "time": "Online sale — jab tak stock hai",
-   "note": "Cross Stitch ki official site pe live sale: 25% off (10500 → 7870).",
+   "note": "Cross Stitch ki official site pe live sale: 25% off (4550 → 3410).",
    "links": {
-    "web": "https://www.crossstitch.pk/products/rts-brownie",
+    "web": "https://www.crossstitch.pk/products/soft-halo",
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
-   "source": "https://www.crossstitch.pk/products/rts-brownie",
+   "source": "https://www.crossstitch.pk/products/soft-halo",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_SAB02429.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
    "auto": true
   },
   {
