@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-21T01:07:46+05:00",
+ "updated": "2026-11-21T06:27:15+05:00",
  "version": 3,
  "deals": [
   {
@@ -351,7 +351,7 @@
    },
    "source": "https://salecrab.com/limelight-anniversary-sale/",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A0346SU-XSL-633-3PieceSatinSuit-Embroidered_Pret_1.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg"
   },
   {
    "id": 119,
@@ -378,7 +378,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0037611801_3.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg"
   },
   {
    "id": 120,
@@ -1115,7 +1115,7 @@
     "cr": "https://www.brandtijara.com/brands/alkaram-studio"
    },
    "source": "https://www.brandtijara.com/brands/alkaram-studio",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF113-26-2-Maroon-1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/SS-60.1-25-3-Pink-1_99972f40-e135-4389-a35d-b59d9afaf566.jpg",
    "auto": true
   },
   {
@@ -1260,14 +1260,14 @@
   },
   {
    "id": 50014,
-   "t": "Limelight — Sale up to 40%",
+   "t": "Limelight — Sale up to 43%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 40,
+   "off": 43,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1277,13 +1277,13 @@
    "addr": "Limelight outlets across Karachi — nearest branch map/link se",
    "phone": "021-111-300-800",
    "time": "Live today",
-   "note": "Up to 40% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
+   "note": "Up to 43% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Limelight+Karachi",
     "cr": "https://www.brandtijara.com/brands/limelight"
    },
    "source": "https://www.brandtijara.com/brands/limelight",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A0346SU-XSL-633-3PieceSatinSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg",
    "auto": true
   },
   {
@@ -1344,14 +1344,14 @@
   },
   {
    "id": 50017,
-   "t": "Shahzeb Saeed — Sale up to 43%",
+   "t": "Shahzeb Saeed — Sale up to 42%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 43,
+   "off": 42,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1361,7 +1361,7 @@
    "addr": "Shahzeb Saeed outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 43% off — brandtijara ne aaj check kiya (Shahzeb Saeed outlets Karachi mein).",
+   "note": "Up to 42% off — brandtijara ne aaj check kiya (Shahzeb Saeed outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Shahzeb Saeed+Karachi",
     "cr": "https://www.brandtijara.com/brands/shahzeb-saeed"
@@ -1423,19 +1423,19 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0037611801_3.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg",
    "auto": true
   },
   {
    "id": 50020,
-   "t": "Servis — Sale up to 25%",
+   "t": "Servis — Sale up to 30%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 25,
+   "off": 30,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1445,7 +1445,7 @@
    "addr": "Servis outlets across Karachi — nearest branch map/link se",
    "phone": "03001234567",
    "time": "Live today",
-   "note": "Up to 25% off — brandtijara ne aaj check kiya (Servis outlets Karachi mein).",
+   "note": "Up to 30% off — brandtijara ne aaj check kiya (Servis outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Servis+Karachi",
     "cr": "https://www.brandtijara.com/brands/servis"
@@ -1940,7 +1940,7 @@
    },
    "source": "https://www.limelight.pk/products/a2828tp-xsl-212",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A0346SU-XSL-633-3PieceSatinSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg",
    "auto": true
   },
   {
@@ -1969,7 +1969,7 @@
    },
    "source": "https://www.limelight.pk/products/a0475st-xsl-489",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A0346SU-XSL-633-3PieceSatinSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg",
    "auto": true
   },
   {
@@ -1998,7 +1998,7 @@
    },
    "source": "https://www.limelight.pk/products/a1267sk-xsl-091",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A0346SU-XSL-633-3PieceSatinSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/W1373SU-SML-MR_6a44fa3d-476d-4aef-b416-62f8465868eb.jpg",
    "auto": true
   },
   {
@@ -2027,7 +2027,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0409-503",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0037611801_3.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg",
    "auto": true
   },
   {
@@ -2056,7 +2056,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0127-225",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0037611801_3.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg",
    "auto": true
   },
   {
@@ -2085,7 +2085,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0037-611",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0037611801_3.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0345112317_6.jpg",
    "auto": true
   },
   {
@@ -2118,6 +2118,35 @@
    "auto": true
   },
   {
+   "id": 85257,
+   "t": "Gul Ahmed — Girls Off-White Trouser (was 3572 → 990)",
+   "emoji": "🧵",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 990,
+   "was": 3572,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Gul Ahmed — official site, delivery across Karachi",
+   "phone": "923212444091",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Gul Ahmed ki official site pe live sale: 72% off (3572 → 990).",
+   "links": {
+    "web": "https://www.gulahmedshop.com/products/girls-off-white-trouser-224-413-037-b",
+    "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
+   },
+   "source": "https://www.gulahmedshop.com/products/girls-off-white-trouser-224-413-037-b",
+   "published": "2026-11-21",
+   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/opus-antique-da-unstitched-fabric-washnwear-off-white--fullshot-front.jpg",
+   "auto": true
+  },
+  {
    "id": 79329,
    "t": "Gul Ahmed — Toddler Girl Multi Woven Blouse (was 3361 → 990)",
    "emoji": "🧵",
@@ -2142,35 +2171,6 @@
     "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
    },
    "source": "https://www.gulahmedshop.com/products/toddler-girl-multi-woven-blouse-224-614-020",
-   "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/opus-antique-da-unstitched-fabric-washnwear-off-white--fullshot-front.jpg",
-   "auto": true
-  },
-  {
-   "id": 83065,
-   "t": "Gul Ahmed — AW23-Tiles Placemat and Runner Set (was 8209 → 2463)",
-   "emoji": "🧵",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 2463,
-   "was": 8209,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Gul Ahmed — official site, delivery across Karachi",
-   "phone": "923212444091",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Gul Ahmed ki official site pe live sale: 70% off (8209 → 2463).",
-   "links": {
-    "web": "https://www.gulahmedshop.com/products/aw23-tiles-placemat-and-runner-set",
-    "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
-   },
-   "source": "https://www.gulahmedshop.com/products/aw23-tiles-placemat-and-runner-set",
    "published": "2026-11-21",
    "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/opus-antique-da-unstitched-fabric-washnwear-off-white--fullshot-front.jpg",
    "auto": true
@@ -2317,7 +2317,7 @@
    },
    "source": "https://www.alkaramstudio.com/products/hand-towel-htwl-07-dark-grey",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF113-26-2-Maroon-1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/SS-60.1-25-3-Pink-1_99972f40-e135-4389-a35d-b59d9afaf566.jpg",
    "auto": true
   },
   {
@@ -2346,7 +2346,7 @@
    },
    "source": "https://www.alkaramstudio.com/products/rts-shirt-trouser-fw-121-1-25-1-purple",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF113-26-2-Maroon-1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/SS-60.1-25-3-Pink-1_99972f40-e135-4389-a35d-b59d9afaf566.jpg",
    "auto": true
   },
   {
@@ -2375,7 +2375,7 @@
    },
    "source": "https://www.alkaramstudio.com/products/stitched-printed-zari-lawn-kurti-gfku7296-grey",
    "published": "2026-11-21",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF113-26-2-Maroon-1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/SS-60.1-25-3-Pink-1_99972f40-e135-4389-a35d-b59d9afaf566.jpg",
    "auto": true
   },
   {
