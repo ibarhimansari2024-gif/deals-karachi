@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-22T21:44:16+05:00",
+ "updated": "2026-11-23T03:09:33+05:00",
  "version": 3,
  "deals": [
   {
@@ -351,7 +351,7 @@
    },
    "source": "https://salecrab.com/limelight-anniversary-sale/",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/U4183SU-3PC-374-3PieceCambricSuit-Printed_Unstitched_1.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg"
   },
   {
    "id": 119,
@@ -378,7 +378,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg"
   },
   {
    "id": 120,
@@ -405,7 +405,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-9187-_1.webp"
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp"
   },
   {
    "id": 121,
@@ -891,7 +891,7 @@
     "cr": "https://www.brandtijara.com/brands/bata"
    },
    "source": "https://www.brandtijara.com/brands/bata",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-9187-_1.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp",
    "auto": true
   },
   {
@@ -1087,7 +1087,7 @@
     "cr": "https://www.brandtijara.com/brands/walkeaze"
    },
    "source": "https://www.brandtijara.com/brands/walkeaze",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/horizon-vial-3-ml-walkeaze-2916990.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/pure-aura-for-women-50-ml-walkeaze-2261041.png",
    "auto": true
   },
   {
@@ -1115,7 +1115,7 @@
     "cr": "https://www.brandtijara.com/brands/alkaram-studio"
    },
    "source": "https://www.brandtijara.com/brands/alkaram-studio",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/F2-10-25-PINK-1_4895dbcf-4a75-4979-a4bb-4b32a44baecd.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/MS-157.1-26-Peach-1.jpg",
    "auto": true
   },
   {
@@ -1283,7 +1283,7 @@
     "cr": "https://www.brandtijara.com/brands/limelight"
    },
    "source": "https://www.brandtijara.com/brands/limelight",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/U4183SU-3PC-374-3PieceCambricSuit-Printed_Unstitched_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg",
    "auto": true
   },
   {
@@ -1423,7 +1423,7 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg",
    "auto": true
   },
   {
@@ -1567,6 +1567,35 @@
    "auto": true
   },
   {
+   "id": 89087,
+   "t": "Bata — Power - Women (was 5499 → 2749)",
+   "emoji": "👟",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 2749,
+   "was": 5499,
+   "cuisine": "Footwear",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Bata — official site, delivery across Karachi",
+   "phone": "04232761261",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Bata ki official site pe live sale: 50% off (5499 → 2749).",
+   "links": {
+    "web": "https://www.bata.com.pk/products/551-7096",
+    "gg": "https://www.google.com/maps/search/Bata+Karachi"
+   },
+   "source": "https://www.bata.com.pk/products/551-7096",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp",
+   "auto": true
+  },
+  {
    "id": 73321,
    "t": "Bata — Power - Men (was 12999 → 6499)",
    "emoji": "👟",
@@ -1591,8 +1620,8 @@
     "gg": "https://www.google.com/maps/search/Bata+Karachi"
    },
    "source": "https://www.bata.com.pk/products/828-9187",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-9187-_1.webp",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp",
    "auto": true
   },
   {
@@ -1620,37 +1649,8 @@
     "gg": "https://www.google.com/maps/search/Bata+Karachi"
    },
    "source": "https://www.bata.com.pk/products/351-5005",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-9187-_1.webp",
-   "auto": true
-  },
-  {
-   "id": 63878,
-   "t": "Bata — Sparx - Women (was 1599 → 799)",
-   "emoji": "👟",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 799,
-   "was": 1599,
-   "cuisine": "Footwear",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Bata — official site, delivery across Karachi",
-   "phone": "04232761261",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Bata ki official site pe live sale: 50% off (1599 → 799).",
-   "links": {
-    "web": "https://www.bata.com.pk/products/577-9502",
-    "gg": "https://www.google.com/maps/search/Bata+Karachi"
-   },
-   "source": "https://www.bata.com.pk/products/577-9502",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-9187-_1.webp",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp",
    "auto": true
   },
   {
@@ -1678,7 +1678,7 @@
     "gg": "https://www.google.com/maps/search/Hush+Puppies+Karachi"
    },
    "source": "https://www.hushpuppies.com.pk/products/hd-mn-0022-f",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/IMG_9244.jpg",
    "auto": true
   },
@@ -1707,7 +1707,7 @@
     "gg": "https://www.google.com/maps/search/Hush+Puppies+Karachi"
    },
    "source": "https://www.hushpuppies.com.pk/products/huli-surrey",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/IMG_9244.jpg",
    "auto": true
   },
@@ -1736,7 +1736,7 @@
     "gg": "https://www.google.com/maps/search/Hush+Puppies+Karachi"
    },
    "source": "https://www.hushpuppies.com.pk/products/hd-mn-0045",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/IMG_9244.jpg",
    "auto": true
   },
@@ -1765,7 +1765,7 @@
     "gg": "https://www.google.com/maps/search/Servis+Karachi"
    },
    "source": "https://www.servis.pk/products/m-ch-0100475-black",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0055/5525/7462/files/M-CH-0100475BLACK.jpg",
    "auto": true
   },
@@ -1794,7 +1794,7 @@
     "gg": "https://www.google.com/maps/search/Servis+Karachi"
    },
    "source": "https://www.servis.pk/products/m-ch-0100471-dark-grey",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0055/5525/7462/files/M-CH-0100475BLACK.jpg",
    "auto": true
   },
@@ -1823,7 +1823,7 @@
     "gg": "https://www.google.com/maps/search/Servis+Karachi"
    },
    "source": "https://www.servis.pk/products/m-ch-0100471-brown",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0055/5525/7462/files/M-CH-0100475BLACK.jpg",
    "auto": true
   },
@@ -1852,7 +1852,7 @@
     "gg": "https://www.google.com/maps/search/Borjan+Karachi"
    },
    "source": "https://www.borjan.com.pk/products/bm7248-black-men-sneakers",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/O01ML0005.jpg",
    "auto": true
   },
@@ -1881,7 +1881,7 @@
     "gg": "https://www.google.com/maps/search/Borjan+Karachi"
    },
    "source": "https://www.borjan.com.pk/products/bm7451-black-men-slip-on",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/O01ML0005.jpg",
    "auto": true
   },
@@ -1910,8 +1910,37 @@
     "gg": "https://www.google.com/maps/search/Borjan+Karachi"
    },
    "source": "https://www.borjan.com.pk/products/bm7247-grey-men-sneakers",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/O01ML0005.jpg",
+   "auto": true
+  },
+  {
+   "id": 68459,
+   "t": "Limelight — Viscose Slub Co-ord Set (was 4499 → 2199)",
+   "emoji": "👗",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 2199,
+   "was": 4499,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Limelight — official site, delivery across Karachi",
+   "phone": "021-111-300-800",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Limelight ki official site pe live sale: 51% off (4499 → 2199).",
+   "links": {
+    "web": "https://www.limelight.pk/products/a1718st-xsl-001",
+    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
+   },
+   "source": "https://www.limelight.pk/products/a1718st-xsl-001",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg",
    "auto": true
   },
   {
@@ -1939,19 +1968,19 @@
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
    "source": "https://www.limelight.pk/products/u2801sh-ssh-prp",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/U4183SU-3PC-374-3PieceCambricSuit-Printed_Unstitched_1.jpg",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg",
    "auto": true
   },
   {
-   "id": 70303,
-   "t": "Limelight — 2 Piece Cambric Suit-Printed (Unstitched) (was 2699 → 1499)",
+   "id": 68199,
+   "t": "Limelight — Chiffon Top (was 2999 → 1500)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 1499,
-   "was": 2699,
+   "price": 1500,
+   "was": 2999,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -1962,101 +1991,14 @@
    "addr": "Limelight — official site, delivery across Karachi",
    "phone": "021-111-300-800",
    "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 44% off (2699 → 1499).",
+   "note": "Limelight ki official site pe live sale: 50% off (2999 → 1500).",
    "links": {
-    "web": "https://www.limelight.pk/products/u3956st-2pc-419",
+    "web": "https://www.limelight.pk/products/g0208tp-sml-034",
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
-   "source": "https://www.limelight.pk/products/u3956st-2pc-419",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/U4183SU-3PC-374-3PieceCambricSuit-Printed_Unstitched_1.jpg",
-   "auto": true
-  },
-  {
-   "id": 85083,
-   "t": "Limelight — 2 Piece Lawn Suit-Printed (Unstitched) (was 2799 → 1599)",
-   "emoji": "👗",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 1599,
-   "was": 2799,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Limelight — official site, delivery across Karachi",
-   "phone": "021-111-300-800",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 43% off (2799 → 1599).",
-   "links": {
-    "web": "https://www.limelight.pk/products/u4325sd-2pc-143",
-    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
-   },
-   "source": "https://www.limelight.pk/products/u4325sd-2pc-143",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/U4183SU-3PC-374-3PieceCambricSuit-Printed_Unstitched_1.jpg",
-   "auto": true
-  },
-  {
-   "id": 81641,
-   "t": "Outfitters — Resort Collar Checkered Shirt (was 3490 → 990)",
-   "emoji": "👕",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 990,
-   "was": 3490,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Outfitters — official site, delivery across Karachi",
-   "phone": "923106070719",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 72% off (3490 → 990).",
-   "links": {
-    "web": "https://www.outfitters.com.pk/products/f0409-503",
-    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
-   },
-   "source": "https://www.outfitters.com.pk/products/f0409-503",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg",
-   "auto": true
-  },
-  {
-   "id": 85501,
-   "t": "Outfitters — Pleated Straight Fit Chinos (was 5990 → 2090)",
-   "emoji": "👕",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 2090,
-   "was": 5990,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Outfitters — official site, delivery across Karachi",
-   "phone": "923106070719",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 65% off (5990 → 2090).",
-   "links": {
-    "web": "https://www.outfitters.com.pk/products/f0538-108-b",
-    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
-   },
-   "source": "https://www.outfitters.com.pk/products/f0538-108-b",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg",
+   "source": "https://www.limelight.pk/products/g0208tp-sml-034",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg",
    "auto": true
   },
   {
@@ -2084,8 +2026,66 @@
     "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
    },
    "source": "https://www.outfitters.com.pk/products/f0127-225",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg",
+   "auto": true
+  },
+  {
+   "id": 74068,
+   "t": "Outfitters — Midi Skirt With Side Flap Pockets (was 3690 → 1490)",
+   "emoji": "👕",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 1490,
+   "was": 3690,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Outfitters — official site, delivery across Karachi",
+   "phone": "923106070719",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Outfitters ki official site pe live sale: 60% off (3690 → 1490).",
+   "links": {
+    "web": "https://www.outfitters.com.pk/products/f0037-611",
+    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
+   },
+   "source": "https://www.outfitters.com.pk/products/f0037-611",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg",
+   "auto": true
+  },
+  {
+   "id": 71385,
+   "t": "Outfitters — Varsity Graphic T-Shirt (was 1690 → 790)",
+   "emoji": "👕",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 790,
+   "was": 1690,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Outfitters — official site, delivery across Karachi",
+   "phone": "923106070719",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Outfitters ki official site pe live sale: 53% off (1690 → 790).",
+   "links": {
+    "web": "https://www.outfitters.com.pk/products/f0953-306",
+    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
+   },
+   "source": "https://www.outfitters.com.pk/products/f0953-306",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg",
    "auto": true
   },
   {
@@ -2113,7 +2113,7 @@
     "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
    },
    "source": "https://www.gulahmedshop.com/products/toddler-girl-green-viscose-blouse-with-full-sleeves-224-617-015",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg",
    "auto": true
   },
@@ -2142,7 +2142,7 @@
     "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
    },
    "source": "https://www.gulahmedshop.com/products/aw23-checks-placemat-and-runner-set",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg",
    "auto": true
   },
@@ -2171,7 +2171,7 @@
     "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
    },
    "source": "https://www.gulahmedshop.com/products/junior-girl-blue-and-white-checkered-casual-shirt-224-417-009",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg",
    "auto": true
   },
@@ -2200,7 +2200,7 @@
     "gg": "https://www.google.com/maps/search/Diners+Karachi"
    },
    "source": "https://www.diners.com.pk/products/eg3602-n-blue",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/OA1707-NAVY-02.webp",
    "auto": true
   },
@@ -2229,7 +2229,7 @@
     "gg": "https://www.google.com/maps/search/Diners+Karachi"
    },
    "source": "https://www.diners.com.pk/products/wk20971-beige",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/OA1707-NAVY-02.webp",
    "auto": true
   },
@@ -2258,7 +2258,7 @@
     "gg": "https://www.google.com/maps/search/Diners+Karachi"
    },
    "source": "https://www.diners.com.pk/products/dtks-61114-d-brown",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/OA1707-NAVY-02.webp",
    "auto": true
   },
@@ -2287,37 +2287,8 @@
     "gg": "https://www.google.com/maps/search/Edenrobe+Karachi"
    },
    "source": "https://www.edenrobe.com/products/polo-signature-shirt-emtps6-090",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0841/3796/7889/files/0N9A028437134.webp",
-   "auto": true
-  },
-  {
-   "id": 62746,
-   "t": "Alkaram Studio — RTS | SHIRT, TROUSER & DUPATTA (was 9490 → 5694)",
-   "emoji": "👗",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 5694,
-   "was": 9490,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Alkaram Studio — official site, delivery across Karachi",
-   "phone": "923122552726",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Alkaram Studio ki official site pe live sale: 40% off (9490 → 5694).",
-   "links": {
-    "web": "https://www.alkaramstudio.com/products/3-pc-embroidered-indian-silk-suit-with-yarn-dyed-dupatta-f2-10-25-pink",
-    "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
-   },
-   "source": "https://www.alkaramstudio.com/products/3-pc-embroidered-indian-silk-suit-with-yarn-dyed-dupatta-f2-10-25-pink",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/F2-10-25-PINK-1_4895dbcf-4a75-4979-a4bb-4b32a44baecd.jpg",
    "auto": true
   },
   {
@@ -2345,8 +2316,8 @@
     "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
    },
    "source": "https://www.alkaramstudio.com/products/rtw-trouser-trd30-3-26-beige",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/F2-10-25-PINK-1_4895dbcf-4a75-4979-a4bb-4b32a44baecd.jpg",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/MS-157.1-26-Peach-1.jpg",
    "auto": true
   },
   {
@@ -2374,8 +2345,37 @@
     "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
    },
    "source": "https://www.alkaramstudio.com/products/stitched-printed-embroidered-lawn-kurta-gfku7219-orange",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/F2-10-25-PINK-1_4895dbcf-4a75-4979-a4bb-4b32a44baecd.jpg",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/MS-157.1-26-Peach-1.jpg",
+   "auto": true
+  },
+  {
+   "id": 86167,
+   "t": "Alkaram Studio — RTW | WAISTCOAT (was 6490 → 3894)",
+   "emoji": "👗",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 3894,
+   "was": 6490,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Alkaram Studio — official site, delivery across Karachi",
+   "phone": "923122552726",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Alkaram Studio ki official site pe live sale: 40% off (6490 → 3894).",
+   "links": {
+    "web": "https://www.alkaramstudio.com/products/rtw-waistcoat-gmwc214-rust",
+    "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
+   },
+   "source": "https://www.alkaramstudio.com/products/rtw-waistcoat-gmwc214-rust",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/MS-157.1-26-Peach-1.jpg",
    "auto": true
   },
   {
@@ -2403,8 +2403,8 @@
     "gg": "https://www.google.com/maps/search/Walkeaze+Karachi"
    },
    "source": "https://www.walkeaze.com/products/05409b-party-bag",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/horizon-vial-3-ml-walkeaze-2916990.jpg",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/pure-aura-for-women-50-ml-walkeaze-2261041.png",
    "auto": true
   },
   {
@@ -2432,8 +2432,8 @@
     "gg": "https://www.google.com/maps/search/Walkeaze+Karachi"
    },
    "source": "https://www.walkeaze.com/products/40269s-sandals",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/horizon-vial-3-ml-walkeaze-2916990.jpg",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/pure-aura-for-women-50-ml-walkeaze-2261041.png",
    "auto": true
   },
   {
@@ -2461,8 +2461,8 @@
     "gg": "https://www.google.com/maps/search/Walkeaze+Karachi"
    },
    "source": "https://www.walkeaze.com/products/74858s-block-heel",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/horizon-vial-3-ml-walkeaze-2916990.jpg",
+   "published": "2026-11-23",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/pure-aura-for-women-50-ml-walkeaze-2261041.png",
    "auto": true
   },
   {
@@ -2490,7 +2490,7 @@
     "gg": "https://www.google.com/maps/search/1st+Step+Karachi"
    },
    "source": "https://www.1ststep.pk/products/casual-hand-bag-gray-0322342",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/5_3f790a00-8a2d-4b81-971a-22631fead48c.webp",
    "auto": true
   },
@@ -2519,7 +2519,7 @@
     "gg": "https://www.google.com/maps/search/1st+Step+Karachi"
    },
    "source": "https://www.1ststep.pk/products/casual-hand-bag-silver-0322342",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/5_3f790a00-8a2d-4b81-971a-22631fead48c.webp",
    "auto": true
   },
@@ -2548,7 +2548,7 @@
     "gg": "https://www.google.com/maps/search/1st+Step+Karachi"
    },
    "source": "https://www.1ststep.pk/products/casual-hand-bag-peach-0322342",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/5_3f790a00-8a2d-4b81-971a-22631fead48c.webp",
    "auto": true
   },
@@ -2577,7 +2577,7 @@
     "gg": "https://www.google.com/maps/search/Khas+Stores+Karachi"
    },
    "source": "https://www.khasstores.com/products/3pc-embroidered-unstitched-lawn-suit-kse-3798",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
    "auto": true
   },
@@ -2606,7 +2606,7 @@
     "gg": "https://www.google.com/maps/search/Khas+Stores+Karachi"
    },
    "source": "https://www.khasstores.com/products/3pc-printed-embroidered-linen-suit-klee-4344",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
    "auto": true
   },
@@ -2635,7 +2635,7 @@
     "gg": "https://www.google.com/maps/search/Khas+Stores+Karachi"
    },
    "source": "https://www.khasstores.com/products/3pc-printed-linen-suit-kle-4394",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
    "auto": true
   },
@@ -2664,7 +2664,7 @@
     "gg": "https://www.google.com/maps/search/Engine+Karachi"
    },
    "source": "https://www.engine.com.pk/products/vtc071-blu",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0015_e6b1e745-7d68-4f01-982c-e6db569ff4ea.jpg",
    "auto": true
   },
@@ -2693,7 +2693,7 @@
     "gg": "https://www.google.com/maps/search/Engine+Karachi"
    },
    "source": "https://www.engine.com.pk/products/vit423-wht",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0015_e6b1e745-7d68-4f01-982c-e6db569ff4ea.jpg",
    "auto": true
   },
@@ -2722,7 +2722,7 @@
     "gg": "https://www.google.com/maps/search/Engine+Karachi"
    },
    "source": "https://www.engine.com.pk/products/iu6035-blk",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0015_e6b1e745-7d68-4f01-982c-e6db569ff4ea.jpg",
    "auto": true
   },
@@ -2751,7 +2751,7 @@
     "gg": "https://www.google.com/maps/search/Dhanak+Karachi"
    },
    "source": "https://www.dhanak.com.pk/products/ss26dc-2617-l-pink-2pcs-lawn-embroidered-kurta-with-trouser",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/IMG_7630.jpg",
    "auto": true
   },
@@ -2780,7 +2780,7 @@
     "gg": "https://www.google.com/maps/search/Dhanak+Karachi"
    },
    "source": "https://www.dhanak.com.pk/products/ss26dc-2612-cream-2pcs-lawn-embroidered-kurta-with-trouser",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/IMG_7630.jpg",
    "auto": true
   },
@@ -2809,7 +2809,7 @@
     "gg": "https://www.google.com/maps/search/Dhanak+Karachi"
    },
    "source": "https://www.dhanak.com.pk/products/ss26dc-2613-pink-2pcs-lawn-embroidered-kurta-with-trouser",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/IMG_7630.jpg",
    "auto": true
   },
@@ -2838,7 +2838,7 @@
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi"
    },
    "source": "https://www.lakhanyonline.com/products/01-piece-ready-to-wear-embroidered-namaz-chaddar-186",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0300/8059/8075/files/40_fde22a76-889c-4ccd-905b-9db00c7eb464.jpg",
    "auto": true
   },
@@ -2867,7 +2867,7 @@
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi"
    },
    "source": "https://www.lakhanyonline.com/products/01-piece-ready-to-wear-embroidered-namaz-chaddar-185",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0300/8059/8075/files/40_fde22a76-889c-4ccd-905b-9db00c7eb464.jpg",
    "auto": true
   },
@@ -2896,7 +2896,7 @@
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi"
    },
    "source": "https://www.lakhanyonline.com/products/01-piece-ready-to-wear-shawl-79",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0300/8059/8075/files/40_fde22a76-889c-4ccd-905b-9db00c7eb464.jpg",
    "auto": true
   },
@@ -2925,7 +2925,7 @@
     "gg": "https://www.google.com/maps/search/Amir+Adnan+Karachi"
    },
    "source": "https://www.amiradnan.com/products/slim-fit-black-emb-shirt-collar-suit",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
    "auto": true
   },
@@ -2954,7 +2954,7 @@
     "gg": "https://www.google.com/maps/search/Amir+Adnan+Karachi"
    },
    "source": "https://www.amiradnan.com/products/slim-fit-reflecting-pond-emb-band-collar-slightly-defected-kurta-pajama",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
    "auto": true
   },
@@ -2983,7 +2983,7 @@
     "gg": "https://www.google.com/maps/search/Amir+Adnan+Karachi"
    },
    "source": "https://www.amiradnan.com/products/classic-fit-blue-emb-shirt-collar-slightly-defected-kameez-shalwar",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
    "auto": true
   },
@@ -3012,7 +3012,7 @@
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
    "source": "https://www.crossstitch.pk/products/blossom-wave",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
    "auto": true
   },
@@ -3041,7 +3041,7 @@
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
    "source": "https://www.crossstitch.pk/products/cloud-sheen",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
    "auto": true
   },
@@ -3070,7 +3070,7 @@
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
    "source": "https://www.crossstitch.pk/products/soft-halo",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
    "auto": true
   },
@@ -3099,7 +3099,7 @@
     "gg": "https://www.google.com/maps/search/Insignia+Karachi"
    },
    "source": "https://www.insignia.com.pk/products/formal-shoulder-bags-bs2311-ivory",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0490/2443/4341/files/1_e64617f6-d129-4a23-a989-6f2cb6c1be06.jpg",
    "auto": true
   },
@@ -3128,7 +3128,7 @@
     "gg": "https://www.google.com/maps/search/Insignia+Karachi"
    },
    "source": "https://www.insignia.com.pk/products/casual-sneakers-ic7555-maroon",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0490/2443/4341/files/1_e64617f6-d129-4a23-a989-6f2cb6c1be06.jpg",
    "auto": true
   },
@@ -3157,7 +3157,7 @@
     "gg": "https://www.google.com/maps/search/Insignia+Karachi"
    },
    "source": "https://www.insignia.com.pk/products/casual-sneakers-ic7555-beige",
-   "published": "2026-11-22",
+   "published": "2026-11-23",
    "thumb": "https://cdn.shopify.com/s/files/1/0490/2443/4341/files/1_e64617f6-d129-4a23-a989-6f2cb6c1be06.jpg",
    "auto": true
   }
