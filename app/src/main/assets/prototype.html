@@ -125,7 +125,13 @@
   @keyframes dotp{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(-7px);opacity:1}}
   /* photo mosaic — saari deals bina parhe dikh jayein */
   .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:2px 14px 18px}
-  .ptile{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--thumbbg);cursor:pointer;transform:translateZ(0)}
+  .ptile{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--thumbbg);cursor:pointer;transform:translateZ(0);
+    animation:ptilein .45s cubic-bezier(.22,1,.36,1) backwards}
+  @keyframes ptilein{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+  .fcard{transition:transform .15s ease}
+  .fcard:active{transform:scale(.97)}
+  .hbanner{transition:transform .15s ease}
+  .hbanner:active{transform:scale(.985)}
   .ptile:active{transform:scale(.96)}
   .ptile .thumb{position:absolute;inset:0;height:auto}
   .ptile .pprice{position:absolute;bottom:6px;left:6px;background:var(--good);color:#fff;font-weight:800;font-size:10.5px;padding:3px 7px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.3);z-index:2}
@@ -214,6 +220,11 @@
   .sheet{position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:40;display:none}
   .sheet.open{display:block;animation:bkg .25s ease}
   @keyframes bkg{from{opacity:0}to{opacity:1}}
+  /* smooth CLOSE: backdrop fade + card slide-down (v6.4 — pehle instant thi, jarring lagti thi) */
+  .sheet.closing{display:block;animation:bkgout .22s ease forwards}
+  .sheet.closing .sheetcard{animation:down .22s ease forwards}
+  @keyframes bkgout{to{opacity:0}}
+  @keyframes down{to{transform:translateY(80px);opacity:0}}
   .sheetcard{position:absolute;left:0;right:0;bottom:0;background:var(--surface);border-radius:32px 32px 0 0;
     max-height:90%;overflow-y:auto;padding:20px 22px 34px;animation:up .38s cubic-bezier(.34,1.35,.64,1);box-shadow:0 -10px 40px rgba(0,0,0,.18)}
   @keyframes up{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
@@ -252,6 +263,11 @@
   /* tab content switch */
   .tabin{animation:tabin .3s cubic-bezier(.22,1,.36,1)}
   @keyframes tabin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  /* tab active pill — active tab ke peechay soft glow pill (v6.4) */
+  .tab{position:relative}
+  .tab.on::before{content:"";position:absolute;inset:2px 8px 6px;border-radius:12px;
+    background:color-mix(in srgb,var(--accent) 10%,transparent);animation:tabpill .3s cubic-bezier(.22,1,.36,1)}
+  @keyframes tabpill{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
   /* tab icon bounce */
   .tab.on .ico{animation:tabpop .3s ease}
   @keyframes tabpop{50%{transform:translateY(-3px) scale(1.18)}}
@@ -394,9 +410,15 @@ function validateDeals(raw){
 
 let DATA=null, state={area:"All areas",cat:"All",q:"",saved:new Set(),tab:"home",homeView:"dash"}, map=null, markers=[];
 /* Android back button ke levels: detail sheet -> feed -> dashboard -> minimize */
+function closeSheet(){
+  const sh=document.getElementById("sheet");
+  if(!sh.classList.contains("open")) return;
+  sh.classList.add("closing");
+  setTimeout(()=>{sh.classList.remove("open","closing");},220);
+}
 window.kpBack=function(){
   const sh=document.getElementById("sheet");
-  if(sh&&sh.classList.contains("open")){sh.classList.remove("open");return "handled";}
+  if(sh&&sh.classList.contains("open")){closeSheet();return "handled";}
   if(state.tab==="home"&&state.homeView==="feed"){state.homeView="dash";showHomeView("slidein-l");return "handled";}
   if(state.tab!=="home"){switchTab("home");return "handled";}
   return "exit";
@@ -545,7 +567,7 @@ function renderHome(){
   const top=[...deals].sort((a,b)=>a.hrs-b.hrs).slice(0,4);
   hs.innerHTML=`
     <div class="hero">
-      <h2>Assalam-o-Alaikum 👋</h2>
+      <h2>${(()=>{const h=new Date().getHours();return h<5?"Salam — raat ho gayi 🌙":h<12?"Assalam-o-Alaikum, subah bakhair ☀️":h<17?"Assalam-o-Alaikum 👋":h<20?"Assalam-o-Alaikum, sham bakhair 🌆":"Assalam-o-Alaikum, good night 🌙";})()}</h2>
       <p>Aaj Karachi mein <b style="color:var(--accent)">${deals.length} live deals</b> hain — category chuno aur sasti deal pakro 🌶️</p>
     </div>
     ${top[0]?`<div class="hbanner" id="hbanner">
@@ -564,8 +586,8 @@ function renderHome(){
     </div>
     <div class="sect"><h2>📸 Saari deals — tasveeron mein</h2><span id="allgrid">${deals.length} pics</span></div>
     <div class="pgrid" id="pgrid">
-      ${deals.map(d=>`
-        <div class="ptile" data-id="${d.id}">
+      ${deals.map((d,i)=>`
+        <div class="ptile" data-id="${d.id}" style="animation-delay:${(i%12)*35}ms">
           <div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}</div>
           <span class="pcat">${d.emoji}</span>
           <span class="pprice">${priceLabel(d)}</span>
@@ -649,7 +671,7 @@ function openDetail(d){
     else { try{navigator.clipboard.writeText(txt);toast("✓ Copy ho gaya");}catch(e){} }
   };
   document.getElementById("savecta").onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);persistSaved();renderAll();openDetail(d);};
-  sh.classList.add("open"); sh.onclick=e=>{if(e.target===sh)sh.classList.remove("open");};
+  sh.classList.add("open"); sh.onclick=e=>{if(e.target===sh)closeSheet();};
 }
 
 /* chips — categories (Food/Fashion/Shopping) + areas */
