@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-22T06:41:01+05:00",
+ "updated": "2026-11-22T13:51:03+05:00",
  "version": 3,
  "deals": [
   {
@@ -351,7 +351,7 @@
    },
    "source": "https://salecrab.com/limelight-anniversary-sale/",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1454DR-SML-034_1_-SilkShirt-Dyed_Pret.jpg"
   },
   {
    "id": 119,
@@ -378,7 +378,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg"
   },
   {
    "id": 120,
@@ -405,7 +405,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp"
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/351-5005-_1.webp"
   },
   {
    "id": 121,
@@ -891,7 +891,7 @@
     "cr": "https://www.brandtijara.com/brands/bata"
    },
    "source": "https://www.brandtijara.com/brands/bata",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/351-5005-_1.webp",
    "auto": true
   },
   {
@@ -1115,7 +1115,7 @@
     "cr": "https://www.brandtijara.com/brands/alkaram-studio"
    },
    "source": "https://www.brandtijara.com/brands/alkaram-studio",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/RB25-1-003_A_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/TRD30-3-26_1.jpg",
    "auto": true
   },
   {
@@ -1283,7 +1283,7 @@
     "cr": "https://www.brandtijara.com/brands/limelight"
    },
    "source": "https://www.brandtijara.com/brands/limelight",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1454DR-SML-034_1_-SilkShirt-Dyed_Pret.jpg",
    "auto": true
   },
   {
@@ -1423,7 +1423,7 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg",
    "auto": true
   },
   {
@@ -1535,7 +1535,7 @@
     "cr": "https://www.brandtijara.com/brands/engine"
    },
    "source": "https://www.brandtijara.com/brands/engine",
-   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0032_11b0036e-b779-4ca7-a265-9203561db261.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0015_e6b1e745-7d68-4f01-982c-e6db569ff4ea.jpg",
    "auto": true
   },
   {
@@ -1567,6 +1567,64 @@
    "auto": true
   },
   {
+   "id": 76747,
+   "t": "Bata — Bubble Gummers - Girls (5 Years - 10 Years) (was 3299 → 1649)",
+   "emoji": "👟",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 1649,
+   "was": 3299,
+   "cuisine": "Footwear",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Bata — official site, delivery across Karachi",
+   "phone": "04232761261",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Bata ki official site pe live sale: 50% off (3299 → 1649).",
+   "links": {
+    "web": "https://www.bata.com.pk/products/351-5005",
+    "gg": "https://www.google.com/maps/search/Bata+Karachi"
+   },
+   "source": "https://www.bata.com.pk/products/351-5005",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/351-5005-_1.webp",
+   "auto": true
+  },
+  {
+   "id": 70793,
+   "t": "Bata — Bubble Gummers - Girls (5 Years - 10 Years) (was 2599 → 1299)",
+   "emoji": "👟",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 1299,
+   "was": 2599,
+   "cuisine": "Footwear",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Bata — official site, delivery across Karachi",
+   "phone": "04232761261",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Bata ki official site pe live sale: 50% off (2599 → 1299).",
+   "links": {
+    "web": "https://www.bata.com.pk/products/351-5089",
+    "gg": "https://www.google.com/maps/search/Bata+Karachi"
+   },
+   "source": "https://www.bata.com.pk/products/351-5089",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/351-5005-_1.webp",
+   "auto": true
+  },
+  {
    "id": 63878,
    "t": "Bata — Sparx - Women (was 1599 → 799)",
    "emoji": "👟",
@@ -1592,65 +1650,7 @@
    },
    "source": "https://www.bata.com.pk/products/577-9502",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp",
-   "auto": true
-  },
-  {
-   "id": 67959,
-   "t": "Bata — Power - Men (was 5499 → 2749)",
-   "emoji": "👟",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 2749,
-   "was": 5499,
-   "cuisine": "Footwear",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Bata — official site, delivery across Karachi",
-   "phone": "04232761261",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Bata ki official site pe live sale: 50% off (5499 → 2749).",
-   "links": {
-    "web": "https://www.bata.com.pk/products/851-1186",
-    "gg": "https://www.google.com/maps/search/Bata+Karachi"
-   },
-   "source": "https://www.bata.com.pk/products/851-1186",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp",
-   "auto": true
-  },
-  {
-   "id": 65854,
-   "t": "Bata — Bata - Women (was 2799 → 1399)",
-   "emoji": "👟",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 1399,
-   "was": 2799,
-   "cuisine": "Footwear",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Bata — official site, delivery across Karachi",
-   "phone": "04232761261",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Bata ki official site pe live sale: 50% off (2799 → 1399).",
-   "links": {
-    "web": "https://www.bata.com.pk/products/671-8431",
-    "gg": "https://www.google.com/maps/search/Bata+Karachi"
-   },
-   "source": "https://www.bata.com.pk/products/671-8431",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/351-5005-_1.webp",
    "auto": true
   },
   {
@@ -1915,14 +1915,14 @@
    "auto": true
   },
   {
-   "id": 82349,
-   "t": "Limelight — Lawn Kurti-Printed (Pret) (was 2699 → 799)",
+   "id": 64833,
+   "t": "Limelight — Khaddar Cardigan Co-ord Set (was 403387 → 3429)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 799,
-   "was": 2699,
+   "price": 3429,
+   "was": 403387,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -1933,25 +1933,25 @@
    "addr": "Limelight — official site, delivery across Karachi",
    "phone": "021-111-300-800",
    "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 70% off (2699 → 799).",
+   "note": "Limelight ki official site pe live sale: 99% off (403387 → 3429).",
    "links": {
-    "web": "https://www.limelight.pk/products/a2828tp-xsl-212",
+    "web": "https://www.limelight.pk/products/l1391st-xsl-143",
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
-   "source": "https://www.limelight.pk/products/a2828tp-xsl-212",
+   "source": "https://www.limelight.pk/products/l1391st-xsl-143",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1454DR-SML-034_1_-SilkShirt-Dyed_Pret.jpg",
    "auto": true
   },
   {
-   "id": 89704,
-   "t": "Limelight — Dangle Earrings (was 1099 → 499)",
+   "id": 74642,
+   "t": "Limelight — Lawn Cardigan With Slip-Embroidered (Pret) (was 4699 → 987)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 499,
-   "was": 1099,
+   "price": 987,
+   "was": 4699,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -1962,25 +1962,25 @@
    "addr": "Limelight — official site, delivery across Karachi",
    "phone": "021-111-300-800",
    "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 55% off (1099 → 499).",
+   "note": "Limelight ki official site pe live sale: 79% off (4699 → 987).",
    "links": {
-    "web": "https://www.limelight.pk/products/j3514er-fre-svr",
+    "web": "https://www.limelight.pk/products/p9795cr-sml-633",
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
-   "source": "https://www.limelight.pk/products/j3514er-fre-svr",
+   "source": "https://www.limelight.pk/products/p9795cr-sml-633",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1454DR-SML-034_1_-SilkShirt-Dyed_Pret.jpg",
    "auto": true
   },
   {
-   "id": 65611,
-   "t": "Limelight — 3 Piece Jacquard Suit-Embroidered (Pret) (was 8899 → 4399)",
+   "id": 61381,
+   "t": "Limelight — Lawn Kurt-Embroidered (Pret) (was 3699 → 999)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 4399,
-   "was": 8899,
+   "price": 999,
+   "was": 3699,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -1991,14 +1991,43 @@
    "addr": "Limelight — official site, delivery across Karachi",
    "phone": "021-111-300-800",
    "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 51% off (8899 → 4399).",
+   "note": "Limelight ki official site pe live sale: 73% off (3699 → 999).",
    "links": {
-    "web": "https://www.limelight.pk/products/p9924su-xsl-049",
+    "web": "https://www.limelight.pk/products/a0043tp-xsl-014",
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
-   "source": "https://www.limelight.pk/products/p9924su-xsl-049",
+   "source": "https://www.limelight.pk/products/a0043tp-xsl-014",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A1454DR-SML-034_1_-SilkShirt-Dyed_Pret.jpg",
+   "auto": true
+  },
+  {
+   "id": 81082,
+   "t": "Outfitters — Balloon Fit Jeans (was 3690 → 490)",
+   "emoji": "👕",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 490,
+   "was": 3690,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Outfitters — official site, delivery across Karachi",
+   "phone": "923106070719",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Outfitters ki official site pe live sale: 87% off (3690 → 490).",
+   "links": {
+    "web": "https://www.outfitters.com.pk/products/f0214-509",
+    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
+   },
+   "source": "https://www.outfitters.com.pk/products/f0214-509",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg",
    "auto": true
   },
   {
@@ -2027,18 +2056,18 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0409-503",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg",
    "auto": true
   },
   {
-   "id": 84485,
-   "t": "Outfitters — Activewear Tank Top (was 2090 → 790)",
+   "id": 85501,
+   "t": "Outfitters — Pleated Straight Fit Chinos (was 5990 → 2090)",
    "emoji": "👕",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 790,
-   "was": 2090,
+   "price": 2090,
+   "was": 5990,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2049,43 +2078,14 @@
    "addr": "Outfitters — official site, delivery across Karachi",
    "phone": "923106070719",
    "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 62% off (2090 → 790).",
+   "note": "Outfitters ki official site pe live sale: 65% off (5990 → 2090).",
    "links": {
-    "web": "https://www.outfitters.com.pk/products/f0127-225",
+    "web": "https://www.outfitters.com.pk/products/f0538-108-b",
     "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
    },
-   "source": "https://www.outfitters.com.pk/products/f0127-225",
+   "source": "https://www.outfitters.com.pk/products/f0538-108-b",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
-   "auto": true
-  },
-  {
-   "id": 74068,
-   "t": "Outfitters — Midi Skirt With Side Flap Pockets (was 3690 → 1490)",
-   "emoji": "👕",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 1490,
-   "was": 3690,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Outfitters — official site, delivery across Karachi",
-   "phone": "923106070719",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 60% off (3690 → 1490).",
-   "links": {
-    "web": "https://www.outfitters.com.pk/products/f0037-611",
-    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
-   },
-   "source": "https://www.outfitters.com.pk/products/f0037-611",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0538108901LOWER_ecfab8e2-6fa9-46d0-8d9d-d34589f2f4e2.jpg",
    "auto": true
   },
   {
@@ -2147,14 +2147,14 @@
    "auto": true
   },
   {
-   "id": 63592,
-   "t": "Gul Ahmed — Junior Boy Black (was 2518 → 990)",
+   "id": 77765,
+   "t": "Gul Ahmed — Junior Girl Blue and White Checkered Casual Shirt (was 2729 → 990)",
    "emoji": "🧵",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
    "price": 990,
-   "was": 2518,
+   "was": 2729,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2165,12 +2165,12 @@
    "addr": "Gul Ahmed — official site, delivery across Karachi",
    "phone": "923212444091",
    "time": "Online sale — jab tak stock hai",
-   "note": "Gul Ahmed ki official site pe live sale: 61% off (2518 → 990).",
+   "note": "Gul Ahmed ki official site pe live sale: 64% off (2729 → 990).",
    "links": {
-    "web": "https://www.gulahmedshop.com/products/junior-boy-black-t-shirt-224-313-024",
+    "web": "https://www.gulahmedshop.com/products/junior-girl-blue-and-white-checkered-casual-shirt-224-417-009",
     "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
    },
-   "source": "https://www.gulahmedshop.com/products/junior-boy-black-t-shirt-224-313-024",
+   "source": "https://www.gulahmedshop.com/products/junior-girl-blue-and-white-checkered-casual-shirt-224-417-009",
    "published": "2026-11-22",
    "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg",
    "auto": true
@@ -2292,6 +2292,35 @@
    "auto": true
   },
   {
+   "id": 77264,
+   "t": "Alkaram Studio — RTW | TROUSER (was 1690 → 1014)",
+   "emoji": "👗",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 1014,
+   "was": 1690,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Alkaram Studio — official site, delivery across Karachi",
+   "phone": "923122552726",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Alkaram Studio ki official site pe live sale: 40% off (1690 → 1014).",
+   "links": {
+    "web": "https://www.alkaramstudio.com/products/rtw-trouser-trd30-3-26-beige",
+    "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
+   },
+   "source": "https://www.alkaramstudio.com/products/rtw-trouser-trd30-3-26-beige",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/TRD30-3-26_1.jpg",
+   "auto": true
+  },
+  {
    "id": 87200,
    "t": "Alkaram Studio — RTW | KURTI (was 3490 → 2094)",
    "emoji": "👗",
@@ -2317,7 +2346,7 @@
    },
    "source": "https://www.alkaramstudio.com/products/stitched-printed-embroidered-lawn-kurta-gfku7219-orange",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/RB25-1-003_A_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/TRD30-3-26_1.jpg",
    "auto": true
   },
   {
@@ -2346,36 +2375,7 @@
    },
    "source": "https://www.alkaramstudio.com/products/rtw-waistcoat-gmwc214-rust",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/RB25-1-003_A_1.jpg",
-   "auto": true
-  },
-  {
-   "id": 66775,
-   "t": "Alkaram Studio — RTS | SHIRT & TROUSER (was 5780 → 3468)",
-   "emoji": "👗",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 3468,
-   "was": 5780,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Alkaram Studio — official site, delivery across Karachi",
-   "phone": "923122552726",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Alkaram Studio ki official site pe live sale: 40% off (5780 → 3468).",
-   "links": {
-    "web": "https://www.alkaramstudio.com/products/2-pc-embroidered-cambric-suit-with-cambric-trouser-64790",
-    "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
-   },
-   "source": "https://www.alkaramstudio.com/products/2-pc-embroidered-cambric-suit-with-cambric-trouser-64790",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/RB25-1-003_A_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/TRD30-3-26_1.jpg",
    "auto": true
   },
   {
@@ -2665,7 +2665,7 @@
    },
    "source": "https://www.engine.com.pk/products/vtc071-blu",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0032_11b0036e-b779-4ca7-a265-9203561db261.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0015_e6b1e745-7d68-4f01-982c-e6db569ff4ea.jpg",
    "auto": true
   },
   {
@@ -2694,7 +2694,7 @@
    },
    "source": "https://www.engine.com.pk/products/vit423-wht",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0032_11b0036e-b779-4ca7-a265-9203561db261.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0015_e6b1e745-7d68-4f01-982c-e6db569ff4ea.jpg",
    "auto": true
   },
   {
@@ -2723,7 +2723,7 @@
    },
    "source": "https://www.engine.com.pk/products/iu6035-blk",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0032_11b0036e-b779-4ca7-a265-9203561db261.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0015_e6b1e745-7d68-4f01-982c-e6db569ff4ea.jpg",
    "auto": true
   },
   {
