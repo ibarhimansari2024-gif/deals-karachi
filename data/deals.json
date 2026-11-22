@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-22T02:46:50+05:00",
+ "updated": "2026-11-22T06:41:01+05:00",
  "version": 3,
  "deals": [
   {
@@ -351,7 +351,7 @@
    },
    "source": "https://salecrab.com/limelight-anniversary-sale/",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3192ST-XSL-597PremiumSilkCo-ordSet-Embroidered_1.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg"
   },
   {
    "id": 119,
@@ -378,7 +378,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0459507620_1.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg"
   },
   {
    "id": 120,
@@ -1260,14 +1260,14 @@
   },
   {
    "id": 50014,
-   "t": "Limelight — Sale up to 43%",
+   "t": "Limelight — Sale up to 40%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 43,
+   "off": 40,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1277,13 +1277,13 @@
    "addr": "Limelight outlets across Karachi — nearest branch map/link se",
    "phone": "021-111-300-800",
    "time": "Live today",
-   "note": "Up to 43% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
+   "note": "Up to 40% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Limelight+Karachi",
     "cr": "https://www.brandtijara.com/brands/limelight"
    },
    "source": "https://www.brandtijara.com/brands/limelight",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3192ST-XSL-597PremiumSilkCo-ordSet-Embroidered_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
    "auto": true
   },
   {
@@ -1316,14 +1316,14 @@
   },
   {
    "id": 50016,
-   "t": "Lakhany — Sale up to 50%",
+   "t": "Lakhany — Sale up to 51%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 50,
+   "off": 51,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1333,7 +1333,7 @@
    "addr": "Lakhany outlets across Karachi — nearest branch map/link se",
    "phone": "+923185254269",
    "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Lakhany outlets Karachi mein).",
+   "note": "Up to 51% off — brandtijara ne aaj check kiya (Lakhany outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi",
     "cr": "https://www.brandtijara.com/brands/lakhany"
@@ -1423,7 +1423,7 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0459507620_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
    "auto": true
   },
   {
@@ -1940,7 +1940,7 @@
    },
    "source": "https://www.limelight.pk/products/a2828tp-xsl-212",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3192ST-XSL-597PremiumSilkCo-ordSet-Embroidered_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
    "auto": true
   },
   {
@@ -1969,18 +1969,18 @@
    },
    "source": "https://www.limelight.pk/products/j3514er-fre-svr",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3192ST-XSL-597PremiumSilkCo-ordSet-Embroidered_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
    "auto": true
   },
   {
-   "id": 85332,
-   "t": "Limelight — Yarn Dyed Co-ord Set- Embroidered (was 6899 → 3399)",
+   "id": 65611,
+   "t": "Limelight — 3 Piece Jacquard Suit-Embroidered (Pret) (was 8899 → 4399)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 3399,
-   "was": 6899,
+   "price": 4399,
+   "was": 8899,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -1991,14 +1991,14 @@
    "addr": "Limelight — official site, delivery across Karachi",
    "phone": "021-111-300-800",
    "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 51% off (6899 → 3399).",
+   "note": "Limelight ki official site pe live sale: 51% off (8899 → 4399).",
    "links": {
-    "web": "https://www.limelight.pk/products/a2586st-xsl-143",
+    "web": "https://www.limelight.pk/products/p9924su-xsl-049",
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
-   "source": "https://www.limelight.pk/products/a2586st-xsl-143",
+   "source": "https://www.limelight.pk/products/p9924su-xsl-049",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A3192ST-XSL-597PremiumSilkCo-ordSet-Embroidered_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
    "auto": true
   },
   {
@@ -2027,7 +2027,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0409-503",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0459507620_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
    "auto": true
   },
   {
@@ -2056,7 +2056,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0127-225",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0459507620_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
    "auto": true
   },
   {
@@ -2085,7 +2085,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0037-611",
    "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0459507620_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
    "auto": true
   },
   {
