@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-23T03:09:33+05:00",
+ "updated": "2026-11-23T07:43:24+05:00",
  "version": 3,
  "deals": [
   {
@@ -351,7 +351,7 @@
    },
    "source": "https://salecrab.com/limelight-anniversary-sale/",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/u3830black_1_-KhaddarShirt-Printed_Unstitched.jpg"
   },
   {
    "id": 119,
@@ -378,7 +378,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0722406513_5.jpg"
   },
   {
    "id": 120,
@@ -1064,14 +1064,14 @@
   },
   {
    "id": 50007,
-   "t": "Walkeaze — Sale up to 50%",
+   "t": "Walkeaze — Sale up to 25%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 50,
+   "off": 25,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1081,7 +1081,7 @@
    "addr": "Walkeaze outlets across Karachi — nearest branch map/link se",
    "phone": "03313274466",
    "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Walkeaze outlets Karachi mein).",
+   "note": "Up to 25% off — brandtijara ne aaj check kiya (Walkeaze outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Walkeaze+Karachi",
     "cr": "https://www.brandtijara.com/brands/walkeaze"
@@ -1115,7 +1115,7 @@
     "cr": "https://www.brandtijara.com/brands/alkaram-studio"
    },
    "source": "https://www.brandtijara.com/brands/alkaram-studio",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/MS-157.1-26-Peach-1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF75-26-Purple-1.jpg",
    "auto": true
   },
   {
@@ -1283,7 +1283,7 @@
     "cr": "https://www.brandtijara.com/brands/limelight"
    },
    "source": "https://www.brandtijara.com/brands/limelight",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/u3830black_1_-KhaddarShirt-Printed_Unstitched.jpg",
    "auto": true
   },
   {
@@ -1316,14 +1316,14 @@
   },
   {
    "id": 50016,
-   "t": "Lakhany — Sale up to 51%",
+   "t": "Lakhany — Sale up to 50%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 51,
+   "off": 50,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1333,7 +1333,7 @@
    "addr": "Lakhany outlets across Karachi — nearest branch map/link se",
    "phone": "+923185254269",
    "time": "Live today",
-   "note": "Up to 51% off — brandtijara ne aaj check kiya (Lakhany outlets Karachi mein).",
+   "note": "Up to 50% off — brandtijara ne aaj check kiya (Lakhany outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi",
     "cr": "https://www.brandtijara.com/brands/lakhany"
@@ -1423,7 +1423,7 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0722406513_5.jpg",
    "auto": true
   },
   {
@@ -1940,7 +1940,7 @@
    },
    "source": "https://www.limelight.pk/products/a1718st-xsl-001",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/u3830black_1_-KhaddarShirt-Printed_Unstitched.jpg",
    "auto": true
   },
   {
@@ -1969,7 +1969,7 @@
    },
    "source": "https://www.limelight.pk/products/u2801sh-ssh-prp",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/u3830black_1_-KhaddarShirt-Printed_Unstitched.jpg",
    "auto": true
   },
   {
@@ -1998,7 +1998,7 @@
    },
    "source": "https://www.limelight.pk/products/g0208tp-sml-034",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/E1678SH-SSH-283_1_-LawnShirt-Printed_Unstitched_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/u3830black_1_-KhaddarShirt-Printed_Unstitched.jpg",
    "auto": true
   },
   {
@@ -2027,7 +2027,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0127-225",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0722406513_5.jpg",
    "auto": true
   },
   {
@@ -2056,7 +2056,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0037-611",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0722406513_5.jpg",
    "auto": true
   },
   {
@@ -2085,7 +2085,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0953-306",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0719107116_8.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0722406513_5.jpg",
    "auto": true
   },
   {
@@ -2317,7 +2317,7 @@
    },
    "source": "https://www.alkaramstudio.com/products/rtw-trouser-trd30-3-26-beige",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/MS-157.1-26-Peach-1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF75-26-Purple-1.jpg",
    "auto": true
   },
   {
@@ -2346,7 +2346,7 @@
    },
    "source": "https://www.alkaramstudio.com/products/stitched-printed-embroidered-lawn-kurta-gfku7219-orange",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/MS-157.1-26-Peach-1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF75-26-Purple-1.jpg",
    "auto": true
   },
   {
@@ -2375,7 +2375,7 @@
    },
    "source": "https://www.alkaramstudio.com/products/rtw-waistcoat-gmwc214-rust",
    "published": "2026-11-23",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/MS-157.1-26-Peach-1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF75-26-Purple-1.jpg",
    "auto": true
   },
   {
