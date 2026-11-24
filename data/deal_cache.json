@@ -822,5 +822,33 @@
    "yt"
   ],
   "area": "Karachi"
+ },
+ "dXDNszPvzAI": {
+  "price": 1000,
+  "phone": "—",
+  "addr": "Karachi",
+  "lat": 24.875,
+  "lng": 67.035,
+  "links": {
+   "yt": "https://www.youtube.com/watch?v=dXDNszPvzAI"
+  },
+  "src": [
+   "yt"
+  ],
+  "area": "Karachi"
+ },
+ "9KiInO7sphc": {
+  "price": 100,
+  "phone": "0319-2718146",
+  "addr": "Plastic Crockery Wholesale, one dollar shop in karachi, essential kitchen tools kitchen gadgets, Daily Discover Pk, chea",
+  "lat": 24.875,
+  "lng": 67.035,
+  "links": {
+   "yt": "https://www.youtube.com/watch?v=9KiInO7sphc"
+  },
+  "src": [
+   "yt"
+  ],
+  "area": "Nazimabad"
  }
 }

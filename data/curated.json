@@ -1,5 +1,5 @@
 {
- "note": "REAL deals captured from public menu pages, Foodpanda live menus, and real YouTube/Instagram posts. Each has a real source link. Prices checked 2026-11-06 — restaurant se final confirm hamesha karein.",
+ "note": "REAL deals captured from public menu pages (kfoods), Foodpanda live menus, real YouTube/Instagram posts, Telemart Blessed Friday Sale, Diamond Supermarket (Karachi delivery) and Stylo/Unze online. Prices checked 2026-11-22. Covered: Food, Fashion, Electronics, Grocery, Shopping. Prices badal sakti hain — confirm karein.",
  "deals": [
   {
    "id": 101,
@@ -941,6 +941,366 @@
    "phone": "0319-2409618",
    "time": "11 AM–3 AM",
    "published": "2026-11-12"
+  },
+  {
+   "id": 138,
+   "t": "MSI Cyborg 15 Gaming Laptop — Core 5 210H, RTX 5060, 144Hz",
+   "emoji": "💻",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 354999,
+   "was": 461500,
+   "cuisine": "Laptop",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "MSI Cyborg 15, 16GB DDR5, 512GB NVMe, RTX 5060 8GB, 15.6\" FHD 144Hz. -23% (PTA intl warranty).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/msi-b2rwfkg-295us-cyborg-15-gaming-laptop-intel-core-5-210h-16gb-ddr5-ram-512gb-nvme-ssd-nvidia-geforce-rtx-5060-8gb-15-6-inch-fhd-ips-144hz-display"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/czone-20261102085900-87161-0-021126085955391.webp?v=1794897224"
+  },
+  {
+   "id": 139,
+   "t": "Apple iPhone 18 Pro 256GB — PTA Approved",
+   "emoji": "📱",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 563999,
+   "was": 800000,
+   "cuisine": "Smartphone",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "iPhone 18 Pro 256GB, A20 Pro, 48MP, 6.3\" XDR 120Hz. PTA approved, official warranty, -30%.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/apple-iphone-18-pro-256gb-pta-approved-with-official-warranty"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/dfsfdfdfadffdaf_4_836a18c7-4d7d-4c63-b362-4fbe320ecaeb.jpg?v=1789065556"
+  },
+  {
+   "id": 140,
+   "t": "Motorola Moto G77 5G — 8GB/256GB (Official Warranty)",
+   "emoji": "📱",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 89149,
+   "was": 114936,
+   "cuisine": "Smartphone",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "Moto G77 5G, 6.78\" AMOLED, 108MP, 5200mAh, Android 16. -22% official warranty.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/motorola-moto-g77-5g-dual-sim-with-official-warranty"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/Untitleddesign-2026-09-16T113447.074.jpg?v=1789540587"
+  },
+  {
+   "id": 141,
+   "t": "Samsung Galaxy A07 — 6.7\" 90Hz, 50MP (Official Warranty)",
+   "emoji": "📱",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 37249,
+   "was": 51811,
+   "cuisine": "Smartphone",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "Budget Samsung: Helio G99, 5000mAh, 4/6GB RAM. -28% official warranty.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/samsung-galaxy-a07-dual-sim-with-official-warranty"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/samsung-galaxy-a07-pakistan-priceoye-capqs-500x500.jpg?v=1781208480"
+  },
+  {
+   "id": 142,
+   "t": "Lenovo LP51 Pro TWS — Wireless Earbuds",
+   "emoji": "🎧",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 1999,
+   "was": 2999,
+   "cuisine": "Audio",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "Lenovo branded true-wireless earbuds, touch controls. -33%.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/lenovo-lp51-pro-tws-wireless-earbuds"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/c9490ee5_5bd6_41cb_b621_2797f2d960f9_oycizx47fm.jpg?v=1785228936"
+  },
+  {
+   "id": 143,
+   "t": "Romoss PB10 — 10000mAh Power Bank",
+   "emoji": "🔋",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 1499,
+   "was": 2249,
+   "cuisine": "Accessories",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "Compact fast-charging 10000mAh power bank. -33%.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/romoss-pb10-10000-mah-portable-compact-power-bank"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/romoss-pb10-10000-mah-portable-compact-power-bank-pakistan-priceoye-s9a4v-500x500.jpg?v=1792151556"
+  },
+  {
+   "id": 144,
+   "t": "Mughal Diamond 5kg — Pure Basmati Rice",
+   "emoji": "🍚",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 1815,
+   "was": 0,
+   "cuisine": "Rice",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Premium pure basmati rice 5kg. Karachi home delivery available.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/mughal-diamond-5kg-pure-basmati.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/mughal-diamond-5kg-pure-basmati.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/32fec5d88a55b82eadc1a3844cefe179/m/_/m.jpg"
+  },
+  {
+   "id": 145,
+   "t": "Vital Tea Leaf Blend Tea Bags 50s",
+   "emoji": "🍵",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 490,
+   "was": 0,
+   "cuisine": "Tea",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Vital leaf-blend tea bags 50 pack — pantry essential, in stock.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/vital-tea-leaf-blend-tea-bags-50s.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/vital-tea-leaf-blend-tea-bags-50s.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/32fec5d88a55b82eadc1a3844cefe179/q/w/qw4vawvea.png"
+  },
+  {
+   "id": 146,
+   "t": "Sunlight Detergent 1Kg Green",
+   "emoji": "🧺",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 295,
+   "was": 0,
+   "cuisine": "Laundry",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Everyday laundry detergent 1kg pouch — Karachi home delivery.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/sunlight-detergent-1kg-green.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/sunlight-detergent-1kg-green.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/32fec5d88a55b82eadc1a3844cefe179/f/7/f7dcf38e-e867-46d1-8c26-1e1d2f5365211.png"
+  },
+  {
+   "id": 147,
+   "t": "Diamond Multi Grain Diet Atta 1kg",
+   "emoji": "🌾",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 350,
+   "was": 0,
+   "cuisine": "Flour",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Multigrain diet flour 1kg — healthy roti option, in stock.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/diamond-multi-grain-diet-atta-1kg.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/diamond-multi-grain-diet-atta-1kg.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/32fec5d88a55b82eadc1a3844cefe179/d/i/diamond_multi_grain_diet_atta_1kg_multigrain_atta_.png"
+  },
+  {
+   "id": 148,
+   "t": "Olpers Tarrka Asli Desi Ghee 1Kg",
+   "emoji": "🧈",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 2975,
+   "was": 0,
+   "cuisine": "Desi Ghee",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Asli desi ghee 1kg — in stock, Karachi home delivery.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/olpers-tarrka-asli-desi-ghee-1kg.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/olpers-tarrka-asli-desi-ghee-1kg.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/e626209f6586797a49e0d0a395e17e33/o/l/olpers_tarrka_asli_desi_ghee_1kg.png"
+  },
+  {
+   "id": 149,
+   "t": "Stylo — Peach Fancy Bridal Sandal FN6155",
+   "emoji": "👠",
+   "area": "Online",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 1500,
+   "was": 8500,
+   "cuisine": "Footwear",
+   "cat": "Shopping",
+   "src": [
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Stylo online — free delivery above Rs 4000",
+   "phone": "042111178956",
+   "time": "Online sale — COD nationwide",
+   "note": "Fancy bridal sandal, -82%, free delivery Rs 4000+.",
+   "links": {
+    "web": "https://stylo.pk/products/peach-fancy-bridal-sandal-fn6155"
+   },
+   "source": "https://stylo.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0485/1459/7030/files/FN615523_1.webp?v=1791528429"
+  },
+  {
+   "id": 150,
+   "t": "Unze — 'MANICA' Stylish Wedge Sandals",
+   "emoji": "👡",
+   "area": "Online",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 1699,
+   "was": 19999,
+   "cuisine": "Footwear",
+   "cat": "Shopping",
+   "src": [
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Unze London online — lifetime refund policy",
+   "phone": "04211118693",
+   "time": "Online sale — COD nationwide",
+   "note": "Winter wedge sandals -92%, lifetime refund, COD.",
+   "links": {
+    "web": "https://unze.com.pk/products/women-manica-stylish-wedge-sandals-1"
+   },
+   "source": "https://unze.com.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0523/9875/1922/files/L38906.jpg?v=1712082777"
   }
  ]
 }

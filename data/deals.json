@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-22T06:41:01+05:00",
+ "updated": "2026-11-24T12:30:10+05:00",
  "version": 3,
  "deals": [
   {
@@ -217,34 +217,6 @@
    "thumb": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600"
   },
   {
-   "id": 110,
-   "t": "Karachi Red Rock — All-Day Buffet 999/-",
-   "emoji": "🍖",
-   "area": "Liberty",
-   "lat": 24.871,
-   "lng": 67.044,
-   "price": 999,
-   "was": 2500,
-   "cuisine": "Buffet",
-   "src": [
-    "ig",
-    "gg"
-   ],
-   "hrs": 168,
-   "addr": "Karachi Red Rock, Liberty Market",
-   "phone": "0314-4349849",
-   "time": "2 PM – 8 PM",
-   "note": "Thu & Fri slots — booking required. Real Instagram post.",
-   "links": {
-    "ig": "https://www.instagram.com/explore/tags/karachifooddeals/",
-    "gg": "https://maps.google.com/?q=Karachi+Red+Rock+Liberty+Karachi"
-   },
-   "source": "Instagram food blogger post (via Modash index)",
-   "published": "2026-10-25",
-   "cat": "Food",
-   "thumb": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600"
-  },
-  {
    "id": 112,
    "t": "Eats N Bites — Double Fish Fillet Burger 900/-",
    "emoji": "🐟",
@@ -324,7 +296,7 @@
    },
    "source": "https://www.gulahmedshop.com/blogs/news/11-11-sale",
    "published": "2026-11-06",
-   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/salt-men-casual-shirts-color-blue-cotton-slub-regular-fit-mn-cs-ss25-175-half-front.jpg"
   },
   {
    "id": 118,
@@ -351,7 +323,7 @@
    },
    "source": "https://salecrab.com/limelight-anniversary-sale/",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A2887ST-XSL-610-YarnDyedCo-ordSet_1.jpg"
   },
   {
    "id": 119,
@@ -378,7 +350,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0766208904LOWER0.jpg"
   },
   {
    "id": 120,
@@ -405,7 +377,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp"
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/848-2605-_1.webp"
   },
   {
    "id": 121,
@@ -867,6 +839,366 @@
    "cat": "Food"
   },
   {
+   "id": 138,
+   "t": "MSI Cyborg 15 Gaming Laptop — Core 5 210H, RTX 5060, 144Hz",
+   "emoji": "💻",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 354999,
+   "was": 461500,
+   "cuisine": "Laptop",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "MSI Cyborg 15, 16GB DDR5, 512GB NVMe, RTX 5060 8GB, 15.6\" FHD 144Hz. -23% (PTA intl warranty).",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/msi-b2rwfkg-295us-cyborg-15-gaming-laptop-intel-core-5-210h-16gb-ddr5-ram-512gb-nvme-ssd-nvidia-geforce-rtx-5060-8gb-15-6-inch-fhd-ips-144hz-display"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/czone-20261102085900-87161-0-021126085955391.webp?v=1794897224"
+  },
+  {
+   "id": 139,
+   "t": "Apple iPhone 18 Pro 256GB — PTA Approved",
+   "emoji": "📱",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 563999,
+   "was": 800000,
+   "cuisine": "Smartphone",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "iPhone 18 Pro 256GB, A20 Pro, 48MP, 6.3\" XDR 120Hz. PTA approved, official warranty, -30%.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/apple-iphone-18-pro-256gb-pta-approved-with-official-warranty"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/dfsfdfdfadffdaf_4_836a18c7-4d7d-4c63-b362-4fbe320ecaeb.jpg?v=1789065556"
+  },
+  {
+   "id": 140,
+   "t": "Motorola Moto G77 5G — 8GB/256GB (Official Warranty)",
+   "emoji": "📱",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 89149,
+   "was": 114936,
+   "cuisine": "Smartphone",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "Moto G77 5G, 6.78\" AMOLED, 108MP, 5200mAh, Android 16. -22% official warranty.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/motorola-moto-g77-5g-dual-sim-with-official-warranty"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/Untitleddesign-2026-09-16T113447.074.jpg?v=1789540587"
+  },
+  {
+   "id": 141,
+   "t": "Samsung Galaxy A07 — 6.7\" 90Hz, 50MP (Official Warranty)",
+   "emoji": "📱",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 37249,
+   "was": 51811,
+   "cuisine": "Smartphone",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "Budget Samsung: Helio G99, 5000mAh, 4/6GB RAM. -28% official warranty.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/samsung-galaxy-a07-dual-sim-with-official-warranty"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/samsung-galaxy-a07-pakistan-priceoye-capqs-500x500.jpg?v=1781208480"
+  },
+  {
+   "id": 142,
+   "t": "Lenovo LP51 Pro TWS — Wireless Earbuds",
+   "emoji": "🎧",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 1999,
+   "was": 2999,
+   "cuisine": "Audio",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "Lenovo branded true-wireless earbuds, touch controls. -33%.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/lenovo-lp51-pro-tws-wireless-earbuds"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/c9490ee5_5bd6_41cb_b621_2797f2d960f9_oycizx47fm.jpg?v=1785228936"
+  },
+  {
+   "id": 143,
+   "t": "Romoss PB10 — 10000mAh Power Bank",
+   "emoji": "🔋",
+   "area": "Online",
+   "lat": 24.872,
+   "lng": 67.069,
+   "price": 1499,
+   "was": 2249,
+   "cuisine": "Accessories",
+   "cat": "Electronics",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Telemart (Al-Khaleej Tower, Shaheed-e-Millat Rd), Karachi",
+   "phone": "021111662453",
+   "time": "Blessed Friday Sale — live",
+   "note": "Compact fast-charging 10000mAh power bank. -33%.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Telemart+Al+Khaleej+Tower+Shaheed+Millat+Road+Karachi",
+    "web": "https://www.telex.pk/products/romoss-pb10-10000-mah-portable-compact-power-bank"
+   },
+   "source": "https://www.telex.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0830/0897/9164/files/romoss-pb10-10000-mah-portable-compact-power-bank-pakistan-priceoye-s9a4v-500x500.jpg?v=1792151556"
+  },
+  {
+   "id": 144,
+   "t": "Mughal Diamond 5kg — Pure Basmati Rice",
+   "emoji": "🍚",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 1815,
+   "was": 0,
+   "cuisine": "Rice",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Premium pure basmati rice 5kg. Karachi home delivery available.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/mughal-diamond-5kg-pure-basmati.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/mughal-diamond-5kg-pure-basmati.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/32fec5d88a55b82eadc1a3844cefe179/m/_/m.jpg"
+  },
+  {
+   "id": 145,
+   "t": "Vital Tea Leaf Blend Tea Bags 50s",
+   "emoji": "🍵",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 490,
+   "was": 0,
+   "cuisine": "Tea",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Vital leaf-blend tea bags 50 pack — pantry essential, in stock.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/vital-tea-leaf-blend-tea-bags-50s.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/vital-tea-leaf-blend-tea-bags-50s.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/32fec5d88a55b82eadc1a3844cefe179/q/w/qw4vawvea.png"
+  },
+  {
+   "id": 146,
+   "t": "Sunlight Detergent 1Kg Green",
+   "emoji": "🧺",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 295,
+   "was": 0,
+   "cuisine": "Laundry",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Everyday laundry detergent 1kg pouch — Karachi home delivery.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/sunlight-detergent-1kg-green.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/sunlight-detergent-1kg-green.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/32fec5d88a55b82eadc1a3844cefe179/f/7/f7dcf38e-e867-46d1-8c26-1e1d2f5365211.png"
+  },
+  {
+   "id": 147,
+   "t": "Diamond Multi Grain Diet Atta 1kg",
+   "emoji": "🌾",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 350,
+   "was": 0,
+   "cuisine": "Flour",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Multigrain diet flour 1kg — healthy roti option, in stock.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/diamond-multi-grain-diet-atta-1kg.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/diamond-multi-grain-diet-atta-1kg.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/32fec5d88a55b82eadc1a3844cefe179/d/i/diamond_multi_grain_diet_atta_1kg_multigrain_atta_.png"
+  },
+  {
+   "id": 148,
+   "t": "Olpers Tarrka Asli Desi Ghee 1Kg",
+   "emoji": "🧈",
+   "area": "Karachi",
+   "lat": 24.89,
+   "lng": 67.04,
+   "price": 2975,
+   "was": 0,
+   "cuisine": "Desi Ghee",
+   "cat": "Grocery",
+   "src": [
+    "gg",
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Diamond Supermarket, Garden East, Karachi (delivery Rs 149)",
+   "phone": "02132292138",
+   "time": "Delivery 10 AM–9 PM",
+   "note": "Asli desi ghee 1kg — in stock, Karachi home delivery.",
+   "links": {
+    "gg": "https://maps.google.com/?q=Diamond+Supermarket+Garden+East+Karachi",
+    "web": "https://www.dsmonline.pk/garden/olpers-tarrka-asli-desi-ghee-1kg.html"
+   },
+   "source": "https://www.dsmonline.pk/garden/olpers-tarrka-asli-desi-ghee-1kg.html",
+   "published": "2026-11-22",
+   "thumb": "https://www.dsmonline.pk/media/catalog/product/cache/e626209f6586797a49e0d0a395e17e33/o/l/olpers_tarrka_asli_desi_ghee_1kg.png"
+  },
+  {
+   "id": 149,
+   "t": "Stylo — Peach Fancy Bridal Sandal FN6155",
+   "emoji": "👠",
+   "area": "Online",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 1500,
+   "was": 8500,
+   "cuisine": "Footwear",
+   "cat": "Shopping",
+   "src": [
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Stylo online — free delivery above Rs 4000",
+   "phone": "042111178956",
+   "time": "Online sale — COD nationwide",
+   "note": "Fancy bridal sandal, -82%, free delivery Rs 4000+.",
+   "links": {
+    "web": "https://stylo.pk/products/peach-fancy-bridal-sandal-fn6155"
+   },
+   "source": "https://stylo.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0485/1459/7030/files/FN615523_1.webp?v=1791528429"
+  },
+  {
+   "id": 150,
+   "t": "Unze — 'MANICA' Stylish Wedge Sandals",
+   "emoji": "👡",
+   "area": "Online",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 1699,
+   "was": 19999,
+   "cuisine": "Footwear",
+   "cat": "Shopping",
+   "src": [
+    "web"
+   ],
+   "hrs": 168,
+   "addr": "Unze London online — lifetime refund policy",
+   "phone": "04211118693",
+   "time": "Online sale — COD nationwide",
+   "note": "Winter wedge sandals -92%, lifetime refund, COD.",
+   "links": {
+    "web": "https://unze.com.pk/products/women-manica-stylish-wedge-sandals-1"
+   },
+   "source": "https://unze.com.pk/",
+   "published": "2026-11-22",
+   "thumb": "https://cdn.shopify.com/s/files/1/0523/9875/1922/files/L38906.jpg?v=1712082777"
+  },
+  {
    "id": 50000,
    "t": "Bata — Sale up to 50%",
    "emoji": "👗",
@@ -891,7 +1223,7 @@
     "cr": "https://www.brandtijara.com/brands/bata"
    },
    "source": "https://www.brandtijara.com/brands/bata",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/848-2605-_1.webp",
    "auto": true
   },
   {
@@ -919,7 +1251,7 @@
     "cr": "https://www.brandtijara.com/brands/diners"
    },
    "source": "https://www.brandtijara.com/brands/diners",
-   "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/OA1707-NAVY-02.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/WU32688_1.webp",
    "auto": true
   },
   {
@@ -975,7 +1307,7 @@
     "cr": "https://www.brandtijara.com/brands/edenrobe"
    },
    "source": "https://www.brandtijara.com/brands/edenrobe",
-   "thumb": "https://cdn.shopify.com/s/files/1/0841/3796/7889/files/0N9A028437134.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0841/3796/7889/files/0N9A078034102.webp",
    "auto": true
   },
   {
@@ -1003,7 +1335,7 @@
     "cr": "https://www.brandtijara.com/brands/gul-ahmed"
    },
    "source": "https://www.brandtijara.com/brands/gul-ahmed",
-   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/salt-men-casual-shirts-color-blue-cotton-slub-regular-fit-mn-cs-ss25-175-half-front.jpg",
    "auto": true
   },
   {
@@ -1031,7 +1363,7 @@
     "cr": "https://www.brandtijara.com/brands/1st-step"
    },
    "source": "https://www.brandtijara.com/brands/1st-step",
-   "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/5_3f790a00-8a2d-4b81-971a-22631fead48c.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/1_d3a626b2-8e8e-44ad-a641-84b49da4a81b.webp",
    "auto": true
   },
   {
@@ -1064,14 +1396,14 @@
   },
   {
    "id": 50007,
-   "t": "Walkeaze — Sale up to 50%",
+   "t": "Walkeaze — Sale up to 30%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 50,
+   "off": 30,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1081,13 +1413,13 @@
    "addr": "Walkeaze outlets across Karachi — nearest branch map/link se",
    "phone": "03313274466",
    "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Walkeaze outlets Karachi mein).",
+   "note": "Up to 30% off — brandtijara ne aaj check kiya (Walkeaze outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Walkeaze+Karachi",
     "cr": "https://www.brandtijara.com/brands/walkeaze"
    },
    "source": "https://www.brandtijara.com/brands/walkeaze",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/pure-aura-for-women-50-ml-walkeaze-2261041.png",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/horizon-vial-3-ml-walkeaze-2916990.jpg",
    "auto": true
   },
   {
@@ -1115,7 +1447,7 @@
     "cr": "https://www.brandtijara.com/brands/alkaram-studio"
    },
    "source": "https://www.brandtijara.com/brands/alkaram-studio",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/RB25-1-003_A_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF473-3P26B-Blue-1.jpg",
    "auto": true
   },
   {
@@ -1143,7 +1475,7 @@
     "cr": "https://www.brandtijara.com/brands/generation"
    },
    "source": "https://www.brandtijara.com/brands/generation",
-   "thumb": "https://cdn.shopify.com/s/files/1/0650/8249/1105/files/S25F7195_Jet_Black_Cover.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0650/8249/1105/files/W26C1532_Azure_Blue_Cover.png",
    "auto": true
   },
   {
@@ -1199,7 +1531,7 @@
     "cr": "https://www.brandtijara.com/brands/borjan"
    },
    "source": "https://www.brandtijara.com/brands/borjan",
-   "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/O01ML0005.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/1_b423460a-89c9-445e-afee-ffcee7e7977c.png",
    "auto": true
   },
   {
@@ -1255,7 +1587,7 @@
     "cr": "https://www.brandtijara.com/brands/cross-stitch"
    },
    "source": "https://www.brandtijara.com/brands/cross-stitch",
-   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0000_1_eaf6c367-1556-4fdd-be69-99bc50b3b30e.jpg",
    "auto": true
   },
   {
@@ -1283,7 +1615,7 @@
     "cr": "https://www.brandtijara.com/brands/limelight"
    },
    "source": "https://www.brandtijara.com/brands/limelight",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A2887ST-XSL-610-YarnDyedCo-ordSet_1.jpg",
    "auto": true
   },
   {
@@ -1316,14 +1648,14 @@
   },
   {
    "id": 50016,
-   "t": "Lakhany — Sale up to 51%",
+   "t": "Lakhany — Sale up to 50%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 51,
+   "off": 50,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1333,7 +1665,7 @@
    "addr": "Lakhany outlets across Karachi — nearest branch map/link se",
    "phone": "+923185254269",
    "time": "Live today",
-   "note": "Up to 51% off — brandtijara ne aaj check kiya (Lakhany outlets Karachi mein).",
+   "note": "Up to 50% off — brandtijara ne aaj check kiya (Lakhany outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi",
     "cr": "https://www.brandtijara.com/brands/lakhany"
@@ -1395,7 +1727,7 @@
     "cr": "https://www.brandtijara.com/brands/amir-adnan"
    },
    "source": "https://www.brandtijara.com/brands/amir-adnan",
-   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/163A525100_0000_163A5249.jpg",
    "auto": true
   },
   {
@@ -1423,7 +1755,7 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0766208904LOWER0.jpg",
    "auto": true
   },
   {
@@ -1507,7 +1839,7 @@
     "cr": "https://www.brandtijara.com/brands/dhanak"
    },
    "source": "https://www.brandtijara.com/brands/dhanak",
-   "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/IMG_7630.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/DA-3012_2.jpg",
    "auto": true
   },
   {
@@ -1535,7 +1867,7 @@
     "cr": "https://www.brandtijara.com/brands/engine"
    },
    "source": "https://www.brandtijara.com/brands/engine",
-   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0032_11b0036e-b779-4ca7-a265-9203561db261.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/3_a912b688-49c7-48c6-8e9e-dc83578d63f3.jpg",
    "auto": true
   },
   {
@@ -1563,18 +1895,18 @@
     "cr": "https://www.brandtijara.com/brands/khas-stores"
    },
    "source": "https://www.brandtijara.com/brands/khas-stores",
-   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-stitched-printed-khaddar-suit-rtw-kkh-4273-printed-khas-stores-436667.jpg",
    "auto": true
   },
   {
-   "id": 63878,
-   "t": "Bata — Sparx - Women (was 1599 → 799)",
+   "id": 82470,
+   "t": "Bata — Skechers Vapor Foam Covert-Men (was 33999 → 16999)",
    "emoji": "👟",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 799,
-   "was": 1599,
+   "price": 16999,
+   "was": 33999,
    "cuisine": "Footwear",
    "cat": "Fashion",
    "src": [
@@ -1585,25 +1917,25 @@
    "addr": "Bata — official site, delivery across Karachi",
    "phone": "04232761261",
    "time": "Online sale — jab tak stock hai",
-   "note": "Bata ki official site pe live sale: 50% off (1599 → 799).",
+   "note": "Bata ki official site pe live sale: 50% off (33999 → 16999).",
    "links": {
-    "web": "https://www.bata.com.pk/products/577-9502",
+    "web": "https://www.bata.com.pk/products/848-2605",
     "gg": "https://www.google.com/maps/search/Bata+Karachi"
    },
-   "source": "https://www.bata.com.pk/products/577-9502",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp",
+   "source": "https://www.bata.com.pk/products/848-2605",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/848-2605-_1.webp",
    "auto": true
   },
   {
-   "id": 67959,
-   "t": "Bata — Power - Men (was 5499 → 2749)",
+   "id": 67352,
+   "t": "Bata — Northstar - Women (was 4999 → 2499)",
    "emoji": "👟",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 2749,
-   "was": 5499,
+   "price": 2499,
+   "was": 4999,
    "cuisine": "Footwear",
    "cat": "Fashion",
    "src": [
@@ -1614,25 +1946,25 @@
    "addr": "Bata — official site, delivery across Karachi",
    "phone": "04232761261",
    "time": "Online sale — jab tak stock hai",
-   "note": "Bata ki official site pe live sale: 50% off (5499 → 2749).",
+   "note": "Bata ki official site pe live sale: 50% off (4999 → 2499).",
    "links": {
-    "web": "https://www.bata.com.pk/products/851-1186",
+    "web": "https://www.bata.com.pk/products/551-1135",
     "gg": "https://www.google.com/maps/search/Bata+Karachi"
    },
-   "source": "https://www.bata.com.pk/products/851-1186",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp",
+   "source": "https://www.bata.com.pk/products/551-1135",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/848-2605-_1.webp",
    "auto": true
   },
   {
-   "id": 65854,
-   "t": "Bata — Bata - Women (was 2799 → 1399)",
+   "id": 83453,
+   "t": "Bata — Bata Comfit - Women (was 4499 → 2249)",
    "emoji": "👟",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 1399,
-   "was": 2799,
+   "price": 2249,
+   "was": 4499,
    "cuisine": "Footwear",
    "cat": "Fashion",
    "src": [
@@ -1643,14 +1975,14 @@
    "addr": "Bata — official site, delivery across Karachi",
    "phone": "04232761261",
    "time": "Online sale — jab tak stock hai",
-   "note": "Bata ki official site pe live sale: 50% off (2799 → 1399).",
+   "note": "Bata ki official site pe live sale: 50% off (4499 → 2249).",
    "links": {
-    "web": "https://www.bata.com.pk/products/671-8431",
+    "web": "https://www.bata.com.pk/products/671-8424",
     "gg": "https://www.google.com/maps/search/Bata+Karachi"
    },
-   "source": "https://www.bata.com.pk/products/671-8431",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/828-6159-_1_18b12ce4-62b4-4fcd-9b2e-b55a1516fbd6.webp",
+   "source": "https://www.bata.com.pk/products/671-8424",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/848-2605-_1.webp",
    "auto": true
   },
   {
@@ -1678,7 +2010,7 @@
     "gg": "https://www.google.com/maps/search/Hush+Puppies+Karachi"
    },
    "source": "https://www.hushpuppies.com.pk/products/hd-mn-0022-f",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/IMG_9244.jpg",
    "auto": true
   },
@@ -1707,7 +2039,7 @@
     "gg": "https://www.google.com/maps/search/Hush+Puppies+Karachi"
    },
    "source": "https://www.hushpuppies.com.pk/products/huli-surrey",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/IMG_9244.jpg",
    "auto": true
   },
@@ -1736,7 +2068,7 @@
     "gg": "https://www.google.com/maps/search/Hush+Puppies+Karachi"
    },
    "source": "https://www.hushpuppies.com.pk/products/hd-mn-0045",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0016/0074/9623/products/IMG_9244.jpg",
    "auto": true
   },
@@ -1765,7 +2097,7 @@
     "gg": "https://www.google.com/maps/search/Servis+Karachi"
    },
    "source": "https://www.servis.pk/products/m-ch-0100475-black",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0055/5525/7462/files/M-CH-0100475BLACK.jpg",
    "auto": true
   },
@@ -1794,7 +2126,7 @@
     "gg": "https://www.google.com/maps/search/Servis+Karachi"
    },
    "source": "https://www.servis.pk/products/m-ch-0100471-dark-grey",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0055/5525/7462/files/M-CH-0100475BLACK.jpg",
    "auto": true
   },
@@ -1823,8 +2155,66 @@
     "gg": "https://www.google.com/maps/search/Servis+Karachi"
    },
    "source": "https://www.servis.pk/products/m-ch-0100471-brown",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0055/5525/7462/files/M-CH-0100475BLACK.jpg",
+   "auto": true
+  },
+  {
+   "id": 68350,
+   "t": "Borjan — Men Sport Shoes-BLACK/GREY (was 5000 → 2500)",
+   "emoji": "👟",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 2500,
+   "was": 5000,
+   "cuisine": "Footwear",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Borjan — official site, delivery across Karachi",
+   "phone": "923337488134",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Borjan ki official site pe live sale: 50% off (5000 → 2500).",
+   "links": {
+    "web": "https://www.borjan.com.pk/products/bm5822-black-grey-men-sport-shoes",
+    "gg": "https://www.google.com/maps/search/Borjan+Karachi"
+   },
+   "source": "https://www.borjan.com.pk/products/bm5822-black-grey-men-sport-shoes",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/1_b423460a-89c9-445e-afee-ffcee7e7977c.png",
+   "auto": true
+  },
+  {
+   "id": 62227,
+   "t": "Borjan — Women Sling Back-BLACK (was 4600 → 2300)",
+   "emoji": "👟",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 2300,
+   "was": 4600,
+   "cuisine": "Footwear",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Borjan — official site, delivery across Karachi",
+   "phone": "923337488134",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Borjan ki official site pe live sale: 50% off (4600 → 2300).",
+   "links": {
+    "web": "https://www.borjan.com.pk/products/bw10844-black-women-sling-back",
+    "gg": "https://www.google.com/maps/search/Borjan+Karachi"
+   },
+   "source": "https://www.borjan.com.pk/products/bw10844-black-women-sling-back",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/1_b423460a-89c9-445e-afee-ffcee7e7977c.png",
    "auto": true
   },
   {
@@ -1852,66 +2242,66 @@
     "gg": "https://www.google.com/maps/search/Borjan+Karachi"
    },
    "source": "https://www.borjan.com.pk/products/bm7248-black-men-sneakers",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/O01ML0005.jpg",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/1_b423460a-89c9-445e-afee-ffcee7e7977c.png",
    "auto": true
   },
   {
-   "id": 80756,
-   "t": "Borjan — Men Slip On-BLACK (was 6300 → 3150)",
-   "emoji": "👟",
+   "id": 79550,
+   "t": "Limelight — Lawn Kurti- Embroidered (Pret) (was 3499 → 1015)",
+   "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 3150,
-   "was": 6300,
-   "cuisine": "Footwear",
+   "price": 1015,
+   "was": 3499,
+   "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
     "gg",
     "cr"
    ],
    "hrs": 168,
-   "addr": "Borjan — official site, delivery across Karachi",
-   "phone": "923337488134",
+   "addr": "Limelight — official site, delivery across Karachi",
+   "phone": "021-111-300-800",
    "time": "Online sale — jab tak stock hai",
-   "note": "Borjan ki official site pe live sale: 50% off (6300 → 3150).",
+   "note": "Limelight ki official site pe live sale: 71% off (3499 → 1015).",
    "links": {
-    "web": "https://www.borjan.com.pk/products/bm7451-black-men-slip-on",
-    "gg": "https://www.google.com/maps/search/Borjan+Karachi"
+    "web": "https://www.limelight.pk/products/p7992tp-sml-wht",
+    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
-   "source": "https://www.borjan.com.pk/products/bm7451-black-men-slip-on",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/O01ML0005.jpg",
+   "source": "https://www.limelight.pk/products/p7992tp-sml-wht",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A2887ST-XSL-610-YarnDyedCo-ordSet_1.jpg",
    "auto": true
   },
   {
-   "id": 84176,
-   "t": "Borjan — Men Sneakers-GREY (was 5400 → 2700)",
-   "emoji": "👟",
+   "id": 88904,
+   "t": "Limelight — Chambray Top-Embroidered (Pret) (was 4999 → 1499)",
+   "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 2700,
-   "was": 5400,
-   "cuisine": "Footwear",
+   "price": 1499,
+   "was": 4999,
+   "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
     "gg",
     "cr"
    ],
    "hrs": 168,
-   "addr": "Borjan — official site, delivery across Karachi",
-   "phone": "923337488134",
+   "addr": "Limelight — official site, delivery across Karachi",
+   "phone": "021-111-300-800",
    "time": "Online sale — jab tak stock hai",
-   "note": "Borjan ki official site pe live sale: 50% off (5400 → 2700).",
+   "note": "Limelight ki official site pe live sale: 70% off (4999 → 1499).",
    "links": {
-    "web": "https://www.borjan.com.pk/products/bm7247-grey-men-sneakers",
-    "gg": "https://www.google.com/maps/search/Borjan+Karachi"
+    "web": "https://www.limelight.pk/products/a1767tp-xsl-143",
+    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
-   "source": "https://www.borjan.com.pk/products/bm7247-grey-men-sneakers",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0083/8405/3305/files/O01ML0005.jpg",
+   "source": "https://www.limelight.pk/products/a1767tp-xsl-143",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A2887ST-XSL-610-YarnDyedCo-ordSet_1.jpg",
    "auto": true
   },
   {
@@ -1939,77 +2329,19 @@
     "gg": "https://www.google.com/maps/search/Limelight+Karachi"
    },
    "source": "https://www.limelight.pk/products/a2828tp-xsl-212",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/A2887ST-XSL-610-YarnDyedCo-ordSet_1.jpg",
    "auto": true
   },
   {
-   "id": 89704,
-   "t": "Limelight — Dangle Earrings (was 1099 → 499)",
-   "emoji": "👗",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 499,
-   "was": 1099,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Limelight — official site, delivery across Karachi",
-   "phone": "021-111-300-800",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 55% off (1099 → 499).",
-   "links": {
-    "web": "https://www.limelight.pk/products/j3514er-fre-svr",
-    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
-   },
-   "source": "https://www.limelight.pk/products/j3514er-fre-svr",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
-   "auto": true
-  },
-  {
-   "id": 65611,
-   "t": "Limelight — 3 Piece Jacquard Suit-Embroidered (Pret) (was 8899 → 4399)",
-   "emoji": "👗",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 4399,
-   "was": 8899,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Limelight — official site, delivery across Karachi",
-   "phone": "021-111-300-800",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Limelight ki official site pe live sale: 51% off (8899 → 4399).",
-   "links": {
-    "web": "https://www.limelight.pk/products/p9924su-xsl-049",
-    "gg": "https://www.google.com/maps/search/Limelight+Karachi"
-   },
-   "source": "https://www.limelight.pk/products/p9924su-xsl-049",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2635/3244/files/P9924SU-XSL-049-3PieceJacquardSuit-Embroidered_Pret_1.jpg",
-   "auto": true
-  },
-  {
-   "id": 81641,
-   "t": "Outfitters — Resort Collar Checkered Shirt (was 3490 → 990)",
+   "id": 81927,
+   "t": "Outfitters — Monotone Chain Sandals (was 5290 → 1590)",
    "emoji": "👕",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 990,
-   "was": 3490,
+   "price": 1590,
+   "was": 5290,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2020,25 +2352,25 @@
    "addr": "Outfitters — official site, delivery across Karachi",
    "phone": "923106070719",
    "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 72% off (3490 → 990).",
+   "note": "Outfitters ki official site pe live sale: 70% off (5290 → 1590).",
    "links": {
-    "web": "https://www.outfitters.com.pk/products/f0409-503",
+    "web": "https://www.outfitters.com.pk/products/f0064-612",
     "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
    },
-   "source": "https://www.outfitters.com.pk/products/f0409-503",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
+   "source": "https://www.outfitters.com.pk/products/f0064-612",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0766208904LOWER0.jpg",
    "auto": true
   },
   {
-   "id": 84485,
-   "t": "Outfitters — Activewear Tank Top (was 2090 → 790)",
+   "id": 69481,
+   "t": "Outfitters — Basic Tank Top (was 1890 → 890)",
    "emoji": "👕",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 790,
-   "was": 2090,
+   "price": 890,
+   "was": 1890,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2049,25 +2381,25 @@
    "addr": "Outfitters — official site, delivery across Karachi",
    "phone": "923106070719",
    "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 62% off (2090 → 790).",
+   "note": "Outfitters ki official site pe live sale: 53% off (1890 → 890).",
    "links": {
-    "web": "https://www.outfitters.com.pk/products/f0127-225",
+    "web": "https://www.outfitters.com.pk/products/f2088-106",
     "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
    },
-   "source": "https://www.outfitters.com.pk/products/f0127-225",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
+   "source": "https://www.outfitters.com.pk/products/f2088-106",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0766208904LOWER0.jpg",
    "auto": true
   },
   {
-   "id": 74068,
-   "t": "Outfitters — Midi Skirt With Side Flap Pockets (was 3690 → 1490)",
+   "id": 76418,
+   "t": "Outfitters — Slogan Print T-Shirt (was 2890 → 1390)",
    "emoji": "👕",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 1490,
-   "was": 3690,
+   "price": 1390,
+   "was": 2890,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2078,25 +2410,25 @@
    "addr": "Outfitters — official site, delivery across Karachi",
    "phone": "923106070719",
    "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 60% off (3690 → 1490).",
+   "note": "Outfitters ki official site pe live sale: 52% off (2890 → 1390).",
    "links": {
-    "web": "https://www.outfitters.com.pk/products/f0037-611",
+    "web": "https://www.outfitters.com.pk/products/f2084-106",
     "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
    },
-   "source": "https://www.outfitters.com.pk/products/f0037-611",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F2007106817.jpg",
+   "source": "https://www.outfitters.com.pk/products/f2084-106",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0766208904LOWER0.jpg",
    "auto": true
   },
   {
-   "id": 85874,
-   "t": "Gul Ahmed — Toddler Girl Green Viscose Blouse With Full Sleeves (was 3782 → 990)",
+   "id": 61999,
+   "t": "Gul Ahmed — Regular Fit Styling Kurta (was 4490 → 988)",
    "emoji": "🧵",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 990,
-   "was": 3782,
+   "price": 988,
+   "was": 4490,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2107,25 +2439,25 @@
    "addr": "Gul Ahmed — official site, delivery across Karachi",
    "phone": "923212444091",
    "time": "Online sale — jab tak stock hai",
-   "note": "Gul Ahmed ki official site pe live sale: 74% off (3782 → 990).",
+   "note": "Gul Ahmed ki official site pe live sale: 78% off (4490 → 988).",
    "links": {
-    "web": "https://www.gulahmedshop.com/products/toddler-girl-green-viscose-blouse-with-full-sleeves-224-617-015",
+    "web": "https://www.gulahmedshop.com/products/regular-fit-styling-kurta-kr-sty25-083",
     "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
    },
-   "source": "https://www.gulahmedshop.com/products/toddler-girl-green-viscose-blouse-with-full-sleeves-224-617-015",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg",
+   "source": "https://www.gulahmedshop.com/products/regular-fit-styling-kurta-kr-sty25-083",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/m2a4174_1.jpg",
    "auto": true
   },
   {
-   "id": 76182,
-   "t": "Gul Ahmed — AW23-Checks Placemat and Runner Set (was 8209 → 2463)",
+   "id": 71154,
+   "t": "Gul Ahmed — Regular Fit Styling Kurta (was 4490 → 988)",
    "emoji": "🧵",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 2463,
-   "was": 8209,
+   "price": 988,
+   "was": 4490,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2136,25 +2468,25 @@
    "addr": "Gul Ahmed — official site, delivery across Karachi",
    "phone": "923212444091",
    "time": "Online sale — jab tak stock hai",
-   "note": "Gul Ahmed ki official site pe live sale: 70% off (8209 → 2463).",
+   "note": "Gul Ahmed ki official site pe live sale: 78% off (4490 → 988).",
    "links": {
-    "web": "https://www.gulahmedshop.com/products/aw23-checks-placemat-and-runner-set",
+    "web": "https://www.gulahmedshop.com/products/regular-fit-styling-kurta-kr-sty25-019",
     "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
    },
-   "source": "https://www.gulahmedshop.com/products/aw23-checks-placemat-and-runner-set",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg",
+   "source": "https://www.gulahmedshop.com/products/regular-fit-styling-kurta-kr-sty25-019",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/m2a4174_1.jpg",
    "auto": true
   },
   {
-   "id": 63592,
-   "t": "Gul Ahmed — Junior Boy Black (was 2518 → 990)",
+   "id": 64648,
+   "t": "Gul Ahmed — Linen Collection MFJP Printed Bed Sheet Set (was 4800 → 2400)",
    "emoji": "🧵",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 990,
-   "was": 2518,
+   "price": 2400,
+   "was": 4800,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2165,14 +2497,14 @@
    "addr": "Gul Ahmed — official site, delivery across Karachi",
    "phone": "923212444091",
    "time": "Online sale — jab tak stock hai",
-   "note": "Gul Ahmed ki official site pe live sale: 61% off (2518 → 990).",
+   "note": "Gul Ahmed ki official site pe live sale: 50% off (4800 → 2400).",
    "links": {
-    "web": "https://www.gulahmedshop.com/products/junior-boy-black-t-shirt-224-313-024",
+    "web": "https://www.gulahmedshop.com/products/mfjp-081-printed-bed-sheet-set",
     "gg": "https://www.google.com/maps/search/Gul+Ahmed+Karachi"
    },
-   "source": "https://www.gulahmedshop.com/products/junior-boy-black-t-shirt-224-313-024",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/492691-peach-minibag-front-ideas.jpg",
+   "source": "https://www.gulahmedshop.com/products/mfjp-081-printed-bed-sheet-set",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0706/3253/8159/files/m2a4174_1.jpg",
    "auto": true
   },
   {
@@ -2200,8 +2532,8 @@
     "gg": "https://www.google.com/maps/search/Diners+Karachi"
    },
    "source": "https://www.diners.com.pk/products/eg3602-n-blue",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/OA1707-NAVY-02.webp",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/WU32688_1.webp",
    "auto": true
   },
   {
@@ -2229,8 +2561,8 @@
     "gg": "https://www.google.com/maps/search/Diners+Karachi"
    },
    "source": "https://www.diners.com.pk/products/wk20971-beige",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/OA1707-NAVY-02.webp",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/WU32688_1.webp",
    "auto": true
   },
   {
@@ -2258,8 +2590,8 @@
     "gg": "https://www.google.com/maps/search/Diners+Karachi"
    },
    "source": "https://www.diners.com.pk/products/dtks-61114-d-brown",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/OA1707-NAVY-02.webp",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0752/0442/8072/files/WU32688_1.webp",
    "auto": true
   },
   {
@@ -2287,19 +2619,19 @@
     "gg": "https://www.google.com/maps/search/Edenrobe+Karachi"
    },
    "source": "https://www.edenrobe.com/products/polo-signature-shirt-emtps6-090",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0841/3796/7889/files/0N9A028437134.webp",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0841/3796/7889/files/0N9A078034102.webp",
    "auto": true
   },
   {
-   "id": 87200,
-   "t": "Alkaram Studio — RTW | KURTI (was 3490 → 2094)",
+   "id": 64622,
+   "t": "Alkaram Studio — RTS | SHIRT, TROUSER & DUPATTA (was 11990 → 7194)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 2094,
-   "was": 3490,
+   "price": 7194,
+   "was": 11990,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2310,25 +2642,25 @@
    "addr": "Alkaram Studio — official site, delivery across Karachi",
    "phone": "923122552726",
    "time": "Online sale — jab tak stock hai",
-   "note": "Alkaram Studio ki official site pe live sale: 40% off (3490 → 2094).",
+   "note": "Alkaram Studio ki official site pe live sale: 40% off (11990 → 7194).",
    "links": {
-    "web": "https://www.alkaramstudio.com/products/stitched-printed-embroidered-lawn-kurta-gfku7219-orange",
+    "web": "https://www.alkaramstudio.com/products/3-piece-embroidered-lawn-suit-with-chiffon-dupatta-ll-12-25-1-royal-blue",
     "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
    },
-   "source": "https://www.alkaramstudio.com/products/stitched-printed-embroidered-lawn-kurta-gfku7219-orange",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/RB25-1-003_A_1.jpg",
+   "source": "https://www.alkaramstudio.com/products/3-piece-embroidered-lawn-suit-with-chiffon-dupatta-ll-12-25-1-royal-blue",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF473-3P26B-Blue-1.jpg",
    "auto": true
   },
   {
-   "id": 86167,
-   "t": "Alkaram Studio — RTW | WAISTCOAT (was 6490 → 3894)",
+   "id": 89707,
+   "t": "Alkaram Studio — RTW | SHIRT, TROUSER & DUPATTA (was 10590 → 6354)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 3894,
-   "was": 6490,
+   "price": 6354,
+   "was": 10590,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2339,25 +2671,25 @@
    "addr": "Alkaram Studio — official site, delivery across Karachi",
    "phone": "923122552726",
    "time": "Online sale — jab tak stock hai",
-   "note": "Alkaram Studio ki official site pe live sale: 40% off (6490 → 3894).",
+   "note": "Alkaram Studio ki official site pe live sale: 40% off (10590 → 6354).",
    "links": {
-    "web": "https://www.alkaramstudio.com/products/rtw-waistcoat-gmwc214-rust",
+    "web": "https://www.alkaramstudio.com/products/rtw-shirt-trouser-dupatta-lpe78-1-3p26-pink",
     "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
    },
-   "source": "https://www.alkaramstudio.com/products/rtw-waistcoat-gmwc214-rust",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/RB25-1-003_A_1.jpg",
+   "source": "https://www.alkaramstudio.com/products/rtw-shirt-trouser-dupatta-lpe78-1-3p26-pink",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF473-3P26B-Blue-1.jpg",
    "auto": true
   },
   {
-   "id": 66775,
-   "t": "Alkaram Studio — RTS | SHIRT & TROUSER (was 5780 → 3468)",
+   "id": 89562,
+   "t": "Alkaram Studio — RTW | ABAYA & STOLE (was 6990 → 4194)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 3468,
-   "was": 5780,
+   "price": 4194,
+   "was": 6990,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2368,14 +2700,14 @@
    "addr": "Alkaram Studio — official site, delivery across Karachi",
    "phone": "923122552726",
    "time": "Online sale — jab tak stock hai",
-   "note": "Alkaram Studio ki official site pe live sale: 40% off (5780 → 3468).",
+   "note": "Alkaram Studio ki official site pe live sale: 40% off (6990 → 4194).",
    "links": {
-    "web": "https://www.alkaramstudio.com/products/2-pc-embroidered-cambric-suit-with-cambric-trouser-64790",
+    "web": "https://www.alkaramstudio.com/products/rtw-abaya-stole-mde381-11-2p25-green",
     "gg": "https://www.google.com/maps/search/Alkaram+Studio+Karachi"
    },
-   "source": "https://www.alkaramstudio.com/products/2-pc-embroidered-cambric-suit-with-cambric-trouser-64790",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/RB25-1-003_A_1.jpg",
+   "source": "https://www.alkaramstudio.com/products/rtw-abaya-stole-mde381-11-2p25-green",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0623/6481/1444/files/EF473-3P26B-Blue-1.jpg",
    "auto": true
   },
   {
@@ -2403,8 +2735,8 @@
     "gg": "https://www.google.com/maps/search/Walkeaze+Karachi"
    },
    "source": "https://www.walkeaze.com/products/05409b-party-bag",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/pure-aura-for-women-50-ml-walkeaze-2261041.png",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/horizon-vial-3-ml-walkeaze-2916990.jpg",
    "auto": true
   },
   {
@@ -2432,8 +2764,8 @@
     "gg": "https://www.google.com/maps/search/Walkeaze+Karachi"
    },
    "source": "https://www.walkeaze.com/products/40269s-sandals",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/pure-aura-for-women-50-ml-walkeaze-2261041.png",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/horizon-vial-3-ml-walkeaze-2916990.jpg",
    "auto": true
   },
   {
@@ -2461,19 +2793,19 @@
     "gg": "https://www.google.com/maps/search/Walkeaze+Karachi"
    },
    "source": "https://www.walkeaze.com/products/74858s-block-heel",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/pure-aura-for-women-50-ml-walkeaze-2261041.png",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0502/1748/4438/files/horizon-vial-3-ml-walkeaze-2916990.jpg",
    "auto": true
   },
   {
-   "id": 80986,
-   "t": "1st Step — Casual Hand bag Gray 0322342 (was 7000 → 3500)",
+   "id": 77897,
+   "t": "1st Step — Women Sneaker Shoes Black 0441152 (was 6000 → 3000)",
    "emoji": "👟",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 3500,
-   "was": 7000,
+   "price": 3000,
+   "was": 6000,
    "cuisine": "Footwear",
    "cat": "Fashion",
    "src": [
@@ -2484,25 +2816,25 @@
    "addr": "1st Step — official site, delivery across Karachi",
    "phone": "03111178101",
    "time": "Online sale — jab tak stock hai",
-   "note": "1st Step ki official site pe live sale: 50% off (7000 → 3500).",
+   "note": "1st Step ki official site pe live sale: 50% off (6000 → 3000).",
    "links": {
-    "web": "https://www.1ststep.pk/products/casual-hand-bag-gray-0322342",
+    "web": "https://www.1ststep.pk/products/women-sneaker-shoes-black-0441152",
     "gg": "https://www.google.com/maps/search/1st+Step+Karachi"
    },
-   "source": "https://www.1ststep.pk/products/casual-hand-bag-gray-0322342",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/5_3f790a00-8a2d-4b81-971a-22631fead48c.webp",
+   "source": "https://www.1ststep.pk/products/women-sneaker-shoes-black-0441152",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/1_d3a626b2-8e8e-44ad-a641-84b49da4a81b.webp",
    "auto": true
   },
   {
-   "id": 60624,
-   "t": "1st Step — Casual Hand bag Silver 0322342 (was 7000 → 3500)",
+   "id": 89048,
+   "t": "1st Step — Women Sneaker Shoes Blue 0441152 (was 6000 → 3000)",
    "emoji": "👟",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 3500,
-   "was": 7000,
+   "price": 3000,
+   "was": 6000,
    "cuisine": "Footwear",
    "cat": "Fashion",
    "src": [
@@ -2513,25 +2845,25 @@
    "addr": "1st Step — official site, delivery across Karachi",
    "phone": "03111178101",
    "time": "Online sale — jab tak stock hai",
-   "note": "1st Step ki official site pe live sale: 50% off (7000 → 3500).",
+   "note": "1st Step ki official site pe live sale: 50% off (6000 → 3000).",
    "links": {
-    "web": "https://www.1ststep.pk/products/casual-hand-bag-silver-0322342",
+    "web": "https://www.1ststep.pk/products/women-sneaker-shoes-blue-0441152",
     "gg": "https://www.google.com/maps/search/1st+Step+Karachi"
    },
-   "source": "https://www.1ststep.pk/products/casual-hand-bag-silver-0322342",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/5_3f790a00-8a2d-4b81-971a-22631fead48c.webp",
+   "source": "https://www.1ststep.pk/products/women-sneaker-shoes-blue-0441152",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/1_d3a626b2-8e8e-44ad-a641-84b49da4a81b.webp",
    "auto": true
   },
   {
-   "id": 86733,
-   "t": "1st Step — Casual Hand bag Peach 0322342 (was 7000 → 3500)",
+   "id": 76351,
+   "t": "1st Step — Women Sneaker Shoes Pink 0441152 (was 6000 → 3000)",
    "emoji": "👟",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 3500,
-   "was": 7000,
+   "price": 3000,
+   "was": 6000,
    "cuisine": "Footwear",
    "cat": "Fashion",
    "src": [
@@ -2542,14 +2874,14 @@
    "addr": "1st Step — official site, delivery across Karachi",
    "phone": "03111178101",
    "time": "Online sale — jab tak stock hai",
-   "note": "1st Step ki official site pe live sale: 50% off (7000 → 3500).",
+   "note": "1st Step ki official site pe live sale: 50% off (6000 → 3000).",
    "links": {
-    "web": "https://www.1ststep.pk/products/casual-hand-bag-peach-0322342",
+    "web": "https://www.1ststep.pk/products/women-sneaker-shoes-pink-0441152",
     "gg": "https://www.google.com/maps/search/1st+Step+Karachi"
    },
-   "source": "https://www.1ststep.pk/products/casual-hand-bag-peach-0322342",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/5_3f790a00-8a2d-4b81-971a-22631fead48c.webp",
+   "source": "https://www.1ststep.pk/products/women-sneaker-shoes-pink-0441152",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0777/3657/5279/files/1_d3a626b2-8e8e-44ad-a641-84b49da4a81b.webp",
    "auto": true
   },
   {
@@ -2577,19 +2909,19 @@
     "gg": "https://www.google.com/maps/search/Khas+Stores+Karachi"
    },
    "source": "https://www.khasstores.com/products/3pc-embroidered-unstitched-lawn-suit-kse-3798",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-stitched-printed-khaddar-suit-rtw-kkh-4273-printed-khas-stores-436667.jpg",
    "auto": true
   },
   {
-   "id": 83308,
-   "t": "Khas Stores — 3PC Printed Embroidered Linen Suit | KLEE-4344 (was 5999 → 4199)",
+   "id": 78862,
+   "t": "Khas Stores — 3PC Stitched Printed Khaddar Suit | RTW-KKH-4245 (was 6999 → 4899)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 4199,
-   "was": 5999,
+   "price": 4899,
+   "was": 6999,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2600,25 +2932,25 @@
    "addr": "Khas Stores — official site, delivery across Karachi",
    "phone": "923228660104",
    "time": "Online sale — jab tak stock hai",
-   "note": "Khas Stores ki official site pe live sale: 30% off (5999 → 4199).",
+   "note": "Khas Stores ki official site pe live sale: 30% off (6999 → 4899).",
    "links": {
-    "web": "https://www.khasstores.com/products/3pc-printed-embroidered-linen-suit-klee-4344",
+    "web": "https://www.khasstores.com/products/3pc-stitched-printed-khaddar-suit-rtw-kkh-4245",
     "gg": "https://www.google.com/maps/search/Khas+Stores+Karachi"
    },
-   "source": "https://www.khasstores.com/products/3pc-printed-embroidered-linen-suit-klee-4344",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
+   "source": "https://www.khasstores.com/products/3pc-stitched-printed-khaddar-suit-rtw-kkh-4245",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-stitched-printed-khaddar-suit-rtw-kkh-4273-printed-khas-stores-436667.jpg",
    "auto": true
   },
   {
-   "id": 85189,
-   "t": "Khas Stores — 3PC Printed Linen Suit | KLE-4394 (was 4499 → 3149)",
+   "id": 70867,
+   "t": "Khas Stores — Crushed Cotton Frock DR-25022 (was 2999 → 2099)",
    "emoji": "👗",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 3149,
-   "was": 4499,
+   "price": 2099,
+   "was": 2999,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2629,77 +2961,19 @@
    "addr": "Khas Stores — official site, delivery across Karachi",
    "phone": "923228660104",
    "time": "Online sale — jab tak stock hai",
-   "note": "Khas Stores ki official site pe live sale: 30% off (4499 → 3149).",
+   "note": "Khas Stores ki official site pe live sale: 30% off (2999 → 2099).",
    "links": {
-    "web": "https://www.khasstores.com/products/3pc-printed-linen-suit-kle-4394",
+    "web": "https://www.khasstores.com/products/crushed-cotton-frock-dr-25022",
     "gg": "https://www.google.com/maps/search/Khas+Stores+Karachi"
    },
-   "source": "https://www.khasstores.com/products/3pc-printed-linen-suit-kle-4394",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-embroidered-khaddar-suit-kkhe-4284-embroidered-khas-stores-419142.webp",
+   "source": "https://www.khasstores.com/products/crushed-cotton-frock-dr-25022",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/1136/8498/files/3pc-stitched-printed-khaddar-suit-rtw-kkh-4273-printed-khas-stores-436667.jpg",
    "auto": true
   },
   {
-   "id": 82843,
-   "t": "Engine — Boys Casual Shirt (was 3499 → 1050)",
-   "emoji": "👕",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 1050,
-   "was": 3499,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Engine — official site, delivery across Karachi",
-   "phone": "042111364463",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Engine ki official site pe live sale: 70% off (3499 → 1050).",
-   "links": {
-    "web": "https://www.engine.com.pk/products/vtc071-blu",
-    "gg": "https://www.google.com/maps/search/Engine+Karachi"
-   },
-   "source": "https://www.engine.com.pk/products/vtc071-blu",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0032_11b0036e-b779-4ca7-a265-9203561db261.jpg",
-   "auto": true
-  },
-  {
-   "id": 72545,
-   "t": "Engine — Boys T Shirt (was 1399 → 420)",
-   "emoji": "👕",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 420,
-   "was": 1399,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Engine — official site, delivery across Karachi",
-   "phone": "042111364463",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Engine ki official site pe live sale: 70% off (1399 → 420).",
-   "links": {
-    "web": "https://www.engine.com.pk/products/vit423-wht",
-    "gg": "https://www.google.com/maps/search/Engine+Karachi"
-   },
-   "source": "https://www.engine.com.pk/products/vit423-wht",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0032_11b0036e-b779-4ca7-a265-9203561db261.jpg",
-   "auto": true
-  },
-  {
-   "id": 79146,
-   "t": "Engine — Boys Straight Fit Trouser (was 1999 → 600)",
+   "id": 78352,
+   "t": "Engine — Girls Panel Trouser (was 1999 → 600)",
    "emoji": "👕",
    "area": "Karachi (online)",
    "lat": 24.8607,
@@ -2718,12 +2992,70 @@
    "time": "Online sale — jab tak stock hai",
    "note": "Engine ki official site pe live sale: 70% off (1999 → 600).",
    "links": {
-    "web": "https://www.engine.com.pk/products/iu6035-blk",
+    "web": "https://www.engine.com.pk/products/tu6040-gry",
     "gg": "https://www.google.com/maps/search/Engine+Karachi"
    },
-   "source": "https://www.engine.com.pk/products/iu6035-blk",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/0032_11b0036e-b779-4ca7-a265-9203561db261.jpg",
+   "source": "https://www.engine.com.pk/products/tu6040-gry",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/3_a912b688-49c7-48c6-8e9e-dc83578d63f3.jpg",
+   "auto": true
+  },
+  {
+   "id": 64944,
+   "t": "Engine — Boys T Shirt (was 1299 → 390)",
+   "emoji": "👕",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 390,
+   "was": 1299,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Engine — official site, delivery across Karachi",
+   "phone": "042111364463",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Engine ki official site pe live sale: 70% off (1299 → 390).",
+   "links": {
+    "web": "https://www.engine.com.pk/products/it6074-nvy",
+    "gg": "https://www.google.com/maps/search/Engine+Karachi"
+   },
+   "source": "https://www.engine.com.pk/products/it6074-nvy",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/3_a912b688-49c7-48c6-8e9e-dc83578d63f3.jpg",
+   "auto": true
+  },
+  {
+   "id": 87146,
+   "t": "Engine — Girls Straight Fit Denim (was 3499 → 1750)",
+   "emoji": "👕",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 1750,
+   "was": 3499,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Engine — official site, delivery across Karachi",
+   "phone": "042111364463",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Engine ki official site pe live sale: 50% off (3499 → 1750).",
+   "links": {
+    "web": "https://www.engine.com.pk/products/vid080-blu",
+    "gg": "https://www.google.com/maps/search/Engine+Karachi"
+   },
+   "source": "https://www.engine.com.pk/products/vid080-blu",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0553/3774/6621/files/3_a912b688-49c7-48c6-8e9e-dc83578d63f3.jpg",
    "auto": true
   },
   {
@@ -2751,66 +3083,8 @@
     "gg": "https://www.google.com/maps/search/Dhanak+Karachi"
    },
    "source": "https://www.dhanak.com.pk/products/ss26dc-2617-l-pink-2pcs-lawn-embroidered-kurta-with-trouser",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/IMG_7630.jpg",
-   "auto": true
-  },
-  {
-   "id": 72518,
-   "t": "Dhanak — SS26DC-2612 CREAM LAWN 2PCS EMBROIDERED KURTA WITH T (was 9990 → 6993)",
-   "emoji": "🧕",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 6993,
-   "was": 9990,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Dhanak — official site, delivery across Karachi",
-   "phone": "923344507179",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Dhanak ki official site pe live sale: 30% off (9990 → 6993).",
-   "links": {
-    "web": "https://www.dhanak.com.pk/products/ss26dc-2612-cream-2pcs-lawn-embroidered-kurta-with-trouser",
-    "gg": "https://www.google.com/maps/search/Dhanak+Karachi"
-   },
-   "source": "https://www.dhanak.com.pk/products/ss26dc-2612-cream-2pcs-lawn-embroidered-kurta-with-trouser",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/IMG_7630.jpg",
-   "auto": true
-  },
-  {
-   "id": 81272,
-   "t": "Dhanak — SS26DC-2613 PINK LAWN 2PCS EMBROIDERED KURTA WITH TR (was 9990 → 6993)",
-   "emoji": "🧕",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 6993,
-   "was": 9990,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Dhanak — official site, delivery across Karachi",
-   "phone": "923344507179",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Dhanak ki official site pe live sale: 30% off (9990 → 6993).",
-   "links": {
-    "web": "https://www.dhanak.com.pk/products/ss26dc-2613-pink-2pcs-lawn-embroidered-kurta-with-trouser",
-    "gg": "https://www.google.com/maps/search/Dhanak+Karachi"
-   },
-   "source": "https://www.dhanak.com.pk/products/ss26dc-2613-pink-2pcs-lawn-embroidered-kurta-with-trouser",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/IMG_7630.jpg",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0587/3080/7460/files/DA-3012_2.jpg",
    "auto": true
   },
   {
@@ -2838,7 +3112,7 @@
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi"
    },
    "source": "https://www.lakhanyonline.com/products/01-piece-ready-to-wear-embroidered-namaz-chaddar-186",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0300/8059/8075/files/40_fde22a76-889c-4ccd-905b-9db00c7eb464.jpg",
    "auto": true
   },
@@ -2867,7 +3141,7 @@
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi"
    },
    "source": "https://www.lakhanyonline.com/products/01-piece-ready-to-wear-embroidered-namaz-chaddar-185",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0300/8059/8075/files/40_fde22a76-889c-4ccd-905b-9db00c7eb464.jpg",
    "auto": true
   },
@@ -2896,7 +3170,7 @@
     "gg": "https://www.google.com/maps/search/Lakhany+Karachi"
    },
    "source": "https://www.lakhanyonline.com/products/01-piece-ready-to-wear-shawl-79",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0300/8059/8075/files/40_fde22a76-889c-4ccd-905b-9db00c7eb464.jpg",
    "auto": true
   },
@@ -2925,8 +3199,8 @@
     "gg": "https://www.google.com/maps/search/Amir+Adnan+Karachi"
    },
    "source": "https://www.amiradnan.com/products/slim-fit-black-emb-shirt-collar-suit",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/163A525100_0000_163A5249.jpg",
    "auto": true
   },
   {
@@ -2954,8 +3228,8 @@
     "gg": "https://www.google.com/maps/search/Amir+Adnan+Karachi"
    },
    "source": "https://www.amiradnan.com/products/slim-fit-reflecting-pond-emb-band-collar-slightly-defected-kurta-pajama",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/163A525100_0000_163A5249.jpg",
    "auto": true
   },
   {
@@ -2983,8 +3257,8 @@
     "gg": "https://www.google.com/maps/search/Amir+Adnan+Karachi"
    },
    "source": "https://www.amiradnan.com/products/classic-fit-blue-emb-shirt-collar-slightly-defected-kameez-shalwar",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/Velvet_Purple_Traditional_Sherwani.webp",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0552/1339/1936/files/163A525100_0000_163A5249.jpg",
    "auto": true
   },
   {
@@ -3012,8 +3286,8 @@
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
    "source": "https://www.crossstitch.pk/products/blossom-wave",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0000_1_eaf6c367-1556-4fdd-be69-99bc50b3b30e.jpg",
    "auto": true
   },
   {
@@ -3041,8 +3315,8 @@
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
    "source": "https://www.crossstitch.pk/products/cloud-sheen",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0000_1_eaf6c367-1556-4fdd-be69-99bc50b3b30e.jpg",
    "auto": true
   },
   {
@@ -3070,8 +3344,8 @@
     "gg": "https://www.google.com/maps/search/Cross+Stitch+Karachi"
    },
    "source": "https://www.crossstitch.pk/products/soft-halo",
-   "published": "2026-11-22",
-   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0006_AKS04765.jpg",
+   "published": "2026-11-24",
+   "thumb": "https://cdn.shopify.com/s/files/1/0178/4492/8612/files/Untitled-1_0000_1_eaf6c367-1556-4fdd-be69-99bc50b3b30e.jpg",
    "auto": true
   },
   {
@@ -3099,7 +3373,7 @@
     "gg": "https://www.google.com/maps/search/Insignia+Karachi"
    },
    "source": "https://www.insignia.com.pk/products/formal-shoulder-bags-bs2311-ivory",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0490/2443/4341/files/1_e64617f6-d129-4a23-a989-6f2cb6c1be06.jpg",
    "auto": true
   },
@@ -3128,7 +3402,7 @@
     "gg": "https://www.google.com/maps/search/Insignia+Karachi"
    },
    "source": "https://www.insignia.com.pk/products/casual-sneakers-ic7555-maroon",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0490/2443/4341/files/1_e64617f6-d129-4a23-a989-6f2cb6c1be06.jpg",
    "auto": true
   },
@@ -3157,8 +3431,133 @@
     "gg": "https://www.google.com/maps/search/Insignia+Karachi"
    },
    "source": "https://www.insignia.com.pk/products/casual-sneakers-ic7555-beige",
-   "published": "2026-11-22",
+   "published": "2026-11-24",
    "thumb": "https://cdn.shopify.com/s/files/1/0490/2443/4341/files/1_e64617f6-d129-4a23-a989-6f2cb6c1be06.jpg",
+   "auto": true
+  },
+  {
+   "id": 10001,
+   "t": "Expo Center Karachi Today: Food Expo Grocery & Cooking Oil Sale! 😱 Sufi Brand Offers",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 1000,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Food",
+   "src": [
+    "yt"
+   ],
+   "hrs": 153,
+   "addr": "Karachi",
+   "phone": "—",
+   "time": "—",
+   "note": "Expo Center Karachi me Food & Agriculture Exhibition shuru ho chuki hai! Is video me hum aapko dikha rahe hain Expo Center Karachi ke andar Sufi Brand ke stalls par aam awam ke liy…",
+   "thumb": "https://i.ytimg.com/vi/dXDNszPvzAI/hqdefault.jpg",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=dXDNszPvzAI"
+   },
+   "auto": true
+  },
+  {
+   "id": 10002,
+   "t": "Asia Ki Sab Se Badi Khajoor Market | Wholesale Khajoor Starting Rs 200/Kg",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 200,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 72,
+   "addr": "Khajoor wholesale market Karachi (Lea Market / Khajoor Bazar) complete visit and wholesale price guide. Is video mein hu",
+   "phone": "0314-2208572",
+   "time": "—",
+   "note": "Real video posted 2026-11-20 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/MOwq2HBy2Jg/hqdefault.jpg",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=MOwq2HBy2Jg"
+   },
+   "auto": true
+  },
+  {
+   "id": 10003,
+   "t": "Rs 750 Me Japanese Thermos & Crockery Sale! 😱 Wholesale Market Karachi",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 750,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 48,
+   "addr": "Shop Name: Al Dawood Crockery Location: Near Faizan-e-Muhammad Masjid, Ahead of Super Market, Karachi Contact Number: 03",
+   "phone": "—",
+   "time": "—",
+   "note": "Real video posted 2026-11-19 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/lUpaQsrNrl0/hqdefault.jpg",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=lUpaQsrNrl0"
+   },
+   "auto": true
+  },
+  {
+   "id": 10004,
+   "t": "Export Quality Towel Sale Rs 100 | Wholesale Market In Karachi | Bath Towel, Floor Mats Sale",
+   "emoji": "🎥",
+   "area": "Karachi",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 100,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 24,
+   "addr": "Export Quality Towel Sale sirf Rs. 100 se start! Aaj Market Bhai aapko lekar aya hai Kohinoor Jubilee Shopping Center Ka",
+   "phone": "0324-2541654",
+   "time": "—",
+   "note": "Real video posted 2026-11-18 — price/timing video mein confirm karein.",
+   "thumb": "https://i.ytimg.com/vi/x5KRgQgVjFU/hqdefault.jpg",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=x5KRgQgVjFU"
+   },
+   "auto": true
+  },
+  {
+   "id": 10005,
+   "t": "100Rs.Sale Smart Kitchen Gadgets | Big Wholesale Baba PLastic Shop | house Hole Item & Kitchen item",
+   "emoji": "🎥",
+   "area": "Nazimabad",
+   "lat": 24.875,
+   "lng": 67.035,
+   "price": 100,
+   "was": 0,
+   "cuisine": "Video Deal",
+   "cat": "Fashion",
+   "src": [
+    "yt"
+   ],
+   "hrs": 120,
+   "addr": "Plastic Crockery Wholesale, one dollar shop in karachi, essential kitchen tools kitchen gadgets, Daily Discover Pk, chea",
+   "phone": "0319-2718146",
+   "time": "—",
+   "note": "100Rs.Sale Smart Kitchen Gadgets | Big Wholesale Baba PLastic Shop | house Hole Item & Kitchen item\n\nMega Sale 5-50 & 100Rs| Kitchen Gadgets,House Hold Items,Plastic Kitchen Crocke…",
+   "thumb": "https://i.ytimg.com/vi/9KiInO7sphc/hqdefault.jpg",
+   "links": {
+    "yt": "https://www.youtube.com/watch?v=9KiInO7sphc"
+   },
    "auto": true
   }
  ]
