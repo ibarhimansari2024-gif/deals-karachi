@@ -37,15 +37,16 @@
   /* header */
   .hdr{background:var(--headerbg);color:var(--headerink);padding:14px 20px 16px;padding-top:max(44px, env(safe-area-inset-top));flex-shrink:0;border-bottom:1px solid var(--border)}
   /* v6.6: scroll pe header + chips collapse — swipe up = deals ko poori screen */
-  .hdr{transition:padding .25s ease}
-  .hdr h1{transition:font-size .25s ease}
-  .hdr .loc{transition:opacity .2s ease,max-height .25s ease,margin .25s ease;max-height:20px;overflow:hidden}
-  .hdr .searchwrap{transition:max-height .3s ease,opacity .25s ease,margin .25s ease;max-height:64px;overflow:hidden}
+  /* v6.7: collapse snappier — layout-anim jitni choti ho utni smooth */
+  .hdr{transition:padding .15s ease}
+  .hdr h1{transition:font-size .15s ease}
+  .hdr .loc{transition:opacity .12s ease,max-height .15s ease,margin .15s ease;max-height:20px;overflow:hidden}
+  .hdr .searchwrap{transition:max-height .2s ease,opacity .15s ease,margin .15s ease;max-height:64px;overflow:hidden}
   .hdr.mini{padding:10px 20px 10px;padding-top:max(10px, env(safe-area-inset-top))}
   .hdr.mini h1{font-size:17px}
   .hdr.mini .loc{opacity:0;max-height:0;margin-top:0}
   .hdr.mini .searchwrap{max-height:0;opacity:0;margin-top:0;pointer-events:none}
-  .cats{transition:max-height .3s ease,padding .3s ease,opacity .25s ease;max-height:130px}
+  .cats{transition:max-height .2s ease,padding .2s ease,opacity .15s ease;max-height:130px}
   .cats.mini{max-height:0;padding-top:0;padding-bottom:0;opacity:0;overflow:hidden}
   .hdr-top{display:flex;justify-content:space-between;align-items:center}
   .hdr h1{font-size:22px;font-weight:800;letter-spacing:-.44px;color:var(--ink)}
@@ -93,7 +94,7 @@
   .fbm{font-size:11px;opacity:.92;margin-top:2px;display:flex;gap:8px;align-items:center}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:14px}
   .card{background:var(--surface);border-radius:var(--r);overflow:hidden;cursor:pointer;
-    border:1px solid var(--border);animation:cardin .45s cubic-bezier(.22,1,.36,1) both;transition:transform .16s ease,box-shadow .2s,background-color .3s,border-color .3s;
+    border:1px solid var(--border);animation:cardin .45s cubic-bezier(.22,1,.36,1) both;transition:transform .16s ease,background-color .3s,border-color .3s;
     box-shadow:var(--shadow)}
   .card:active{transform:scale(.96)}
   @keyframes cardin{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
@@ -563,7 +564,8 @@ function renderFeatured(){
   el.querySelectorAll(".fcard").forEach(c=>c.addEventListener("click",()=>{const d=DATA.deals.find(x=>x.id===Number(c.dataset.id)); if(d) openDetail(d);}));
 }
 function buildCard(d,i){
-  const c=document.createElement("div");c.className="card";if(i!==undefined)c.style.animationDelay=(i%8)*50+"ms";
+  const c=document.createElement("div");c.className="card";
+  if(i!==undefined){ if(i<16){c.style.animationDelay=(i%8)*50+"ms";} else {c.style.animation="none";} }
   c.innerHTML=`<div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}
     <div class="srcbadges">${d.src.map(s=>`<span class="src ${s}">${({yt:"YT",ig:"IG",tt:"TT",gg:"GO",cr:"✓"})[s]}</span>`).join("")}</div>
     ${d.was>d.price?`<div class="pricepill">${Math.round((1-d.price/d.was)*100)}% OFF</div>`:`<div class="pricepill">${d.price>0?"Rs "+d.price.toLocaleString():(priceLabel(d)==="🏷️ Sale live"?"🏷️ Sale":priceLabel(d))}</div>`}</div>
@@ -614,7 +616,7 @@ function renderHome(){
     <div class="sect"><h2>📸 Saari deals — tasveeron mein</h2><span id="allgrid">${deals.length} pics</span></div>
     <div class="pgrid" id="pgrid">
       ${deals.map((d,i)=>`
-        <div class="ptile" data-id="${d.id}" style="animation-delay:${(i%12)*35}ms">
+        <div class="ptile" data-id="${d.id}" style="${i<24?`animation-delay:${(i%12)*35}ms`:"animation:none"}">
           <div class="thumb"><div class="mono"><span class="memoji">${d.emoji}</span>${brandMono(d.t)}</div>${thumbImg(d,false)}</div>
           <span class="pcat">${d.emoji}</span>
           <span class="pprice">${priceLabel(d)}</span>
@@ -801,7 +803,7 @@ function switchTab(t){
   if(t==="me"){document.getElementById("featwrap").style.display="none";document.getElementById("grid").innerHTML=`<div class="empty" style="text-align:left;padding:22px">
     <div style="font-size:44px;margin-bottom:6px">🌶️</div>
     <b style="color:var(--ink);font-size:19px">Karachi Pulse</b>
-    <div style="opacity:.65;font-size:12.5px;margin:2px 0 14px">Version 6.6 · debug build</div>
+    <div style="opacity:.65;font-size:12.5px;margin:2px 0 14px">Version 6.7 · debug build</div>
     <div style="background:var(--surface2);border-radius:14px;padding:14px;margin-bottom:10px">
       <b style="font-size:13.5px">Kaise kaam karta hai</b><br>
       <small style="opacity:.75;line-height:1.7">Har 15 min auto-update · Karachi ke restaurant pages aur deals channels se real deals · har deal ki picture + price + phone</small>
