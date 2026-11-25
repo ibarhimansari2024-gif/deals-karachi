@@ -36,6 +36,17 @@
 
   /* header */
   .hdr{background:var(--headerbg);color:var(--headerink);padding:14px 20px 16px;padding-top:max(44px, env(safe-area-inset-top));flex-shrink:0;border-bottom:1px solid var(--border)}
+  /* v6.6: scroll pe header + chips collapse — swipe up = deals ko poori screen */
+  .hdr{transition:padding .25s ease}
+  .hdr h1{transition:font-size .25s ease}
+  .hdr .loc{transition:opacity .2s ease,max-height .25s ease,margin .25s ease;max-height:20px;overflow:hidden}
+  .hdr .searchwrap{transition:max-height .3s ease,opacity .25s ease,margin .25s ease;max-height:64px;overflow:hidden}
+  .hdr.mini{padding:10px 20px 10px;padding-top:max(10px, env(safe-area-inset-top))}
+  .hdr.mini h1{font-size:17px}
+  .hdr.mini .loc{opacity:0;max-height:0;margin-top:0}
+  .hdr.mini .searchwrap{max-height:0;opacity:0;margin-top:0;pointer-events:none}
+  .cats{transition:max-height .3s ease,padding .3s ease,opacity .25s ease;max-height:130px}
+  .cats.mini{max-height:0;padding-top:0;padding-bottom:0;opacity:0;overflow:hidden}
   .hdr-top{display:flex;justify-content:space-between;align-items:center}
   .hdr h1{font-size:22px;font-weight:800;letter-spacing:-.44px;color:var(--ink)}
   .hdr h1 b{color:var(--accent)}
@@ -332,7 +343,7 @@
         <button class="hbtn" id="refreshBtn"><span class="ic">⟳</span></button>
       </div>
     </div>
-    <div style="position:relative;margin-top:14px">
+    <div class="searchwrap">
       <span class="searchico">🔍</span>
       <input id="search" class="search" placeholder="Biryani, pizza, buffet… dhoondo" autocomplete="off">
     </div>
@@ -635,6 +646,8 @@ function showHomeView(anim){
   fw.style.display=dash?"none":"block";
   cats.style.display=dash?"none":"flex";
   br.style.display=dash?"none":"flex";
+  hs.scrollTop=0; fw.scrollTop=0;
+  document.querySelector(".hdr").classList.remove("mini"); cats.classList.remove("mini");
   const el=dash?hs:fw;
   if(anim){el.classList.remove("slidein-r","slidein-l");void el.offsetWidth;el.classList.add(anim);}
   if(dash) renderHome(); else renderAll();
@@ -769,6 +782,7 @@ function switchTab(t){
   const feed=document.getElementById("feedwrap"),mv=document.getElementById("mapview"),
         hs=document.getElementById("homescreen"),cats=document.getElementById("cats");
   hs.style.display="none";
+  document.querySelector(".hdr").classList.remove("mini"); cats.classList.remove("mini");
   if(t==="home"){
     if(state.homeView==="dash"){hs.style.display="block";feed.style.display="none";mv.style.display="none";cats.style.display="none";showHomeView("slidein-l");}
     else {feed.style.display="block";mv.style.display="none";cats.style.display="flex";showHomeView();}
@@ -787,7 +801,7 @@ function switchTab(t){
   if(t==="me"){document.getElementById("featwrap").style.display="none";document.getElementById("grid").innerHTML=`<div class="empty" style="text-align:left;padding:22px">
     <div style="font-size:44px;margin-bottom:6px">🌶️</div>
     <b style="color:var(--ink);font-size:19px">Karachi Pulse</b>
-    <div style="opacity:.65;font-size:12.5px;margin:2px 0 14px">Version 6.5 · debug build</div>
+    <div style="opacity:.65;font-size:12.5px;margin:2px 0 14px">Version 6.6 · debug build</div>
     <div style="background:var(--surface2);border-radius:14px;padding:14px;margin-bottom:10px">
       <b style="font-size:13.5px">Kaise kaam karta hai</b><br>
       <small style="opacity:.75;line-height:1.7">Har 15 min auto-update · Karachi ke restaurant pages aur deals channels se real deals · har deal ki picture + price + phone</small>
@@ -812,6 +826,16 @@ document.getElementById("seeall").addEventListener("click",()=>{switchTab("home"
 document.getElementById("backbtn").addEventListener("click",()=>{
   state.homeView="dash"; state.cat="All"; switchTab("home"); showHomeView("slidein-l");
 });
+
+/* v6.6: scroll pe header + chips collapse — swipe up = deals zyada jagah, upar = wapas */
+const hdrEl=document.querySelector(".hdr"), catsEl=document.getElementById("cats");
+function hdrCollapse(el){
+  const mini=el.scrollTop>40;
+  hdrEl.classList.toggle("mini",mini);
+  catsEl.classList.toggle("mini",mini&&catsEl.style.display!=="none");
+}
+document.getElementById("homescreen").addEventListener("scroll",function(){hdrCollapse(this);},{passive:true});
+document.getElementById("feedwrap").addEventListener("scroll",function(){hdrCollapse(this);},{passive:true});
 
 /* theme — light default (v5 redesign), dark optional */
 const themeBtn=document.getElementById("themeBtn");
