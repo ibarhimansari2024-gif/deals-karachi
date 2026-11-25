@@ -269,6 +269,15 @@
   .cta:active{background:var(--brand-deep,#e00b41)}
   .cta.ghost{background:var(--surface2);color:var(--ink);border:1.5px solid var(--border);box-shadow:none}
   .srcnote{font-size:10.5px;color:var(--muted);margin-top:12px;line-height:1.5}
+  /* v6.8: auth card (Supabase sign-in) */
+  .authcard{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px}
+  .authcard input{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--ink);font-size:13.5px;font-family:inherit;outline:none;margin-top:8px}
+  .authcard input:focus{border-color:var(--accent)}
+  .authbtns{display:flex;gap:8px;margin-top:10px}
+  .abtn{flex:1;padding:11px;border-radius:10px;border:none;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:13px;cursor:pointer;font-family:inherit}
+  .abtn.ghost{background:var(--surface);color:var(--ink);border:1.5px solid var(--border)}
+  .authmsg{font-size:11.5px;margin-top:8px;font-weight:700;color:var(--muted)}
+  .authmsg.ok{color:var(--good)}.authmsg.err{color:var(--accent)}
   .ph{font-weight:800;color:var(--accent);letter-spacing:.4px;white-space:nowrap;font-variant-numeric:tabular-nums}
   .toast{position:absolute;left:50%;bottom:110px;transform:translateX(-50%) translateY(16px);opacity:0;background:var(--ink);color:var(--bg);
     padding:10px 18px;border-radius:100px;font-size:12.5px;font-weight:800;z-index:50;display:none;white-space:nowrap;transition:opacity .25s,transform .25s}
@@ -701,7 +710,10 @@ function openDetail(d){
     if(navigator.share) navigator.share({title:"Karachi Pulse",text:txt}).catch(()=>{});
     else { try{navigator.clipboard.writeText(txt);toast("✓ Copy ho gaya");}catch(e){} }
   };
-  document.getElementById("savecta").onclick=()=>{state.saved.has(d.id)?state.saved.delete(d.id):state.saved.add(d.id);persistSaved();renderAll();openDetail(d);};
+  document.getElementById("savecta").onclick=()=>{
+    const had=state.saved.has(d.id);
+    if(had){state.saved.delete(d.id);sbSyncRemove(d.id);}else{state.saved.add(d.id);sbSyncPush([d.id]);}
+    persistSaved();renderAll();openDetail(d);};
   sh.classList.add("open"); sh.onclick=e=>{if(e.target===sh)closeSheet();};
 }
 
@@ -804,6 +816,7 @@ function switchTab(t){
     <div style="font-size:44px;margin-bottom:6px">🌶️</div>
     <b style="color:var(--ink);font-size:19px">Karachi Pulse</b>
     <div style="opacity:.65;font-size:12.5px;margin:2px 0 14px">Version 6.7 · debug build</div>
+    <div id="authslot"></div>
     <div style="background:var(--surface2);border-radius:14px;padding:14px;margin-bottom:10px">
       <b style="font-size:13.5px">Kaise kaam karta hai</b><br>
       <small style="opacity:.75;line-height:1.7">Har 15 min auto-update · Karachi ke restaurant pages aur deals channels se real deals · har deal ki picture + price + phone</small>
@@ -816,7 +829,7 @@ function switchTab(t){
       <b style="font-size:13.5px">Settings</b><br>
       <small style="opacity:.75;line-height:1.7">Theme: header ka 🌙 button · Data: <span id="lastupd2">${DATA.updated||"—"}</span></small>
     </div>
-  </div>`;return;}
+  </div>`;renderAuth();return;}
   document.getElementById("featwrap").style.display="block";
   renderAll();
 }
@@ -838,6 +851,89 @@ function hdrCollapse(el){
 }
 document.getElementById("homescreen").addEventListener("scroll",function(){hdrCollapse(this);},{passive:true});
 document.getElementById("feedwrap").addEventListener("scroll",function(){hdrCollapse(this);},{passive:true});
+
+/* ===== v6.8: Supabase auth + saved-deals sync (keys khali = feature OFF) ===== */
+const SB_URL="";   /* Project URL, e.g. https://abcd.supabase.co */
+const SB_KEY="";   /* anon public key (Settings -> API) */
+let SBSESS=null;
+try{const s=JSON.parse(localStorage.getItem("kp_session")||"null");if(s&&s.user&&s.access_token)SBSESS=s;}catch(e){}
+function sbOn(){return typeof SB_URL==="string"&&SB_URL.length>10&&typeof SB_KEY==="string"&&SB_KEY.length>10;}
+function sbSave(){try{SBSESS?localStorage.setItem("kp_session",JSON.stringify(SBSESS)):localStorage.removeItem("kp_session");}catch(e){}}
+async function sbCall(path,opts={}){
+  const h={"apikey":SB_KEY,"Content-Type":"application/json"};
+  if(opts.headers)Object.assign(h,opts.headers);
+  if(SBSESS&&SBSESS.access_token)h["Authorization"]="Bearer "+SBSESS.access_token;
+  try{
+    const r=await fetch(SB_URL+path,{method:opts.method||"GET",headers:h,body:opts.body});
+    const t=await r.text(); let j=null; try{j=JSON.parse(t);}catch(e){}
+    return {ok:r.ok,status:r.status,body:j||t};
+  }catch(e){ return {ok:false,status:0,body:"network"}; }
+}
+function renderAuth(){
+  const slot=document.getElementById("authslot"); if(!slot||!sbOn()) return;
+  if(SBSESS){
+    slot.innerHTML=`<div class="authcard"><b style="font-size:13.5px">✓ Sign in — ${(SBSESS.user&&SBSESS.user.email)||""}</b><br>
+      <small style="opacity:.75;line-height:1.7;display:block;margin-top:4px">Cloud sync ON — ❤️ saved deals account se judi hain, doosre phone pe bhi milengi</small>
+      <div class="authbtns"><button class="abtn ghost" id="sbOut">Sign out</button></div></div>`;
+    document.getElementById("sbOut").onclick=async()=>{SBSESS=null;sbSave();renderAuth();};
+    return;
+  }
+  slot.innerHTML=`<div class="authcard"><b style="font-size:13.5px">Sign in</b><br>
+    <small style="opacity:.75;line-height:1.7;display:block;margin-top:4px">Email + password — ❤️ saved deals cloud mein sync hongi</small>
+    <input id="sbEmail" type="email" placeholder="email" autocomplete="email">
+    <input id="sbPass" type="password" placeholder="password (6+ harf)" autocomplete="current-password">
+    <div class="authbtns"><button class="abtn" id="sbIn">Sign in</button><button class="abtn ghost" id="sbUp">Naya account</button></div>
+    <div class="authmsg" id="sbMsg"></div></div>`;
+  const msg=(t,ok)=>{const m=document.getElementById("sbMsg");if(m){m.textContent=t;m.className="authmsg "+(ok?"ok":"err");}};
+  const email=()=>document.getElementById("sbEmail").value.trim();
+  const pass=()=>document.getElementById("sbPass").value;
+  document.getElementById("sbIn").onclick=async()=>{
+    if(!email()||pass().length<6){msg("Email aur 6+ harf ka password likho",false);return;}
+    msg("Sign in ho raha hai…",true);
+    const r=await sbCall("/auth/v1/token?grant_type=password",{method:"POST",body:JSON.stringify({email:email(),password:pass()})});
+    if(r.ok&&r.body&&r.body.access_token){SBSESS=r.body;sbSave();msg("✓ Sign in ho gaya",true);sbSyncPull();renderAuth();}
+    else msg("Login fail — email/password check karo",false);
+  };
+  document.getElementById("sbUp").onclick=async()=>{
+    if(!email()||pass().length<6){msg("Email aur 6+ harf ka password likho",false);return;}
+    msg("Account ban raha hai…",true);
+    const r=await sbCall("/auth/v1/signup",{method:"POST",body:JSON.stringify({email:email(),password:pass()})});
+    if(r.ok&&r.body&&r.body.access_token){SBSESS=r.body;sbSave();msg("✓ Account ban gaya — sign in ho tum",true);sbSyncPull();renderAuth();}
+    else if(r.ok){msg("Account bana — email verify kar ke sign in karo",true);}
+    else msg(r.body&&(r.body.msg||r.body.error_description||r.body.message)||"Signup fail — dobara try karo",false);
+  };
+}
+/* sync: cloud = source of truth on login (union merge), local toggle = immediate push */
+async function sbSyncPull(){
+  if(!sbOn()||!SBSESS) return;
+  try{
+    const uid=SBSESS.user&&SBSESS.user.id; if(!uid) return;
+    const r=await sbCall("/rest/v1/saved_deals?select=deal_id&user_id=eq."+uid);
+    if(r.ok&&Array.isArray(r.body)){
+      const cloud=new Set(r.body.map(x=>Number(x.deal_id)));
+      const merged=new Set([...state.saved,...cloud]);
+      const localOnly=[...merged].filter(id=>!cloud.has(id));
+      state.saved=merged; persistSaved();
+      if(localOnly.length) await sbSyncPush(localOnly);
+    }
+  }catch(e){}
+}
+async function sbSyncPush(ids){
+  if(!sbOn()||!SBSESS||!ids.length) return;
+  try{
+    const uid=SBSESS.user&&SBSESS.user.id; if(!uid) return;
+    await sbCall("/rest/v1/saved_deals",{method:"POST",
+      headers:{"Prefer":"resolution=merge-duplicates"},
+      body:JSON.stringify(ids.map(id=>({user_id:uid,deal_id:id})))});
+  }catch(e){}
+}
+async function sbSyncRemove(id){
+  if(!sbOn()||!SBSESS) return;
+  try{
+    const uid=SBSESS.user&&SBSESS.user.id; if(!uid) return;
+    await sbCall("/rest/v1/saved_deals?user_id=eq."+uid+"&deal_id=eq."+id,{method:"DELETE"});
+  }catch(e){}
+}
 
 /* theme — light default (v5 redesign), dark optional */
 const themeBtn=document.getElementById("themeBtn");
