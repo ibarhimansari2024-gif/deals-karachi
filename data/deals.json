@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-26T01:38:58+05:00",
+ "updated": "2026-11-26T08:05:27+05:00",
  "version": 3,
  "deals": [
   {
@@ -377,7 +377,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp"
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/851-4093_1_1.webp"
   },
   {
    "id": 121,
@@ -1223,7 +1223,7 @@
     "cr": "https://www.brandtijara.com/brands/bata"
    },
    "source": "https://www.brandtijara.com/brands/bata",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/851-4093_1_1.webp",
    "auto": true
   },
   {
@@ -1368,14 +1368,14 @@
   },
   {
    "id": 50006,
-   "t": "Hush Puppies — Sale up to 50%",
+   "t": "Hush Puppies — Sale up to 40%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 50,
+   "off": 40,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1385,7 +1385,7 @@
    "addr": "Hush Puppies outlets across Karachi — nearest branch map/link se",
    "phone": "042111347425",
    "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Hush Puppies outlets Karachi mein).",
+   "note": "Up to 40% off — brandtijara ne aaj check kiya (Hush Puppies outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Hush Puppies+Karachi",
     "cr": "https://www.brandtijara.com/brands/hush-puppies"
@@ -1452,14 +1452,14 @@
   },
   {
    "id": 50009,
-   "t": "Generation — Sale up to 60%",
+   "t": "Generation — Sale up to 50%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 60,
+   "off": 50,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1469,7 +1469,7 @@
    "addr": "Generation outlets across Karachi — nearest branch map/link se",
    "phone": "923337488134",
    "time": "Live today",
-   "note": "Up to 60% off — brandtijara ne aaj check kiya (Generation outlets Karachi mein).",
+   "note": "Up to 50% off — brandtijara ne aaj check kiya (Generation outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Generation+Karachi",
     "cr": "https://www.brandtijara.com/brands/generation"
@@ -1899,6 +1899,35 @@
    "auto": true
   },
   {
+   "id": 76628,
+   "t": "Bata — Mocassino - Men (was 4499 → 2249)",
+   "emoji": "👟",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 2249,
+   "was": 4499,
+   "cuisine": "Footwear",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Bata — official site, delivery across Karachi",
+   "phone": "04232761261",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Bata ki official site pe live sale: 50% off (4499 → 2249).",
+   "links": {
+    "web": "https://www.bata.com.pk/products/851-4093",
+    "gg": "https://www.google.com/maps/search/Bata+Karachi"
+   },
+   "source": "https://www.bata.com.pk/products/851-4093",
+   "published": "2026-11-26",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/851-4093_1_1.webp",
+   "auto": true
+  },
+  {
    "id": 89087,
    "t": "Bata — Power - Women (was 5499 → 2749)",
    "emoji": "👟",
@@ -1924,7 +1953,7 @@
    },
    "source": "https://www.bata.com.pk/products/551-7096",
    "published": "2026-11-26",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/851-4093_1_1.webp",
    "auto": true
   },
   {
@@ -1953,36 +1982,7 @@
    },
    "source": "https://www.bata.com.pk/products/528-1191",
    "published": "2026-11-26",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp",
-   "auto": true
-  },
-  {
-   "id": 66758,
-   "t": "Bata — Ambassador - Men (was 6499 → 3249)",
-   "emoji": "👟",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 3249,
-   "was": 6499,
-   "cuisine": "Footwear",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Bata — official site, delivery across Karachi",
-   "phone": "04232761261",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Bata ki official site pe live sale: 50% off (6499 → 3249).",
-   "links": {
-    "web": "https://www.bata.com.pk/products/851-4570",
-    "gg": "https://www.google.com/maps/search/Bata+Karachi"
-   },
-   "source": "https://www.bata.com.pk/products/851-4570",
-   "published": "2026-11-26",
-   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/551-7096-_1.webp",
+   "thumb": "https://cdn.shopify.com/s/files/1/0143/1552/0054/files/851-4093_1_1.webp",
    "auto": true
   },
   {
