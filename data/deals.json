@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-27T02:42:07+05:00",
+ "updated": "2026-11-27T08:50:05+05:00",
  "version": 3,
  "deals": [
   {
@@ -217,34 +217,6 @@
    "thumb": "https://commons.wikimedia.org/wiki/Special:FilePath/BBQ_Platter.jpg?width=600"
   },
   {
-   "id": 112,
-   "t": "Eats N Bites — Double Fish Fillet Burger 900/-",
-   "emoji": "🐟",
-   "area": "Samanabad",
-   "lat": 24.866,
-   "lng": 67.066,
-   "price": 900,
-   "was": 1400,
-   "cuisine": "Fast Food",
-   "src": [
-    "ig",
-    "gg"
-   ],
-   "hrs": 168,
-   "addr": "Samanabad & Model Town Link Rd branches",
-   "phone": "—",
-   "time": "All day",
-   "note": "Winter special. Real Instagram post.",
-   "links": {
-    "ig": "https://www.instagram.com/eatsnbitesofficial/",
-    "gg": "https://maps.google.com/?q=Eats+n+Bites+Samanabad+Karachi"
-   },
-   "source": "https://www.instagram.com/eatsnbitesofficial/",
-   "published": "2026-10-28",
-   "cat": "Food",
-   "thumb": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg"
-  },
-  {
    "id": 116,
    "t": "Khaadi — Online Sale up to 70% Off",
    "emoji": "👗",
@@ -350,7 +322,7 @@
    },
    "source": "https://www.brandtijara.com/in-store/karachi",
    "published": "2026-11-08",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0518217801_4.jpg"
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0472303126_1_1.jpg"
   },
   {
    "id": 120,
@@ -1284,14 +1256,14 @@
   },
   {
    "id": 50003,
-   "t": "Edenrobe — Sale up to 61%",
+   "t": "Edenrobe — Sale up to 60%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 61,
+   "off": 60,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1301,7 +1273,7 @@
    "addr": "Edenrobe outlets across Karachi — nearest branch map/link se",
    "phone": "923233841787",
    "time": "Live today",
-   "note": "Up to 61% off — brandtijara ne aaj check kiya (Edenrobe outlets Karachi mein).",
+   "note": "Up to 60% off — brandtijara ne aaj check kiya (Edenrobe outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Edenrobe+Karachi",
     "cr": "https://www.brandtijara.com/brands/edenrobe"
@@ -1480,14 +1452,14 @@
   },
   {
    "id": 50010,
-   "t": "Cambridge — Sale up to 50%",
+   "t": "Cambridge — Sale up to 43%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 50,
+   "off": 43,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1497,7 +1469,7 @@
    "addr": "Cambridge outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 50% off — brandtijara ne aaj check kiya (Cambridge outlets Karachi mein).",
+   "note": "Up to 43% off — brandtijara ne aaj check kiya (Cambridge outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Cambridge+Karachi",
     "cr": "https://www.brandtijara.com/brands/cambridge"
@@ -1536,14 +1508,14 @@
   },
   {
    "id": 50012,
-   "t": "Saeed Ghani — Sale up to 27%",
+   "t": "Saeed Ghani — Sale up to 25%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 27,
+   "off": 25,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1553,7 +1525,7 @@
    "addr": "Saeed Ghani outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 27% off — brandtijara ne aaj check kiya (Saeed Ghani outlets Karachi mein).",
+   "note": "Up to 25% off — brandtijara ne aaj check kiya (Saeed Ghani outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Saeed Ghani+Karachi",
     "cr": "https://www.brandtijara.com/brands/saeed-ghani"
@@ -1592,14 +1564,14 @@
   },
   {
    "id": 50014,
-   "t": "Limelight — Sale up to 39%",
+   "t": "Limelight — Sale up to 38%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 39,
+   "off": 38,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1609,7 +1581,7 @@
    "addr": "Limelight outlets across Karachi — nearest branch map/link se",
    "phone": "021-111-300-800",
    "time": "Live today",
-   "note": "Up to 39% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
+   "note": "Up to 38% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Limelight+Karachi",
     "cr": "https://www.brandtijara.com/brands/limelight"
@@ -1755,7 +1727,7 @@
     "cr": "https://www.brandtijara.com/brands/outfitters"
    },
    "source": "https://www.brandtijara.com/brands/outfitters",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0518217801_4.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0472303126_1_1.jpg",
    "auto": true
   },
   {
@@ -2301,7 +2273,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0249-617",
    "published": "2026-11-27",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0518217801_4.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0472303126_1_1.jpg",
    "auto": true
   },
   {
@@ -2330,7 +2302,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0250-617",
    "published": "2026-11-27",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0518217801_4.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0472303126_1_1.jpg",
    "auto": true
   },
   {
@@ -2359,7 +2331,7 @@
    },
    "source": "https://www.outfitters.com.pk/products/f0246-617",
    "published": "2026-11-27",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0518217801_4.jpg",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0472303126_1_1.jpg",
    "auto": true
   },
   {
