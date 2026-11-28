@@ -1,6 +1,6 @@
 {
  "app": "Karachi Pulse",
- "updated": "2026-11-28T03:01:25+05:00",
+ "updated": "2026-11-28T08:51:32+05:00",
  "version": 3,
  "deals": [
   {
@@ -556,7 +556,7 @@
    ],
    "hrs": 168,
    "addr": "Foods Inn, Allama I.I. Qazi Chowk, Block A, SMCHS, Karachi",
-   "phone": "923242464292",
+   "phone": "—",
    "time": "All day",
    "note": "1 chicken chatni roll + 1 chicken mayo garlic roll. Online deal (kfoods).",
    "links": {
@@ -1564,14 +1564,14 @@
   },
   {
    "id": 50014,
-   "t": "Limelight — Sale up to 38%",
+   "t": "Limelight — Sale up to 39%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 38,
+   "off": 39,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1581,7 +1581,7 @@
    "addr": "Limelight outlets across Karachi — nearest branch map/link se",
    "phone": "021-111-300-800",
    "time": "Live today",
-   "note": "Up to 38% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
+   "note": "Up to 39% off — brandtijara ne aaj check kiya (Limelight outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Limelight+Karachi",
     "cr": "https://www.brandtijara.com/brands/limelight"
@@ -1648,14 +1648,14 @@
   },
   {
    "id": 50017,
-   "t": "Shahzeb Saeed — Sale up to 42%",
+   "t": "Shahzeb Saeed — Sale up to 44%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 42,
+   "off": 44,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1665,7 +1665,7 @@
    "addr": "Shahzeb Saeed outlets across Karachi — nearest branch map/link se",
    "phone": "—",
    "time": "Live today",
-   "note": "Up to 42% off — brandtijara ne aaj check kiya (Shahzeb Saeed outlets Karachi mein).",
+   "note": "Up to 44% off — brandtijara ne aaj check kiya (Shahzeb Saeed outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Shahzeb Saeed+Karachi",
     "cr": "https://www.brandtijara.com/brands/shahzeb-saeed"
@@ -1732,14 +1732,14 @@
   },
   {
    "id": 50020,
-   "t": "Servis — Sale up to 30%",
+   "t": "Servis — Sale up to 25%",
    "emoji": "👗",
    "area": "Karachi",
    "lat": 24.875,
    "lng": 67.035,
    "price": 0,
    "was": 0,
-   "off": 30,
+   "off": 25,
    "cuisine": "Fashion",
    "cat": "Fashion",
    "src": [
@@ -1749,7 +1749,7 @@
    "addr": "Servis outlets across Karachi — nearest branch map/link se",
    "phone": "03001234567",
    "time": "Live today",
-   "note": "Up to 30% off — brandtijara ne aaj check kiya (Servis outlets Karachi mein).",
+   "note": "Up to 25% off — brandtijara ne aaj check kiya (Servis outlets Karachi mein).",
    "links": {
     "gg": "https://www.google.com/maps/search/Servis+Karachi",
     "cr": "https://www.brandtijara.com/brands/servis"
@@ -2248,35 +2248,6 @@
    "auto": true
   },
   {
-   "id": 77220,
-   "t": "Outfitters — Pack of 2- Hair Clips (was 1090 → 190)",
-   "emoji": "👕",
-   "area": "Karachi (online)",
-   "lat": 24.8607,
-   "lng": 67.0011,
-   "price": 190,
-   "was": 1090,
-   "cuisine": "Clothing",
-   "cat": "Fashion",
-   "src": [
-    "gg",
-    "cr"
-   ],
-   "hrs": 168,
-   "addr": "Outfitters — official site, delivery across Karachi",
-   "phone": "923106070719",
-   "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 83% off (1090 → 190).",
-   "links": {
-    "web": "https://www.outfitters.com.pk/products/f0246-617",
-    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
-   },
-   "source": "https://www.outfitters.com.pk/products/f0246-617",
-   "published": "2026-11-28",
-   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0960306301_2.jpg",
-   "auto": true
-  },
-  {
    "id": 76901,
    "t": "Outfitters — Resort Collar Printed Shirt (was 2490 → 690)",
    "emoji": "👕",
@@ -2306,14 +2277,14 @@
    "auto": true
   },
   {
-   "id": 66991,
-   "t": "Outfitters — Relaxed Fit Jeans (was 5990 → 1790)",
+   "id": 74255,
+   "t": "Outfitters — Varsity Graphic T-Shirt (was 1890 → 890)",
    "emoji": "👕",
    "area": "Karachi (online)",
    "lat": 24.8607,
    "lng": 67.0011,
-   "price": 1790,
-   "was": 5990,
+   "price": 890,
+   "was": 1890,
    "cuisine": "Clothing",
    "cat": "Fashion",
    "src": [
@@ -2324,12 +2295,41 @@
    "addr": "Outfitters — official site, delivery across Karachi",
    "phone": "923106070719",
    "time": "Online sale — jab tak stock hai",
-   "note": "Outfitters ki official site pe live sale: 70% off (5990 → 1790).",
+   "note": "Outfitters ki official site pe live sale: 53% off (1890 → 890).",
    "links": {
-    "web": "https://www.outfitters.com.pk/products/f0733-109",
+    "web": "https://www.outfitters.com.pk/products/f0960-306",
     "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
    },
-   "source": "https://www.outfitters.com.pk/products/f0733-109",
+   "source": "https://www.outfitters.com.pk/products/f0960-306",
+   "published": "2026-11-28",
+   "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0960306301_2.jpg",
+   "auto": true
+  },
+  {
+   "id": 61269,
+   "t": "Outfitters — Ribbed Beanie With Label Patch (was 1690 → 790)",
+   "emoji": "👕",
+   "area": "Karachi (online)",
+   "lat": 24.8607,
+   "lng": 67.0011,
+   "price": 790,
+   "was": 1690,
+   "cuisine": "Clothing",
+   "cat": "Fashion",
+   "src": [
+    "gg",
+    "cr"
+   ],
+   "hrs": 168,
+   "addr": "Outfitters — official site, delivery across Karachi",
+   "phone": "923106070719",
+   "time": "Online sale — jab tak stock hai",
+   "note": "Outfitters ki official site pe live sale: 53% off (1690 → 790).",
+   "links": {
+    "web": "https://www.outfitters.com.pk/products/f0116-215",
+    "gg": "https://www.google.com/maps/search/Outfitters+Karachi"
+   },
+   "source": "https://www.outfitters.com.pk/products/f0116-215",
    "published": "2026-11-28",
    "thumb": "https://cdn.shopify.com/s/files/1/2290/7887/files/F0960306301_2.jpg",
    "auto": true
